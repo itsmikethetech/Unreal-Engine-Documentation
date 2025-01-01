@@ -12,27 +12,21 @@ The Unreal Engine 5 series introduces revolutionary features such as Nanite (vir
 This resource is unofficial—it is created by the community, for the community. While every effort is made to ensure accuracy, always cross-reference with Epic Games’ official documentation and resources to stay current with updates and best practices.
 
 # Key Features of Unreal Engine 5.5
-## Nanite Enhancements
-Improved workflows for high-poly assets and better optimization for large environments.
-
-## Lumen Improvements
-Enhanced real-time global illumination system offering more stable and higher-quality results.
-
-## World Building Upgrades
-Tools like World Partition provide streamlined management of large open worlds and levels.
-
-## Refined Developer Workflows
-Blueprint improvements, expanded C++ APIs, and new editor features that boost productivity.
-
-## Virtual Production & Cinematics
-Continued evolution of virtual production toolsets for high-quality cinematic content.
+- Nanite Enhancements
+  - Improved workflows for high-poly assets and better optimization for large environments.
+- Lumen Improvements
+  - Enhanced real-time global illumination system offering more stable and higher-quality results.
+- World Building Upgrades
+  - Tools like World Partition provide streamlined management of large open worlds and levels.
+- Refined Developer Workflows
+  - Blueprint improvements, expanded C++ APIs, and new editor features that boost productivity.
+- Virtual Production & Cinematics
+  - Continued evolution of virtual production toolsets for high-quality cinematic content.
 
 # Who This Guide Is For
-## New Users
-If you’re just starting with Unreal Engine, you’ll find explanations of core concepts and step-by-step tutorials.
-
-## Intermediate Developers
-Dive deeper into more advanced tools and customization to build larger and more complex projects.
-
-## Experienced Professionals
-Explore performance tuning, cutting-edge workflows, and best practices for high-end production.
+- New Users
+  - If you’re just starting with Unreal Engine, you’ll find explanations of core concepts and step-by-step tutorials.
+- Intermediate Developers
+  - Dive deeper into more advanced tools and customization to build larger and more complex projects.
+- Experienced Professionals
+  - Explore performance tuning, cutting-edge workflows, and best practices for high-end production.
