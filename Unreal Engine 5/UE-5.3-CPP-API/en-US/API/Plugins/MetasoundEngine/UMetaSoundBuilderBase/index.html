@@ -1,0 +1,1675 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="./../../../../../Include/Javascript/common_en-US.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var time = new Date(0);
+		var preview = false;
+		var relativeHTMLPath = "./../../../../../";
+				var pageid = 0;
+				var heroimage = "./../../../../../Images/ue5-hero.png";
+				var lang = "en-US";
+				var basePath = document.location.pathname.substring(0, document.location.pathname.indexOf('/' + lang + '/') + lang.length + 1);
+		document.write('<base href="' +  encodeURI(basePath) + '/API/Plugins/MetasoundEngine/UMetaSoundBuilderBase/" />');
+				var udnCSS = './../../../../../Include/CSS/udn_public.css';
+		var udnLangCSS = '';
+				var udnOverrideCSS = './../../../../../Include/CSS/skin_overrides.css';
+		var udnOverrideDarkCSS = './../../../../../Include/CSS/skin_overrides_dark.css';
+		var fancyboxCSS = './../../../../../Include/CSS/jquery.fancybox.css';
+		var jqueryuiCSS = './../../../../../Include/CSS/jquery-ui.min.css';
+		var qtipCSS = './../../../../../Include/CSS/jquery.qtip.css';
+		var prettifyCSS = './../../../../../Include/CSS/prettify.css';
+		var navbarCSS = './../../../../../Include/CSS/navBar.css';
+		var twentytwentyCSS = './../../../../../Include/CSS/twentytwenty.css';
+		var recommendationsCSS = './../../../../../Include/CSS/jquery.recommendations.css';
+	</script>
+    <title>UMetaSoundBuilderBase | Unreal Engine 5.2 Documentation</title>
+    	    <meta name=viewport content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Cache-control" content="no-store">
+    <script  src="./../../../../../Include/Javascript/CustomEvent.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/jquery-3.4.0.min.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/udn.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/udn_extras.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/jquery-ui.min.js" type="text/javascript"></script>
+	    <script  src="./../../../../../Include/Javascript/informational.js" type="text/javascript"></script>
+	    <script  src="./../../../../../Include/Javascript/jquery.fancybox.pack.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/jquery.qtip.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/prettify.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/jquery.slimscroll.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/jquery.event.move.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/jquery.twentytwenty.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/lazysizes.min.js" type="text/javascript"></script>
+	    <script  src="./../../../../../Include/Javascript/jquery.recommendations.js" type="text/javascript"></script>
+	
+    <link async rel="icon" href="./../../../../../Include/Images/site_icon.png" type="image/x-icon" />
+    <link async rel="shortcut icon" href="./../../../../../Include/Images/site_icon.png" type="image/x-icon" />
+    <link async href="./../../../../../Include/Images/touch_icon.png" rel="apple-touch-icon" />
+    <link async href="./../../../../../Include/Images/touch_icon_114.png" sizes="114x114" rel="apple-touch-icon" />    
+		<script  src="./../../../../../Include/Javascript/CollapsibleLists.js" type="text/javascript"></script>
+	<script  src="./../../../../../Include/Javascript/navigationBarUI.js"></script>
+	<script  src="./../../../../../Include/Javascript/navigationBar.js"></script>
+		
+	<link rel="alternate" href="https://docs.unrealengine.com/latest/en-US/API/Plugins/MetasoundEngine/UMetaSoundBuilderBase/" hreflang="x-default" />
+
+	<meta name="title" content="UMetaSoundBuilderBase" />
+<meta name="description" content="Base implementation of MetaSound builder" />
+<meta name="availability" content="Public" />
+<meta name="crumbs" content="%ROOT%,API,API/Plugins,API/Plugins/MetasoundEngine" />
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta property="og:title" content="UMetaSoundBuilderBase" />
+	<meta property="og:description" content="Base implementation of MetaSound builder" />
+		<meta property="og:image" content="https://docs.unrealengine.com/5.1/Images/placeholder-social.png" />
+	</head>
+<body id="webbgThree" style="visibility: hidden;" onload="document.body.style.visibility='visible';">
+			<script>window.__tracking_base = 'https://tracking.unrealengine.com';</script>
+	<script src="https://tracking.unrealengine.com/tracking.js" async></script>    <div id="webThree">
+				<div id="page_head">
+						<div id="head">
+				<div id="logo"></div>
+			</div>
+						<div id="pagenav">
+				<div class="crumbs" id="crumbs">
+<span id="versionContainer">
+	<span id="versionSelect" class="btn btn-version" onclick="ToggleMenu($('#versionMenu'), $(this));"></span>
+	<div id="versionMenu">
+		<div id="4_26" data-version="4.26" class="btn btn-select" onclick="createCookie('version', '4.26', 365);SwitchVersion('4.26');">Unreal Engine 4.26 Documentation</div>
+		<div id="4_27" data-version="4.27" class="btn btn-select" onclick="createCookie('version', '4.27', 365);SwitchVersion('4.27');">Unreal Engine 4.27 Documentation</div>
+		<div id="5_0" data-version="5.0" class="btn btn-select" onclick="createCookie('version', '5.0', 365);SwitchVersion('5.0');">Unreal Engine 5.0 Documentation</div>
+		<div id="5_1" data-version="5.1" class="btn btn-select" onclick="createCookie('version', '5.1', 365);SwitchVersion('5.1');">Unreal Engine 5.1 Documentation</div>
+		<div id="5_2" data-version="5.2" class="btn btn-select" onclick="createCookie('version', '5.2', 365);SwitchVersion('5.2');">Unreal Engine 5.2 Documentation</div>
+		<div id="5_3" data-version="5.3" class="btn btn-select" onclick="createCookie('version', '5.3', 365);SwitchVersion('5.3');">Unreal Engine 5.3 Documentation</div>
+	</div>
+</span>
+	<span class="separator">></span> <a id="parent_link" href="../../../../API">Unreal Engine API Reference</a>
+
+	<span class="separator">></span> <a id="parent_link" href="../../../Plugins">Plugins</a>
+
+	<span class="separator">></span> <a id="parent_link" href="../../MetasoundEngine">MetasoundEngine</a>
+
+<span class="separator">></span> <span id="page">UMetaSoundBuilderBase</span>
+</div>				<div id="pageNavRight">
+								<!-- Start of Search -->
+												<div id="search_container">
+					<form name="bodySearch" method="get" action="https://www.unrealengine.com/en-US/bing-search" onsubmit="return validateSearch()">
+						<input type="image" src="./../../../../../Include/Images/search_box_icon.png" class="searchbutton"/>
+						<input type="hidden" name="filter" value="Documentation" />
+						<input type="text" name="keyword" placeholder="Search Documentation..." class="searchbox" autocomplete="off"/>
+					</form>
+				</div>
+								<!-- End of Search -->
+				<div id="skinContainer">
+	<div id="skinSelect" class="btn btn-skin" onclick="ToggleMenu($('#skinMenu'), $(this));"></div>
+	<div id="skinMenu">
+		<div id="light" class="btn btn-select" onclick="createCookie('skin', 'light', 365);location.reload();">Light Theme</div>
+		<div id="dark" class="btn btn-select" onclick="createCookie('skin', 'dark', 365);location.reload();">Dark Theme</div>
+	</div>
+</div>				</div>
+			</div>
+		</div>						<div id="navWrapper">
+			<div id="nav-filter-container">
+				<div id="nav-filter-inner">
+					<form>
+						<input type="text" placeholder="Filter pages..." id="nav-filter" onchange="clearTimeout(filterTimer); filterTimer = setTimeout(updateNavTreeFilter,250, this.value);if(this.value.length == 0){$('#filter-clear').hide();}else{$('#filter-clear').show();}" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" />
+						<button class="close-icon" id="filter-clear" type="reset" onclick="clearTimeout(filterTimer); filterTimer = setTimeout(updateNavTreeFilter,250, '');$(this).hide();"></button>
+					</form>
+				</div>
+			</div>
+			<nav id="navPanel">
+			</nav>
+			<div id="navigation" title="Click to toggle navigation menu"><span>></span></div>
+		</div>		
+		<div id="splitter">
+		</div>
+				<div id="contentContainer">
+										<div id="pagedefault">
+				<div id="product-banner">
+	<div id="product-logo"></div>
+</div>				<div id="pagecontainer" style="padding-right:0px;">
+					<!-- Start of Markdown converted page content -->
+										<div class="hero  background">
+	<div class="imgContainer"><img src="./../../../../../Images/ue5-hero.png" /></div>	<div class="info">
+		<div id="pageTitle">
+			<h1 id="H1TitleId">UMetaSoundBuilderBase</h1>
+		</div>
+		<h2 >Base implementation of MetaSound builder</h2>
+		<div id="access">
+			<div class="accessContainer">
+															</div>
+		</div>
+	</div>
+</div>															<div id="maincol">
+																																				<div class="heading expanded" onclick="sectionOnClick(this, 'hierarchy');">
+        <p>Inheritance Hierarchy</p>
+    </div>
+<div id="hierarchy">
+    <div class="hierarchy">
+	<table  class="hierarchy-table" cellspacing="0" id="hrch"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../../../Runtime/CoreUObject/UObject/UObjectBase"><p>UObjectBase</p></a><table  class="hierarchy-table" cellspacing="0" id="hrch_1"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../../../Runtime/CoreUObject/UObject/UObjectBaseUtility"><p>UObjectBaseUtility</p></a><table  class="hierarchy-table" cellspacing="0" id="hrch_1_1"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../../../Runtime/CoreUObject/UObject/UObject"><p>UObject</p></a><table  class="hierarchy-table" cellspacing="0" id="hrch_1_1_1"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><p>UMetaSoundBuilderBase</p>
+<table  class="hierarchy-table" cellspacing="0" id="hrch_1_1_1_1"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../UMetaSoundPatchBuilder"><p>UMetaSoundPatchBuilder</p></a></td></tr><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../UMetaSoundSourceBuilder"><p>UMetaSoundSourceBuilder</p></a></td></tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr></table>
+</div>
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'references');">
+        <p>References</p>
+    </div>
+<div id="references">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="normal-row">
+	<td class="name-cell">
+		<p>Module</p>
+	</td>
+	<td class="desc-cell">
+		<p><a id="content_link" href=".." ><span>MetasoundEngine</span></a></p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<p>Header</p>
+	</td>
+	<td class="desc-cell">
+		<p>&#47;Engine&#47;Plugins&#47;Runtime&#47;Metasound&#47;Source&#47;MetasoundEngine&#47;Public&#47;MetasoundBuilderSubsystem.h</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<p>Include</p>
+	</td>
+	<td class="desc-cell">
+		<p>&#35;include &quot;MetasoundBuilderSubsystem.h&quot;</p>
+	</td>
+</tr>
+			</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'syntax');">
+        <p>Syntax</p>
+    </div>
+<div id="syntax">
+    <div class="simplecode_api">
+	<p>UCLASS&#40;Abstract&#41;<br />class UMetaSoundBuilderBase : public <a id="content_link" href="../../../Runtime/CoreUObject/UObject/UObject" ><span>UObject</span></a>  </p>
+</div>
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'description');">
+        <p>Remarks</p>
+    </div>
+<div id="description">
+    <p>Base implementation of MetaSound builder</p>
+</div><div class="syntax">
+	<div class="heading expanded" onclick="sectionOnClick(this, 'variables');">
+        <p>Variables</p>
+    </div>
+<div id="variables">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:8%">
+			</th>
+			<th class="type-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:15%">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../Images/api_variable_protected.png" />
+
+<img class="  lazyload" alt="UProperty" title="UProperty" width="18" data-src="./../../../../../Images/api_variable_meta.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="bIsAttached"><p>bIsAttached</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>If true, builder is attached to an existing asset (directly making changes to its document).</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../Images/api_variable_protected.png" />
+
+<img class="  lazyload" alt="UProperty" title="UProperty" width="18" data-src="./../../../../../Images/api_variable_meta.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../MetasoundFrontend/FMetaSoundFrontendDocumentBuilde-" ><span>FMetaSoundFront</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="Builder"><p>Builder</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'functions_0');">
+        <p>Functions</p>
+    </div>
+<div id="functions_0">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:8%;">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category, Meta" title="BlueprintCallable, Category, Meta" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FMetaSoundBuilderNodeOutputHandl-" ><span>FMetaSoundBu</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="AddGraphInputNode"><nobr><p>AddGraphInputNode</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Name,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> DataType,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../MetasoundFrontend/FMetasoundFrontendLiteral" ><span>FMetasoundFrontendLiteral</span></a> DefaultVa...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../EMetaSoundBuilderResult" ><span>EMetaSoundBuilderResult</span></a>&amp; OutResult,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bIsConstructorInput<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Adds a graph input node with the given name, DataType, and sets the graph input to default value.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category, Meta" title="BlueprintCallable, Category, Meta" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FMetaSoundBuilderNodeInputHandle" ><span>FMetaSoundBu</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="AddGraphOutputNode"><nobr><p>AddGraphOutputNode</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Name,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> DataType,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../MetasoundFrontend/FMetasoundFrontendLiteral" ><span>FMetasoundFrontendLiteral</span></a> DefaultVa...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../EMetaSoundBuilderResult" ><span>EMetaSoundBuilderResult</span></a>&amp; OutResult,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bIsConstructorOutput<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Adds a graph output node with the given name, DataType, and sets output node's input to default value.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category, Meta" title="BlueprintCallable, Category, Meta" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="AddInterface"><nobr><p>AddInterface</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> InterfaceName,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../EMetaSoundBuilderResult" ><span>EMetaSoundBuilderResult</span></a>&amp; OutResult<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Adds an interface registered with the given name to the graph, adding associated input and output nodes.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category, Meta" title="BlueprintCallable, Category, Meta" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+
+<img class="  lazyload" alt="displayname" title="displayname" width="18" data-src="./../../../../../Images/api_function_meta_other.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FMetaSoundNodeHandle" ><span>FMetaSoundNo</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="AddNode"><nobr><p>AddNode</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/CoreUObject/UObject/TScriptInterface" ><span>TScriptInterface</span></a>&lt; <a id="content_link" href="../../MetasoundFrontend/IMetaSoundDocumentInterface" ><span>IMetaSoundD</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../EMetaSoundBuilderResult" ><span>EMetaSoundBuilderResult</span></a>&amp; OutResult<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Adds a node to the graph using the provided MetaSound asset as its defining NodeClass.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category, Meta" title="BlueprintCallable, Category, Meta" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+
+<img class="  lazyload" alt="displayname" title="displayname" width="18" data-src="./../../../../../Images/api_function_meta_other.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FMetaSoundNodeHandle" ><span>FMetaSoundNo</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="AddNodeByClassName"><nobr><p>AddNodeByClassName</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../MetasoundFrontend/FMetasoundFrontendClassName" ><span>FMetasoundFrontendClassName</span></a>&amp;...,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 MajorVersion,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../EMetaSoundBuilderResult" ><span>EMetaSoundBuilderResult</span></a>&amp; OutResult<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Adds node referencing the highest native class version of the given class name to the document.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/CoreUObject/UObject/TScriptInterface" ><span>TScriptInter</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="Build"><nobr><p>Build</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/CoreUObject/UObject/UObject" ><span>UObject</span></a>&#42; Parent,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FMetaSoundBuilderOptions" ><span>FMetaSoundBuilderOptions</span></a>&amp; Op...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>UClassType &amp;</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="BuildInternal"><nobr><p>BuildInternal</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/CoreUObject/UObject/UObject" ><span>UObject</span></a>&#42; Parent,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FMetaSoundBuilderOptions" ><span>FMetaSoundBuilderOptions</span></a>&amp; Bu...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Runs build, conforming the document and corresponding object data on a MetaSound <a id="content_link" href="../../../Runtime/CoreUObject/UObject/UObject" ><span>UObject</span></a> to that managed by this builder.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category, Meta" title="BlueprintCallable, Category, Meta" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../FMetaSoundBuilderNodeOutputHandl-" ><span>FMet</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ConnectNodeInput-"><nobr><p>ConnectNodeInputsToMatchingGraphInterfaceInputs</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FMetaSoundNodeHandle" ><span>FMetaSoundNodeHandle</span></a>&amp; NodeHa...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../EMetaSoundBuilderResult" ><span>EMetaSoundBuilderResult</span></a>&amp; OutResult<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Connects a given node's inputs to all graph inputs for shared interfaces implemented on both the node's referenced class and the builder's MetaSound graph. Returns outputs of connected input nodes.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category, Meta" title="BlueprintCallable, Category, Meta" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ConnectNodeInputToGraphInput"><nobr><p>ConnectNodeInputToGraphInput</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> GraphInputName,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FMetaSoundBuilderNodeInputHandle" ><span>FMetaSoundBuilderNodeInputHan</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../EMetaSoundBuilderResult" ><span>EMetaSoundBuilderResult</span></a>&amp; OutResult<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Connects a given node input to the graph input with the given name.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category, Meta" title="BlueprintCallable, Category, Meta" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../FMetaSoundBuilderNodeInputHandle" ><span>FMet</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ConnectNodeOutpu-"><nobr><p>ConnectNodeOutputsToMatchingGraphInterfaceOutputs</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FMetaSoundNodeHandle" ><span>FMetaSoundNodeHandle</span></a>&amp; NodeHa...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../EMetaSoundBuilderResult" ><span>EMetaSoundBuilderResult</span></a>&amp; OutResult<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Connects a given node's outputs to all graph outputs for shared interfaces implemented on both the node's referenced class and the builder's MetaSound graph. Returns inputs of connected output nodes.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category, Meta" title="BlueprintCallable, Category, Meta" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ConnectNodeOutputToGraphOutput"><nobr><p>ConnectNodeOutputToGraphOutput</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> GraphOutputName,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FMetaSoundBuilderNodeOutputHandl-" ><span>FMetaSoundBuilderNodeOutputHa</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../EMetaSoundBuilderResult" ><span>EMetaSoundBuilderResult</span></a>&amp; OutResult<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Connects a given node output to the graph output with the given name.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category, Meta" title="BlueprintCallable, Category, Meta" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ConnectNodes"><nobr><p>ConnectNodes</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FMetaSoundBuilderNodeOutputHandl-" ><span>FMetaSoundBuilderNodeOutputHa</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FMetaSoundBuilderNodeInputHandle" ><span>FMetaSoundBuilderNodeInputHan</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../EMetaSoundBuilderResult" ><span>EMetaSoundBuilderResult</span></a>&amp; OutResult<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Connects node output to a node input.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category, Meta" title="BlueprintCallable, Category, Meta" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ConnectNodesByInterfaceBindings"><nobr><p>ConnectNodesByInterfaceBindings</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FMetaSoundNodeHandle" ><span>FMetaSoundNodeHandle</span></a>&amp; FromNo...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FMetaSoundNodeHandle" ><span>FMetaSoundNodeHandle</span></a>&amp; ToNode...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../EMetaSoundBuilderResult" ><span>EMetaSoundBuilderResult</span></a>&amp; OutResult<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Connects two nodes using defined MetaSound Interface Bindings registered with the MetaSound Interface registry.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ContainsNode"><nobr><p>ContainsNode</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FMetaSoundNodeHandle" ><span>FMetaSoundNodeHandle</span></a>&amp; Node<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns whether node exists.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ContainsNodeInput"><nobr><p>ContainsNodeInput</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FMetaSoundBuilderNodeInputHandle" ><span>FMetaSoundBuilderNodeInputHan</span></a>...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns whether node input exists.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ContainsNodeOutput"><nobr><p>ContainsNodeOutput</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FMetaSoundBuilderNodeOutputHandl-" ><span>FMetaSoundBuilderNodeOutputHa</span></a>...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns whether node output exists.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category, Meta" title="BlueprintCallable, Category, Meta" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ConvertFromPreset"><nobr><p>ConvertFromPreset</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../EMetaSoundBuilderResult" ><span>EMetaSoundBuilderResult</span></a>&amp; OutResult<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Converts this preset to a fully accessible MetaSound; sets result to succeeded if it was converted successfully and failed if it was not.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category, Meta" title="BlueprintCallable, Category, Meta" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ConvertToPreset"><nobr><p>ConvertToPreset</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/CoreUObject/UObject/TScriptInterface" ><span>TScriptInterface</span></a>&lt; <a id="content_link" href="../../MetasoundFrontend/IMetaSoundDocumentInterface" ><span>IMetaSoundD</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../EMetaSoundBuilderResult" ><span>EMetaSoundBuilderResult</span></a>&amp; OutResult<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Convert this builder to a MetaSound source preset with the given referenced source builder.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../MetasoundFrontend/UMetaSoundBuilderDocument" ><span>UMetaSoundBu</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CreateTransientDocumentObject"><nobr><p>CreateTransientDocumentObject()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Constructs a transient <a id="content_link" href="../../MetasoundFrontend/UMetaSoundBuilderDocument" ><span>UMetaSoundBuilderDocument</span></a> to be acted upon by this builder instance.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category, Meta" title="BlueprintCallable, Category, Meta" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="DisconnectNodeInput"><nobr><p>DisconnectNodeInput</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FMetaSoundBuilderNodeInputHandle" ><span>FMetaSoundBuilderNodeInputHan</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../EMetaSoundBuilderResult" ><span>EMetaSoundBuilderResult</span></a>&amp; OutResult<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Removes connection to a given node input. Returns success if connection was removed, failed if not.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category, Meta" title="BlueprintCallable, Category, Meta" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="DisconnectNodeOutput"><nobr><p>DisconnectNodeOutput</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FMetaSoundBuilderNodeOutputHandl-" ><span>FMetaSoundBuilderNodeOutputHa</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../EMetaSoundBuilderResult" ><span>EMetaSoundBuilderResult</span></a>&amp; OutResult<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Removes all connections from a given node output. Returns success if all connections were removed, failed if not.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category, Meta" title="BlueprintCallable, Category, Meta" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="DisconnectNodes"><nobr><p>DisconnectNodes</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FMetaSoundBuilderNodeOutputHandl-" ><span>FMetaSoundBuilderNodeOutputHa</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FMetaSoundBuilderNodeInputHandle" ><span>FMetaSoundBuilderNodeInputHan</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../EMetaSoundBuilderResult" ><span>EMetaSoundBuilderResult</span></a>&amp; OutResult<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Disconnects node output to a node input. Returns success if connection was removed, failed if not.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category, Meta" title="BlueprintCallable, Category, Meta" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="DisconnectNodesB-"><nobr><p>DisconnectNodesByInterfaceBindings</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FMetaSoundNodeHandle" ><span>FMetaSoundNodeHandle</span></a>&amp; FromNo...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FMetaSoundNodeHandle" ><span>FMetaSoundNodeHandle</span></a>&amp; ToNode...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../EMetaSoundBuilderResult" ><span>EMetaSoundBuilderResult</span></a>&amp; OutResult<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Disconnects two nodes using defined MetaSound Interface Bindings registered with the MetaSound Interface registry.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category, Meta" title="BlueprintCallable, Category, Meta" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FMetaSoundNodeHandle" ><span>FMetaSoundNo</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FindGraphInputNode"><nobr><p>FindGraphInputNode</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> InputName,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../EMetaSoundBuilderResult" ><span>EMetaSoundBuilderResult</span></a>&amp; OutResult<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns graph input node by the given name if it exists, or an invalid handle if not found.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category, Meta" title="BlueprintCallable, Category, Meta" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FMetaSoundNodeHandle" ><span>FMetaSoundNo</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FindGraphOutputNode"><nobr><p>FindGraphOutputNode</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> OutputName,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../EMetaSoundBuilderResult" ><span>EMetaSoundBuilderResult</span></a>&amp; OutResult<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns graph output node by the given name if it exists, or an invalid handle if not found.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category, Meta" title="BlueprintCallable, Category, Meta" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../FMetaSoundNodeHandle" ><span>FMet</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FindInterfaceInputNodes"><nobr><p>FindInterfaceInputNodes</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> InterfaceName,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../EMetaSoundBuilderResult" ><span>EMetaSoundBuilderResult</span></a>&amp; OutResult<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category, Meta" title="BlueprintCallable, Category, Meta" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../FMetaSoundNodeHandle" ><span>FMet</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FindInterfaceOutputNodes"><nobr><p>FindInterfaceOutputNodes</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> InterfaceName,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../EMetaSoundBuilderResult" ><span>EMetaSoundBuilderResult</span></a>&amp; OutResult<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category, Meta" title="BlueprintCallable, Category, Meta" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../MetasoundFrontend/FMetasoundFrontendVersion" ><span>FMetasoundFr</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FindNodeClassVersion"><nobr><p>FindNodeClassVersion</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FMetaSoundNodeHandle" ><span>FMetaSoundNodeHandle</span></a>&amp; NodeHa...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../EMetaSoundBuilderResult" ><span>EMetaSoundBuilderResult</span></a>&amp; OutResult<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns output's parent node if the input is valid, otherwise returns invalid node handle.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category, Meta" title="BlueprintCallable, Category, Meta" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FMetaSoundBuilderNodeInputHandle" ><span>FMetaSoundBu</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FindNodeInputByName"><nobr><p>FindNodeInputByName</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FMetaSoundNodeHandle" ><span>FMetaSoundNodeHandle</span></a>&amp; NodeHa...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> InputName,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../EMetaSoundBuilderResult" ><span>EMetaSoundBuilderResult</span></a>&amp; OutResult<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns node input by the given name if it exists, or an invalid handle if not found.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category, Meta" title="BlueprintCallable, Category, Meta" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FMetaSoundNodeHandle" ><span>FMetaSoundNo</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FindNodeInputParent"><nobr><p>FindNodeInputParent</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FMetaSoundBuilderNodeInputHandle" ><span>FMetaSoundBuilderNodeInputHan</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../EMetaSoundBuilderResult" ><span>EMetaSoundBuilderResult</span></a>&amp; OutResult<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns input's parent node if the input is valid, otherwise returns invalid node handle.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category, Meta" title="BlueprintCallable, Category, Meta" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../FMetaSoundBuilderNodeInputHandle" ><span>FMet</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FindNodeInputs"><nobr><p>FindNodeInputs</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FMetaSoundNodeHandle" ><span>FMetaSoundNodeHandle</span></a>&amp; NodeHa...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../EMetaSoundBuilderResult" ><span>EMetaSoundBuilderResult</span></a>&amp; OutResult<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns node output by the given name.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category, Meta" title="BlueprintCallable, Category, Meta" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../FMetaSoundBuilderNodeInputHandle" ><span>FMet</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FindNodeInputsByDataType"><nobr><p>FindNodeInputsByDataType</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FMetaSoundNodeHandle" ><span>FMetaSoundNodeHandle</span></a>&amp; NodeHa...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../EMetaSoundBuilderResult" ><span>EMetaSoundBuilderResult</span></a>&amp; OutResult,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> DataType<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns node inputs by the given DataType (ex. "Audio", "Trigger", "String", "Bool", "Float", "Int32", etc.).</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category, Meta" title="BlueprintCallable, Category, Meta" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FMetaSoundBuilderNodeOutputHandl-" ><span>FMetaSoundBu</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FindNodeOutputByName"><nobr><p>FindNodeOutputByName</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FMetaSoundNodeHandle" ><span>FMetaSoundNodeHandle</span></a>&amp; NodeHa...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> OutputName,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../EMetaSoundBuilderResult" ><span>EMetaSoundBuilderResult</span></a>&amp; OutResult<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns node output by the given name.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category, Meta" title="BlueprintCallable, Category, Meta" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FMetaSoundNodeHandle" ><span>FMetaSoundNo</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FindNodeOutputParent"><nobr><p>FindNodeOutputParent</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FMetaSoundBuilderNodeOutputHandl-" ><span>FMetaSoundBuilderNodeOutputHa</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../EMetaSoundBuilderResult" ><span>EMetaSoundBuilderResult</span></a>&amp; OutResult<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns output's parent node if the input is valid, otherwise returns invalid node handle.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category, Meta" title="BlueprintCallable, Category, Meta" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../FMetaSoundBuilderNodeOutputHandl-" ><span>FMet</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FindNodeOutputs"><nobr><p>FindNodeOutputs</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FMetaSoundNodeHandle" ><span>FMetaSoundNodeHandle</span></a>&amp; NodeHa...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../EMetaSoundBuilderResult" ><span>EMetaSoundBuilderResult</span></a>&amp; OutResult<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns all node outputs.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category, Meta" title="BlueprintCallable, Category, Meta" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../FMetaSoundBuilderNodeOutputHandl-" ><span>FMet</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FindNodeOutputsByDataType"><nobr><p>FindNodeOutputsByDataType</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FMetaSoundNodeHandle" ><span>FMetaSoundNodeHandle</span></a>&amp; NodeHa...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../EMetaSoundBuilderResult" ><span>EMetaSoundBuilderResult</span></a>&amp; OutResult,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> DataType<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns node outputs by the given DataType (ex. "Audio", "Trigger", "String", "Bool", "Float", "Int32", etc.).</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../../../Runtime/CoreUObject/UObject/UClass" ><span>UClass</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetBuilderUClass"><nobr><p>GetBuilderUClass()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns the base MetaSound <a id="content_link" href="../../../Runtime/CoreUObject/UObject/UClass" ><span>UClass</span></a> the builder is operating on (ex. MetaSoundSource, MetaSoundPatch, etc. not to be confused with the underlying document builder's MetaSound class type)</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../../MetasoundFrontend/FMetaSoundFrontendDocumentBuilde-" ><span>FMetaS</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetConstBuilder"><nobr><p>GetConstBuilder()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category, Meta" title="BlueprintCallable, Category, Meta" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../MetasoundFrontend/FMetasoundFrontendLiteral" ><span>FMetasoundFr</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetNodeInputClassDefault"><nobr><p>GetNodeInputClassDefault</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FMetaSoundBuilderNodeInputHandle" ><span>FMetaSoundBuilderNodeInputHan</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../EMetaSoundBuilderResult" ><span>EMetaSoundBuilderResult</span></a>&amp; OutResult<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns node input's class literal value if set, otherwise fails and returns default literal.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category, Meta" title="BlueprintCallable, Category, Meta" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetNodeInputData"><nobr><p>GetNodeInputData</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FMetaSoundBuilderNodeInputHandle" ><span>FMetaSoundBuilderNodeInputHan</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a>&amp; Name,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a>&amp; DataType,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../EMetaSoundBuilderResult" ><span>EMetaSoundBuilderResult</span></a>&amp; OutResult<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns node input's data if valid (including things like name and datatype).</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category, Meta" title="BlueprintCallable, Category, Meta" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../MetasoundFrontend/FMetasoundFrontendLiteral" ><span>FMetasoundFr</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetNodeInputDefault"><nobr><p>GetNodeInputDefault</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FMetaSoundBuilderNodeInputHandle" ><span>FMetaSoundBuilderNodeInputHan</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../EMetaSoundBuilderResult" ><span>EMetaSoundBuilderResult</span></a>&amp; OutResult<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns node input's literal value if set on graph, otherwise fails and returns default literal.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category, Meta" title="BlueprintCallable, Category, Meta" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetNodeOutputData"><nobr><p>GetNodeOutputData</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FMetaSoundBuilderNodeOutputHandl-" ><span>FMetaSoundBuilderNodeOutputHa</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a>&amp; Name,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a>&amp; DataType,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../EMetaSoundBuilderResult" ><span>EMetaSoundBuilderResult</span></a>&amp; OutResult<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns node output's data if valid (including things like name and datatype).</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/CoreUObject/UObject/UObject" ><span>UObject</span></a> &#42...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetReferencedPresetAsset"><nobr><p>GetReferencedPresetAsset()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Return the asset referenced by this preset builder. Returns nullptr if the builder is not a preset.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../MetasoundFrontend/FMetasoundFrontendClassName" ><span>FMetasoundFr</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetRootGraphClassName"><nobr><p>GetRootGraphClassName()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns the document's root graph class name.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="InitFrontendBuilder"><nobr><p>InitFrontendBuilder()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="InitNodeLocations"><nobr><p>InitNodeLocations()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Initializes and ensures all nodes have a position (required prior to exporting to an asset if expected to be viewed in the editor).</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="InterfaceIsDeclared"><nobr><p>InterfaceIsDeclared</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> InterfaceName<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns if a given interface is declared.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="IsPreset"><nobr><p>IsPreset()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns whether this is a preset.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="NodeInputIsConnected"><nobr><p>NodeInputIsConnected</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FMetaSoundBuilderNodeInputHandle" ><span>FMetaSoundBuilderNodeInputHan</span></a>...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns if a given node input has connections.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="NodeOutputIsConnected"><nobr><p>NodeOutputIsConnected</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FMetaSoundBuilderNodeOutputHandl-" ><span>FMetaSoundBuilderNodeOutputHa</span></a>...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns if a given node output is connected.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="NodesAreConnected"><nobr><p>NodesAreConnected</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FMetaSoundBuilderNodeOutputHandl-" ><span>FMetaSoundBuilderNodeOutputHa</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FMetaSoundBuilderNodeInputHandle" ><span>FMetaSoundBuilderNodeInputHan</span></a>...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns if a given node output and node input are connected.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ReloadCache"><nobr><p>ReloadCache()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Primarily used by editor transaction stack to avoid corruption when object is changed outside of the builder API.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category, Meta" title="BlueprintCallable, Category, Meta" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RemoveGraphInput"><nobr><p>RemoveGraphInput</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Name,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../EMetaSoundBuilderResult" ><span>EMetaSoundBuilderResult</span></a>&amp; OutResult<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Removes graph input if it exists; sets result to succeeded if it was removed and failed if it was not.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category, Meta" title="BlueprintCallable, Category, Meta" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RemoveGraphOutput"><nobr><p>RemoveGraphOutput</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Name,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../EMetaSoundBuilderResult" ><span>EMetaSoundBuilderResult</span></a>&amp; OutResult<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Removes graph output if it exists; sets result to succeeded if it was removed and failed if it was not.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category, Meta" title="BlueprintCallable, Category, Meta" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RemoveInterface"><nobr><p>RemoveInterface</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> InterfaceName,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../EMetaSoundBuilderResult" ><span>EMetaSoundBuilderResult</span></a>&amp; OutResult<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Removes the interface with the given name from the builder's MetaSound.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category, Meta" title="BlueprintCallable, Category, Meta" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RemoveNode"><nobr><p>RemoveNode</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FMetaSoundNodeHandle" ><span>FMetaSoundNodeHandle</span></a>&amp; NodeHa...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../EMetaSoundBuilderResult" ><span>EMetaSoundBuilderResult</span></a>&amp; OutResult<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Removes node and any associated connections from the builder's MetaSound.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category, Meta" title="BlueprintCallable, Category, Meta" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RemoveNodeInputDefault"><nobr><p>RemoveNodeInputDefault</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FMetaSoundBuilderNodeInputHandle" ><span>FMetaSoundBuilderNodeInputHan</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../EMetaSoundBuilderResult" ><span>EMetaSoundBuilderResult</span></a>&amp; OutResult<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Removes node input literal default if set, reverting the value to be whatever the node class defaults the value to.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RenameRootGraphClass"><nobr><p>RenameRootGraphClass</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../MetasoundFrontend/FMetasoundFrontendClassName" ><span>FMetasoundFrontendClassName</span></a>&amp;...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Rename the document's root graph class with a guid and optional namespace and variant.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetAuthor"><nobr><p>SetAuthor</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; InAuthor<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the author of the MetaSound.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category, Meta" title="BlueprintCallable, Category, Meta" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetGraphInputDefault"><nobr><p>SetGraphInputDefault</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> InputName,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../MetasoundFrontend/FMetasoundFrontendLiteral" ><span>FMetasoundFrontendLiteral</span></a>&amp; L...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../EMetaSoundBuilderResult" ><span>EMetaSoundBuilderResult</span></a>&amp; OutResult<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the input node's default value, overriding the default provided by the referenced graph if the graph is a preset.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category, Meta" title="BlueprintCallable, Category, Meta" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetNodeInputDefault"><nobr><p>SetNodeInputDefault</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FMetaSoundBuilderNodeInputHandle" ><span>FMetaSoundBuilderNodeInputHan</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../MetasoundFrontend/FMetasoundFrontendLiteral" ><span>FMetasoundFrontendLiteral</span></a>&amp; L...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../EMetaSoundBuilderResult" ><span>EMetaSoundBuilderResult</span></a>&amp; OutResult<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the node's input default value (used if no connection to the given node input is present)</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetNodeLocation"><nobr><p>SetNodeLocation</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FMetaSoundNodeHandle" ><span>FMetaSoundNodeHandle</span></a>&amp; InNode...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector2D&amp; InLocation,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../EMetaSoundBuilderResult" ><span>EMetaSoundBuilderResult</span></a>&amp; OutResult<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UpdateDependencyClassNames"><nobr><p>UpdateDependencyClassNames</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TMap" ><span>TMap</span></a>&lt; <a id="content_link" href="../../MetasoundFrontend/FMetasoundFrontendClassName" ><span>FMetasoundFrontendClass</span></a>...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Update dependency class names given a map of old to new referenced class names.</p>
+	</td>
+</tr>
+	</table>
+</div>
+
+</div>
+</div>
+																	</div>
+					<!-- End of Markdown converted page content -->
+				</div>
+												<div id="recommendations"></div>			</div>
+						<div id="footer"></div>			
+									<div id="announcement">
+			<div style="display:inline-block;margin:5px;">
+				Help shape the future of Unreal Engine documentation! Tell us how we're doing so we can serve you better.
+			</div>
+			<div style="margin:5px;display:inline-block;">
+				<div class="btn action" style="margin-top:-6px;display:inline-block;" onclick="$('#announcement').hide();window.open('https://epicgames.questionpro.com/t/AVVbJZwedR');createCookie('announcement-read', new Date().getTime(), 30);">Take our survey</div>
+				<div class="btn btn-default" style="margin-top:-6px;display:inline-block;" onclick="$('#announcement').hide();createCookie('announcement-read', new Date().getTime(), 30);">Cancel</div>
+			</div>
+			<div class="btn-close" style="position:absolute;right:5px;top:10px;padding:3px;width:14px;height:14px;" onclick="$('#announcement').hide();"></div>
+			</div>
+					</div>
+	</div>
+</body>
+</html>

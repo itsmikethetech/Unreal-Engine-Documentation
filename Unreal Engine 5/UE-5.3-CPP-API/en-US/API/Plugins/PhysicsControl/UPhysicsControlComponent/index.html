@@ -1,0 +1,3109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="./../../../../../Include/Javascript/common_en-US.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var time = new Date(0);
+		var preview = false;
+		var relativeHTMLPath = "./../../../../../";
+				var pageid = 0;
+				var heroimage = "./../../../../../Images/ue5-hero.png";
+				var lang = "en-US";
+				var basePath = document.location.pathname.substring(0, document.location.pathname.indexOf('/' + lang + '/') + lang.length + 1);
+		document.write('<base href="' +  encodeURI(basePath) + '/API/Plugins/PhysicsControl/UPhysicsControlComponent/" />');
+				var udnCSS = './../../../../../Include/CSS/udn_public.css';
+		var udnLangCSS = '';
+				var udnOverrideCSS = './../../../../../Include/CSS/skin_overrides.css';
+		var udnOverrideDarkCSS = './../../../../../Include/CSS/skin_overrides_dark.css';
+		var fancyboxCSS = './../../../../../Include/CSS/jquery.fancybox.css';
+		var jqueryuiCSS = './../../../../../Include/CSS/jquery-ui.min.css';
+		var qtipCSS = './../../../../../Include/CSS/jquery.qtip.css';
+		var prettifyCSS = './../../../../../Include/CSS/prettify.css';
+		var navbarCSS = './../../../../../Include/CSS/navBar.css';
+		var twentytwentyCSS = './../../../../../Include/CSS/twentytwenty.css';
+		var recommendationsCSS = './../../../../../Include/CSS/jquery.recommendations.css';
+	</script>
+    <title>UPhysicsControlComponent | Unreal Engine 5.2 Documentation</title>
+    	    <meta name=viewport content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Cache-control" content="no-store">
+    <script  src="./../../../../../Include/Javascript/CustomEvent.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/jquery-3.4.0.min.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/udn.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/udn_extras.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/jquery-ui.min.js" type="text/javascript"></script>
+	    <script  src="./../../../../../Include/Javascript/informational.js" type="text/javascript"></script>
+	    <script  src="./../../../../../Include/Javascript/jquery.fancybox.pack.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/jquery.qtip.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/prettify.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/jquery.slimscroll.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/jquery.event.move.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/jquery.twentytwenty.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/lazysizes.min.js" type="text/javascript"></script>
+	    <script  src="./../../../../../Include/Javascript/jquery.recommendations.js" type="text/javascript"></script>
+	
+    <link async rel="icon" href="./../../../../../Include/Images/site_icon.png" type="image/x-icon" />
+    <link async rel="shortcut icon" href="./../../../../../Include/Images/site_icon.png" type="image/x-icon" />
+    <link async href="./../../../../../Include/Images/touch_icon.png" rel="apple-touch-icon" />
+    <link async href="./../../../../../Include/Images/touch_icon_114.png" sizes="114x114" rel="apple-touch-icon" />    
+		<script  src="./../../../../../Include/Javascript/CollapsibleLists.js" type="text/javascript"></script>
+	<script  src="./../../../../../Include/Javascript/navigationBarUI.js"></script>
+	<script  src="./../../../../../Include/Javascript/navigationBar.js"></script>
+		
+	<link rel="alternate" href="https://docs.unrealengine.com/latest/en-US/API/Plugins/PhysicsControl/UPhysicsControlComponent/" hreflang="x-default" />
+
+	<meta name="title" content="UPhysicsControlComponent" />
+<meta name="description" content="This is the main Physics Control Component class which manages Controls and Body Modifiers associated with one or more static or skeletal meshes." />
+<meta name="availability" content="Public" />
+<meta name="crumbs" content="%ROOT%,API,API/Plugins,API/Plugins/PhysicsControl" />
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta property="og:title" content="UPhysicsControlComponent" />
+	<meta property="og:description" content="This is the main Physics Control Component class which manages Controls and Body Modifiers associated with one or more static or skeletal meshes." />
+		<meta property="og:image" content="https://docs.unrealengine.com/5.1/Images/placeholder-social.png" />
+	</head>
+<body id="webbgThree" style="visibility: hidden;" onload="document.body.style.visibility='visible';">
+			<script>window.__tracking_base = 'https://tracking.unrealengine.com';</script>
+	<script src="https://tracking.unrealengine.com/tracking.js" async></script>    <div id="webThree">
+				<div id="page_head">
+						<div id="head">
+				<div id="logo"></div>
+			</div>
+						<div id="pagenav">
+				<div class="crumbs" id="crumbs">
+<span id="versionContainer">
+	<span id="versionSelect" class="btn btn-version" onclick="ToggleMenu($('#versionMenu'), $(this));"></span>
+	<div id="versionMenu">
+		<div id="4_26" data-version="4.26" class="btn btn-select" onclick="createCookie('version', '4.26', 365);SwitchVersion('4.26');">Unreal Engine 4.26 Documentation</div>
+		<div id="4_27" data-version="4.27" class="btn btn-select" onclick="createCookie('version', '4.27', 365);SwitchVersion('4.27');">Unreal Engine 4.27 Documentation</div>
+		<div id="5_0" data-version="5.0" class="btn btn-select" onclick="createCookie('version', '5.0', 365);SwitchVersion('5.0');">Unreal Engine 5.0 Documentation</div>
+		<div id="5_1" data-version="5.1" class="btn btn-select" onclick="createCookie('version', '5.1', 365);SwitchVersion('5.1');">Unreal Engine 5.1 Documentation</div>
+		<div id="5_2" data-version="5.2" class="btn btn-select" onclick="createCookie('version', '5.2', 365);SwitchVersion('5.2');">Unreal Engine 5.2 Documentation</div>
+		<div id="5_3" data-version="5.3" class="btn btn-select" onclick="createCookie('version', '5.3', 365);SwitchVersion('5.3');">Unreal Engine 5.3 Documentation</div>
+	</div>
+</span>
+	<span class="separator">></span> <a id="parent_link" href="../../../../API">Unreal Engine API Reference</a>
+
+	<span class="separator">></span> <a id="parent_link" href="../../../Plugins">Plugins</a>
+
+	<span class="separator">></span> <a id="parent_link" href="../../PhysicsControl">PhysicsControl</a>
+
+<span class="separator">></span> <span id="page">UPhysicsControlComponent</span>
+</div>				<div id="pageNavRight">
+								<!-- Start of Search -->
+												<div id="search_container">
+					<form name="bodySearch" method="get" action="https://www.unrealengine.com/en-US/bing-search" onsubmit="return validateSearch()">
+						<input type="image" src="./../../../../../Include/Images/search_box_icon.png" class="searchbutton"/>
+						<input type="hidden" name="filter" value="Documentation" />
+						<input type="text" name="keyword" placeholder="Search Documentation..." class="searchbox" autocomplete="off"/>
+					</form>
+				</div>
+								<!-- End of Search -->
+				<div id="skinContainer">
+	<div id="skinSelect" class="btn btn-skin" onclick="ToggleMenu($('#skinMenu'), $(this));"></div>
+	<div id="skinMenu">
+		<div id="light" class="btn btn-select" onclick="createCookie('skin', 'light', 365);location.reload();">Light Theme</div>
+		<div id="dark" class="btn btn-select" onclick="createCookie('skin', 'dark', 365);location.reload();">Dark Theme</div>
+	</div>
+</div>				</div>
+			</div>
+		</div>						<div id="navWrapper">
+			<div id="nav-filter-container">
+				<div id="nav-filter-inner">
+					<form>
+						<input type="text" placeholder="Filter pages..." id="nav-filter" onchange="clearTimeout(filterTimer); filterTimer = setTimeout(updateNavTreeFilter,250, this.value);if(this.value.length == 0){$('#filter-clear').hide();}else{$('#filter-clear').show();}" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" />
+						<button class="close-icon" id="filter-clear" type="reset" onclick="clearTimeout(filterTimer); filterTimer = setTimeout(updateNavTreeFilter,250, '');$(this).hide();"></button>
+					</form>
+				</div>
+			</div>
+			<nav id="navPanel">
+			</nav>
+			<div id="navigation" title="Click to toggle navigation menu"><span>></span></div>
+		</div>		
+		<div id="splitter">
+		</div>
+				<div id="contentContainer">
+										<div id="pagedefault">
+				<div id="product-banner">
+	<div id="product-logo"></div>
+</div>				<div id="pagecontainer" style="padding-right:0px;">
+					<!-- Start of Markdown converted page content -->
+										<div class="hero  background">
+	<div class="imgContainer"><img src="./../../../../../Images/ue5-hero.png" /></div>	<div class="info">
+		<div id="pageTitle">
+			<h1 id="H1TitleId">UPhysicsControlComponent</h1>
+		</div>
+		<h2 >This is the main Physics Control Component class which manages Controls and Body Modifiers associated with one or more static or skeletal meshes.</h2>
+		<div id="access">
+			<div class="accessContainer">
+															</div>
+		</div>
+	</div>
+</div>															<div id="maincol">
+																																				<div class="heading expanded" onclick="sectionOnClick(this, 'hierarchy');">
+        <p>Inheritance Hierarchy</p>
+    </div>
+<div id="hierarchy">
+    <div class="hierarchy">
+	<table  class="hierarchy-table" cellspacing="0" id="hrch"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../../../Runtime/CoreUObject/UObject/UObjectBase"><p>UObjectBase</p></a><table  class="hierarchy-table" cellspacing="0" id="hrch_1"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../../../Runtime/CoreUObject/UObject/UObjectBaseUtility"><p>UObjectBaseUtility</p></a><table  class="hierarchy-table" cellspacing="0" id="hrch_1_1"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../../../Runtime/CoreUObject/UObject/UObject"><p>UObject</p></a><table  class="hierarchy-table" cellspacing="0" id="hrch_1_1_1"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../../../Runtime/Engine/Components/UActorComponent"><p>UActorComponent</p></a><table  class="hierarchy-table" cellspacing="0" id="hrch_1_1_1_1"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../../../Runtime/Engine/Components/USceneComponent"><p>USceneComponent</p></a><table  class="hierarchy-table" cellspacing="0" id="hrch_1_1_1_1_1"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><p>UPhysicsControlComponent</p>
+</td></tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr></table>
+</div>
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'references');">
+        <p>References</p>
+    </div>
+<div id="references">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="normal-row">
+	<td class="name-cell">
+		<p>Module</p>
+	</td>
+	<td class="desc-cell">
+		<p><a id="content_link" href=".." ><span>PhysicsControl</span></a></p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<p>Header</p>
+	</td>
+	<td class="desc-cell">
+		<p>&#47;Engine&#47;Plugins&#47;Experimental&#47;PhysicsControl&#47;Source&#47;PhysicsControl&#47;Public&#47;PhysicsControlComponent.h</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<p>Include</p>
+	</td>
+	<td class="desc-cell">
+		<p>&#35;include &quot;PhysicsControlComponent.h&quot;</p>
+	</td>
+</tr>
+			</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'syntax');">
+        <p>Syntax</p>
+    </div>
+<div id="syntax">
+    <div class="simplecode_api">
+	<p>UCLASS&#40;Meta&#61;&#40;BlueprintSpawnableComponent&#41;, ClassGroup&#61;Physics, Experimental&#41;<br />class UPhysicsControlComponent : public <a id="content_link" href="../../../Runtime/Engine/Components/USceneComponent" ><span>USceneComponent</span></a>  </p>
+</div>
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'description');">
+        <p>Remarks</p>
+    </div>
+<div id="description">
+    <p>This is the main Physics Control Component class which manages Controls and Body Modifiers associated with one or more static or skeletal meshes. You can add this as a component to an actor containing a mesh and then use it to create, configure and destroy Controls/Body Modifiers:
+</p><p>Controls are used to control one physics body relative to another (or the world). These controls are done through physical spring/damper drives.
+</p><p>Body Modifiers are used to update the most important physical properties of physics bodies such as whether they are simulated vs kinematic, or whether they experience gravity.
+</p><p>Note that Controls and Body Modifiers are given names (which are predictable). These names can then be stored (perhaps in arrays) to make it easy to quickly change multiple Controls/Body Modifiers.</p>
+</div><div class="syntax">
+	<div class="heading expanded" onclick="sectionOnClick(this, 'variables');">
+        <p>Variables</p>
+    </div>
+<div id="variables">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:8%">
+			</th>
+			<th class="type-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:15%">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../Images/api_variable_public.png" />
+
+<img class="  lazyload" alt="UProperty" title="UProperty" width="18" data-src="./../../../../../Images/api_variable_meta.png" />
+
+<img class="  lazyload" alt="Category, EditAnywhere" title="Category, EditAnywhere" width="18" data-src="./../../../../../Images/api_variable_meta_editor.png" />
+
+<img class="  lazyload" alt="BlueprintReadWrite" title="BlueprintReadWrite" width="18" data-src="./../../../../../Images/api_variable_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>bShowDebugBodyModifierList</p>
+	</td>
+	<td class="desc-cell">
+		<p>Display all the body modifiers and their basic properties when this component is selected</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../Images/api_variable_public.png" />
+
+<img class="  lazyload" alt="UProperty" title="UProperty" width="18" data-src="./../../../../../Images/api_variable_meta.png" />
+
+<img class="  lazyload" alt="Category, EditAnywhere" title="Category, EditAnywhere" width="18" data-src="./../../../../../Images/api_variable_meta_editor.png" />
+
+<img class="  lazyload" alt="BlueprintReadWrite" title="BlueprintReadWrite" width="18" data-src="./../../../../../Images/api_variable_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>bShowDebugControlList</p>
+	</td>
+	<td class="desc-cell">
+		<p>Display all the controls and their basic properties when this component is selected</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../Images/api_variable_public.png" />
+
+<img class="  lazyload" alt="UProperty" title="UProperty" width="18" data-src="./../../../../../Images/api_variable_meta.png" />
+
+<img class="  lazyload" alt="Category, EditAnywhere" title="Category, EditAnywhere" width="18" data-src="./../../../../../Images/api_variable_meta_editor.png" />
+
+<img class="  lazyload" alt="BlueprintReadWrite" title="BlueprintReadWrite" width="18" data-src="./../../../../../Images/api_variable_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>bShowDebugVisualization</p>
+	</td>
+	<td class="desc-cell">
+		<p>Visualize the controls when this component is selected</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../Images/api_variable_public.png" />
+
+<img class="  lazyload" alt="UProperty" title="UProperty" width="18" data-src="./../../../../../Images/api_variable_meta.png" />
+
+<img class="  lazyload" alt="Category, EditAnywhere" title="Category, EditAnywhere" width="18" data-src="./../../../../../Images/api_variable_meta_editor.png" />
+
+<img class="  lazyload" alt="BlueprintReadWrite" title="BlueprintReadWrite" width="18" data-src="./../../../../../Images/api_variable_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Containers/FString" ><span>FString</span></a></p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>DebugBodyModifierDetailFilter</p>
+	</td>
+	<td class="desc-cell">
+		<p>Display detailed info for body modifiers containing this string (if non-empty) when this component is selected</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../Images/api_variable_public.png" />
+
+<img class="  lazyload" alt="UProperty" title="UProperty" width="18" data-src="./../../../../../Images/api_variable_meta.png" />
+
+<img class="  lazyload" alt="Category, EditAnywhere" title="Category, EditAnywhere" width="18" data-src="./../../../../../Images/api_variable_meta_editor.png" />
+
+<img class="  lazyload" alt="BlueprintReadWrite" title="BlueprintReadWrite" width="18" data-src="./../../../../../Images/api_variable_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Containers/FString" ><span>FString</span></a></p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>DebugControlDetailFilter</p>
+	</td>
+	<td class="desc-cell">
+		<p>Display detailed info for controls containing this string (if non-empty) when this component is selected</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Templates/TPimplPtr" ><span>TPimplPtr</span></a>&lt; FPhy...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="Implementation"><p>Implementation</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../Images/api_variable_public.png" />
+
+<img class="  lazyload" alt="UProperty" title="UProperty" width="18" data-src="./../../../../../Images/api_variable_meta.png" />
+
+<img class="  lazyload" alt="Category, EditAnywhere" title="Category, EditAnywhere" width="18" data-src="./../../../../../Images/api_variable_meta_editor.png" />
+
+<img class="  lazyload" alt="BlueprintReadWrite" title="BlueprintReadWrite" width="18" data-src="./../../../../../Images/api_variable_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>int32</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="MaxNumControlsOr-"><p>MaxNumControlsOrModifiersPerName</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Upper limit on the number of controls or modifiers that will be created using the same name (which will get a numerical postfix).</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../Images/api_variable_public.png" />
+
+<img class="  lazyload" alt="UProperty" title="UProperty" width="18" data-src="./../../../../../Images/api_variable_meta.png" />
+
+<img class="  lazyload" alt="Category, EditAnywhere" title="Category, EditAnywhere" width="18" data-src="./../../../../../Images/api_variable_meta_editor.png" />
+
+<img class="  lazyload" alt="BlueprintReadWrite" title="BlueprintReadWrite" width="18" data-src="./../../../../../Images/api_variable_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>float</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="TeleportDistanceThreshold"><p>TeleportDistanceThreshold</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>If the component moves by more than this distance then it is treated as a teleport, which prevents velocities being used for a frame.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../Images/api_variable_public.png" />
+
+<img class="  lazyload" alt="UProperty" title="UProperty" width="18" data-src="./../../../../../Images/api_variable_meta.png" />
+
+<img class="  lazyload" alt="Category, EditAnywhere" title="Category, EditAnywhere" width="18" data-src="./../../../../../Images/api_variable_meta_editor.png" />
+
+<img class="  lazyload" alt="BlueprintReadWrite" title="BlueprintReadWrite" width="18" data-src="./../../../../../Images/api_variable_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>float</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="TeleportRotationThreshold"><p>TeleportRotationThreshold</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>If the component rotates by more than this angle (in degrees) then it is treated as a teleport, which prevents velocities being used for a frame.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../Images/api_variable_public.png" />
+
+<img class="  lazyload" alt="UProperty" title="UProperty" width="18" data-src="./../../../../../Images/api_variable_meta.png" />
+
+<img class="  lazyload" alt="Category, EditAnywhere" title="Category, EditAnywhere" width="18" data-src="./../../../../../Images/api_variable_meta_editor.png" />
+
+<img class="  lazyload" alt="BlueprintReadWrite" title="BlueprintReadWrite" width="18" data-src="./../../../../../Images/api_variable_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>float</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="VelocityPredictionTime"><p>VelocityPredictionTime</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>The time used when "predicting" the target position/orientation.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../Images/api_variable_public.png" />
+
+<img class="  lazyload" alt="UProperty" title="UProperty" width="18" data-src="./../../../../../Images/api_variable_meta.png" />
+
+<img class="  lazyload" alt="Category, EditAnywhere" title="Category, EditAnywhere" width="18" data-src="./../../../../../Images/api_variable_meta_editor.png" />
+
+<img class="  lazyload" alt="BlueprintReadWrite" title="BlueprintReadWrite" width="18" data-src="./../../../../../Images/api_variable_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>float</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>VisualizationSizeScale</p>
+	</td>
+	<td class="desc-cell">
+		<p>Size of the gizmos etc used during visualization</p>
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'constructor');">
+        <p>Constructors</p>
+    </div>
+<div id="constructor">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="__ctor"><nobr><p>UPhysicsControlComponent</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/CoreUObject/UObject/FObjectInitializer" ><span>FObjectInitializer</span></a>&amp; ObjectIn...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'functions_0');">
+        <p>Functions</p>
+    </div>
+<div id="functions_0">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:8%;">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="AddBodyModifiersToSet"><nobr><p>AddBodyModifiersToSet</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FPhysicsControlNames" ><span>FPhysicsControlNames</span></a>&amp; NewSet,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> >&amp; BodyModifie...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Set<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Adds BodyModifiers to a Set.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="AddBodyModifierToSet"><nobr><p>AddBodyModifierToSet</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FPhysicsControlNames" ><span>FPhysicsControlNames</span></a>&amp; NewSet,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> BodyModifier,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Set<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Adds a BodyModifier to a Set.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="AddControlsToSet"><nobr><p>AddControlsToSet</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FPhysicsControlNames" ><span>FPhysicsControlNames</span></a>&amp; NewSet,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> >&amp; Controls,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Set<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Adds Controls to a Set.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="AddControlToSet"><nobr><p>AddControlToSet</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FPhysicsControlNames" ><span>FPhysicsControlNames</span></a>&amp; NewSet,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Control,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Set<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Adds a Control to a Set.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a></p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CreateBodyModifier"><nobr><p>CreateBodyModifier</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Components/UMeshComponent" ><span>UMeshComponent</span></a>&#42; MeshComponent,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> BoneName,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Set,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../EPhysicsMovementType" ><span>EPhysicsMovementType</span></a> Movement...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Engine/Engine/ECollisionEnabled__Type" ><span>ECollisionEnabled::Type</span></a> Colli...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const float GravityMultiplier,<br />&nbsp;&nbsp;&nbsp;&nbsp;const float PhysicsBlendWeight,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bUseSkeletalAnimation,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bUpdateKinematicFromSimu...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Creates a new body modifier for mesh components</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Containers/TMap" ><span>TMap</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a>,...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CreateBodyModifi-_1"><nobr><p>CreateBodyModifiersFromLimbBones</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FPhysicsControlNames" ><span>FPhysicsControlNames</span></a>&amp; AllBodyModif...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TMap" ><span>TMap</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a>, <a id="content_link" href="../FPhysicsControlLimbBones" ><span>FPhysicsControlL</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../EPhysicsMovementType" ><span>EPhysicsMovementType</span></a> Movement...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Engine/Engine/ECollisionEnabled__Type" ><span>ECollisionEnabled::Type</span></a> Colli...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const float GravityMultiplier,<br />&nbsp;&nbsp;&nbsp;&nbsp;const float PhysicsBlendWeight,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bUseSkeletalAnimation,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bUpdateKinematicFromSimu...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Creates a collection of controls controlling a skeletal mesh, grouped together in limbs</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FNam</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CreateBodyModifi-"><nobr><p>CreateBodyModifiersFromSkeletalMeshBelow</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Components/USkeletalMeshComponent" ><span>USkeletalMeshComponent</span></a>&#42; Skelet...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> BoneName,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bIncludeSelf,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Set,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../EPhysicsMovementType" ><span>EPhysicsMovementType</span></a> Movement...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Engine/Engine/ECollisionEnabled__Type" ><span>ECollisionEnabled::Type</span></a> Colli...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const float GravityMultiplier,<br />&nbsp;&nbsp;&nbsp;&nbsp;const float PhysicsBlendWeight,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bUseSkeletalAnimation,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bUpdateKinematicFromSimu...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Creates new body modifiers for skeletal mesh components</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a></p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CreateControl"><nobr><p>CreateControl</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Components/UMeshComponent" ><span>UMeshComponent</span></a>&#42; ParentMeshComp...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> ParentBoneName,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Components/UMeshComponent" ><span>UMeshComponent</span></a>&#42; ChildMeshCompo...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> ChildBoneName,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FPhysicsControlData" ><span>FPhysicsControlData</span></a> ControlDa...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FPhysicsControlTarget" ><span>FPhysicsControlTarget</span></a> Control...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FPhysicsControlSettings" ><span>FPhysicsControlSettings</span></a> Contr...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Set,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bEnabled<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Creates a new control for mesh components</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CreateControlsAn-"><nobr><p>CreateControlsAndBodyModifiersFromLimbBones</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FPhysicsControlNames" ><span>FPhysicsControlNames</span></a>&amp; AllWorldSpac...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TMap" ><span>TMap</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a>, <a id="content_link" href="../FPhysicsControlNames" ><span>FPhysicsControlNames</span></a> >...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FPhysicsControlNames" ><span>FPhysicsControlNames</span></a>&amp; AllParentSpa...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TMap" ><span>TMap</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a>, <a id="content_link" href="../FPhysicsControlNames" ><span>FPhysicsControlNames</span></a> >...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FPhysicsControlNames" ><span>FPhysicsControlNames</span></a>&amp; AllBodyModif...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TMap" ><span>TMap</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a>, <a id="content_link" href="../FPhysicsControlNames" ><span>FPhysicsControlNames</span></a> >...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Components/USkeletalMeshComponent" ><span>USkeletalMeshComponent</span></a>&#42; Skelet...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../FPhysicsControlLimbSetupData" ><span>FPhysicsControlLimbSe</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FPhysicsControlData" ><span>FPhysicsControlData</span></a> WorldSpac...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FPhysicsControlSettings" ><span>FPhysicsControlSettings</span></a> World...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bEnableWorldSpaceControl...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FPhysicsControlData" ><span>FPhysicsControlData</span></a> ParentSpa...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FPhysicsControlSettings" ><span>FPhysicsControlSettings</span></a> Paren...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bEnableParentSpaceContro...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../EPhysicsMovementType" ><span>EPhysicsMovementType</span></a> PhysicsM...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const float GravityMultiplier,<br />&nbsp;&nbsp;&nbsp;&nbsp;const float PhysicsBlendWeight<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Creates a collections of controls and body modifiers for a character, based on the description passed in.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Containers/TMap" ><span>TMap</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a>,...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CreateControlsFromLimbBones"><nobr><p>CreateControlsFromLimbBones</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FPhysicsControlNames" ><span>FPhysicsControlNames</span></a>&amp; AllControls,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TMap" ><span>TMap</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a>, <a id="content_link" href="../FPhysicsControlLimbBones" ><span>FPhysicsControlL</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../EPhysicsControlType" ><span>EPhysicsControlType</span></a> ControlTy...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FPhysicsControlData" ><span>FPhysicsControlData</span></a> ControlDa...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FPhysicsControlSettings" ><span>FPhysicsControlSettings</span></a> Contr...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bEnabled<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Creates a collection of controls controlling a skeletal mesh, grouped together in limbs</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Containers/TMap" ><span>TMap</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a>,...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CreateControlsFr-_4"><nobr><p>CreateControlsFromLimbBonesAndConstraintProfile</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FPhysicsControlNames" ><span>FPhysicsControlNames</span></a>&amp; AllControls,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TMap" ><span>TMap</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a>, <a id="content_link" href="../FPhysicsControlLimbBones" ><span>FPhysicsControlL</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> ConstraintProfile,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bEnabled<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Creates a collection of ParentSpace controls controlling a skeletal mesh, grouped together in limbs, initializing them with a constraint profile</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FNam</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CreateControlsFr-_2"><nobr><p>CreateControlsFromSkeletalMesh</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Components/USkeletalMeshComponent" ><span>USkeletalMeshComponent</span></a>&#42; Skelet...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> >&amp; BoneNames,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../EPhysicsControlType" ><span>EPhysicsControlType</span></a> ControlTy...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FPhysicsControlData" ><span>FPhysicsControlData</span></a> ControlDa...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FPhysicsControlSettings" ><span>FPhysicsControlSettings</span></a> Contr...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Set,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bEnabled<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Creates a collection of controls controlling a skeletal mesh</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FNam</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CreateControlsFr-_3"><nobr><p>CreateControlsFromSkeletalMeshAndConstraintProfile</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Components/USkeletalMeshComponent" ><span>USkeletalMeshComponent</span></a>&#42; Skelet...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> >&amp; BoneNames,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> ConstraintProfile,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Set,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bEnabled<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Creates a collection of ParentSpace controls controlling a skeletal mesh, initializing them with a constraint profile</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FNam</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CreateControlsFr-_1"><nobr><p>CreateControlsFromSkeletalMeshAndConstraintProfileBelow</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Components/USkeletalMeshComponent" ><span>USkeletalMeshComponent</span></a>&#42; Skelet...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> BoneName,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bIncludeSelf,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> ConstraintProfile,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Set,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bEnabled<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Creates a collection of ParentSpace controls controlling a skeletal mesh, initializing them with a constraint profile</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FNam</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CreateControlsFr-"><nobr><p>CreateControlsFromSkeletalMeshBelow</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Components/USkeletalMeshComponent" ><span>USkeletalMeshComponent</span></a>&#42; Skelet...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> BoneName,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bIncludeSelf,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../EPhysicsControlType" ><span>EPhysicsControlType</span></a> ControlTy...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FPhysicsControlData" ><span>FPhysicsControlData</span></a> ControlDa...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FPhysicsControlSettings" ><span>FPhysicsControlSettings</span></a> Contr...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Set,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bEnabled<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Creates a collection of controls controlling a skeletal mesh</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CreateNamedBodyModifier"><nobr><p>CreateNamedBodyModifier</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Name,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Components/UMeshComponent" ><span>UMeshComponent</span></a>&#42; MeshComponent,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> BoneName,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Set,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../EPhysicsMovementType" ><span>EPhysicsMovementType</span></a> Movement...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Engine/Engine/ECollisionEnabled__Type" ><span>ECollisionEnabled::Type</span></a> Colli...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const float GravityMultiplier,<br />&nbsp;&nbsp;&nbsp;&nbsp;const float PhysicsBlendWeight,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bUseSkeletalAnimation,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bUpdateKinematicFromSimu...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Creates a new body modifier for mesh components</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CreateNamedControl"><nobr><p>CreateNamedControl</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Name,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Components/UMeshComponent" ><span>UMeshComponent</span></a>&#42; ParentMeshComp...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> ParentBoneName,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Components/UMeshComponent" ><span>UMeshComponent</span></a>&#42; ChildMeshCompo...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> ChildBoneName,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FPhysicsControlData" ><span>FPhysicsControlData</span></a> ControlDa...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FPhysicsControlTarget" ><span>FPhysicsControlTarget</span></a> Control...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FPhysicsControlSettings" ><span>FPhysicsControlSettings</span></a> Contr...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Set,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bEnabled<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Creates a new control for mesh components</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="DebugDraw"><nobr><p>DebugDraw</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/FPrimitiveDrawInterface" ><span>FPrimitiveDrawInterface</span></a>&#42; PDI<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Used by the component visualizer.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="DebugDrawControl"><nobr><p>DebugDrawControl</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/FPrimitiveDrawInterface" ><span>FPrimitiveDrawInterface</span></a>&#42; PDI,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FPhysicsControlRecord&amp; Recor...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> ControlName<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Used by the component visualizer.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="DestroyBodyModifier"><nobr><p>DestroyBodyModifier</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Name<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Destroys a BodyModifier</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="DestroyBodyModifiers"><nobr><p>DestroyBodyModifiers</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> >&amp; Names<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Destroys BodyModifiers</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="DestroyBodyModifiersInSet"><nobr><p>DestroyBodyModifiersInSet</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Set<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Destroys BodyModifiers</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="DestroyControl"><nobr><p>DestroyControl</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Name<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Destroys a control</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="DestroyControls"><nobr><p>DestroyControls</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> >&amp; Names<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Destroys all controls</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="DestroyControlsInSet"><nobr><p>DestroyControlsInSet</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Set<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Destroys all controls in a set</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetAllBodyModifierNames"><nobr><p>GetAllBodyModifierNames()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns a reference to all the body modifier names that have been created.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetAllControlNames"><nobr><p>GetAllControlNames()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns a reference to all the control names that have been created.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetBodyModifierNamesInSet"><nobr><p>GetBodyModifierNamesInSet</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Set<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns a reference to all the body modifier names that have been created and are in the specified set, which could be a limb, or a subsequently created set.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FVec...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetCachedBoneAng-"><nobr><p>GetCachedBoneAngularVelocities</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Engine/Components/USkeletalMeshComponent" ><span>USkeletalMeshComponent</span></a>&#42; ...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> >&amp; BoneNames<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Gets the angular velocities of the requested bones that will be used as targets (in world space).</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FVector</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetCachedBoneAngularVelocity"><nobr><p>GetCachedBoneAngularVelocity</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Engine/Components/USkeletalMeshComponent" ><span>USkeletalMeshComponent</span></a>&#42; ...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> BoneName<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Gets the angular velocity of the requested bone that will be used as a target (in world space).</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FRotator</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetCachedBoneOrientation"><nobr><p>GetCachedBoneOrientation</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Engine/Components/USkeletalMeshComponent" ><span>USkeletalMeshComponent</span></a>&#42; ...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> BoneName<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Gets the orientation of the requested bone that will be used as a target (in world space).</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FRot...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetCachedBoneOrientations"><nobr><p>GetCachedBoneOrientations</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Engine/Components/USkeletalMeshComponent" ><span>USkeletalMeshComponent</span></a>&#42; ...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> >&amp; BoneNames<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Gets the orientations of the requested bones that will be used as targets (in world space).</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FVector</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetCachedBonePosition"><nobr><p>GetCachedBonePosition</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Engine/Components/USkeletalMeshComponent" ><span>USkeletalMeshComponent</span></a>&#42; ...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> BoneName<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Gets the position of the requested bone that will be used as a target (in world space).</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FVec...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetCachedBonePositions"><nobr><p>GetCachedBonePositions</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Engine/Components/USkeletalMeshComponent" ><span>USkeletalMeshComponent</span></a>&#42; ...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> >&amp; BoneNames<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Gets the positions of the requested bones that will be used as targets (in world space).</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FTransform</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetCachedBoneTransform"><nobr><p>GetCachedBoneTransform</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Engine/Components/USkeletalMeshComponent" ><span>USkeletalMeshComponent</span></a>&#42; ...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> BoneName<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Gets the transforms of the requested bone that will be used as a target (in world space).</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FTra...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetCachedBoneTransforms"><nobr><p>GetCachedBoneTransforms</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Engine/Components/USkeletalMeshComponent" ><span>USkeletalMeshComponent</span></a>&#42; ...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> >&amp; BoneNames<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Gets the transforms of the requested bones that will be used as targets (in world space).</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FVec...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetCachedBoneVelocities"><nobr><p>GetCachedBoneVelocities</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Engine/Components/USkeletalMeshComponent" ><span>USkeletalMeshComponent</span></a>&#42; ...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> >&amp; BoneNames<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Gets the linear velocities of the requested bones that will be used as targets (in world space).</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FVector</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetCachedBoneVelocity"><nobr><p>GetCachedBoneVelocity</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Engine/Components/USkeletalMeshComponent" ><span>USkeletalMeshComponent</span></a>&#42; ...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> BoneName<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Gets the linear velocity of the requested bone that will be used as a target (in world space).</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetControlAutoDisable"><nobr><p>GetControlAutoDisable</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Name<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetControlData"><nobr><p>GetControlData</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Name,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FPhysicsControlData" ><span>FPhysicsControlData</span></a>&amp; ControlData<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetControlEnabled"><nobr><p>GetControlEnabled</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Name<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetControlMultiplier"><nobr><p>GetControlMultiplier</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Name,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FPhysicsControlMultiplier" ><span>FPhysicsControlMultiplier</span></a>&amp; Control...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetControlNamesInSet"><nobr><p>GetControlNamesInSet</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Set<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns a reference to all the control names that have been created and are in the specified set, which could be a limb, or a subsequently created set.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetControlTarget"><nobr><p>GetControlTarget</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Name,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FPhysicsControlTarget" ><span>FPhysicsControlTarget</span></a>&amp; ControlTarg...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Containers/TMap" ><span>TMap</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a>,...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetLimbBonesFromSkeletalMesh"><nobr><p>GetLimbBonesFromSkeletalMesh</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Components/USkeletalMeshComponent" ><span>USkeletalMeshComponent</span></a>&#42; Skelet...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../FPhysicsControlLimbSetupData" ><span>FPhysicsControlLimbSe</span></a>...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Calculates which bones belong to which limb in a skeletal mesh</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FNam</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetSetsContainingBodyModifier"><nobr><p>GetSetsContainingBodyModifier</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Control<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns the names of all sets containing the body modifier (may be empty - e.g. if it doesn't exist)</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FNam</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetSetsContainingControl"><nobr><p>GetSetsContainingControl</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Control<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns the names of all sets containing the control (may be empty - e.g. if it doesn't exist)</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ResetBodyModifie-_2"><nobr><p>ResetBodyModifiersInSetToCachedBoneTransforms</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> SetName,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../EResetToCachedTargetBehavior" ><span>EResetToCachedTargetBehavior</span></a> ...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Calls ResetBodyModifierToCachedTarget for each of the body modifiers in the set</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ResetBodyModifie-_1"><nobr><p>ResetBodyModifiersToCachedBoneTransforms</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> >&amp; Names,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../EResetToCachedTargetBehavior" ><span>EResetToCachedTargetBehavior</span></a> ...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Calls ResetBodyModifierToCachedTarget for each of the body modifiers</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ResetBodyModifie-"><nobr><p>ResetBodyModifierToCachedBoneTransform</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Name,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../EResetToCachedTargetBehavior" ><span>EResetToCachedTargetBehavior</span></a> ...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>This flags the body associated with the modifier to set (using teleport) its position and velocity to the cached animation target.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ResetControlPoint"><nobr><p>ResetControlPoint</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Name<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Resets the control point to the center of mass of the mesh</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetBodyModifierCollisionType"><nobr><p>SetBodyModifierCollisionType</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Name,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Engine/Engine/ECollisionEnabled__Type" ><span>ECollisionEnabled::Type</span></a> Colli...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the collision type for a body modifier</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetBodyModifierG-"><nobr><p>SetBodyModifierGravityMultiplier</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Name,<br />&nbsp;&nbsp;&nbsp;&nbsp;const float GravityMultiplier<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the gravity multiplier for a body modifier</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetBodyModifierK-"><nobr><p>SetBodyModifierKinematicTarget</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Name,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector KinematicTargetPositi...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FRotator KinematicTargetOrien...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bMakeKinematic<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the kinematic target transform for a body modifier.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetBodyModifierMovementType"><nobr><p>SetBodyModifierMovementType</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Name,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../EPhysicsMovementType" ><span>EPhysicsMovementType</span></a> Movement...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the movement type for a body modifier</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetBodyModifierP-"><nobr><p>SetBodyModifierPhysicsBlendWeight</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Name,<br />&nbsp;&nbsp;&nbsp;&nbsp;const float PhysicsBlendWeight<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the physics blend weight for a body modifier</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetBodyModifiersCollisionType"><nobr><p>SetBodyModifiersCollisionType</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> >&amp; Names,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Engine/Engine/ECollisionEnabled__Type" ><span>ECollisionEnabled::Type</span></a> Colli...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the collision type for body modifiers</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetBodyModifiers-_2"><nobr><p>SetBodyModifiersGravityMultiplier</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> >&amp; Names,<br />&nbsp;&nbsp;&nbsp;&nbsp;const float GravityMultiplier<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the gravity multiplier for body modifiers</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetBodyModifiers-_1"><nobr><p>SetBodyModifiersInSetCollisionType</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Set,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Engine/Engine/ECollisionEnabled__Type" ><span>ECollisionEnabled::Type</span></a> Colli...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the collision type for body modifiers</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetBodyModifiers-_3"><nobr><p>SetBodyModifiersInSetGravityMultiplier</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Set,<br />&nbsp;&nbsp;&nbsp;&nbsp;const float GravityMultiplier<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the gravity multiplier for body modifiers</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetBodyModifiers-"><nobr><p>SetBodyModifiersInSetMovementType</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Set,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../EPhysicsMovementType" ><span>EPhysicsMovementType</span></a> Movement...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the movement type for body modifiers</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetBodyModifiers-_5"><nobr><p>SetBodyModifiersInSetPhysicsBlendWeight</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Set,<br />&nbsp;&nbsp;&nbsp;&nbsp;const float PhysicsBlendWeight<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the physics blend weight for body modifiers</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetBodyModifiers-_9"><nobr><p>SetBodyModifiersInSetUpdateKinematicFromSimulation</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Set,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bUpdateKinematicFromSimu...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets whether body modifiers should update kinematics from the simulation results</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetBodyModifiers-_7"><nobr><p>SetBodyModifiersInSetUseSkeletalAnimation</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Set,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bUseSkeletalAnimation<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets whether body modifiers should use skeletal animation for their kinematic targets</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetBodyModifiersMovementType"><nobr><p>SetBodyModifiersMovementType</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> >&amp; Names,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../EPhysicsMovementType" ><span>EPhysicsMovementType</span></a> Movement...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the movement type for body modifiers</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetBodyModifiers-_4"><nobr><p>SetBodyModifiersPhysicsBlendWeight</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> >&amp; Names,<br />&nbsp;&nbsp;&nbsp;&nbsp;const float PhysicsBlendWeight<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the physics blend weight for body modifiers</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetBodyModifiers-_8"><nobr><p>SetBodyModifiersUpdateKinematicFromSimulation</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> >&amp; Names,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bUpdateKinematicFromSimu...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets whether body modifiers should update kinematics from the simulation results</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetBodyModifiers-_6"><nobr><p>SetBodyModifiersUseSkeletalAnimation</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> >&amp; Names,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bUseSkeletalAnimation<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets whether body modifiers should use skeletal animation for their kinematic targets</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetBodyModifierU-_1"><nobr><p>SetBodyModifierUpdateKinematicFromSimulation</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Name,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bUpdateKinematicFromSimu...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets whether a body modifier should update kinematics from the simulation results</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetBodyModifierU-"><nobr><p>SetBodyModifierUseSkeletalAnimation</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Name,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bUseSkeletalAnimation<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets whether a body modifier should use skeletal animation for its kinematic targets</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetCachedBoneData"><nobr><p>SetCachedBoneData</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Engine/Components/USkeletalMeshComponent" ><span>USkeletalMeshComponent</span></a>&#42; ...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> BoneName,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FTransform&amp; TM,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector Velocity,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector AngularVelocity<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>This allows the caller to override the target that will have been calculated and cached at the start of the Physics Control Component update.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetControlAngularData"><nobr><p>SetControlAngularData</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Name,<br />&nbsp;&nbsp;&nbsp;&nbsp;const float Strength,<br />&nbsp;&nbsp;&nbsp;&nbsp;const float DampingRatio,<br />&nbsp;&nbsp;&nbsp;&nbsp;const float ExtraDamping,<br />&nbsp;&nbsp;&nbsp;&nbsp;const float MaxTorque,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bEnableControl<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Modifies an existing control's angular data - i.e. the strengths etc of the control driving towards the target</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetControlAutoDisable"><nobr><p>SetControlAutoDisable</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Name,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bAutoDisable<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetControlData"><nobr><p>SetControlData</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Name,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FPhysicsControlData" ><span>FPhysicsControlData</span></a> ControlDa...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bEnableControl<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Modifies an existing control data - i.e. the strengths etc of the control driving towards the target</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetControlDatas"><nobr><p>SetControlDatas</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> >&amp; Names,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FPhysicsControlData" ><span>FPhysicsControlData</span></a> ControlDa...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bEnableControl<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Modifies existing control data - i.e. the strengths etc of the controls driving towards the targets</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetControlDatasInSet"><nobr><p>SetControlDatasInSet</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Set,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FPhysicsControlData" ><span>FPhysicsControlData</span></a> ControlDa...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bEnableControl<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Modifies existing control data - i.e. the strengths etc of the controls driving towards the targets</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetControlDisableCollision"><nobr><p>SetControlDisableCollision</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Name,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bDisableCollision<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetControlEnabled"><nobr><p>SetControlEnabled</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Name,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bEnable<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Activates or deactivates a control</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetControlLinearData"><nobr><p>SetControlLinearData</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Name,<br />&nbsp;&nbsp;&nbsp;&nbsp;const float Strength,<br />&nbsp;&nbsp;&nbsp;&nbsp;const float DampingRatio,<br />&nbsp;&nbsp;&nbsp;&nbsp;const float ExtraDamping,<br />&nbsp;&nbsp;&nbsp;&nbsp;const float MaxForce,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bEnableControl<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Modifies an existing control's linear data - i.e. the strengths etc of the control driving towards the target</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetControlMultiplier"><nobr><p>SetControlMultiplier</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Name,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FPhysicsControlMultiplier" ><span>FPhysicsControlMultiplier</span></a> Con...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bEnableControl<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Modifies an existing control data using the multipliers</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetControlMultipliers"><nobr><p>SetControlMultipliers</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> >&amp; Names,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FPhysicsControlMultiplier" ><span>FPhysicsControlMultiplier</span></a> Con...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bEnableControl<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Modifies existing control data using the multipliers</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetControlMultipliersInSet"><nobr><p>SetControlMultipliersInSet</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Set,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FPhysicsControlMultiplier" ><span>FPhysicsControlMultiplier</span></a> Con...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bEnableControl<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Modifies existing control data using the multipliers</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetControlPoint"><nobr><p>SetControlPoint</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Name,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector Position<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the point at which controls will "push" the child object.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetControlsAutoDisable"><nobr><p>SetControlsAutoDisable</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> >&amp; Names,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bAutoDisable<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetControlsDisableCollision"><nobr><p>SetControlsDisableCollision</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> >&amp; Names,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bDisableCollision<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetControlsEnabled"><nobr><p>SetControlsEnabled</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> >&amp; Names,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bEnable<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Activates or deactivates controls</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetControlsInSetAutoDisable"><nobr><p>SetControlsInSetAutoDisable</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Set,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bAutoDisable<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetControlsInSet-_1"><nobr><p>SetControlsInSetDisableCollision</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Set,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bDisableCollision<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetControlsInSetEnabled"><nobr><p>SetControlsInSetEnabled</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Set,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bEnable<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Activates or deactivates controls</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetControlsInSet-"><nobr><p>SetControlsInSetUseSkeletalAnimation</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Set,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bUseSkeletalAnimation,<br />&nbsp;&nbsp;&nbsp;&nbsp;const float SkeletalAnimationVeloci...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets whether or not the controls should use skeletal animation for the targets</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetControlsUseSk-"><nobr><p>SetControlsUseSkeletalAnimation</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> >&amp; Names,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bUseSkeletalAnimation,<br />&nbsp;&nbsp;&nbsp;&nbsp;const float SkeletalAnimationVeloci...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets whether or not the controls should use skeletal animation for the targets</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetControlTarget"><nobr><p>SetControlTarget</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Name,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FPhysicsControlTarget" ><span>FPhysicsControlTarget</span></a> Control...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bEnableControl<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Modifies an existing control target - i.e. what it is driving towards, relative to the parent object</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetControlTargetOrientation"><nobr><p>SetControlTargetOrientation</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Name,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FRotator Orientation,<br />&nbsp;&nbsp;&nbsp;&nbsp;const float AngularVelocityDeltaTim...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bEnableControl,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bApplyControlPointToTarg...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Modifies an existing control target - i.e. what it is driving towards, relative to the parent object</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetControlTargetOrientations"><nobr><p>SetControlTargetOrientations</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> >&amp; Names,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FRotator Orientation,<br />&nbsp;&nbsp;&nbsp;&nbsp;const float AngularVelocityDeltaTim...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bEnableControl,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bApplyControlPointToTarg...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Calls SetControlTargetOrientation for each of the control names</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetControlTarget-_6"><nobr><p>SetControlTargetOrientationsFromArray</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> >&amp; Names,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FRotator >&amp; Orientat...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const float VelocityDeltaTime,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bEnableControl,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bApplyControlPointToTarg...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Calls SetControlTargetPosition for each element of the control names and positions.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetControlTarget-_4"><nobr><p>SetControlTargetOrientationsInSet</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> SetName,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FRotator Orientation,<br />&nbsp;&nbsp;&nbsp;&nbsp;const float AngularVelocityDeltaTim...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bEnableControl,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bApplyControlPointToTarg...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Calls SetControlTargetOrientation for each of the controls in the set</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetControlTargetPoses"><nobr><p>SetControlTargetPoses</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Name,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector ParentPosition,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FRotator ParentOrientation,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector ChildPosition,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FRotator ChildOrientation,<br />&nbsp;&nbsp;&nbsp;&nbsp;const float VelocityDeltaTime,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bEnableControl<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Calculates and sets an existing control target.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetControlTargetPosition"><nobr><p>SetControlTargetPosition</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Name,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector Position,<br />&nbsp;&nbsp;&nbsp;&nbsp;const float VelocityDeltaTime,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bEnableControl,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bApplyControlPointToTarg...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Modifies an existing control target - i.e. what it is driving towards, relative to the parent object</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetControlTarget-"><nobr><p>SetControlTargetPositionAndOrientation</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Name,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector Position,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FRotator Orientation,<br />&nbsp;&nbsp;&nbsp;&nbsp;const float VelocityDeltaTime,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bEnableControl,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bApplyControlPointToTarg...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Modifies an existing control target - i.e. what it is driving towards, relative to the parent object</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetControlTargetPositions"><nobr><p>SetControlTargetPositions</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> >&amp; Names,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector Position,<br />&nbsp;&nbsp;&nbsp;&nbsp;const float VelocityDeltaTime,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bEnableControl,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bApplyControlPointToTarg...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Calls SetControlTargetPosition for each of the control names</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetControlTarget-_1"><nobr><p>SetControlTargetPositionsAndOrientations</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> >&amp; Names,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector Position,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FRotator Orientation,<br />&nbsp;&nbsp;&nbsp;&nbsp;const float VelocityDeltaTime,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bEnableControl,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bApplyControlPointToTarg...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Calls SetControlTargetPositionAndOrientation for each of the control names</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetControlTarget-_7"><nobr><p>SetControlTargetPositionsAndOrientationsFromArray</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> >&amp; Names,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FVector >&amp; Positions,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FRotator >&amp; Orientat...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const float VelocityDeltaTime,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bEnableControl,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bApplyControlPointToTarg...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Calls SetControlTargetPositionAndOrientation for each element of the control names, positions and orientations.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetControlTarget-_2"><nobr><p>SetControlTargetPositionsAndOrientationsInSet</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> SetName,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector Position,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FRotator Orientation,<br />&nbsp;&nbsp;&nbsp;&nbsp;const float VelocityDeltaTime,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bEnableControl,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bApplyControlPointToTarg...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Calls SetControlTargetPositionAndOrientation for each control in the set</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetControlTarget-_5"><nobr><p>SetControlTargetPositionsFromArray</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> >&amp; Names,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FVector >&amp; Positions,<br />&nbsp;&nbsp;&nbsp;&nbsp;const float VelocityDeltaTime,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bEnableControl,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bApplyControlPointToTarg...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Calls SetControlTargetPosition for each element of the control names and positions.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetControlTarget-_3"><nobr><p>SetControlTargetPositionsInSet</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> SetName,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector Position,<br />&nbsp;&nbsp;&nbsp;&nbsp;const float VelocityDeltaTime,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bEnableControl,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bApplyControlPointToTarg...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Calls SetControlTargetPosition for each of the controls in the set</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetControlTargets"><nobr><p>SetControlTargets</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> >&amp; Names,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FPhysicsControlTarget" ><span>FPhysicsControlTarget</span></a> Control...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bEnableControl<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Modifies existing control targets - i.e. what they are driving towards, relative to the parent objects</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetControlTargetsInSet"><nobr><p>SetControlTargetsInSet</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Set,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FPhysicsControlTarget" ><span>FPhysicsControlTarget</span></a> Control...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bEnableControl<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Modifies existing control targets - i.e. what they are driving towards, relative to the parent objects</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetControlUseSke-"><nobr><p>SetControlUseSkeletalAnimation</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> Name,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bUseSkeletalAnimation,<br />&nbsp;&nbsp;&nbsp;&nbsp;const float SkeletalAnimationVeloci...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets whether or not the control should use skeletal animation for the targets</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UpdateControls"><nobr><p>UpdateControls</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float DeltaTime<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Allows manual ticking so that your code can run in between updating the target caches and updating the controls and body modifiers.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UpdateSpriteTexture"><nobr><p>UpdateSpriteTexture()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UpdateTargetCaches"><nobr><p>UpdateTargetCaches</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float DeltaTime<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Allows manual ticking so that your code can run in between updating the target caches and updating the controls.</p>
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'functions_2');">
+        <p>Overridden from UActorComponent</p>
+    </div>
+<div id="functions_2">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:8%;">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="InitializeComponent"><nobr><p>InitializeComponent()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Initializes the component.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnRegister"><nobr><p>OnRegister()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Called when a component is registered, after Scene is set, but before CreateRenderState_Concurrent or OnCreatePhysicsState are called.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="TickComponent"><nobr><p>TickComponent</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float DeltaTime,<br />&nbsp;&nbsp;&nbsp;&nbsp;enum ELevelTick TickType,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Engine/FActorComponentTickFunction" ><span>FActorComponentTickFunction</span></a>&#42; T...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Function called every frame on this ActorComponent.</p>
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'functions_3');">
+        <p>Overridden from UObject</p>
+    </div>
+<div id="functions_3">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:8%;">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="BeginDestroy"><nobr><p>BeginDestroy()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Called before destroying the object.</p>
+	</td>
+</tr>
+	</table>
+</div>
+
+</div>
+</div>
+																	</div>
+					<!-- End of Markdown converted page content -->
+				</div>
+												<div id="recommendations"></div>			</div>
+						<div id="footer"></div>			
+									<div id="announcement">
+			<div style="display:inline-block;margin:5px;">
+				Help shape the future of Unreal Engine documentation! Tell us how we're doing so we can serve you better.
+			</div>
+			<div style="margin:5px;display:inline-block;">
+				<div class="btn action" style="margin-top:-6px;display:inline-block;" onclick="$('#announcement').hide();window.open('https://epicgames.questionpro.com/t/AVVbJZwedR');createCookie('announcement-read', new Date().getTime(), 30);">Take our survey</div>
+				<div class="btn btn-default" style="margin-top:-6px;display:inline-block;" onclick="$('#announcement').hide();createCookie('announcement-read', new Date().getTime(), 30);">Cancel</div>
+			</div>
+			<div class="btn-close" style="position:absolute;right:5px;top:10px;padding:3px;width:14px;height:14px;" onclick="$('#announcement').hide();"></div>
+			</div>
+					</div>
+	</div>
+</body>
+</html>

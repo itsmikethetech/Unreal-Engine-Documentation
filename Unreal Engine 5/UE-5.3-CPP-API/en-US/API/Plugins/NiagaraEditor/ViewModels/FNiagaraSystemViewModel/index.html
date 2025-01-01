@@ -1,0 +1,2567 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="./../../../../../../Include/Javascript/common_en-US.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var time = new Date(0);
+		var preview = false;
+		var relativeHTMLPath = "./../../../../../../";
+				var pageid = 0;
+				var heroimage = "./../../../../../../Images/ue5-hero.png";
+				var lang = "en-US";
+				var basePath = document.location.pathname.substring(0, document.location.pathname.indexOf('/' + lang + '/') + lang.length + 1);
+		document.write('<base href="' +  encodeURI(basePath) + '/API/Plugins/NiagaraEditor/ViewModels/FNiagaraSystemViewModel/" />');
+				var udnCSS = './../../../../../../Include/CSS/udn_public.css';
+		var udnLangCSS = '';
+				var udnOverrideCSS = './../../../../../../Include/CSS/skin_overrides.css';
+		var udnOverrideDarkCSS = './../../../../../../Include/CSS/skin_overrides_dark.css';
+		var fancyboxCSS = './../../../../../../Include/CSS/jquery.fancybox.css';
+		var jqueryuiCSS = './../../../../../../Include/CSS/jquery-ui.min.css';
+		var qtipCSS = './../../../../../../Include/CSS/jquery.qtip.css';
+		var prettifyCSS = './../../../../../../Include/CSS/prettify.css';
+		var navbarCSS = './../../../../../../Include/CSS/navBar.css';
+		var twentytwentyCSS = './../../../../../../Include/CSS/twentytwenty.css';
+		var recommendationsCSS = './../../../../../../Include/CSS/jquery.recommendations.css';
+	</script>
+    <title>FNiagaraSystemViewModel | Unreal Engine 5.2 Documentation</title>
+    	    <meta name=viewport content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Cache-control" content="no-store">
+    <script  src="./../../../../../../Include/Javascript/CustomEvent.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/jquery-3.4.0.min.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/udn.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/udn_extras.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/jquery-ui.min.js" type="text/javascript"></script>
+	    <script  src="./../../../../../../Include/Javascript/informational.js" type="text/javascript"></script>
+	    <script  src="./../../../../../../Include/Javascript/jquery.fancybox.pack.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/jquery.qtip.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/prettify.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/jquery.slimscroll.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/jquery.event.move.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/jquery.twentytwenty.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/lazysizes.min.js" type="text/javascript"></script>
+	    <script  src="./../../../../../../Include/Javascript/jquery.recommendations.js" type="text/javascript"></script>
+	
+    <link async rel="icon" href="./../../../../../../Include/Images/site_icon.png" type="image/x-icon" />
+    <link async rel="shortcut icon" href="./../../../../../../Include/Images/site_icon.png" type="image/x-icon" />
+    <link async href="./../../../../../../Include/Images/touch_icon.png" rel="apple-touch-icon" />
+    <link async href="./../../../../../../Include/Images/touch_icon_114.png" sizes="114x114" rel="apple-touch-icon" />    
+		<script  src="./../../../../../../Include/Javascript/CollapsibleLists.js" type="text/javascript"></script>
+	<script  src="./../../../../../../Include/Javascript/navigationBarUI.js"></script>
+	<script  src="./../../../../../../Include/Javascript/navigationBar.js"></script>
+		
+	<link rel="alternate" href="https://docs.unrealengine.com/latest/en-US/API/Plugins/NiagaraEditor/ViewModels/FNiagaraSystemViewModel/" hreflang="x-default" />
+
+	<meta name="title" content="FNiagaraSystemViewModel" />
+<meta name="description" content="A view model for viewing and editing a [UNiagaraSystem](API\Plugins\Niagara\UNiagaraSystem)." />
+<meta name="availability" content="Public" />
+<meta name="crumbs" content="%ROOT%,API,API/Plugins,API/Plugins/NiagaraEditor,API/Plugins/NiagaraEditor/ViewModels" />
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta property="og:title" content="FNiagaraSystemViewModel" />
+	<meta property="og:description" content="A view model for viewing and editing a [UNiagaraSystem](API\Plugins\Niagara\UNiagaraSystem)." />
+		<meta property="og:image" content="https://docs.unrealengine.com/5.1/Images/placeholder-social.png" />
+	</head>
+<body id="webbgThree" style="visibility: hidden;" onload="document.body.style.visibility='visible';">
+			<script>window.__tracking_base = 'https://tracking.unrealengine.com';</script>
+	<script src="https://tracking.unrealengine.com/tracking.js" async></script>    <div id="webThree">
+				<div id="page_head">
+						<div id="head">
+				<div id="logo"></div>
+			</div>
+						<div id="pagenav">
+				<div class="crumbs" id="crumbs">
+<span id="versionContainer">
+	<span id="versionSelect" class="btn btn-version" onclick="ToggleMenu($('#versionMenu'), $(this));"></span>
+	<div id="versionMenu">
+		<div id="4_26" data-version="4.26" class="btn btn-select" onclick="createCookie('version', '4.26', 365);SwitchVersion('4.26');">Unreal Engine 4.26 Documentation</div>
+		<div id="4_27" data-version="4.27" class="btn btn-select" onclick="createCookie('version', '4.27', 365);SwitchVersion('4.27');">Unreal Engine 4.27 Documentation</div>
+		<div id="5_0" data-version="5.0" class="btn btn-select" onclick="createCookie('version', '5.0', 365);SwitchVersion('5.0');">Unreal Engine 5.0 Documentation</div>
+		<div id="5_1" data-version="5.1" class="btn btn-select" onclick="createCookie('version', '5.1', 365);SwitchVersion('5.1');">Unreal Engine 5.1 Documentation</div>
+		<div id="5_2" data-version="5.2" class="btn btn-select" onclick="createCookie('version', '5.2', 365);SwitchVersion('5.2');">Unreal Engine 5.2 Documentation</div>
+		<div id="5_3" data-version="5.3" class="btn btn-select" onclick="createCookie('version', '5.3', 365);SwitchVersion('5.3');">Unreal Engine 5.3 Documentation</div>
+	</div>
+</span>
+	<span class="separator">></span> <a id="parent_link" href="../../../../../API">Unreal Engine API Reference</a>
+
+	<span class="separator">></span> <a id="parent_link" href="../../../../Plugins">Plugins</a>
+
+	<span class="separator">></span> <a id="parent_link" href="../../../NiagaraEditor">NiagaraEditor</a>
+
+	<span class="separator">></span> <a id="parent_link" href="../../ViewModels">ViewModels</a>
+
+<span class="separator">></span> <span id="page">FNiagaraSystemViewModel</span>
+</div>				<div id="pageNavRight">
+								<!-- Start of Search -->
+												<div id="search_container">
+					<form name="bodySearch" method="get" action="https://www.unrealengine.com/en-US/bing-search" onsubmit="return validateSearch()">
+						<input type="image" src="./../../../../../../Include/Images/search_box_icon.png" class="searchbutton"/>
+						<input type="hidden" name="filter" value="Documentation" />
+						<input type="text" name="keyword" placeholder="Search Documentation..." class="searchbox" autocomplete="off"/>
+					</form>
+				</div>
+								<!-- End of Search -->
+				<div id="skinContainer">
+	<div id="skinSelect" class="btn btn-skin" onclick="ToggleMenu($('#skinMenu'), $(this));"></div>
+	<div id="skinMenu">
+		<div id="light" class="btn btn-select" onclick="createCookie('skin', 'light', 365);location.reload();">Light Theme</div>
+		<div id="dark" class="btn btn-select" onclick="createCookie('skin', 'dark', 365);location.reload();">Dark Theme</div>
+	</div>
+</div>				</div>
+			</div>
+		</div>						<div id="navWrapper">
+			<div id="nav-filter-container">
+				<div id="nav-filter-inner">
+					<form>
+						<input type="text" placeholder="Filter pages..." id="nav-filter" onchange="clearTimeout(filterTimer); filterTimer = setTimeout(updateNavTreeFilter,250, this.value);if(this.value.length == 0){$('#filter-clear').hide();}else{$('#filter-clear').show();}" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" />
+						<button class="close-icon" id="filter-clear" type="reset" onclick="clearTimeout(filterTimer); filterTimer = setTimeout(updateNavTreeFilter,250, '');$(this).hide();"></button>
+					</form>
+				</div>
+			</div>
+			<nav id="navPanel">
+			</nav>
+			<div id="navigation" title="Click to toggle navigation menu"><span>></span></div>
+		</div>		
+		<div id="splitter">
+		</div>
+				<div id="contentContainer">
+										<div id="pagedefault">
+				<div id="product-banner">
+	<div id="product-logo"></div>
+</div>				<div id="pagecontainer" style="padding-right:0px;">
+					<!-- Start of Markdown converted page content -->
+										<div class="hero  background">
+	<div class="imgContainer"><img src="./../../../../../../Images/ue5-hero.png" /></div>	<div class="info">
+		<div id="pageTitle">
+			<h1 id="H1TitleId">FNiagaraSystemViewModel</h1>
+		</div>
+		<h2 >A view model for viewing and editing a [UNiagaraSystem](API\Plugins\Niagara\UNiagaraSystem).</h2>
+		<div id="access">
+			<div class="accessContainer">
+															</div>
+		</div>
+	</div>
+</div>															<div id="maincol">
+																																				<div class="heading expanded" onclick="sectionOnClick(this, 'hierarchy');">
+        <p>Inheritance Hierarchy</p>
+    </div>
+<div id="hierarchy">
+    <div class="hierarchy">
+	<table  class="hierarchy-table" cellspacing="0" id="hrch"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../../../../Runtime/Core/Templates/TSharedFromThis"><p>TSharedFromThis</p></a></td></tr><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../../../../Runtime/CoreUObject/UObject/FGCObject"><p>FGCObject</p></a></td></tr><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../../../../Editor/UnrealEd/FEditorUndoClient"><p>FEditorUndoClient</p></a></td></tr><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../../../../Editor/UnrealEd/FTickableEditorObject"><p>FTickableEditorObject</p></a></td></tr><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../TNiagaraViewModelManager"><p>TNiagaraViewModelManager</p></a></td></tr><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../INiagaraParamete-"><p>INiagaraParameterDefinitionsSubscriberViewModel</p></a><table  class="hierarchy-table" cellspacing="0" id="hrch_6"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><p>FNiagaraSystemViewModel</p>
+</td></tr></table></td></tr></table>
+</div>
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'references');">
+        <p>References</p>
+    </div>
+<div id="references">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="normal-row">
+	<td class="name-cell">
+		<p>Module</p>
+	</td>
+	<td class="desc-cell">
+		<p><a id="content_link" href="../.." ><span>NiagaraEditor</span></a></p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<p>Header</p>
+	</td>
+	<td class="desc-cell">
+		<p>&#47;Engine&#47;Plugins&#47;FX&#47;Niagara&#47;Source&#47;NiagaraEditor&#47;Public&#47;ViewModels&#47;NiagaraSystemViewModel.h</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<p>Include</p>
+	</td>
+	<td class="desc-cell">
+		<p>&#35;include &quot;ViewModels&#47;NiagaraSystemViewModel.h&quot;</p>
+	</td>
+</tr>
+			</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'syntax');">
+        <p>Syntax</p>
+    </div>
+<div id="syntax">
+    <div class="simplecode_api">
+	<p>class FNiagaraSystemViewModel :<br />&nbsp;&nbsp;&nbsp;&nbsp;public <a id="content_link" href="../../../../Runtime/Core/Templates/TSharedFromThis" ><span>TSharedFromThis&lt; FNiagaraSystemViewModel ></span></a>,<br />&nbsp;&nbsp;&nbsp;&nbsp;public <a id="content_link" href="../../../../Runtime/CoreUObject/UObject/FGCObject" ><span>FGCObject</span></a>,<br />&nbsp;&nbsp;&nbsp;&nbsp;public <a id="content_link" href="../../../../Editor/UnrealEd/FEditorUndoClient" ><span>FEditorUndoClient</span></a>,<br />&nbsp;&nbsp;&nbsp;&nbsp;public <a id="content_link" href="../../../../Editor/UnrealEd/FTickableEditorObject" ><span>FTickableEditorObject</span></a>,<br />&nbsp;&nbsp;&nbsp;&nbsp;public <a id="content_link" href="../TNiagaraViewModelManager" ><span>TNiagaraViewModelManager&lt; UNiagaraSystem, FNiagaraSystemViewModel ></span></a>,<br />&nbsp;&nbsp;&nbsp;&nbsp;public <a id="content_link" href="../INiagaraParamete-" ><span>INiagaraParameterDefinitionsSubscriberViewModel</span></a>  </p>
+</div>
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'description');">
+        <p>Remarks</p>
+    </div>
+<div id="description">
+    <p>A view model for viewing and editing a <a id="content_link" href="../../../Niagara/UNiagaraSystem" ><span>UNiagaraSystem</span></a>.</p>
+</div><div class="syntax">
+	<div class="heading expanded" onclick="sectionOnClick(this, 'variables');">
+        <p>Variables</p>
+    </div>
+<div id="variables">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:8%">
+			</th>
+			<th class="type-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:15%">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Niagara/ENiagaraStatDisplayMode" ><span>ENiagaraStatDis</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="StatDisplayMode"><p>StatDisplayMode</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Niagara/ENiagaraStatEvaluationType" ><span>ENiagaraStatEva</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="StatEvaluationType"><p>StatEvaluationType</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'constructor');">
+        <p>Constructors</p>
+    </div>
+<div id="constructor">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="__ctor"><nobr><p>FNiagaraSystemViewModel()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Creates a new view model with the supplied System and System instance.</p>
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'destructor');">
+        <p>Destructors</p>
+    </div>
+<div id="destructor">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="__dtor"><nobr><p>~FNiagaraSystemViewModel()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'functions_0');">
+        <p>Functions</p>
+    </div>
+<div id="functions_0">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:8%;">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Templates/TSharedPtr" ><span>TSharedPtr</span></a>&lt; ...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="AddEmitter/2"><nobr><p>AddEmitter</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Niagara/UNiagaraEmitter" ><span>UNiagaraEmitter</span></a>&amp; Emitter,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../../Runtime/Core/Misc/FGuid" ><span>FGuid</span></a> EmitterVersion<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Adds a new emitter to the System.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Templates/TSharedPtr" ><span>TSharedPtr</span></a>&lt; ...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="AddEmitter/1"><nobr><p>AddEmitter</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Niagara/FVersionedNiagaraEmitter" ><span>FVersionedNiagaraEmitter</span></a>&amp; Em...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Adds a new emitter to the System.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Templates/TSharedPtr" ><span>TSharedPtr</span></a>&lt; ...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="AddEmitterFromAs-"><nobr><p>AddEmitterFromAssetData</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/CoreUObject/AssetRegistry/FAssetData" ><span>FAssetData</span></a>&amp; AssetData<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Adds a new emitter to the System from an emitter asset data.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Templates/TSharedPtr" ><span>TSharedPtr</span></a>&lt; ...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="AddEmptyEmitter"><nobr><p>AddEmptyEmitter()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Adds an empty emitter to the system.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Misc/FGuid" ><span>FGuid</span></a></p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="AddMessage"><nobr><p>AddMessage</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../UNiagaraMessageData" ><span>UNiagaraMessageData</span></a>&#42; NewMessag...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Add a serialized message to the Emitter/System this viewmodel is managing.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Misc/FGuid" ><span>FGuid</span></a></p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="AddStackMessage"><nobr><p>AddStackMessage</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../UNiagaraMessageData" ><span>UNiagaraMessageData</span></a>&#42; NewMessag...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../UNiagaraNodeFunctionCall" ><span>UNiagaraNodeFunctionCall</span></a>&#42; Targ...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Add a serialized message to the target function call node inside a script this viewmodel is managing.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ChangeEmitterVersion"><nobr><p>ChangeEmitterVersion</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Niagara/FVersionedNiagaraEmitter" ><span>FVersionedNiagaraEmitter</span></a>&amp; Em...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/Core/Misc/FGuid" ><span>FGuid</span></a>&amp; NewVersion<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Changes the version of an existing emitter in the system</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="Cleanup"><nobr><p>Cleanup()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Act as if the system has been fully destroyed although references might persist.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ClearEmitterStats"><nobr><p>ClearEmitterStats()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Clear the captures stats for all the emitters in the current system.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CompileSystem"><nobr><p>CompileSystem</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bForce<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Compiles the spawn and update scripts.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="DeleteEmitters"><nobr><p>DeleteEmitters</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../../Runtime/Core/Containers/TSet" ><span>TSet</span></a>&lt; <a id="content_link" href="../../../../Runtime/Core/Misc/FGuid" ><span>FGuid</span></a> > EmitterHandleIdsToDel...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Deletes the emitters with the supplied ids from the system</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="DisableEmitters"><nobr><p>DisableEmitters</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../../Runtime/Core/Misc/FGuid" ><span>FGuid</span></a> > EmitterHandlesIdsTo...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Disable the supplied emitters.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="DisableSelectedE-"><nobr><p>DisableSelectedEmitters()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="DismissMessageAn-"><nobr><p>DismissMessageAndRefresh</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Niagara/FNiagaraMessageSourceAndStore" ><span>FNiagaraMessageSourceAndStore</span></a> Messa...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../../Runtime/Core/Misc/FGuid" ><span>FGuid</span></a> MessageKey<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="DumpToText"><nobr><p>DumpToText</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; ExportText<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Export the current state of the system to text.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="DuplicateEmitters"><nobr><p>DuplicateEmitters</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="FEmitterHandleTo-" ><span>FEmitterHandleToDuplicate</span></a> >...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Duplicates a set of emitters and refreshes everything.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FocusTab"><nobr><p>FocusTab</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../../Runtime/Core/UObject/FName" ><span>FName</span></a> TabName,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bDrawAttention<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../UNiagaraGraph" ><span>UNia</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetAllGraphs"><nobr><p>GetAllGraphs()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Utility method to gather all graphs.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetCanModifyEmit-"><nobr><p>GetCanModifyEmittersFromTimeline()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Gets whether or not emitters can be added from the timeline.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../UNiagaraCurveSelectionViewModel" ><span>UNiagaraCurv</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetCurveSelectio-"><nobr><p>GetCurveSelectionViewModel()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Internationalization/FText" ><span>FText</span></a></p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetDisplayName"><nobr><p>GetDisplayName()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../UNiagaraSystemEditorDocumentsVie-" ><span>UNiagaraSyst</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetDocumentViewModel"><nobr><p>GetDocumentViewModel()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../ENiagaraSystemViewModelEditMode" ><span>ENiagaraSyst</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetEditMode"><nobr><p>GetEditMode()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Gets the current editing mode for this system view model.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../UNiagaraSystemEditorData" ><span>UNiagaraSyst</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetEditorData"><nobr><p>GetEditorData()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Gets editor specific data which can be stored per system.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../UNiagaraEditorParametersAdapter" ><span>UNiagaraEdit</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetEditorOnlyPar-"><nobr><p>GetEditorOnlyParametersAdapter()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Helper to get the current System or Emitter's EditorParameters.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Templates/TSharedPtr" ><span>TSharedPtr</span></a>&lt; ...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetEmitterHandle-_1"><nobr><p>GetEmitterHandleViewModelById</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../../Runtime/Core/Misc/FGuid" ><span>FGuid</span></a> InEmitterHandleId<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Gets an emitter handle view model by ID. Returns an invalid shared ptr if it can't be found.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Templates/TSharedPtr" ><span>TSharedPtr</span></a>&lt; ...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetEmitterHandle-_2"><nobr><p>GetEmitterHandleViewModelForEmitter</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Niagara/FVersionedNiagaraEmitter" ><span>FVersionedNiagaraEmitter</span></a>&amp; In...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Gets an emitter handle view model for the given emitter.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetEmitterHandle-"><nobr><p>GetEmitterHandleViewModels()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Gets an array of the view models for the emitter handles owned by this System.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../FNiagaraGraphParameterReference" ><span>FNia</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetGraphParamete-"><nobr><p>GetGraphParameterReferences</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Niagara/FNiagaraVariable" ><span>FNiagaraVariable</span></a>&amp; Parameter,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../ENiagaraGetGraphParameterReferen-" ><span>ENiagaraGetGraphParameterReferences</span></a>...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Utility method to gather graph parameter references</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetIsEmitterPinned"><nobr><p>GetIsEmitterPinned</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../../Runtime/Core/Templates/TSharedRef" ><span>TSharedRef</span></a>&lt; <a id="content_link" href="../FNiagaraEmitterHandleViewModel" ><span>FNiagaraEmitterHandleVi</span></a>...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Checks whether or not an emitter is pinned in the stack UI</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetIsForDataProc-"><nobr><p>GetIsForDataProcessingOnly()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Gets whether or not this view model is for data processing only and will not be displayed in the UI.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Niagara/ENiagaraScriptCompileStatus" ><span>ENiagaraScri</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetLatestCompile-"><nobr><p>GetLatestCompileStatus()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Get the latest status of this view-model's script compilation.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Misc/FGuid" ><span>FGuid</span></a></p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetMessageLogGuid"><nobr><p>GetMessageLogGuid()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Get the Guid Key for messages associated with this asset.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="FOnPinnedEmitter-" ><span>FOnPinnedEmi</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetOnPinnedEmitt-"><nobr><p>GetOnPinnedEmittersChanged()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns a multicast delegate that is broadcast when an emitter pinned state has changed</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetOrderedScript-_1"><nobr><p>GetOrderedScriptsForEmitter</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Niagara/FVersionedNiagaraEmitter" ><span>FVersionedNiagaraEmitter</span></a>&amp; Em...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Niagara/UNiagaraScript" ><span>UNiagaraScript</span></a>&#42; >&amp; Ou...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Gets all non-event scripts which will execute for an emitter.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetOrderedScript-"><nobr><p>GetOrderedScriptsForEmitterHandleId</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../../Runtime/Core/Misc/FGuid" ><span>FGuid</span></a> EmitterHandleId,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Niagara/UNiagaraScript" ><span>UNiagaraScript</span></a>&#42; >&amp; Ou...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Get all non-event scripts which will execute for an emitter.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Templates/TSharedPtr" ><span>TSharedPtr</span></a>&lt; ...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetOverviewGraph-"><nobr><p>GetOverviewGraphViewModel()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Gets the ViewModel for the system overview graph.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../INiagaraParameterPanelViewModel" ><span>INiagaraPara</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetParameterPane-"><nobr><p>GetParameterPanelViewModel()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../../Runtime/Core/Templates/TSharedRef" ><span>TSha</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetPinnedEmitter-"><nobr><p>GetPinnedEmitterHandles()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Keeps track of the emitters that are pinned in the stack UI, for persistence</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Templates/TSharedRef" ><span>TSharedRef</span></a>&lt; ...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetPlaceholderDa-"><nobr><p>GetPlaceholderDataInterfaceManager()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Niagara/UNiagaraComponent" ><span>UNiagaraComp</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetPreviewComponent"><nobr><p>GetPreviewComponent()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Gets a niagara component for previewing the simulated System.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../UNiagaraSystemScalabilityViewMod-" ><span>UNiagaraSyst</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetScalabilityVi-"><nobr><p>GetScalabilityViewModel()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../UNiagaraScratchPadViewModel" ><span>UNiagaraScra</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetScriptScratch-"><nobr><p>GetScriptScratchPadViewModel()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../UNiagaraGraph" ><span>UNia</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetSelectedGraphs"><nobr><p>GetSelectedGraphs()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Utility method to gather all graphs marked as selected via the system selection viewmodel.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../UNiagaraSystemSelectionViewModel" ><span>UNiagaraSyst</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetSelectionView-"><nobr><p>GetSelectionViewModel()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Gets the a view model representing the selected entries in the overview.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Templates/TSharedPtr" ><span>TSharedPtr</span></a>&lt; ...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetSequencer"><nobr><p>GetSequencer()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Gets the sequencer for this System for displaying the timeline.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetStackModuleDa-_1"><nobr><p>GetStackModuleDataByEmitterHandleId</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../../Runtime/Core/Misc/FGuid" ><span>FGuid</span></a> EmitterHandleId<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Gets the stack module data for the provided emitter handled id, for use in determining dependencies.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetStackModuleDa-"><nobr><p>GetStackModuleDataByModuleEntry</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Stack/UNiagaraStackEntry" ><span>UNiagaraStackEntry</span></a>&#42; ModuleEntr...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Gets the stack module data for the provided module stack entry, for use in determining dependencies.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Niagara/UNiagaraSystem" ><span>UNiagaraSyst</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetSystem"><nobr><p>GetSystem()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Get access to the underlying system</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../../../../Runtime/Core/Templates/TSharedPtr" ><span>TShare</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetSystemGraphSe-"><nobr><p>GetSystemGraphSelectionViewModel()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetSystemMessage-"><nobr><p>GetSystemMessageStores</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Niagara/FNiagaraMessageSourceAndStore" ><span>FNiagaraMessageSourceAndSto</span></a>...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Templates/TSharedPtr" ><span>TSharedPtr</span></a>&lt; ...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetSystemScriptV-"><nobr><p>GetSystemScriptViewModel()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Gets the view model for the System script.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../Stack/UNiagaraStackViewModel" ><span>UNiagaraStac</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetSystemStackVi-"><nobr><p>GetSystemStackViewModel()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Gets the stack view model representing this system.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Templates/TSharedPtr" ><span>TSharedPtr</span></a>&lt; ...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetToolkitCommands"><nobr><p>GetToolkitCommands()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Gets the system toolkit command list.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Templates/TSharedPtr" ><span>TSharedPtr</span></a>&lt; ...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetUserParameter-_1"><nobr><p>GetUserParameterPanelViewModel()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../HierarchyEditor/UNiagaraUserPara-" ><span>UNiagaraUser</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetUserParameter-"><nobr><p>GetUserParametersHierarchyViewModel()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/UObject/FName" ><span>FName</span></a></p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetWorkflowMode"><nobr><p>GetWorkflowMode()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Gets the current workflow mode for this system view model.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="Initialize"><nobr><p>Initialize</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Niagara/UNiagaraSystem" ><span>UNiagaraSystem</span></a>&amp; InSystem,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FNiagaraSystemViewModelOptions" ><span>FNiagaraSystemViewModelOptions</span></a> InOp...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Initializes this system view model with the supplied system and options.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="IsolateEmitters"><nobr><p>IsolateEmitters</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../../Runtime/Core/Misc/FGuid" ><span>FGuid</span></a> > EmitterHandlesIdsTo...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Isolates the supplied emitters. This will remove all other emitters from isolation.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="IsolateSelectedE-"><nobr><p>IsolateSelectedEmitters()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="IsValid"><nobr><p>IsValid()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns whether or not this view model is initialized and safe to use.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="NotifyDataObject-"><nobr><p>NotifyDataObjectChanged</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../../Runtime/CoreUObject/UObject/UObject" ><span>UObject</span></a>&#42; > ChangedObje...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../ENiagaraDataObjectChange" ><span>ENiagaraDataObjectChange</span></a> ChangeType<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Called to notify the system view model that one of the data objects in the system was modified.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="NotifyObjectAsse-"><nobr><p>NotifyObjectAssetChanged</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../UNiagaraNode" ><span>UNiagaraNode</span></a>&amp; OwningNode,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../../Runtime/Core/UObject/FName" ><span>FName</span></a> VariableReadName,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../../Runtime/CoreUObject/UObject/UObject" ><span>UObject</span></a>&#42; NewValue<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Called to notify the system view model that one of the object references in the system was modified.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="NotifyParameterR-"><nobr><p>NotifyParameterRemovedExternally</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Niagara/FNiagaraVariableBase" ><span>FNiagaraVariableBase</span></a>&amp; InVar,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Niagara/UNiagaraEmitter" ><span>UNiagaraEmitter</span></a>&#42; InOptionalEmi...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="NotifyParameterR-_1"><nobr><p>NotifyParameterRenamedExternally</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Niagara/FNiagaraVariableBase" ><span>FNiagaraVariableBase</span></a>&amp; InOldV...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Niagara/FNiagaraVariableBase" ><span>FNiagaraVariableBase</span></a>&amp; InNewV...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Niagara/UNiagaraEmitter" ><span>UNiagaraEmitter</span></a>&#42; InOptionalEmi...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="NotifyPostSave"><nobr><p>NotifyPostSave()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="NotifyPreClose"><nobr><p>NotifyPreClose()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="NotifyPreSave"><nobr><p>NotifyPreSave()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="FOnChangeWorkflo-" ><span>FOnChangeWor</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnChangeWorkflowMode"><nobr><p>OnChangeWorkflowMode()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Gets the delegate that is bound to the owning toolkit's SetCurrentMode function.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="FOnEmitterHandle-" ><span>FOnEmitterHa</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnEmitterHandleV-_1"><nobr><p>OnEmitterHandleViewModelsChanged()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Gets a multicast delegate which is called any time the array of emitter handle view models changes.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; floa...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnGetPlaybackSpeeds"><nobr><p>OnGetPlaybackSpeeds()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FOnGetWorkflowMode" ><span>FOnGetWorkfl</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnGetWorkflowMode"><nobr><p>OnGetWorkflowMode()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Gets the delegate which is called any time the array of emitter handle view models changes.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="FOnExternalRemov-" ><span>FOnExternalR</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnParameterRemov-"><nobr><p>OnParameterRemovedExternally()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="FOnExternalRenam-" ><span>FOnExternalR</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnParameterRenam-"><nobr><p>OnParameterRenamedExternally()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="FOnPostSequencer-" ><span>FOnPostSeque</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnPostSequencerT-_1"><nobr><p>OnPostSequencerTimeChanged()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Gets a multicast delegate which is called whenever we've received and handled a sequencer time update.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="FOnPreClose" ><span>FOnPreClose</span></a> ...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnPreClose"><nobr><p>OnPreClose()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FSimpleMulti...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnPreSave"><nobr><p>OnPreSave()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="FOnRequestFocusTab" ><span>FOnRequestFo</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnRequestFocusTab"><nobr><p>OnRequestFocusTab()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="FOnSystemCompiled" ><span>FOnSystemCom</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnSystemCompiled"><nobr><p>OnSystemCompiled()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Gets a multicast delegate which is called whenever the system has been compiled.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RefreshAll"><nobr><p>RefreshAll()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Reinitializes all System instances, and rebuilds emitter handle view models and tracks.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RefreshAssetMess-"><nobr><p>RefreshAssetMessagesDeferred()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RemoveMessage"><nobr><p>RemoveMessage</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/Core/Misc/FGuid" ><span>FGuid</span></a>&amp; MessageKey<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Remove a serialized message from the Emitter/System this viewmodel is managing.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RemoveStackMessage"><nobr><p>RemoveStackMessage</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/Core/Misc/FGuid" ><span>FGuid</span></a>&amp; MessageKey,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../UNiagaraNodeFunctionCall" ><span>UNiagaraNodeFunctionCall</span></a>&#42; Targ...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Remove a serialized message from the target function call node inside a script this viewmodel is managing.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RenameParameter"><nobr><p>RenameParameter</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Niagara/FNiagaraVariable" ><span>FNiagaraVariable</span></a> TargetParame...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/Core/UObject/FName" ><span>FName</span></a> NewName,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../ENiagaraGetGraphParameterReferen-" ><span>ENiagaraGetGraphParameterReferences</span></a>...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Rename a parameter within the RenameScope and update associated tracking metadata such as Parameter Definition synchronization.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RequestResetSystem"><nobr><p>RequestResetSystem()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Resets the System instance to initial conditions on the next tick.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ResetStack"><nobr><p>ResetStack()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ResetSystem/1"><nobr><p>ResetSystem()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Resets the System instance to initial conditions.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ResetSystem/2"><nobr><p>ResetSystem</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="ETimeResetMode" ><span>ETimeResetMode</span></a> TimeResetMode,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="EMultiResetMode" ><span>EMultiResetMode</span></a> MultiResetMode,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="EReinitMode" ><span>EReinitMode</span></a> ReinitMode<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Resets the system instance to initial conditions.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetEmitterPinned-"><nobr><p>SetEmitterPinnedState</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../../Runtime/Core/Templates/TSharedRef" ><span>TSharedRef</span></a>&lt; <a id="content_link" href="../FNiagaraEmitterHandleViewModel" ><span>FNiagaraEmitterHandleVi</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bPinnedState<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets an internal state when an emitter was pinned/unpinned in the stack UI</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetParameterPane-"><nobr><p>SetParameterPanelViewModel</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../../Runtime/Core/Templates/TSharedPtr" ><span>TSharedPtr</span></a>&lt; <a id="content_link" href="../INiagaraParameterPanelViewModel" ><span>INiagaraParameterPanelV</span></a>...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetToolkitCommands"><nobr><p>SetToolkitCommands</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/Core/Templates/TSharedRef" ><span>TSharedRef</span></a>&lt; <a id="content_link" href="../../../../Runtime/Slate/Framework/Commands/FUICommandList" ><span>FUICommandList</span></a> > ...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Set the system toolkit command list.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetWorkflowMode"><nobr><p>SetWorkflowMode</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../../Runtime/Core/UObject/FName" ><span>FName</span></a> WorkflowMode<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ToggleEmitterIso-"><nobr><p>ToggleEmitterIsolation</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../../Runtime/Core/Templates/TSharedRef" ><span>TSharedRef</span></a>&lt; <a id="content_link" href="../FNiagaraEmitterHandleViewModel" ><span>FNiagaraEmitterHandleVi</span></a>...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Toggles the isolation state of a single emitter.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ToggleIsolateEmi-"><nobr><p>ToggleIsolateEmitterAndSelectedEmitters</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../../Runtime/Core/Misc/FGuid" ><span>FGuid</span></a> OriginEmitter<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>This is specifically for UI with some unique behavior.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UpdateEmitterFix-"><nobr><p>UpdateEmitterFixedBounds()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Updates all selected emitter's fixed bounds with their current dynamic bounds.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UpdateSystemFixe-"><nobr><p>UpdateSystemFixedBounds()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Updates the current system's fixed bounds with its current dynamic bounds.</p>
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'functions_2');">
+        <p>Overridden from FGCObject</p>
+    </div>
+<div id="functions_2">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:8%;">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="AddReferencedObjects"><nobr><p>AddReferencedObjects</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../../Runtime/CoreUObject/UObject/FReferenceCollector" ><span>FReferenceCollector</span></a>&amp; Collector<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Pure virtual that must be overloaded by the inheriting class.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Containers/FString" ><span>FString</span></a></p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetReferencerName"><nobr><p>GetReferencerName()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Overload this method to report a name for your referencer</p>
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'functions_3');">
+        <p>Overridden from FEditorUndoClient</p>
+    </div>
+<div id="functions_3">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:8%;">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="PostRedo"><nobr><p>PostRedo</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bSuccess<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Signal that client should run any PostRedo code</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="PostUndo"><nobr><p>PostUndo</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bSuccess<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Signal that client should run any PostUndo code</p>
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'functions_5');">
+        <p>Overridden from FTickableObjectBase</p>
+    </div>
+<div id="functions_5">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:8%;">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Stats/TStatId" ><span>TStatId</span></a></p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetStatId"><nobr><p>GetStatId()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Return the stat id to use for this tickable</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="IsTickable"><nobr><p>IsTickable()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Virtual that can be overloaded by the inheriting class.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="Tick"><nobr><p>Tick</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float DeltaTime<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>~ <a id="content_link" href="../../../../Editor/UnrealEd/FTickableEditorObject" ><span>FTickableEditorObject</span></a></p>
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'functions_7');">
+        <p>Overridden from INiagaraParameterDefinitionsSubscriberViewModel</p>
+    </div>
+<div id="functions_7">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:8%;">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Niagara/INiagaraParameterDefinitionsSubs-" ><span>INiagaraPara</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetParameterDefi-"><nobr><p>GetParameterDefinitionsSubscriber()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'classes');">
+        <p>Classes</p>
+    </div>
+<div id="classes">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:15%">
+			</th>
+			<th class="name-cell" style="width:20%">
+				<p>Name</p>
+			</th>
+			<th class="desc-cell" style="width:65%">
+				<p>Description</p>
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public struct" title="Public struct" width="18" data-src="./../../../../../../Images/api_struct_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="FEmitterHandleTo-"><p>FEmitterHandleToDuplicate</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+			</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'enums');">
+        <p>Enums</p>
+    </div>
+<div id="enums">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:15%">
+			</th>
+			<th class="name-cell" style="width:20%">
+				<p>Name</p>
+			</th>
+			<th class="desc-cell" style="width:65%">
+				<p>Description</p>
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public enum" title="Public enum" width="18" data-src="./../../../../../../Images/api_enum_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="EMultiResetMode"><p>EMultiResetMode</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Defines different multi-system reset modes for this system view model</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public enum" title="Public enum" width="18" data-src="./../../../../../../Images/api_enum_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="EReinitMode"><p>EReinitMode</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Defines different initialization modes when resetting for this system view model</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public enum" title="Public enum" width="18" data-src="./../../../../../../Images/api_enum_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="ETimeResetMode"><p>ETimeResetMode</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Defines different time reset modes for this system view model</p>
+	</td>
+</tr>
+			</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'typedefs');">
+        <p>Typedefs</p>
+    </div>
+<div id="typedefs">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="name-cell" style="width:15%">
+				<p>Name</p>
+			</th>
+			<th class="desc-cell" style="width:85%">
+				<p>Description</p>
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="FOnChangeWorkflo-"><p>FOnChangeWorkflowMode</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="FOnEmitterHandle-"><p>FOnEmitterHandleViewModelsChanged</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="FOnExternalRemov-"><p>FOnExternalRemoveParameter</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="FOnExternalRenam-"><p>FOnExternalRenameParameter</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="FOnPinnedEmitter-"><p>FOnPinnedEmittersChanged</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="FOnPostSequencer-"><p>FOnPostSequencerTimeChange</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="FOnPreClose"><p>FOnPreClose</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="FOnRequestFocusTab"><p>FOnRequestFocusTab</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="FOnSystemCompiled"><p>FOnSystemCompiled</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+			</table>
+</div>
+
+</div>
+</div>
+																	</div>
+					<!-- End of Markdown converted page content -->
+				</div>
+												<div id="recommendations"></div>			</div>
+						<div id="footer"></div>			
+									<div id="announcement">
+			<div style="display:inline-block;margin:5px;">
+				Help shape the future of Unreal Engine documentation! Tell us how we're doing so we can serve you better.
+			</div>
+			<div style="margin:5px;display:inline-block;">
+				<div class="btn action" style="margin-top:-6px;display:inline-block;" onclick="$('#announcement').hide();window.open('https://epicgames.questionpro.com/t/AVVbJZwedR');createCookie('announcement-read', new Date().getTime(), 30);">Take our survey</div>
+				<div class="btn btn-default" style="margin-top:-6px;display:inline-block;" onclick="$('#announcement').hide();createCookie('announcement-read', new Date().getTime(), 30);">Cancel</div>
+			</div>
+			<div class="btn-close" style="position:absolute;right:5px;top:10px;padding:3px;width:14px;height:14px;" onclick="$('#announcement').hide();"></div>
+			</div>
+					</div>
+	</div>
+</body>
+</html>

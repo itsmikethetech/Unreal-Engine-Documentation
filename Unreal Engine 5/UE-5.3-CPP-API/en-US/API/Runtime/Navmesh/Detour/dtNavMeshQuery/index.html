@@ -1,0 +1,1259 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="./../../../../../../Include/Javascript/common_en-US.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var time = new Date(0);
+		var preview = false;
+		var relativeHTMLPath = "./../../../../../../";
+				var pageid = 0;
+				var heroimage = "./../../../../../../Images/ue5-hero.png";
+				var lang = "en-US";
+				var basePath = document.location.pathname.substring(0, document.location.pathname.indexOf('/' + lang + '/') + lang.length + 1);
+		document.write('<base href="' +  encodeURI(basePath) + '/API/Runtime/Navmesh/Detour/dtNavMeshQuery/" />');
+				var udnCSS = './../../../../../../Include/CSS/udn_public.css';
+		var udnLangCSS = '';
+				var udnOverrideCSS = './../../../../../../Include/CSS/skin_overrides.css';
+		var udnOverrideDarkCSS = './../../../../../../Include/CSS/skin_overrides_dark.css';
+		var fancyboxCSS = './../../../../../../Include/CSS/jquery.fancybox.css';
+		var jqueryuiCSS = './../../../../../../Include/CSS/jquery-ui.min.css';
+		var qtipCSS = './../../../../../../Include/CSS/jquery.qtip.css';
+		var prettifyCSS = './../../../../../../Include/CSS/prettify.css';
+		var navbarCSS = './../../../../../../Include/CSS/navBar.css';
+		var twentytwentyCSS = './../../../../../../Include/CSS/twentytwenty.css';
+		var recommendationsCSS = './../../../../../../Include/CSS/jquery.recommendations.css';
+	</script>
+    <title>dtNavMeshQuery | Unreal Engine 5.2 Documentation</title>
+    	    <meta name=viewport content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Cache-control" content="no-store">
+    <script  src="./../../../../../../Include/Javascript/CustomEvent.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/jquery-3.4.0.min.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/udn.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/udn_extras.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/jquery-ui.min.js" type="text/javascript"></script>
+	    <script  src="./../../../../../../Include/Javascript/informational.js" type="text/javascript"></script>
+	    <script  src="./../../../../../../Include/Javascript/jquery.fancybox.pack.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/jquery.qtip.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/prettify.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/jquery.slimscroll.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/jquery.event.move.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/jquery.twentytwenty.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/lazysizes.min.js" type="text/javascript"></script>
+	    <script  src="./../../../../../../Include/Javascript/jquery.recommendations.js" type="text/javascript"></script>
+	
+    <link async rel="icon" href="./../../../../../../Include/Images/site_icon.png" type="image/x-icon" />
+    <link async rel="shortcut icon" href="./../../../../../../Include/Images/site_icon.png" type="image/x-icon" />
+    <link async href="./../../../../../../Include/Images/touch_icon.png" rel="apple-touch-icon" />
+    <link async href="./../../../../../../Include/Images/touch_icon_114.png" sizes="114x114" rel="apple-touch-icon" />    
+		<script  src="./../../../../../../Include/Javascript/CollapsibleLists.js" type="text/javascript"></script>
+	<script  src="./../../../../../../Include/Javascript/navigationBarUI.js"></script>
+	<script  src="./../../../../../../Include/Javascript/navigationBar.js"></script>
+		
+	<link rel="alternate" href="https://docs.unrealengine.com/latest/en-US/API/Runtime/Navmesh/Detour/dtNavMeshQuery/" hreflang="x-default" />
+
+	<meta name="title" content="dtNavMeshQuery" />
+<meta name="description" content="Provides the ability to perform pathfinding related queries against a navigation mesh." />
+<meta name="availability" content="Public" />
+<meta name="crumbs" content="%ROOT%,API,API/Runtime,API/Runtime/Navmesh,API/Runtime/Navmesh/Detour" />
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta property="og:title" content="dtNavMeshQuery" />
+	<meta property="og:description" content="Provides the ability to perform pathfinding related queries against a navigation mesh." />
+		<meta property="og:image" content="https://docs.unrealengine.com/5.1/Images/placeholder-social.png" />
+	</head>
+<body id="webbgThree" style="visibility: hidden;" onload="document.body.style.visibility='visible';">
+			<script>window.__tracking_base = 'https://tracking.unrealengine.com';</script>
+	<script src="https://tracking.unrealengine.com/tracking.js" async></script>    <div id="webThree">
+				<div id="page_head">
+						<div id="head">
+				<div id="logo"></div>
+			</div>
+						<div id="pagenav">
+				<div class="crumbs" id="crumbs">
+<span id="versionContainer">
+	<span id="versionSelect" class="btn btn-version" onclick="ToggleMenu($('#versionMenu'), $(this));"></span>
+	<div id="versionMenu">
+		<div id="4_26" data-version="4.26" class="btn btn-select" onclick="createCookie('version', '4.26', 365);SwitchVersion('4.26');">Unreal Engine 4.26 Documentation</div>
+		<div id="4_27" data-version="4.27" class="btn btn-select" onclick="createCookie('version', '4.27', 365);SwitchVersion('4.27');">Unreal Engine 4.27 Documentation</div>
+		<div id="5_0" data-version="5.0" class="btn btn-select" onclick="createCookie('version', '5.0', 365);SwitchVersion('5.0');">Unreal Engine 5.0 Documentation</div>
+		<div id="5_1" data-version="5.1" class="btn btn-select" onclick="createCookie('version', '5.1', 365);SwitchVersion('5.1');">Unreal Engine 5.1 Documentation</div>
+		<div id="5_2" data-version="5.2" class="btn btn-select" onclick="createCookie('version', '5.2', 365);SwitchVersion('5.2');">Unreal Engine 5.2 Documentation</div>
+		<div id="5_3" data-version="5.3" class="btn btn-select" onclick="createCookie('version', '5.3', 365);SwitchVersion('5.3');">Unreal Engine 5.3 Documentation</div>
+	</div>
+</span>
+	<span class="separator">></span> <a id="parent_link" href="../../../../../API">Unreal Engine API Reference</a>
+
+	<span class="separator">></span> <a id="parent_link" href="../../../../Runtime">Runtime</a>
+
+	<span class="separator">></span> <a id="parent_link" href="../../../Navmesh">Navmesh</a>
+
+	<span class="separator">></span> <a id="parent_link" href="../../Detour">Detour</a>
+
+<span class="separator">></span> <span id="page">dtNavMeshQuery</span>
+</div>				<div id="pageNavRight">
+								<!-- Start of Search -->
+												<div id="search_container">
+					<form name="bodySearch" method="get" action="https://www.unrealengine.com/en-US/bing-search" onsubmit="return validateSearch()">
+						<input type="image" src="./../../../../../../Include/Images/search_box_icon.png" class="searchbutton"/>
+						<input type="hidden" name="filter" value="Documentation" />
+						<input type="text" name="keyword" placeholder="Search Documentation..." class="searchbox" autocomplete="off"/>
+					</form>
+				</div>
+								<!-- End of Search -->
+				<div id="skinContainer">
+	<div id="skinSelect" class="btn btn-skin" onclick="ToggleMenu($('#skinMenu'), $(this));"></div>
+	<div id="skinMenu">
+		<div id="light" class="btn btn-select" onclick="createCookie('skin', 'light', 365);location.reload();">Light Theme</div>
+		<div id="dark" class="btn btn-select" onclick="createCookie('skin', 'dark', 365);location.reload();">Dark Theme</div>
+	</div>
+</div>				</div>
+			</div>
+		</div>						<div id="navWrapper">
+			<div id="nav-filter-container">
+				<div id="nav-filter-inner">
+					<form>
+						<input type="text" placeholder="Filter pages..." id="nav-filter" onchange="clearTimeout(filterTimer); filterTimer = setTimeout(updateNavTreeFilter,250, this.value);if(this.value.length == 0){$('#filter-clear').hide();}else{$('#filter-clear').show();}" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" />
+						<button class="close-icon" id="filter-clear" type="reset" onclick="clearTimeout(filterTimer); filterTimer = setTimeout(updateNavTreeFilter,250, '');$(this).hide();"></button>
+					</form>
+				</div>
+			</div>
+			<nav id="navPanel">
+			</nav>
+			<div id="navigation" title="Click to toggle navigation menu"><span>></span></div>
+		</div>		
+		<div id="splitter">
+		</div>
+				<div id="contentContainer">
+										<div id="pagedefault">
+				<div id="product-banner">
+	<div id="product-logo"></div>
+</div>				<div id="pagecontainer" style="padding-right:0px;">
+					<!-- Start of Markdown converted page content -->
+										<div class="hero  background">
+	<div class="imgContainer"><img src="./../../../../../../Images/ue5-hero.png" /></div>	<div class="info">
+		<div id="pageTitle">
+			<h1 id="H1TitleId">dtNavMeshQuery</h1>
+		</div>
+		<h2 >Provides the ability to perform pathfinding related queries against a navigation mesh.</h2>
+		<div id="access">
+			<div class="accessContainer">
+															</div>
+		</div>
+	</div>
+</div>															<div id="maincol">
+																																				<div class="heading expanded" onclick="sectionOnClick(this, 'references');">
+        <p>References</p>
+    </div>
+<div id="references">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="normal-row">
+	<td class="name-cell">
+		<p>Module</p>
+	</td>
+	<td class="desc-cell">
+		<p><a id="content_link" href="../.." ><span>Navmesh</span></a></p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<p>Header</p>
+	</td>
+	<td class="desc-cell">
+		<p>&#47;Engine&#47;Source&#47;Runtime&#47;Navmesh&#47;Public&#47;Detour&#47;DetourNavMeshQuery.h</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<p>Include</p>
+	</td>
+	<td class="desc-cell">
+		<p>&#35;include &quot;Detour&#47;DetourNavMeshQuery.h&quot;</p>
+	</td>
+</tr>
+			</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'syntax');">
+        <p>Syntax</p>
+    </div>
+<div id="syntax">
+    <div class="simplecode_api">
+	<p>class dtNavMeshQuery  </p>
+</div>
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'description');">
+        <p>Remarks</p>
+    </div>
+<div id="description">
+    <p>Provides the ability to perform pathfinding related queries against a navigation mesh.
+</p><p>For methods that support undersized buffers, if the buffer is too small to hold the entire result set the return status of the method will include the #DT_BUFFER_TOO_SMALL flag.
+</p><p>Constant member functions can be used by multiple clients without side effects. (E.g. No change to the closed list. No impact on an in-progress sliced path query. Etc.)
+</p><p>Walls and portals: A <em>wall</em> is a polygon segment that is considered impassable. A <em>portal</em> is a passable segment between polygons. A portal may be treated as a wall based on the <a id="content_link" href="../dtQueryFilter" ><span>dtQueryFilter</span></a> used for a query.</p>
+</div><div class="syntax">
+	<div class="heading expanded" onclick="sectionOnClick(this, 'constructor');">
+        <p>Constructors</p>
+    </div>
+<div id="constructor">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="__ctor"><nobr><p>dtNavMeshQuery()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'destructor');">
+        <p>Destructors</p>
+    </div>
+<div id="destructor">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="__dtor"><nobr><p>~dtNavMeshQuery()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'functions_0');">
+        <p>Functions</p>
+    </div>
+<div id="functions_0">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:8%;">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>dtStatus</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="appendPortals"><nobr><p>appendPortals</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const int startIdx,<br />&nbsp;&nbsp;&nbsp;&nbsp;const int endIdx,<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtReal&#42; endPos,<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtPolyRef&#42; path,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../dtQueryResult" ><span>dtQueryResult</span></a>&amp; result,<br />&nbsp;&nbsp;&nbsp;&nbsp;const int options<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Appends intermediate portal points to a straight path.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>dtStatus</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="appendVertex"><nobr><p>appendVertex</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtReal&#42; pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;const unsigned char flags,<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtPolyRef ref,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../dtQueryResult" ><span>dtQueryResult</span></a>&amp; result,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bOverrideIdenticalPositi...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Appends vertex to a straight path.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>dtStatus</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="closestPointOnPoly"><nobr><p>closestPointOnPoly</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef ref,<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtReal&#42; pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtReal&#42; closest<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Finds the closest point on the specified polygon.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>dtStatus</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="closestPointOnPolyBoundary"><nobr><p>closestPointOnPolyBoundary</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef ref,<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtReal&#42; pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtReal&#42; closest<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns a point on the boundary closest to the source point if the source point is outside the polygon's xz-bounds.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>dtStatus</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="finalizeSlicedFindPath"><nobr><p>finalizeSlicedFindPath</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef&#42; path,<br />&nbsp;&nbsp;&nbsp;&nbsp;int&#42; pathCount,<br />&nbsp;&nbsp;&nbsp;&nbsp;const int maxPath<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Finalizes and returns the results of a sliced path query.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>dtStatus</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="finalizeSlicedFindPathPartial"><nobr><p>finalizeSlicedFindPathPartial</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtPolyRef&#42; existing,<br />&nbsp;&nbsp;&nbsp;&nbsp;const int existingSize,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef&#42; path,<br />&nbsp;&nbsp;&nbsp;&nbsp;int&#42; pathCount,<br />&nbsp;&nbsp;&nbsp;&nbsp;const int maxPath<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Finalizes and returns the results of an incomplete sliced path query, returning the path to the furthest polygon on the existing path that was visited during the search.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>dtStatus</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="findDistanceToWall"><nobr><p>findDistanceToWall</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef startRef,<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtReal&#42; centerPos,<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtReal maxRadius,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../dtQueryFilter" ><span>dtQueryFilter</span></a>&#42; filter,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtReal&#42; hitDist,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtReal&#42; hitPos,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtReal&#42; hitNormal<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Finds the distance from the specified position to the nearest polygon wall.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>dtStatus</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="findLocalNeighbourhood"><nobr><p>findLocalNeighbourhood</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef startRef,<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtReal&#42; centerPos,<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtReal radius,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../dtQueryFilter" ><span>dtQueryFilter</span></a>&#42; filter,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef&#42; resultRef,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef&#42; resultParent,<br />&nbsp;&nbsp;&nbsp;&nbsp;int&#42; resultCount,<br />&nbsp;&nbsp;&nbsp;&nbsp;const int maxResult<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Finds the non-overlapping navigation polygons in the local neighbourhood around the center position.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>dtStatus</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="findNearestContainingPoly"><nobr><p>findNearestContainingPoly</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtReal&#42; center,<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtReal&#42; extents,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../dtQueryFilter" ><span>dtQueryFilter</span></a>&#42; filter,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef&#42; nearestRef,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtReal&#42; nearestPt<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Finds the nearest polygon in height containing the specified center point.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>dtStatus</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="findNearestPoly"><nobr><p>findNearestPoly</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtReal&#42; center,<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtReal&#42; extents,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../dtQueryFilter" ><span>dtQueryFilter</span></a>&#42; filter,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef&#42; nearestRef,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtReal&#42; nearestPt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtReal&#42; referencePt<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Finds the polygon nearest to the specified center point.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>dtStatus</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="findNearestPoly2D"><nobr><p>findNearestPoly2D</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtReal&#42; center,<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtReal&#42; extents,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../dtQueryFilter" ><span>dtQueryFilter</span></a>&#42; filter,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef&#42; outProjectedRef,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtReal&#42; outProjectedPt,<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtReal&#42; referencePt,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtReal tolerance<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Finds the polygon 2D-nearest to the specified center point.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>dtStatus</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="findPath"><nobr><p>findPath</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef startRef,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef endRef,<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtReal&#42; startPos,<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtReal&#42; endPos,<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtReal costLimit,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../dtQueryFilter" ><span>dtQueryFilter</span></a>&#42; filter,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../dtQueryResult" ><span>dtQueryResult</span></a>&amp; result,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtReal&#42; totalCost<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Finds a path from the start polygon to the end polygon.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>dtStatus</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="findPolysAroundCircle"><nobr><p>findPolysAroundCircle</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef startRef,<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtReal&#42; centerPos,<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtReal radius,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../dtQueryFilter" ><span>dtQueryFilter</span></a>&#42; filter,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef&#42; resultRef,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef&#42; resultParent,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtReal&#42; resultCost,<br />&nbsp;&nbsp;&nbsp;&nbsp;int&#42; resultCount,<br />&nbsp;&nbsp;&nbsp;&nbsp;const int maxResult<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Finds the polygons along the navigation graph that touch the specified circle.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>dtStatus</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="findPolysAroundShape"><nobr><p>findPolysAroundShape</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef startRef,<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtReal&#42; verts,<br />&nbsp;&nbsp;&nbsp;&nbsp;const int nverts,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../dtQueryFilter" ><span>dtQueryFilter</span></a>&#42; filter,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef&#42; resultRef,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef&#42; resultParent,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtReal&#42; resultCost,<br />&nbsp;&nbsp;&nbsp;&nbsp;int&#42; resultCount,<br />&nbsp;&nbsp;&nbsp;&nbsp;const int maxResult<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Finds the polygons along the naviation graph that touch the specified convex polygon.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>dtStatus</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="findPolysInPathDistance"><nobr><p>findPolysInPathDistance</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef startRef,<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtReal&#42; centerPos,<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtReal pathDistance,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../dtQueryFilter" ><span>dtQueryFilter</span></a>&#42; filter,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef&#42; resultRef,<br />&nbsp;&nbsp;&nbsp;&nbsp;int&#42; resultCount,<br />&nbsp;&nbsp;&nbsp;&nbsp;const int maxResult<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Finds the polygons along the navigation graph that are no more than given path length away from centerPos.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>dtStatus</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="findRandomPoint"><nobr><p>findRandomPoint</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../dtQueryFilter" ><span>dtQueryFilter</span></a>&#42; filter,<br />&nbsp;&nbsp;&nbsp;&nbsp;float(&#42;)() frand,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef&#42; randomRef,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtReal&#42; randomPt<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns random location on navmesh.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>dtStatus</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="findRandomPointAroundCircle"><nobr><p>findRandomPointAroundCircle</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef startRef,<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtReal&#42; centerPos,<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtReal maxRadius,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../dtQueryFilter" ><span>dtQueryFilter</span></a>&#42; filter,<br />&nbsp;&nbsp;&nbsp;&nbsp;float(&#42;)() frand,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef&#42; randomRef,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtReal&#42; randomPt<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns random location on navmesh within the reach of specified location.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>dtStatus</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="findRandomPointInPoly"><nobr><p>findRandomPointInPoly</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef ref,<br />&nbsp;&nbsp;&nbsp;&nbsp;float(&#42;)() frand,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtReal&#42; randomPt<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns random location inside the specified polygon.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>dtStatus</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="findStraightPath"><nobr><p>findStraightPath</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtReal&#42; startPos,<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtReal&#42; endPos,<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtPolyRef&#42; path,<br />&nbsp;&nbsp;&nbsp;&nbsp;const int pathSize,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../dtQueryResult" ><span>dtQueryResult</span></a>&amp; result,<br />&nbsp;&nbsp;&nbsp;&nbsp;const int options<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Finds the straight path from the start to the end position within the polygon corridor.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>dtStatus</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="findWallsAroundPath"><nobr><p>findWallsAroundPath</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtPolyRef&#42; path,<br />&nbsp;&nbsp;&nbsp;&nbsp;const int pathCount,<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtReal&#42; searchAreaPoly,<br />&nbsp;&nbsp;&nbsp;&nbsp;const int searchAreaPolyCount,<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtReal maxAreaEnterCost,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../dtQueryFilter" ><span>dtQueryFilter</span></a>&#42; filter,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef&#42; neiRefs,<br />&nbsp;&nbsp;&nbsp;&nbsp;int&#42; neiCount,<br />&nbsp;&nbsp;&nbsp;&nbsp;const int maxNei,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtReal&#42; resultWalls,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef&#42; resultRefs,<br />&nbsp;&nbsp;&nbsp;&nbsp;int&#42; resultCount,<br />&nbsp;&nbsp;&nbsp;&nbsp;const int maxResult<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>[UE] Finds the wall segments that overlap the polygon shape.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>dtStatus</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="findWallsInNeighbourhood"><nobr><p>findWallsInNeighbourhood</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef startRef,<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtReal&#42; centerPos,<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtReal radius,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../dtQueryFilter" ><span>dtQueryFilter</span></a>&#42; filter,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef&#42; neiRefs,<br />&nbsp;&nbsp;&nbsp;&nbsp;int&#42; neiCount,<br />&nbsp;&nbsp;&nbsp;&nbsp;const int maxNei,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtReal&#42; resultWalls,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef&#42; resultRefs,<br />&nbsp;&nbsp;&nbsp;&nbsp;int&#42; resultCount,<br />&nbsp;&nbsp;&nbsp;&nbsp;const int maxResult<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>[UE] Finds the wall segments in local neighbourhood</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>dtStatus</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="findWallsOverlappingShape"><nobr><p>findWallsOverlappingShape</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef startRef,<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtReal&#42; verts,<br />&nbsp;&nbsp;&nbsp;&nbsp;const int nverts,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../dtQueryFilter" ><span>dtQueryFilter</span></a>&#42; filter,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef&#42; neiRefs,<br />&nbsp;&nbsp;&nbsp;&nbsp;int&#42; neiCount,<br />&nbsp;&nbsp;&nbsp;&nbsp;const int maxNei,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtReal&#42; resultWalls,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef&#42; resultRefs,<br />&nbsp;&nbsp;&nbsp;&nbsp;int&#42; resultCount,<br />&nbsp;&nbsp;&nbsp;&nbsp;const int maxResult<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>[UE] Finds the wall segments that overlap the polygon shape.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../dtNavMesh" ><span>dtNavM</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="getAttachedNavMesh"><nobr><p>getAttachedNavMesh()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Gets the navigation mesh the query object is using.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="getCurrentBestResult"><nobr><p>getCurrentBestResult</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../dtNode" ><span>dtNode</span></a>&#42;&amp; bestNode,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtReal&amp; bestCost<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Gets best node ref and cost from sliced pathfinding data.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>dtStatus</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="getEdgeMidPoint/2"><nobr><p>getEdgeMidPoint</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef from,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../dtPoly" ><span>dtPoly</span></a>&#42; fromPoly,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../dtMeshTile" ><span>dtMeshTile</span></a>&#42; fromTile,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef to,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../dtPoly" ><span>dtPoly</span></a>&#42; toPoly,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../dtMeshTile" ><span>dtMeshTile</span></a>&#42; toTile,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtReal&#42; mid<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>dtStatus</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="getEdgeMidPoint/1"><nobr><p>getEdgeMidPoint</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef from,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef to,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtReal&#42; mid<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns edge mid point between two polygons.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../dtNodePool" ><span>dtNodePool</span></a> &amp;...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="getNodePool"><nobr><p>getNodePool()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Gets the node pool.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>dtStatus</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="getPolyHeight"><nobr><p>getPolyHeight</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef ref,<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtReal&#42; pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtReal&#42; height<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Gets the height of the polygon at the provided position using the height detail.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>dtStatus</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="getPolyWallSegments"><nobr><p>getPolyWallSegments</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef ref,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../dtQueryFilter" ><span>dtQueryFilter</span></a>&#42; filter,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtReal&#42; segmentVerts,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef&#42; segmentRefs,<br />&nbsp;&nbsp;&nbsp;&nbsp;int&#42; segmentCount,<br />&nbsp;&nbsp;&nbsp;&nbsp;const int maxSegments<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns the segments for the specified polygon, optionally including portals.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>dtStatus</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="getPortalPoints/1"><nobr><p>getPortalPoints</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef from,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef to,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtReal&#42; left,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtReal&#42; right,<br />&nbsp;&nbsp;&nbsp;&nbsp;unsigned char&amp; fromType,<br />&nbsp;&nbsp;&nbsp;&nbsp;unsigned char&amp; toType<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Exposing function to be able to generate navigation corridors as sequence of point pairs</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>dtStatus</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="getPortalPoints/2"><nobr><p>getPortalPoints</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef from,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../dtPoly" ><span>dtPoly</span></a>&#42; fromPoly,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../dtMeshTile" ><span>dtMeshTile</span></a>&#42; fromTile,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef to,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../dtPoly" ><span>dtPoly</span></a>&#42; toPoly,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../dtMeshTile" ><span>dtMeshTile</span></a>&#42; toTile,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtReal&#42; left,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtReal&#42; right<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>int</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="getQueryNodes"><nobr><p>getQueryNodes()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>dtStatus</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="init"><nobr><p>init</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../dtNavMesh" ><span>dtNavMesh</span></a>&#42; nav,<br />&nbsp;&nbsp;&nbsp;&nbsp;const int maxNodes,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../dtQuerySpecialLinkFilter" ><span>dtQuerySpecialLinkFilter</span></a>&#42; link...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Initializes the query object.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>dtStatus</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="initSlicedFindPath"><nobr><p>initSlicedFindPath</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef startRef,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef endRef,<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtReal&#42; startPos,<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtReal&#42; endPos,<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtReal costLimit,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool requireNavigableEndLocat...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../dtQueryFilter" ><span>dtQueryFilter</span></a>&#42; filter<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Initializes a sliced path query.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="isInClosedList"><nobr><p>isInClosedList</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef ref<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns true if the polygon reference is in the closed list.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>dtStatus</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="isPointInsidePoly"><nobr><p>isPointInsidePoly</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef ref,<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtReal&#42; pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool&amp; result<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Checks if specified pos is inside given polygon specified by ref</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="isRequiringNavigableEndLocation"><nobr><p>isRequiringNavigableEndLocation()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="isValidPolyRef"><nobr><p>isValidPolyRef</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef ref,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../dtQueryFilter" ><span>dtQueryFilter</span></a>&#42; filter<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns true if the polygon reference is valid and passes the filter restrictions.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>dtStatus</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="moveAlongSurface"><nobr><p>moveAlongSurface</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef startRef,<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtReal&#42; startPos,<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtReal&#42; endPos,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../dtQueryFilter" ><span>dtQueryFilter</span></a>&#42; filter,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtReal&#42; resultPos,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef&#42; visited,<br />&nbsp;&nbsp;&nbsp;&nbsp;int&#42; visitedCount,<br />&nbsp;&nbsp;&nbsp;&nbsp;const int maxVisitedSize<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Moves from the start to the end position constrained to the navigation mesh.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="passLinkFilter"><nobr><p>passLinkFilter</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../dtMeshTile" ><span>dtMeshTile</span></a>&#42; tile,<br />&nbsp;&nbsp;&nbsp;&nbsp;const int polyIdx<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="passLinkFilterByRef"><nobr><p>passLinkFilterByRef</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../dtMeshTile" ><span>dtMeshTile</span></a>&#42; tile,<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtPolyRef ref<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>dtStatus</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="projectedPointOnPoly"><nobr><p>projectedPointOnPoly</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef ref,<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtReal&#42; pos,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtReal&#42; projected<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Finds the point's projection on the specified polygon.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>dtStatus</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="queryPolygons"><nobr><p>queryPolygons</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtReal&#42; center,<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtReal&#42; extents,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../dtQueryFilter" ><span>dtQueryFilter</span></a>&#42; filter,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef&#42; polys,<br />&nbsp;&nbsp;&nbsp;&nbsp;int&#42; polyCount,<br />&nbsp;&nbsp;&nbsp;&nbsp;const int maxPolys<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Finds polygons that overlap the search box.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>dtStatus</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="raycast"><nobr><p>raycast</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef startRef,<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtReal&#42; startPos,<br />&nbsp;&nbsp;&nbsp;&nbsp;const dtReal&#42; endPos,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../dtQueryFilter" ><span>dtQueryFilter</span></a>&#42; filter,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtReal&#42; t,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtReal&#42; hitNormal,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef&#42; path,<br />&nbsp;&nbsp;&nbsp;&nbsp;int&#42; pathCount,<br />&nbsp;&nbsp;&nbsp;&nbsp;const int maxPath<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Casts a 'walkability' ray along the surface of the navigation mesh from the start position toward the end position.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="setRequireNavigableEndLocation"><nobr><p>setRequireNavigableEndLocation</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool value<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="updateLinkFilter"><nobr><p>updateLinkFilter</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../dtQuerySpecialLinkFilter" ><span>dtQuerySpecialLinkFilter</span></a>&#42; link...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>UE: updates special link filter for this query.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>dtStatus</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="updateSlicedFindPath"><nobr><p>updateSlicedFindPath</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const int maxIter,<br />&nbsp;&nbsp;&nbsp;&nbsp;int&#42; doneIters<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Updates an in-progress sliced path query.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="wasClusterLinkSearched"><nobr><p>wasClusterLinkSearched</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef cFrom,<br />&nbsp;&nbsp;&nbsp;&nbsp;dtPolyRef cTo<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns true if the cluster link was used in previous search.</p>
+	</td>
+</tr>
+	</table>
+</div>
+
+</div>
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'seealso');">
+        <p>See Also</p>
+    </div>
+<div id="seealso">
+    <p><a id="content_link" href="../dtNavMesh" ><span>dtNavMesh</span></a>
+</p><p><a id="content_link" href="../dtQueryFilter" ><span>dtQueryFilter</span></a>
+</p><p>dtAllocNavMeshQuery()
+</p><p>dtAllocNavMeshQuery()</p>
+</div>
+																	</div>
+					<!-- End of Markdown converted page content -->
+				</div>
+												<div id="recommendations"></div>			</div>
+						<div id="footer"></div>			
+									<div id="announcement">
+			<div style="display:inline-block;margin:5px;">
+				Help shape the future of Unreal Engine documentation! Tell us how we're doing so we can serve you better.
+			</div>
+			<div style="margin:5px;display:inline-block;">
+				<div class="btn action" style="margin-top:-6px;display:inline-block;" onclick="$('#announcement').hide();window.open('https://epicgames.questionpro.com/t/AVVbJZwedR');createCookie('announcement-read', new Date().getTime(), 30);">Take our survey</div>
+				<div class="btn btn-default" style="margin-top:-6px;display:inline-block;" onclick="$('#announcement').hide();createCookie('announcement-read', new Date().getTime(), 30);">Cancel</div>
+			</div>
+			<div class="btn-close" style="position:absolute;right:5px;top:10px;padding:3px;width:14px;height:14px;" onclick="$('#announcement').hide();"></div>
+			</div>
+					</div>
+	</div>
+</body>
+</html>

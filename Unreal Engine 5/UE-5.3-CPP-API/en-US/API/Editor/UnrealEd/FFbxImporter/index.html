@@ -1,0 +1,3050 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="./../../../../../Include/Javascript/common_en-US.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var time = new Date(0);
+		var preview = false;
+		var relativeHTMLPath = "./../../../../../";
+				var pageid = 0;
+				var heroimage = "./../../../../../Images/ue5-hero.png";
+				var lang = "en-US";
+				var basePath = document.location.pathname.substring(0, document.location.pathname.indexOf('/' + lang + '/') + lang.length + 1);
+		document.write('<base href="' +  encodeURI(basePath) + '/API/Editor/UnrealEd/FFbxImporter/" />');
+				var udnCSS = './../../../../../Include/CSS/udn_public.css';
+		var udnLangCSS = '';
+				var udnOverrideCSS = './../../../../../Include/CSS/skin_overrides.css';
+		var udnOverrideDarkCSS = './../../../../../Include/CSS/skin_overrides_dark.css';
+		var fancyboxCSS = './../../../../../Include/CSS/jquery.fancybox.css';
+		var jqueryuiCSS = './../../../../../Include/CSS/jquery-ui.min.css';
+		var qtipCSS = './../../../../../Include/CSS/jquery.qtip.css';
+		var prettifyCSS = './../../../../../Include/CSS/prettify.css';
+		var navbarCSS = './../../../../../Include/CSS/navBar.css';
+		var twentytwentyCSS = './../../../../../Include/CSS/twentytwenty.css';
+		var recommendationsCSS = './../../../../../Include/CSS/jquery.recommendations.css';
+	</script>
+    <title>FFbxImporter | Unreal Engine 5.2 Documentation</title>
+    	    <meta name=viewport content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Cache-control" content="no-store">
+    <script  src="./../../../../../Include/Javascript/CustomEvent.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/jquery-3.4.0.min.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/udn.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/udn_extras.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/jquery-ui.min.js" type="text/javascript"></script>
+	    <script  src="./../../../../../Include/Javascript/informational.js" type="text/javascript"></script>
+	    <script  src="./../../../../../Include/Javascript/jquery.fancybox.pack.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/jquery.qtip.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/prettify.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/jquery.slimscroll.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/jquery.event.move.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/jquery.twentytwenty.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/lazysizes.min.js" type="text/javascript"></script>
+	    <script  src="./../../../../../Include/Javascript/jquery.recommendations.js" type="text/javascript"></script>
+	
+    <link async rel="icon" href="./../../../../../Include/Images/site_icon.png" type="image/x-icon" />
+    <link async rel="shortcut icon" href="./../../../../../Include/Images/site_icon.png" type="image/x-icon" />
+    <link async href="./../../../../../Include/Images/touch_icon.png" rel="apple-touch-icon" />
+    <link async href="./../../../../../Include/Images/touch_icon_114.png" sizes="114x114" rel="apple-touch-icon" />    
+		<script  src="./../../../../../Include/Javascript/CollapsibleLists.js" type="text/javascript"></script>
+	<script  src="./../../../../../Include/Javascript/navigationBarUI.js"></script>
+	<script  src="./../../../../../Include/Javascript/navigationBar.js"></script>
+		
+	<link rel="alternate" href="https://docs.unrealengine.com/latest/en-US/API/Editor/UnrealEd/FFbxImporter/" hreflang="x-default" />
+
+	<meta name="title" content="FFbxImporter" />
+<meta name="description" content="Main FBX Importer class." />
+<meta name="availability" content="Public" />
+<meta name="crumbs" content="%ROOT%,API,API/Editor,API/Editor/UnrealEd" />
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta property="og:title" content="FFbxImporter" />
+	<meta property="og:description" content="Main FBX Importer class." />
+		<meta property="og:image" content="https://docs.unrealengine.com/5.1/Images/placeholder-social.png" />
+	</head>
+<body id="webbgThree" style="visibility: hidden;" onload="document.body.style.visibility='visible';">
+			<script>window.__tracking_base = 'https://tracking.unrealengine.com';</script>
+	<script src="https://tracking.unrealengine.com/tracking.js" async></script>    <div id="webThree">
+				<div id="page_head">
+						<div id="head">
+				<div id="logo"></div>
+			</div>
+						<div id="pagenav">
+				<div class="crumbs" id="crumbs">
+<span id="versionContainer">
+	<span id="versionSelect" class="btn btn-version" onclick="ToggleMenu($('#versionMenu'), $(this));"></span>
+	<div id="versionMenu">
+		<div id="4_26" data-version="4.26" class="btn btn-select" onclick="createCookie('version', '4.26', 365);SwitchVersion('4.26');">Unreal Engine 4.26 Documentation</div>
+		<div id="4_27" data-version="4.27" class="btn btn-select" onclick="createCookie('version', '4.27', 365);SwitchVersion('4.27');">Unreal Engine 4.27 Documentation</div>
+		<div id="5_0" data-version="5.0" class="btn btn-select" onclick="createCookie('version', '5.0', 365);SwitchVersion('5.0');">Unreal Engine 5.0 Documentation</div>
+		<div id="5_1" data-version="5.1" class="btn btn-select" onclick="createCookie('version', '5.1', 365);SwitchVersion('5.1');">Unreal Engine 5.1 Documentation</div>
+		<div id="5_2" data-version="5.2" class="btn btn-select" onclick="createCookie('version', '5.2', 365);SwitchVersion('5.2');">Unreal Engine 5.2 Documentation</div>
+		<div id="5_3" data-version="5.3" class="btn btn-select" onclick="createCookie('version', '5.3', 365);SwitchVersion('5.3');">Unreal Engine 5.3 Documentation</div>
+	</div>
+</span>
+	<span class="separator">></span> <a id="parent_link" href="../../../../API">Unreal Engine API Reference</a>
+
+	<span class="separator">></span> <a id="parent_link" href="../../../Editor">Editor</a>
+
+	<span class="separator">></span> <a id="parent_link" href="../../UnrealEd">UnrealEd</a>
+
+<span class="separator">></span> <span id="page">FFbxImporter</span>
+</div>				<div id="pageNavRight">
+								<!-- Start of Search -->
+												<div id="search_container">
+					<form name="bodySearch" method="get" action="https://www.unrealengine.com/en-US/bing-search" onsubmit="return validateSearch()">
+						<input type="image" src="./../../../../../Include/Images/search_box_icon.png" class="searchbutton"/>
+						<input type="hidden" name="filter" value="Documentation" />
+						<input type="text" name="keyword" placeholder="Search Documentation..." class="searchbox" autocomplete="off"/>
+					</form>
+				</div>
+								<!-- End of Search -->
+				<div id="skinContainer">
+	<div id="skinSelect" class="btn btn-skin" onclick="ToggleMenu($('#skinMenu'), $(this));"></div>
+	<div id="skinMenu">
+		<div id="light" class="btn btn-select" onclick="createCookie('skin', 'light', 365);location.reload();">Light Theme</div>
+		<div id="dark" class="btn btn-select" onclick="createCookie('skin', 'dark', 365);location.reload();">Dark Theme</div>
+	</div>
+</div>				</div>
+			</div>
+		</div>						<div id="navWrapper">
+			<div id="nav-filter-container">
+				<div id="nav-filter-inner">
+					<form>
+						<input type="text" placeholder="Filter pages..." id="nav-filter" onchange="clearTimeout(filterTimer); filterTimer = setTimeout(updateNavTreeFilter,250, this.value);if(this.value.length == 0){$('#filter-clear').hide();}else{$('#filter-clear').show();}" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" />
+						<button class="close-icon" id="filter-clear" type="reset" onclick="clearTimeout(filterTimer); filterTimer = setTimeout(updateNavTreeFilter,250, '');$(this).hide();"></button>
+					</form>
+				</div>
+			</div>
+			<nav id="navPanel">
+			</nav>
+			<div id="navigation" title="Click to toggle navigation menu"><span>></span></div>
+		</div>		
+		<div id="splitter">
+		</div>
+				<div id="contentContainer">
+										<div id="pagedefault">
+				<div id="product-banner">
+	<div id="product-logo"></div>
+</div>				<div id="pagecontainer" style="padding-right:0px;">
+					<!-- Start of Markdown converted page content -->
+										<div class="hero  background">
+	<div class="imgContainer"><img src="./../../../../../Images/ue5-hero.png" /></div>	<div class="info">
+		<div id="pageTitle">
+			<h1 id="H1TitleId">FFbxImporter</h1>
+		</div>
+		<h2 >Main FBX Importer class.</h2>
+		<div id="access">
+			<div class="accessContainer">
+															</div>
+		</div>
+	</div>
+</div>															<div id="maincol">
+																																				<div class="heading expanded" onclick="sectionOnClick(this, 'references');">
+        <p>References</p>
+    </div>
+<div id="references">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="normal-row">
+	<td class="name-cell">
+		<p>Module</p>
+	</td>
+	<td class="desc-cell">
+		<p><a id="content_link" href=".." ><span>UnrealEd</span></a></p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<p>Header</p>
+	</td>
+	<td class="desc-cell">
+		<p>&#47;Engine&#47;Source&#47;Editor&#47;UnrealEd&#47;Public&#47;FbxImporter.h</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<p>Include</p>
+	</td>
+	<td class="desc-cell">
+		<p>&#35;include &quot;FbxImporter.h&quot;</p>
+	</td>
+</tr>
+			</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'syntax');">
+        <p>Syntax</p>
+    </div>
+<div id="syntax">
+    <div class="simplecode_api">
+	<p>class FFbxImporter  </p>
+</div>
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'description');">
+        <p>Remarks</p>
+    </div>
+<div id="description">
+    <p>Main FBX Importer class.</p>
+</div><div class="syntax">
+	<div class="heading expanded" onclick="sectionOnClick(this, 'variables');">
+        <p>Variables</p>
+    </div>
+<div id="variables">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:8%">
+			</th>
+			<th class="type-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:15%">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="bFirstMesh"><p>bFirstMesh</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Flag that the mesh is the first mesh to import in current FBX scene FBX scene may contain multiple meshes, importer can import them at one time.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FbxMap&lt; FbxStri...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CollisionModels"><p>CollisionModels</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Collision model list.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FFbxDataConverter" ><span>FFbxDataConvert</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="Converter"><p>Converter</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Scene management</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/TWeakObjectPtr" ><span>TWeakOb</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CreatedObjects"><p>CreatedObjects</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="IMPORTPHASE" ><span>IMPORTPHASE</span></a></p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>CurPhase</p>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Containers/FString" ><span>FString</span></a></p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>ErrorMessage</p>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../UnFbx__EFbxCreator" ><span>EFbxCreator</span></a></p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>FbxCreator</p>
+	</td>
+	<td class="desc-cell">
+		<p>Value is true if the file was create by blender.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Containers/FString" ><span>FString</span></a></p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>FbxFileCreator</p>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Containers/FString" ><span>FString</span></a></p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>FbxFileVersion</p>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Containers/TMap" ><span>TMap</span></a>&lt; FbxFileTe...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FbxTextureToUniqueNameMap"><p>FbxTextureToUniqueNameMap</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>A map holding pairs of fbx texture that needs to be renamed with the associated string to avoid name conflicts.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FbxAxisSystem</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>FileAxisSystem</p>
+	</td>
+	<td class="desc-cell">
+		<p>Original File Info.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Containers/FString" ><span>FString</span></a></p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>FileBasePath</p>
+	</td>
+	<td class="desc-cell">
+		<p>Base path of fbx file</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FbxSystemUnit</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>FileUnitSystem</p>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FbxGeometryConv...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GeometryConverter"><p>GeometryConverter</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FbxImporter &#4...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="Importer"><p>Importer</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FBXImportOptions" ><span>FBXImportOption</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ImportOptions"><p>ImportOptions</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/GenericPlatform/EAppReturnType__Type" ><span>EAppReturnType:</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="LastMergeBonesChoice"><p>LastMergeBonesChoice</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Set when importing skeletal meshes if the merge bones step fails.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Misc/FMD5Hash" ><span>FMD5Hash</span></a></p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>Md5Hash</p>
+	</td>
+	<td class="desc-cell">
+		<p>We cache the hash of the file when we open the file. This is to avoid calculating the hash many time when importing many asset in one fbx file.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FbxMap&lt; FbxStri...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="NodeUniqueNameToOriginalNameMap"><p>NodeUniqueNameToOriginalNameMap</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>A map holding the original name of the renamed fbx nodes, It is used namely to associate collision meshes to their corresponding static mesh if it has been renamed.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/UObject/TWeakObjectPtr" ><span>TWeakObjectPtr</span></a>&lt;...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="Parent"><p>Parent</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FbxScene &#42;</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>Scene</p>
+	</td>
+	<td class="desc-cell">
+		<p>Current Fbx scene we are importing. Make sure to release it after import</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FbxManager &#42...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SdkManager"><p>SdkManager</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FbxNode...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="TransformSettingsToFbxApply"><p>TransformSettingsToFbxApply</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Make sure we are not applying two time the option transform to the same node</p>
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'constructor');">
+        <p>Constructors</p>
+    </div>
+<div id="constructor">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="__ctor"><nobr><p>FFbxImporter()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'destructor');">
+        <p>Destructors</p>
+    </div>
+<div id="destructor">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="__dtor"><nobr><p>~FFbxImporter()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'functions_0');">
+        <p>Functions</p>
+    </div>
+<div id="functions_0">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:8%;">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="AddStaticMeshSourceModelGenerate-"><nobr><p>AddStaticMeshSourceModelGeneratedLOD</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Engine/UStaticMesh" ><span>UStaticMesh</span></a>&#42; StaticMesh,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 LODIndex<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Add a GeneratedLOD to the staticmesh at the specified LOD index</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="AddTokenizedErrorMessage"><nobr><p>AddTokenizedErrorMessage</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Templates/TSharedRef" ><span>TSharedRef</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/Logging/FTokenizedMessage" ><span>FTokenizedMessage</span></a> > Err...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> FbxErrorName<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Error message handler</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ApplyTransformSettingsToFbxNode"><nobr><p>ApplyTransformSettingsToFbxNode</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxNode&#42; Node,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Factories/UFbxAssetImportData" ><span>UFbxAssetImportData</span></a>&#42; AssetData<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Apply asset import settings for transform to an FBX node</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="BuildFbxMatrixForImportTransform"><nobr><p>BuildFbxMatrixForImportTransform</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxAMatrix&amp; OutMatrix,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Factories/UFbxAssetImportData" ><span>UFbxAssetImportData</span></a>&#42; AssetData<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Populate the given matrix with the correct information for the asset data, in a format that matches FBX internals or without conversion</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="BuildSkeletonSystem"><nobr><p>BuildSkeletonSystem</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FbxCluster&#42; >&amp; Cluste...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FbxNode&#42; >&amp; OutSorted...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Fill FBX skeletons to OutSortedLinks</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="BuildStaticMeshFromGeometry"><nobr><p>BuildStaticMeshFromGeometry</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxNode&#42; Node,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Engine/UStaticMesh" ><span>UStaticMesh</span></a>&#42; StaticMesh,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="FFbxMaterial" ><span>FFbxMaterial</span></a> >&amp; MeshMateri...,<br />&nbsp;&nbsp;&nbsp;&nbsp;int LODIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Factories/EVertexColorImportOption__Type" ><span>EVertexColorImportOption::Type</span></a> Vert...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TMap" ><span>TMap</span></a>&lt; FVector3f, <a id="content_link" href="../../../Runtime/Core/Math/FColor" ><span>FColor</span></a> >&amp; E...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Math/FColor" ><span>FColor</span></a>&amp; VertexOverrideColor<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Set up the static mesh data from Fbx Mesh.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CanCreateClass"><nobr><p>CanCreateClass</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/CoreUObject/UObject/UClass" ><span>UClass</span></a>&#42; Class<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>The asset tool have a filter mecanism for CreateAsset, return true if the asset can be created, false otherwise</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CanImportClass"><nobr><p>CanImportClass</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/CoreUObject/UObject/UClass" ><span>UClass</span></a>&#42; Class<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>The asset tool have a filter mecanism for ImportAsset, return true if the asset can be imported, false otherwise</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CheckSmoothingInfo"><nobr><p>CheckSmoothingInfo</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxMesh&#42; FbxMesh<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CleanUp"><nobr><p>CleanUp()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Clean up for destroy the Importer.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CleanUpUnusedMaterials"><nobr><p>CleanUpUnusedMaterials</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Rendering/FSkeletalMeshImportData" ><span>FSkeletalMeshImportData</span></a>&amp; ImportDat...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Make sure there is no unused material in the raw data.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ClearAllCaches"><nobr><p>ClearAllCaches()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Clear all data that need to be clear when we start importing a fbx file.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ClearTokenizedErrorMessages"><nobr><p>ClearTokenizedErrorMessages()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FbxAMatrix</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ComputeSkeletalMeshTotalMatrix"><nobr><p>ComputeSkeletalMeshTotalMatrix</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxNode&#42; Node,<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxNode&#42; RootSkeletalNode<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Compute the matrix for skeletal Fbx Node If we import don't import a scene it will call ComputeTotalMatrix with Node as the parameter.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FbxAMatrix</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ComputeTotalMatrix"><nobr><p>ComputeTotalMatrix</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxNode&#42; Node<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Compute the global matrix for Fbx Node If we import scene it will return identity plus the pivot if we turn the bake pivot option</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ConvertScene"><nobr><p>ConvertScene()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Convert the scene from the current options.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CreateAndLinkExpressionForMateri-"><nobr><p>CreateAndLinkExpressionForMaterialProperty</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const FbxSurfaceMaterial&amp; FbxMater...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Materials/UMaterial" ><span>UMaterial</span></a>&#42; UnrealMaterial,<br />&nbsp;&nbsp;&nbsp;&nbsp;const char&#42; MaterialProperty,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/FExpressionInput" ><span>FExpressionInput</span></a>&amp; MaterialInput,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bSetupAsNormalMap,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/Containers/FString" ><span>FString</span></a> >&amp; UVSet,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector2D&amp; Location<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Material</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>T &#42;</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CreateAsset"><nobr><p>CreateAsset</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/FString" ><span>FString</span></a> ParentPackageName,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/FString" ><span>FString</span></a> ObjectName,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bAllowReplace<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Templated function to create an asset with given package and name</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/CoreUObject/UObject/UObject" ><span>UObject</span></a> &#42...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CreateAssetOfClass"><nobr><p>CreateAssetOfClass</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/CoreUObject/UObject/UClass" ><span>UClass</span></a>&#42; AssetClass,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/FString" ><span>FString</span></a> ParentPackageName,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/FString" ><span>FString</span></a> ObjectName,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bAllowReplace<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Create a new asset from the package and objectname and class</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Engine/Camera/ACameraActor" ><span>ACameraActor</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CreateCamera"><nobr><p>CreateCamera</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxCamera&#42; InCamera,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Engine/UWorld" ><span>UWorld</span></a>&#42; InWorld<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Import Fbx Camera object</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Engine/Engine/ALight" ><span>ALight</span></a> &#42;</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CreateLight"><nobr><p>CreateLight</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxLight&#42; InLight,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Engine/UWorld" ><span>UWorld</span></a>&#42; InWorld<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Various actors, current the Fbx importer don't importe them</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Engine/Materials/UMaterialInterface" ><span>UMaterialInt</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CreateUnrealMaterial"><nobr><p>CreateUnrealMaterial</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const FbxSurfaceMaterial&amp; FbxMater...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/Containers/FString" ><span>FString</span></a> >&amp; OutUVSets,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bForSkeletalMesh<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Create Unreal material from Fbx material.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="DeleteInstance"><nobr><p>DeleteInstance()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>int32</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="DoUnSmoothVerts"><nobr><p>DoUnSmoothVerts</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Rendering/FSkeletalMeshImportData" ><span>FSkeletalMeshImportData</span></a>&amp; ImportDat...,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bDuplicateUnSmoothWedges<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Make un-smooth faces work.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FacesAreSmoothlyConnected"><nobr><p>FacesAreSmoothlyConnected</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Rendering/FSkeletalMeshImportData" ><span>FSkeletalMeshImportData</span></a>&amp; ImportDat...,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 Face1,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 Face2<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Check if two faces belongs to same smoothing group</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FillAndVerifyBoneNames"><nobr><p>FillAndVerifyBoneNames</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Animation/USkeleton" ><span>USkeleton</span></a>&#42; Skeleton,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FbxNode&#42; >&amp; SortedLin...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> >&amp; OutRawBoneNames,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/FString" ><span>FString</span></a> Filename<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Fill up and verify bone names for animation</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FillAnimSequenceByKey"><nobr><p>FillAnimSequenceByKey</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxNode&#42; Node,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Animation/UAnimSequence" ><span>UAnimSequence</span></a>&#42; AnimSequence,<br />&nbsp;&nbsp;&nbsp;&nbsp;const char&#42; TakeName,<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxTime&amp; Start,<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxTime&amp; End,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bIsRoot,<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxVector4 Scale<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Anims</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FillCollisionModelList"><nobr><p>FillCollisionModelList</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxNode&#42; Node<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>If the node model is a collision model, then fill it into collision model list</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FillFbxCollisionMeshArray"><nobr><p>FillFbxCollisionMeshArray</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxNode&#42; Node<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Fill the collision models array by going through all mesh node recursively</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FillFbxMeshAndLODGroupArray"><nobr><p>FillFbxMeshAndLODGroupArray</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxNode&#42; Node,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FbxNode&#42; >&amp; outLODGro...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FbxNode&#42; >&amp; outMeshAr...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Get all Fbx mesh objects not under a LOD group and all LOD group node</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FillFbxMeshArray"><nobr><p>FillFbxMeshArray</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxNode&#42; Node,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FbxNode&#42; >&amp; outMeshAr...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="" ><span>UnFbx::FFbxImporter</span></a>&#42; FFbxImpor...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Get all Fbx mesh objects</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FillFbxSkelMeshArrayInScene"><nobr><p>FillFbxSkelMeshArrayInScene</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxNode&#42; Node,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FbxNode&#42; >&#4...,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool ExpandLOD,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bCombineSkeletalMesh,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bForceFindRigid<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Get all Fbx skeletal mesh objects in the scene. these meshes are grouped by skeleton they bind to</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FillLightComponent"><nobr><p>FillLightComponent</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxLight&#42; Light,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Components/ULightComponent" ><span>ULightComponent</span></a>&#42; UnrealLight<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Import Light detail info</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FillSkeletalMeshImportData"><nobr><p>FillSkeletalMeshImportData</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FbxNode&#42; >&amp; NodeArray,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Factories/UFbxSkeletalMeshImportData" ><span>UFbxSkeletalMeshImportData</span></a>&#42; Te...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FbxShape&#42; >&#42; FbxS...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Rendering/FSkeletalMeshImportData" ><span>FSkeletalMeshImportData</span></a>&#42; OutDa...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FbxNode&#42; >&amp; OutImport...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> >&amp; LastImportedMater...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bIsReimport,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TMap" ><span>TMap</span></a>&lt; FVector3f, <a id="content_link" href="../../../Runtime/Core/Math/FColor" ><span>FColor</span></a> >&amp; E...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Fill FSkeletalMeshIMportData from Fbx Nodes and FbxShape Array if exists.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FillSkeletalMeshImportPoints"><nobr><p>FillSkeletalMeshImportPoints</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Rendering/FSkeletalMeshImportData" ><span>FSkeletalMeshImportData</span></a>&#42; OutDa...,<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxNode&#42; RootNode,<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxNode&#42; Node,<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxShape&#42; FbxShape<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Fill the Points in FSkeletalMeshIMportData from a Fbx Node and a FbxShape if it exists.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FillSkelMeshImporterFromFbx"><nobr><p>FillSkelMeshImporterFromFbx</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Rendering/FSkeletalMeshImportData" ><span>FSkeletalMeshImportData</span></a>&amp; ImportDat...,<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxMesh&#42;&amp; Mesh,<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxSkin&#42; Skin,<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxShape&#42; Shape,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FbxNode&#42; >&amp; SortedLin...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FbxSurfaceMaterial&amp;#...,<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxNode&#42; RootNode,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TMap" ><span>TMap</span></a>&lt; FVector3f, <a id="content_link" href="../../../Runtime/Core/Math/FColor" ><span>FColor</span></a> >&amp; E...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Meshes</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FindAllLODGroupNode"><nobr><p>FindAllLODGroupNode</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FbxNode&#42; >&amp; OutNodeIn...,<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxNode&#42; NodeLodGroup,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 LodIndex<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Find the all the node containing a mesh attribute for the specified LOD index.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Engine/Materials/UMaterialInterface" ><span>UMaterialInt</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FindExistingMaterialFromFbxMater-"><nobr><p>FindExistingMaterialFromFbxMaterial</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const FbxSurfaceMaterial&amp; FbxMater...,<br />&nbsp;&nbsp;&nbsp;&nbsp;EMaterialSearchLocation MaterialSea...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Tries to find an existing UnrealMaterial from the FbxMaterial, returns nullptr if could not find a material.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FbxNode &#42...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FindFBXMeshesByBone"><nobr><p>FindFBXMeshesByBone</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a>&amp; RootBoneName,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bExpandLOD,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FbxNode&#42; >&amp; OutFBXMes...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Find FBX meshes that match Unreal skeletal mesh according to the bone of mesh</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FbxNode &#42...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FindLODGroupNode"><nobr><p>FindLODGroupNode</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxNode&#42; NodeLodGroup,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 LodIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxNode&#42; NodeToFind<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Find the first node containing a mesh attribute for the specified LOD index.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FindOrImportMaterialsFromNode"><nobr><p>FindOrImportMaterialsFromNode</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxNode&#42; FbxNode,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Engine/Materials/UMaterialInterface" ><span>UMaterialInterface</span></a>&#42; > ...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/Containers/FString" ><span>FString</span></a> >&amp; UVSets,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bForSkeletalMesh<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Create materials from Fbx node.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FixupMaterial"><nobr><p>FixupMaterial</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const FbxSurfaceMaterial&amp; FbxMater...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Materials/UMaterial" ><span>UMaterial</span></a>&#42; unMaterial<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Add a basic white diffuse color if no expression is linked to diffuse input.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FlushToTokenizedErrorMessage"><nobr><p>FlushToTokenizedErrorMessage</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;enum <a id="content_link" href="../../../Runtime/Core/Logging/EMessageSeverity__Type" ><span>EMessageSeverity::Type</span></a> Severit...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GatherPointsForMorphTarget"><nobr><p>GatherPointsForMorphTarget</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Rendering/FSkeletalMeshImportData" ><span>FSkeletalMeshImportData</span></a>&#42; OutDa...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FbxNode&#42; >&amp; NodeArray,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FbxShape&#42; >&#42; FbxS...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TSet" ><span>TSet</span></a>&lt; uint32 >&amp; ModifiedPoints<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Fill the Points in FSkeletalMeshIMportData from Fbx Nodes and FbxShape Array if it exists.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetAnimationIntervalMultiLayer"><nobr><p>GetAnimationIntervalMultiLayer</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxNode&#42; RootNode,<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxAnimStack&#42; AnimStack,<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxTimeSpan&amp; AnimTimeSpan<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>When we get exported time we call GetanimationInterval from fbx sdk and it return the layer 0 by default This function return the sum of all layer instead of just the layer 0.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FbxTimeSpan</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetAnimationTimeSpan"><nobr><p>GetAnimationTimeSpan</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxNode&#42; RootNode,<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxAnimStack&#42; AnimStack<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Get Animation Time Span - duration of the animation</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetCreatedObjects"><nobr><p>GetCreatedObjects()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Get the UObjects that have been created so far during the import process.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const TCHAR ...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetErrorMessage"><nobr><p>GetErrorMessage()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Retrieve the FBX loader's error message explaining its failure to read a given FBX file.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Containers/FString" ><span>FString</span></a></p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetFbxFileVersion"><nobr><p>GetFbxFileVersion()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>int32</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetFbxMeshCount"><nobr><p>GetFbxMeshCount</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxNode&#42; Node,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bCountLODs,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32&amp; OutNumLODGroups<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Get mesh count (including static mesh and skeletal mesh, except collision models) and find collision models</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Containers/FString" ><span>FString</span></a></p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetFileAxisDirection"><nobr><p>GetFileAxisDirection()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Containers/FString" ><span>FString</span></a></p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetFileCreator"><nobr><p>GetFileCreator()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Containers/FString" ><span>FString</span></a></p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetFileUnitSystem"><nobr><p>GetFileUnitSystem()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FbxGeometryC...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetGeometryConverter"><nobr><p>GetGeometryConverter()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>int32</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetGlobalAnimStackSampleRate"><nobr><p>GetGlobalAnimStackSampleRate</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxAnimStack&#42; CurAnimStack<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Calculate the global Sample Rate for all the nodes in the FbxAnimStack pass in parameter</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetImportOperationCancelled"><nobr><p>GetImportOperationCancelled()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns true if the last import operation was canceled.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FBXImportOptions" ><span>FBXImportOpt</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetImportOptions"><nobr><p>GetImportOptions()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Get the object of import options</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>int32</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetImportType"><nobr><p>GetImportType</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; InFilename<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Detect if the FBX file has skeletal mesh model.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="" ><span>FFbxImporter</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetInstance"><nobr><p>GetInstance()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns the importer singleton. It will be created on the first request.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Containers/FString" ><span>FString</span></a></p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetMaterialBasePackageName"><nobr><p>GetMaterialBasePackageName</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; MaterialFullName<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Containers/FString" ><span>FString</span></a></p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetMaterialFullName"><nobr><p>GetMaterialFullName</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const FbxSurfaceMaterial&amp; FbxMater...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Make material Unreal asset name from the Fbx material</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>int32</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetMaxSampleRate"><nobr><p>GetMaxSampleRate</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FbxNode&#42; >&amp; SortedLin...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Calculate Max Sample Rate - separate out of the original ImportAnimations</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FbxNode &#42...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetMeshNodesFromName"><nobr><p>GetMeshNodesFromName</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; ReimportMeshName,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FbxNode&#42; >&amp; FbxMeshAr...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Return the node that match the mesh name. Return nullptr in case there is no match</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>float</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetOriginalFbxFramerate"><nobr><p>GetOriginalFbxFramerate()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FbxNode &#42...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetRootSkeleton"><nobr><p>GetRootSkeleton</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxNode&#42; Link<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Get Unreal skeleton root from the FBX skeleton node. Mesh and dummy can be used as skeleton.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetSceneInfo"><nobr><p>GetSceneInfo</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/FString" ><span>FString</span></a> Filename,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FbxSceneInfo" ><span>FbxSceneInfo</span></a>&amp; SceneInfo,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bPreventMaterialNameClash<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Get detail infomation in the Fbx scene</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ImportAnimation"><nobr><p>ImportAnimation</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Animation/USkeleton" ><span>USkeleton</span></a>&#42; Skeleton,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Animation/UAnimSequence" ><span>UAnimSequence</span></a>&#42; DestSeq,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; FileName,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FbxNode&#42; >&amp; SortedLin...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FbxNode&#42; >&amp; NodeArray,<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxAnimStack&#42; CurAnimStack,<br />&nbsp;&nbsp;&nbsp;&nbsp;const int32 ResampleRate,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FbxTimeSpan AnimTimeSpan,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bReimport<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Import one animation from CurAnimStack</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Engine/Animation/UAnimSequence" ><span>UAnimSequenc</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ImportAnimations"><nobr><p>ImportAnimations</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Animation/USkeleton" ><span>USkeleton</span></a>&#42; Skeleton,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/CoreUObject/UObject/UObject" ><span>UObject</span></a>&#42; Outer,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FbxNode&#42; >&amp; SortedLin...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; Name,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Factories/UFbxAnimSequenceImportData" ><span>UFbxAnimSequenceImportData</span></a>&#42; Te...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FbxNode&#42; >&amp; NodeArray<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Add to the animation set, the animations contained within the FBX scene, for the given skeletal mesh</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ImportBones"><nobr><p>ImportBones</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FbxNode&#42; >&amp; NodeArray,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Rendering/FSkeletalMeshImportData" ><span>FSkeletalMeshImportData</span></a>&amp; ImportDat...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Factories/UFbxSkeletalMeshImportData" ><span>UFbxSkeletalMeshImportData</span></a>&#42; Te...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FbxNode&#42; >&amp; OutSorted...,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool&amp; bOutDiffPose,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bDisableMissingBindPoseWarning,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool&amp; bUseTime0AsRefPose,<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxNode&#42; SkeletalMeshNode,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bIsReimport<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Import bones from skeletons that NodeArray bind to.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ImportCollisionModels"><nobr><p>ImportCollisionModels</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Engine/UStaticMesh" ><span>UStaticMesh</span></a>&#42; StaticMesh,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FbxString&amp; NodeName<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Import collision models for one static mesh if it has collision models</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ImportCurve"><nobr><p>ImportCurve</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const FbxAnimCurve&#42; FbxCurve,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Curves/FRichCurve" ><span>FRichCurve</span></a>&amp; RichCurve,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FbxTimeSpan&amp; AnimTimeSpan,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bNegative,<br />&nbsp;&nbsp;&nbsp;&nbsp;const float ValueScale,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bAutoSetTangents<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Import FbxCurve to Curve</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ImportFbxMorphTarget"><nobr><p>ImportFbxMorphTarget</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FbxNode&#42; >&amp; SkelMeshN...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Engine/USkeletalMesh" ><span>USkeletalMesh</span></a>&#42; BaseSkelMesh,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 LODIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Rendering/FSkeletalMeshImportData" ><span>FSkeletalMeshImportData</span></a>&amp; BaseSkele...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Import Fbx Morph object for the Skeletal Mesh. In Fbx, morph object is a property of the Fbx Node.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ImportFile"><nobr><p>ImportFile</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/FString" ><span>FString</span></a> Filename,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bPreventMaterialNameClash<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Import Fbx file.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ImportFromFile"><nobr><p>ImportFromFile</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; Filename,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; Type,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bPreventMaterialNameClash<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Attempt to load an FBX scene from a given filename.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ImportNodeCustomProperties"><nobr><p>ImportNodeCustomProperties</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/CoreUObject/UObject/UObject" ><span>UObject</span></a>&#42; Object,<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxNode&#42; Node,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bPrefixTagWithNodeName<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Import the user-defined properties on the node as FBX metadata on the object</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Engine/Engine/USkeletalMesh" ><span>USkeletalMes</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ImportSkeletalMesh"><nobr><p>ImportSkeletalMesh</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="FImportSkeletalMeshArgs" ><span>FImportSkeletalMeshArgs</span></a>&amp; ImportSke...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ImportSkeletalMeshLOD"><nobr><p>ImportSkeletalMeshLOD</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Engine/USkeletalMesh" ><span>USkeletalMesh</span></a>&#42; InSkeletalMesh,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Engine/USkeletalMesh" ><span>USkeletalMesh</span></a>&#42; BaseSkeletalMes...,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 DesiredLOD,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Factories/UFbxSkeletalMeshImportData" ><span>UFbxSkeletalMeshImportData</span></a>&#42; Te...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Import LOD object for skeletal mesh</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Engine/Engine/UStaticMesh" ><span>UStaticMesh</span></a> ...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ImportStaticMesh"><nobr><p>ImportStaticMesh</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/CoreUObject/UObject/UObject" ><span>UObject</span></a>&#42; InParent,<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxNode&#42; Node,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a>&amp; Name,<br />&nbsp;&nbsp;&nbsp;&nbsp;EObjectFlags Flags,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Factories/UFbxStaticMeshImportData" ><span>UFbxStaticMeshImportData</span></a>&#42; Impo...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Engine/UStaticMesh" ><span>UStaticMesh</span></a>&#42; InStaticMesh,<br />&nbsp;&nbsp;&nbsp;&nbsp;int LODIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../ImportUtils/FExistingStaticMeshData" ><span>FExistingStaticMeshData</span></a>&#42;...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Creates a static mesh with the given name and flags, imported from within the FBX scene.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Engine/Engine/UStaticMesh" ><span>UStaticMesh</span></a> ...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ImportStaticMeshAsSingle"><nobr><p>ImportStaticMeshAsSingle</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/CoreUObject/UObject/UObject" ><span>UObject</span></a>&#42; InParent,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FbxNode&#42; >&amp; MeshNodeA...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> InName,<br />&nbsp;&nbsp;&nbsp;&nbsp;EObjectFlags Flags,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Factories/UFbxStaticMeshImportData" ><span>UFbxStaticMeshImportData</span></a>&#42; Temp...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Engine/UStaticMesh" ><span>UStaticMesh</span></a>&#42; InStaticMesh,<br />&nbsp;&nbsp;&nbsp;&nbsp;int LODIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../ImportUtils/FExistingStaticMeshData" ><span>FExistingStaticMeshData</span></a>&#42;...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Creates a static mesh from all the meshes in FBX scene with the given name and flags.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ImportStaticMeshGlobalSockets"><nobr><p>ImportStaticMeshGlobalSockets</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Engine/UStaticMesh" ><span>UStaticMesh</span></a>&#42; StaticMesh<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ImportStaticMeshLocalSockets"><nobr><p>ImportStaticMeshLocalSockets</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Engine/UStaticMesh" ><span>UStaticMesh</span></a>&#42; StaticMesh,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FbxNode&#42; >&amp; MeshNodeA...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Engine/Engine/UTexture" ><span>UTexture</span></a> &#4...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ImportTexture"><nobr><p>ImportTexture</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxFileTexture&#42; FbxTexture,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bSetupAsNormalMap<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Generate Unreal texture object from FBX texture.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ImportTexturesFromNode"><nobr><p>ImportTexturesFromNode</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxNode&#42; Node<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Visit all materials of one node, import textures from materials.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="IsOddNegativeScale"><nobr><p>IsOddNegativeScale</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxAMatrix&amp; TotalMatrix<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Check if there are negative scale in the transform matrix and its number is odd.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="IsUnrealBone"><nobr><p>IsUnrealBone</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxNode&#42; Link<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns if the passed FbxNode can be used as a skeleton bone in Unreal.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="IsUnrealTransformAttribute"><nobr><p>IsUnrealTransformAttribute</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxNode&#42; Link<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns if the passed FbxNode can be used as a transform attribute in Unreal.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="IsValidAnimationData"><nobr><p>IsValidAnimationData</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FbxNode&#42; >&amp; SortedLin...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FbxNode&#42; >&amp; NodeArray,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32&amp; ValidTakeCount<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Is valid animation data</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="LinkMaterialProperty"><nobr><p>LinkMaterialProperty</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const FbxSurfaceMaterial&amp; FbxMater...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Materials/UMaterialInstanceConstant" ><span>UMaterialInstanceConstant</span></a>&#42; Unr...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const char&#42; MaterialProperty,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> ParameterValue,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bSetupAsNormalMap<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Create and link texture to the right material parameter value</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="LoadNodeKeyframeAnimation"><nobr><p>LoadNodeKeyframeAnimation</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxNode&#42; NodeToQuery,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FFbxCurvesAPI" ><span>FFbxCurvesAPI</span></a>&amp; CurvesAPI<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="LoadNodeKeyframeAnimationRecursi-"><nobr><p>LoadNodeKeyframeAnimationRecursively</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FFbxCurvesAPI" ><span>FFbxCurvesAPI</span></a>&amp; CurvesAPI,<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxNode&#42; NodeToQuery<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Containers/FString" ><span>FString</span></a></p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="MakeName"><nobr><p>MakeName</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const ANSICHAR&#42; name<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Help</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a></p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="MakeNameForMesh"><nobr><p>MakeNameForMesh</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/FString" ><span>FString</span></a> InName,<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxObject&#42; FbxObject<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Containers/FString" ><span>FString</span></a></p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="MakeString"><nobr><p>MakeString</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const ANSICHAR&#42; Name<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="MergeAllLayerAnimation"><nobr><p>MergeAllLayerAnimation</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxAnimStack&#42; AnimStack,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 ResampleRate<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Merge all layers of one AnimStack to one layer.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OpenFile"><nobr><p>OpenFile</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/FString" ><span>FString</span></a> Filename<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Initialize Fbx file for import.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="PartialCleanUp"><nobr><p>PartialCleanUp()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Cleanup the fbx file data so we can read again another file</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="PopulateAnimatedCurveData"><nobr><p>PopulateAnimatedCurveData</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FFbxCurvesAPI" ><span>FFbxCurvesAPI</span></a>&amp; CurvesAPI<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>For sequencer import</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="PostImportStaticMesh"><nobr><p>PostImportStaticMesh</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Engine/UStaticMesh" ><span>UStaticMesh</span></a>&#42; StaticMesh,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FbxNode&#42; >&amp; MeshNodeA...,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 LODIndex<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Finish the import of the staticmesh after all LOD have been process (cannot be call before all LOD are imported).</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="PrepareAndShowMaterialConflictDi-"><nobr><p>PrepareAndShowMaterialConflictDialog</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; TMaterialType >&amp; Cur...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; TMaterialType >&amp; ResultMat...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; int32 >&amp; RemapMaterial,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> >&amp; RemapMaterialName,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bCanShowDialog,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bIsPreviewDialog,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bForceResetOnConflict,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../UnFbx__EFBXReimportDialogReturnO-" ><span>EFBXReimportDialogReturnOption</span></a>&amp; Ou...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ReadHeaderFromFile"><nobr><p>ReadHeaderFromFile</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; Filename,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bPreventMaterialNameClash<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Make sure the file header is read</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RecursiveBuildSkeleton"><nobr><p>RecursiveBuildSkeleton</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxNode&#42; Link,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FbxNode&#42; >&amp; OutSorted...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Fill FBX skeletons to OutSortedLinks recursively</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FbxNode &#42...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RecursiveFindParentLodGroup"><nobr><p>RecursiveFindParentLodGroup</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxNode&#42; ParentNode<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Find the first parent node containing a eLODGroup attribute.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Engine/Engine/UStaticMesh" ><span>UStaticMesh</span></a> ...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ReimportSceneStaticMesh"><nobr><p>ReimportSceneStaticMesh</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;uint64 FbxNodeUniqueId,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint64 FbxMeshUniqueId,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Engine/UStaticMesh" ><span>UStaticMesh</span></a>&#42; Mesh,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Factories/UFbxStaticMeshImportData" ><span>UFbxStaticMeshImportData</span></a>&#42; Temp...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Re-import Unreal static mesh from updated scene Fbx file if the Fbx mesh is in LODGroup, the LOD of mesh will be updated</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Engine/Engine/USkeletalMesh" ><span>USkeletalMes</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ReimportSkeletalMesh"><nobr><p>ReimportSkeletalMesh</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Engine/USkeletalMesh" ><span>USkeletalMesh</span></a>&#42; Mesh,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Factories/UFbxSkeletalMeshImportData" ><span>UFbxSkeletalMeshImportData</span></a>&#42; Te...,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint64 SkeletalMeshFbxUID,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FbxNode&#42; >&#42; OutSk...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Re-import Unreal skeletal mesh from updated Fbx file If the Fbx mesh is in LODGroup, the LOD of mesh will be updated.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Engine/Engine/UStaticMesh" ><span>UStaticMesh</span></a> ...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ReimportStaticMesh"><nobr><p>ReimportStaticMesh</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Engine/UStaticMesh" ><span>UStaticMesh</span></a>&#42; Mesh,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Factories/UFbxStaticMeshImportData" ><span>UFbxStaticMeshImportData</span></a>&#42; Temp...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Re-import Unreal static mesh from updated Fbx file if the Fbx mesh is in LODGroup, the LOD of mesh will be updated</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ReleaseScene"><nobr><p>ReleaseScene()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Empties the FBX scene, releasing its memory.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RemoveTransformSettingsFromFbxNo-"><nobr><p>RemoveTransformSettingsFromFbxNode</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxNode&#42; Node,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Factories/UFbxAssetImportData" ><span>UFbxAssetImportData</span></a>&#42; AssetData<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Remove asset import settings for transform to an FBX node</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ReplaceSkeletalMeshGeometryImpor-"><nobr><p>ReplaceSkeletalMeshGeometryImportData</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Engine/Engine/USkeletalMesh" ><span>USkeletalMesh</span></a>&#42; SkeletalM...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Rendering/FSkeletalMeshImportData" ><span>FSkeletalMeshImportData</span></a>&#42; Impor...,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 LodIndex<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ReplaceSkeletalMeshSkinningImpor-"><nobr><p>ReplaceSkeletalMeshSkinningImportData</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Engine/Engine/USkeletalMesh" ><span>USkeletalMesh</span></a>&#42; SkeletalM...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Rendering/FSkeletalMeshImportData" ><span>FSkeletalMeshImportData</span></a>&#42; Impor...,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 LodIndex<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FbxNode &#42...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RetrieveObjectFromName"><nobr><p>RetrieveObjectFromName</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const TCHAR&#42; ObjectName,<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxNode&#42; Root<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Retrieve the object inside the FBX scene from the name</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RetrievePoseFromBindPose"><nobr><p>RetrievePoseFromBindPose</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FbxNode&#42; >&amp; Nod...,<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxArray&lt; FbxPose&#42; >&amp; PoseArr...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Retrieve pose array from bind pose</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetMaterialOrderByName"><nobr><p>SetMaterialOrderByName</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Rendering/FSkeletalMeshImportData" ><span>FSkeletalMeshImportData</span></a>&amp; ImportDat...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> > LastImportedMateria...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetMaterialSkinXXOrder"><nobr><p>SetMaterialSkinXXOrder</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Rendering/FSkeletalMeshImportData" ><span>FSkeletalMeshImportData</span></a>&amp; ImportDat...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Get material mapping array according "Skinxx" flag in material name</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetupAnimationDataFromMesh"><nobr><p>SetupAnimationDataFromMesh</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Engine/USkeletalMesh" ><span>USkeletalMesh</span></a>&#42; SkeletalMesh,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/CoreUObject/UObject/UObject" ><span>UObject</span></a>&#42; InParent,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FbxNode&#42; >&amp; NodeArray,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Factories/UFbxAnimSequenceImportData" ><span>UFbxAnimSequenceImportData</span></a>&#42; Im...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; Filename<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Import and set up animation related data from mesh</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetupTransformForNode"><nobr><p>SetupTransformForNode</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxNode&#42; Node<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ShowFbxMaterialConflictWindow"><nobr><p>ShowFbxMaterialConflictWindow</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; TMaterialType >&amp; InS...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; TMaterialType >&amp; InR...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; int32 >&amp; RemapMaterials,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; bool >&amp; FuzzyRemapMaterial...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../UnFbx__EFBXReimportDialogReturnO-" ><span>EFBXReimportDialogReturnOption</span></a>&amp; Ou...,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bIsPreviewConflict<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>This function show a dialog to let the user resolve the material conflict that arise when re-importing a mesh</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ShowFbxSkeletonConflictWindow"><nobr><p>ShowFbxSkeletonConflictWindow</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Engine/USkeletalMesh" ><span>USkeletalMesh</span></a>&#42; SkeletalMesh,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Animation/USkeleton" ><span>USkeleton</span></a>&#42; Skeleton,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Factories/FSkeletonCompareData" ><span>ImportCompareHelper::FSkeletonCompa</span></a>...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>This function show a dialog to let the user know what will be change in the skeleton if the fbx is imported</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SkinControlPointsToPose"><nobr><p>SkinControlPointsToPose</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Rendering/FSkeletalMeshImportData" ><span>FSkeletalMeshImportData</span></a>&amp; ImportDat...,<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxMesh&#42; Mesh,<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxShape&#42; Shape,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bUseT0<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Skins the control points of the given mesh or shape using either the default pose for skinning or the first frame of the default animation.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="TraverseHierarchyNodeRecursively"><nobr><p>TraverseHierarchyNodeRecursively</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FbxSceneInfo" ><span>FbxSceneInfo</span></a>&amp; SceneInfo,<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxNode&#42; ParentNode,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FbxNodeInfo" ><span>FbxNodeInfo</span></a>&amp; ParentInfo<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Fill the <a id="content_link" href="../FbxNodeInfo" ><span>FbxNodeInfo</span></a> structure recursively to reflect the FbxNode hierarchy.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UpdateSkeletalMeshImportData"><nobr><p>UpdateSkeletalMeshImportData</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Engine/USkeletalMesh" ><span>USkeletalMesh</span></a>&#42; SkeletalMesh,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Factories/UFbxSkeletalMeshImportData" ><span>UFbxSkeletalMeshImportData</span></a>&#42; Sk...,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 SpecificLod,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Runtime/Core/UObject/FName" ><span>FName</span></a> >&#42; ImportMateria...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../Factories/FImportMeshLodSectionsData" ><span>FImportMeshLodSectionsData</span></a> ...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UpdateStaticMeshImportData"><nobr><p>UpdateStaticMeshImportData</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Engine/UStaticMesh" ><span>UStaticMesh</span></a>&#42; StaticMesh,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Factories/UFbxStaticMeshImportData" ><span>UFbxStaticMeshImportData</span></a>&#42; Stat...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ValidateAnimStack"><nobr><p>ValidateAnimStack</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FbxNode&#42; >&amp; SortedLin...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FbxNode&#42; >&amp; NodeArray,<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxAnimStack&#42; CurAnimStack,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 ResampleRate,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bImportMorph,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bSnapToClosestFrameBoundary,<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxTimeSpan&amp; AnimTimeSpan<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Validate Anim Stack - multiple check for validating animstack</p>
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'classes');">
+        <p>Classes</p>
+    </div>
+<div id="classes">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:15%">
+			</th>
+			<th class="name-cell" style="width:20%">
+				<p>Name</p>
+			</th>
+			<th class="desc-cell" style="width:65%">
+				<p>Description</p>
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public struct" title="Public struct" width="18" data-src="./../../../../../Images/api_struct_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="FFbxMaterial"><p>FFbxMaterial</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public class" title="Public class" width="18" data-src="./../../../../../Images/api_class_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="FImportSkeletalMeshArgs"><p>FImportSkeletalMeshArgs</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Creates a skeletal mesh from Fbx Nodes with the given name and flags, imported from within the FBX scene.</p>
+	</td>
+</tr>
+			</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'enums');">
+        <p>Enums</p>
+    </div>
+<div id="enums">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:15%">
+			</th>
+			<th class="name-cell" style="width:20%">
+				<p>Name</p>
+			</th>
+			<th class="desc-cell" style="width:65%">
+				<p>Description</p>
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected enum" title="Protected enum" width="18" data-src="./../../../../../Images/api_enum_protected.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="IMPORTPHASE"><p>IMPORTPHASE</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+			</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'constants');">
+        <p>Constants</p>
+    </div>
+<div id="constants">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="name-cell" style="width:15%">
+				<p>Name</p>
+			</th>
+			<th class="desc-cell" style="width:85%">
+				<p>Description</p>
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="StaticInstance"><p>StaticInstance</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="StaticPreviewInstance"><p>StaticPreviewInstance</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+			</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'deprecatedfunctions');">
+        <p>Deprecated Functions</p>
+    </div>
+<div id="deprecatedfunctions">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:8%;">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetScene"><nobr><p>SetScene</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FbxScene&#42; InScene<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Do not use this function.</p>
+	</td>
+</tr>
+	</table>
+</div>
+
+</div>
+</div>
+																	</div>
+					<!-- End of Markdown converted page content -->
+				</div>
+												<div id="recommendations"></div>			</div>
+						<div id="footer"></div>			
+									<div id="announcement">
+			<div style="display:inline-block;margin:5px;">
+				Help shape the future of Unreal Engine documentation! Tell us how we're doing so we can serve you better.
+			</div>
+			<div style="margin:5px;display:inline-block;">
+				<div class="btn action" style="margin-top:-6px;display:inline-block;" onclick="$('#announcement').hide();window.open('https://epicgames.questionpro.com/t/AVVbJZwedR');createCookie('announcement-read', new Date().getTime(), 30);">Take our survey</div>
+				<div class="btn btn-default" style="margin-top:-6px;display:inline-block;" onclick="$('#announcement').hide();createCookie('announcement-read', new Date().getTime(), 30);">Cancel</div>
+			</div>
+			<div class="btn-close" style="position:absolute;right:5px;top:10px;padding:3px;width:14px;height:14px;" onclick="$('#announcement').hide();"></div>
+			</div>
+					</div>
+	</div>
+</body>
+</html>

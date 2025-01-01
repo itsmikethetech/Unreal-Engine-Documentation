@@ -1,0 +1,1724 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="./../../../../../../Include/Javascript/common_en-US.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var time = new Date(0);
+		var preview = false;
+		var relativeHTMLPath = "./../../../../../../";
+				var pageid = 0;
+				var heroimage = "./../../../../../../Images/ue5-hero.png";
+				var lang = "en-US";
+				var basePath = document.location.pathname.substring(0, document.location.pathname.indexOf('/' + lang + '/') + lang.length + 1);
+		document.write('<base href="' +  encodeURI(basePath) + '/API/Runtime/Engine/HLSLTree/FEmitContext/" />');
+				var udnCSS = './../../../../../../Include/CSS/udn_public.css';
+		var udnLangCSS = '';
+				var udnOverrideCSS = './../../../../../../Include/CSS/skin_overrides.css';
+		var udnOverrideDarkCSS = './../../../../../../Include/CSS/skin_overrides_dark.css';
+		var fancyboxCSS = './../../../../../../Include/CSS/jquery.fancybox.css';
+		var jqueryuiCSS = './../../../../../../Include/CSS/jquery-ui.min.css';
+		var qtipCSS = './../../../../../../Include/CSS/jquery.qtip.css';
+		var prettifyCSS = './../../../../../../Include/CSS/prettify.css';
+		var navbarCSS = './../../../../../../Include/CSS/navBar.css';
+		var twentytwentyCSS = './../../../../../../Include/CSS/twentytwenty.css';
+		var recommendationsCSS = './../../../../../../Include/CSS/jquery.recommendations.css';
+	</script>
+    <title>FEmitContext | Unreal Engine 5.2 Documentation</title>
+    	    <meta name=viewport content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Cache-control" content="no-store">
+    <script  src="./../../../../../../Include/Javascript/CustomEvent.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/jquery-3.4.0.min.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/udn.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/udn_extras.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/jquery-ui.min.js" type="text/javascript"></script>
+	    <script  src="./../../../../../../Include/Javascript/informational.js" type="text/javascript"></script>
+	    <script  src="./../../../../../../Include/Javascript/jquery.fancybox.pack.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/jquery.qtip.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/prettify.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/jquery.slimscroll.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/jquery.event.move.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/jquery.twentytwenty.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/lazysizes.min.js" type="text/javascript"></script>
+	    <script  src="./../../../../../../Include/Javascript/jquery.recommendations.js" type="text/javascript"></script>
+	
+    <link async rel="icon" href="./../../../../../../Include/Images/site_icon.png" type="image/x-icon" />
+    <link async rel="shortcut icon" href="./../../../../../../Include/Images/site_icon.png" type="image/x-icon" />
+    <link async href="./../../../../../../Include/Images/touch_icon.png" rel="apple-touch-icon" />
+    <link async href="./../../../../../../Include/Images/touch_icon_114.png" sizes="114x114" rel="apple-touch-icon" />    
+		<script  src="./../../../../../../Include/Javascript/CollapsibleLists.js" type="text/javascript"></script>
+	<script  src="./../../../../../../Include/Javascript/navigationBarUI.js"></script>
+	<script  src="./../../../../../../Include/Javascript/navigationBar.js"></script>
+		
+	<link rel="alternate" href="https://docs.unrealengine.com/latest/en-US/API/Runtime/Engine/HLSLTree/FEmitContext/" hreflang="x-default" />
+
+	<meta name="title" content="FEmitContext" />
+<meta name="description" content="Tracks shared state while emitting HLSL code" />
+<meta name="availability" content="Public" />
+<meta name="crumbs" content="%ROOT%,API,API/Runtime,API/Runtime/Engine,API/Runtime/Engine/HLSLTree" />
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta property="og:title" content="FEmitContext" />
+	<meta property="og:description" content="Tracks shared state while emitting HLSL code" />
+		<meta property="og:image" content="https://docs.unrealengine.com/5.1/Images/placeholder-social.png" />
+	</head>
+<body id="webbgThree" style="visibility: hidden;" onload="document.body.style.visibility='visible';">
+			<script>window.__tracking_base = 'https://tracking.unrealengine.com';</script>
+	<script src="https://tracking.unrealengine.com/tracking.js" async></script>    <div id="webThree">
+				<div id="page_head">
+						<div id="head">
+				<div id="logo"></div>
+			</div>
+						<div id="pagenav">
+				<div class="crumbs" id="crumbs">
+<span id="versionContainer">
+	<span id="versionSelect" class="btn btn-version" onclick="ToggleMenu($('#versionMenu'), $(this));"></span>
+	<div id="versionMenu">
+		<div id="4_26" data-version="4.26" class="btn btn-select" onclick="createCookie('version', '4.26', 365);SwitchVersion('4.26');">Unreal Engine 4.26 Documentation</div>
+		<div id="4_27" data-version="4.27" class="btn btn-select" onclick="createCookie('version', '4.27', 365);SwitchVersion('4.27');">Unreal Engine 4.27 Documentation</div>
+		<div id="5_0" data-version="5.0" class="btn btn-select" onclick="createCookie('version', '5.0', 365);SwitchVersion('5.0');">Unreal Engine 5.0 Documentation</div>
+		<div id="5_1" data-version="5.1" class="btn btn-select" onclick="createCookie('version', '5.1', 365);SwitchVersion('5.1');">Unreal Engine 5.1 Documentation</div>
+		<div id="5_2" data-version="5.2" class="btn btn-select" onclick="createCookie('version', '5.2', 365);SwitchVersion('5.2');">Unreal Engine 5.2 Documentation</div>
+		<div id="5_3" data-version="5.3" class="btn btn-select" onclick="createCookie('version', '5.3', 365);SwitchVersion('5.3');">Unreal Engine 5.3 Documentation</div>
+	</div>
+</span>
+	<span class="separator">></span> <a id="parent_link" href="../../../../../API">Unreal Engine API Reference</a>
+
+	<span class="separator">></span> <a id="parent_link" href="../../../../Runtime">Runtime</a>
+
+	<span class="separator">></span> <a id="parent_link" href="../../../Engine">Engine</a>
+
+	<span class="separator">></span> <a id="parent_link" href="../../HLSLTree">HLSLTree</a>
+
+<span class="separator">></span> <span id="page">FEmitContext</span>
+</div>				<div id="pageNavRight">
+								<!-- Start of Search -->
+												<div id="search_container">
+					<form name="bodySearch" method="get" action="https://www.unrealengine.com/en-US/bing-search" onsubmit="return validateSearch()">
+						<input type="image" src="./../../../../../../Include/Images/search_box_icon.png" class="searchbutton"/>
+						<input type="hidden" name="filter" value="Documentation" />
+						<input type="text" name="keyword" placeholder="Search Documentation..." class="searchbox" autocomplete="off"/>
+					</form>
+				</div>
+								<!-- End of Search -->
+				<div id="skinContainer">
+	<div id="skinSelect" class="btn btn-skin" onclick="ToggleMenu($('#skinMenu'), $(this));"></div>
+	<div id="skinMenu">
+		<div id="light" class="btn btn-select" onclick="createCookie('skin', 'light', 365);location.reload();">Light Theme</div>
+		<div id="dark" class="btn btn-select" onclick="createCookie('skin', 'dark', 365);location.reload();">Dark Theme</div>
+	</div>
+</div>				</div>
+			</div>
+		</div>						<div id="navWrapper">
+			<div id="nav-filter-container">
+				<div id="nav-filter-inner">
+					<form>
+						<input type="text" placeholder="Filter pages..." id="nav-filter" onchange="clearTimeout(filterTimer); filterTimer = setTimeout(updateNavTreeFilter,250, this.value);if(this.value.length == 0){$('#filter-clear').hide();}else{$('#filter-clear').show();}" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" />
+						<button class="close-icon" id="filter-clear" type="reset" onclick="clearTimeout(filterTimer); filterTimer = setTimeout(updateNavTreeFilter,250, '');$(this).hide();"></button>
+					</form>
+				</div>
+			</div>
+			<nav id="navPanel">
+			</nav>
+			<div id="navigation" title="Click to toggle navigation menu"><span>></span></div>
+		</div>		
+		<div id="splitter">
+		</div>
+				<div id="contentContainer">
+										<div id="pagedefault">
+				<div id="product-banner">
+	<div id="product-logo"></div>
+</div>				<div id="pagecontainer" style="padding-right:0px;">
+					<!-- Start of Markdown converted page content -->
+										<div class="hero  background">
+	<div class="imgContainer"><img src="./../../../../../../Images/ue5-hero.png" /></div>	<div class="info">
+		<div id="pageTitle">
+			<h1 id="H1TitleId">FEmitContext</h1>
+		</div>
+		<h2 >Tracks shared state while emitting HLSL code</h2>
+		<div id="access">
+			<div class="accessContainer">
+															</div>
+		</div>
+	</div>
+</div>															<div id="maincol">
+																																				<div class="heading expanded" onclick="sectionOnClick(this, 'references');">
+        <p>References</p>
+    </div>
+<div id="references">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="normal-row">
+	<td class="name-cell">
+		<p>Module</p>
+	</td>
+	<td class="desc-cell">
+		<p><a id="content_link" href="../.." ><span>Engine</span></a></p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<p>Header</p>
+	</td>
+	<td class="desc-cell">
+		<p>&#47;Engine&#47;Source&#47;Runtime&#47;Engine&#47;Public&#47;HLSLTree&#47;HLSLTreeEmit.h</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<p>Include</p>
+	</td>
+	<td class="desc-cell">
+		<p>&#35;include &quot;HLSLTree&#47;HLSLTreeEmit.h&quot;</p>
+	</td>
+</tr>
+			</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'syntax');">
+        <p>Syntax</p>
+    </div>
+<div id="syntax">
+    <div class="simplecode_api">
+	<p>class FEmitContext  </p>
+</div>
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'description');">
+        <p>Remarks</p>
+    </div>
+<div id="description">
+    <p>Tracks shared state while emitting HLSL code</p>
+</div><div class="syntax">
+	<div class="heading expanded" onclick="sectionOnClick(this, 'variables');">
+        <p>Variables</p>
+    </div>
+<div id="variables">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:8%">
+			</th>
+			<th class="type-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:15%">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Core/Misc/FMemStackBase" ><span>FMemStackBase</span></a> &amp;...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="Allocator"><p>Allocator</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>bMarkLiveValues</p>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>bUseAnalyticDerivatives</p>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>bUsesSkyAtmosphere</p>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Core/Containers/TMap" ><span>TMap</span></a>&lt; <a id="content_link" href="../FConnectionKey" ><span>FConnecti</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ConnectionMap"><p>ConnectionMap</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>uint32</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>CurrentBoolUniformOffset</p>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>uint32</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>CurrentNumBoolComponents</p>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Core/Containers/TMap" ><span>TMap</span></a>&lt; <a id="content_link" href="../../../Core/Hash/FXxHash64" ><span>FXxHash64</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CustomDataMap"><p>CustomDataMap</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>uint32</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>DynamicParticleParameterMask</p>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Core/Containers/TMap" ><span>TMap</span></a>&lt; <a id="content_link" href="../../../Core/Hash/FXxHash64" ><span>FXxHash64</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="EmitCustomHLSLMap"><p>EmitCustomHLSLMap</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Core/Containers/TMap" ><span>TMap</span></a>&lt; <a id="content_link" href="../../../Core/Hash/FXxHash64" ><span>FXxHash64</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="EmitExpressionMap"><p>EmitExpressionMap</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Core/Containers/TMap" ><span>TMap</span></a>&lt; const <a id="content_link" href="../FFunction" ><span>FFu</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="EmitFunctionMap"><p>EmitFunctionMap</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Core/Containers/TMap" ><span>TMap</span></a>&lt; const <a id="content_link" href="../FExpression" ><span>FEx</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="EmitLocalPHIMap"><p>EmitLocalPHIMap</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../FEmitShaderNode" ><span>FEmitSh</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="EmitNodes"><p>EmitNodes</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Core/Containers/TMap" ><span>TMap</span></a>&lt; <a id="content_link" href="../../../Core/Hash/FXxHash64" ><span>FXxHash64</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="EmitPreshaderMap"><p>EmitPreshaderMap</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Core/Containers/TMap" ><span>TMap</span></a>&lt; const <a id="content_link" href="../FScope" ><span>FSc</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="EmitScopeMap"><p>EmitScopeMap</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FErrorHandlerInterface" ><span>FErrorHandlerIn</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="Errors"><p>Errors</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../../FMaterial" ><span>FMaterial</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="Material"><p>Material</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>TODO - Material values required for preshaders, need to decouple preshaders from material system Current plan is to implement support for externally registered preshader opcodes, and move the preshader opcodes related to material parameters into a separate module.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../FMaterialCompilationOutput" ><span>FMaterialCompil</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="MaterialCompilationOutput"><p>MaterialCompilationOutput</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>int32</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>NumErrors</p>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>int32</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>NumExpressionLocalPHIs</p>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>int32</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>NumExpressionLocals</p>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Core/Containers/TArray" ><span>TArray</span></a>&lt; const <a id="content_link" href="../FOwnedNode" ><span>F</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OwnerStack"><p>OwnerStack</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Core/Containers/TMap" ><span>TMap</span></a>&lt; const <a id="content_link" href="../FExpression" ><span>FEx</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="PrepareLocalPHIMap"><p>PrepareLocalPHIMap</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Core/Containers/TMap" ><span>TMap</span></a>&lt; const <a id="content_link" href="../FExpression" ><span>FEx</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="PrepareValueMap"><p>PrepareValueMap</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Core/Containers/TArray" ><span>TArray</span></a>&lt; const <a id="content_link" href="../FPreshaderLocalPHIScope" ><span>F</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="PreshaderLocalPHIScopes"><p>PreshaderLocalPHIScopes</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Core/Containers/TArray" ><span>TArray</span></a>&lt; struct ...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="PreshaderLoopScopes"><p>PreshaderLoopScopes</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>int32</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>PreshaderStackPosition</p>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>EShaderFrequenc...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ShaderFrequency"><p>ShaderFrequency</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FTargetParameters" ><span>FTargetParamete</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="TargetParameters"><p>TargetParameters</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../../Shader/FStructTypeRegistry" ><span>Shader::F</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="TypeRegistry"><p>TypeRegistry</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>uint32</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>UniformPreshaderOffset</p>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'constructor');">
+        <p>Constructors</p>
+    </div>
+<div id="constructor">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="__ctor"><nobr><p>FEmitContext</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Core/Misc/FMemStackBase" ><span>FMemStackBase</span></a>&amp; InAllocator,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FTargetParameters" ><span>FTargetParameters</span></a>&amp; InTargetP...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FErrorHandlerInterface" ><span>FErrorHandlerInterface</span></a>&amp; InErrors,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Shader/FStructTypeRegistry" ><span>Shader::FStructTypeRegistry</span></a>&amp;...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'destructor');">
+        <p>Destructors</p>
+    </div>
+<div id="destructor">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="__dtor"><nobr><p>~FEmitContext()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'functions_0');">
+        <p>Functions</p>
+    </div>
+<div id="functions_0">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:8%;">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>T &amp;</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="AcquireData"><nobr><p>AcquireData()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Finds or creates arbitrary data that's associated with this context.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FEmitScope" ><span>FEmitScope</span></a> &amp;...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="AcquireEmitScope"><nobr><p>AcquireEmitScope</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FScope" ><span>FScope</span></a>&#42; Scope<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FEmitScope" ><span>FEmitScope</span></a> &amp;...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="AcquireEmitScopeWithParent"><nobr><p>AcquireEmitScopeWithParent</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FScope" ><span>FScope</span></a>&#42; Scope,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FEmitScope" ><span>FEmitScope</span></a>&#42; EmitParentScope<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FEmitShaderExpression" ><span>FEmitShaderE</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="EmitCast"><nobr><p>EmitCast</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FEmitScope" ><span>FEmitScope</span></a>&amp; Scope,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FEmitShaderExpression" ><span>FEmitShaderExpression</span></a>&#42; ShaderV...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Shader/FType" ><span>Shader::FType</span></a>&amp; DestType,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../UE__HLSLTree__EEmitCastFlags" ><span>EEmitCastFlags</span></a> Flags<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FEmitShaderExpression" ><span>FEmitShaderE</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="EmitConstantZero"><nobr><p>EmitConstantZero</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FEmitScope" ><span>FEmitScope</span></a>&amp; Scope,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Shader/FType" ><span>Shader::FType</span></a>&amp; Type<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FEmitShaderExpression" ><span>FEmitShaderE</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="EmitCustomHLSL"><nobr><p>EmitCustomHLSL</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FEmitScope" ><span>FEmitScope</span></a>&amp; Scope,<br />&nbsp;&nbsp;&nbsp;&nbsp;FStringView DeclarationCode,<br />&nbsp;&nbsp;&nbsp;&nbsp;FStringView FunctionCode,<br />&nbsp;&nbsp;&nbsp;&nbsp;TConstArrayView&lt; <a id="content_link" href="../FCustomHLSLInput" ><span>FCustomHLSLInput</span></a> >...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Shader/FStructType" ><span>Shader::FStructType</span></a>&#42; Out...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FStringViews passed to this method are expected to reference persistent memory</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="EmitDeclarationsCode"><nobr><p>EmitDeclarationsCode</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FStringBuilderBase&amp; OutCode<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FEmitShaderExpression" ><span>FEmitShaderE</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="EmitExpression"><nobr><p>EmitExpression</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FEmitScope" ><span>FEmitScope</span></a>&amp; Scope,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Shader/FType" ><span>Shader::FType</span></a>&amp; Type,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FormatType&amp; Format,<br />&nbsp;&nbsp;&nbsp;&nbsp;Types... Args<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FEmitShaderExpression" ><span>FEmitShaderE</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="EmitExpressionWithDependencies"><nobr><p>EmitExpressionWithDependencies</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FEmitScope" ><span>FEmitScope</span></a>&amp; Scope,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; <a id="content_link" href="../FEmitShaderNode" ><span>FEmitShaderNode</span></a>&#42; >...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Shader/FType" ><span>Shader::FType</span></a>&amp; Type,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FormatType&amp; Format,<br />&nbsp;&nbsp;&nbsp;&nbsp;Types... Args<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Generate a snippit of HLSL code, strings with identical contents will be deduplicated, and their dependencies will be merged</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FEmitShaderExpression" ><span>FEmitShaderE</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="EmitExpressionWithDependency"><nobr><p>EmitExpressionWithDependency</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FEmitScope" ><span>FEmitScope</span></a>&amp; Scope,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FEmitShaderNode" ><span>FEmitShaderNode</span></a>&#42; Dependency,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Shader/FType" ><span>Shader::FType</span></a>&amp; Type,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FormatType&amp; Format,<br />&nbsp;&nbsp;&nbsp;&nbsp;Types... Args<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FEmitShaderStatement" ><span>FEmitShaderS</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="EmitFormatStatementInternal"><nobr><p>EmitFormatStatementInternal</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FEmitScope" ><span>FEmitScope</span></a>&amp; Scope,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; <a id="content_link" href="../FEmitShaderNode" ><span>FEmitShaderNode</span></a>&#42; >...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../UE__HLSLTree__EEmitScopeFormat" ><span>EEmitScopeFormat</span></a> ScopeFormat,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FEmitScope" ><span>FEmitScope</span></a>&#42; NestedScope0,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FEmitScope" ><span>FEmitScope</span></a>&#42; NestedScope1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FormatType0&amp; Format0,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FormatType1&amp; Format1,<br />&nbsp;&nbsp;&nbsp;&nbsp;Types... Args<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FEmitShaderExpression" ><span>FEmitShaderE</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="EmitInlineExpression"><nobr><p>EmitInlineExpression</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FEmitScope" ><span>FEmitScope</span></a>&amp; Scope,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Shader/FType" ><span>Shader::FType</span></a>&amp; Type,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FormatType&amp; Format,<br />&nbsp;&nbsp;&nbsp;&nbsp;Types... Args<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FEmitShaderExpression" ><span>FEmitShaderE</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="EmitInlineExpressionWithDependen-"><nobr><p>EmitInlineExpressionWithDependencies</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FEmitScope" ><span>FEmitScope</span></a>&amp; Scope,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; <a id="content_link" href="../FEmitShaderNode" ><span>FEmitShaderNode</span></a>&#42; >...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Shader/FType" ><span>Shader::FType</span></a>&amp; Type,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FormatType&amp; Format,<br />&nbsp;&nbsp;&nbsp;&nbsp;Types... Args<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FEmitShaderExpression" ><span>FEmitShaderE</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="EmitInlineExpressionWithDependen-_1"><nobr><p>EmitInlineExpressionWithDependency</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FEmitScope" ><span>FEmitScope</span></a>&amp; Scope,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FEmitShaderNode" ><span>FEmitShaderNode</span></a>&#42; Dependency,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Shader/FType" ><span>Shader::FType</span></a>&amp; Type,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FormatType&amp; Format,<br />&nbsp;&nbsp;&nbsp;&nbsp;Types... Args<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FEmitShaderStatement" ><span>FEmitShaderS</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="EmitNestedScope"><nobr><p>EmitNestedScope</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FEmitScope" ><span>FEmitScope</span></a>&amp; Scope,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FScope" ><span>FScope</span></a>&#42; NestedScope,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FormatType&amp; Format,<br />&nbsp;&nbsp;&nbsp;&nbsp;Types... Args<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FEmitShaderStatement" ><span>FEmitShaderS</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="EmitNestedScopes"><nobr><p>EmitNestedScopes</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FEmitScope" ><span>FEmitScope</span></a>&amp; Scope,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FScope" ><span>FScope</span></a>&#42; NestedScope0,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FScope" ><span>FScope</span></a>&#42; NestedScope1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FormatType0&amp; Format0,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FormatType1&amp; Format1,<br />&nbsp;&nbsp;&nbsp;&nbsp;Types... Args<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FEmitShaderStatement" ><span>FEmitShaderS</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="EmitNextScope"><nobr><p>EmitNextScope</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FEmitScope" ><span>FEmitScope</span></a>&amp; Scope,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FScope" ><span>FScope</span></a>&#42; NextScope<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FEmitShaderStatement" ><span>FEmitShaderS</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="EmitNextScopeWithDependency"><nobr><p>EmitNextScopeWithDependency</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FEmitScope" ><span>FEmitScope</span></a>&amp; Scope,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FEmitShaderNode" ><span>FEmitShaderNode</span></a>&#42; Dependency,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FScope" ><span>FScope</span></a>&#42; NextScope<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FEmitShaderExpression" ><span>FEmitShaderE</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="EmitPreshaderOrConstant"><nobr><p>EmitPreshaderOrConstant</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FEmitScope" ><span>FEmitScope</span></a>&amp; Scope,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FRequestedType" ><span>FRequestedType</span></a>&amp; RequestedTyp...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Shader/FType" ><span>Shader::FType</span></a>&amp; ResultType,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FExpression" ><span>FExpression</span></a>&#42; Expression<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="EmitPreshaderScope/2"><nobr><p>EmitPreshaderScope</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FEmitScope" ><span>FEmitScope</span></a>&amp; EmitScope,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FRequestedType" ><span>FRequestedType</span></a>&amp; RequestedTyp...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const <a id="content_link" href="../FEmitPreshaderScope" ><span>FEmitPreshaderSco</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Shader/FPreshaderData" ><span>Shader::FPreshaderData</span></a>&amp; OutPreshad...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="EmitPreshaderScope/1"><nobr><p>EmitPreshaderScope</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FScope" ><span>FScope</span></a>&#42; Scope,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FRequestedType" ><span>FRequestedType</span></a>&amp; RequestedTyp...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const <a id="content_link" href="../FEmitPreshaderScope" ><span>FEmitPreshaderSco</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Shader/FPreshaderData" ><span>Shader::FPreshaderData</span></a>&amp; OutPreshad...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FEmitShaderStatement" ><span>FEmitShaderS</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="EmitStatement"><nobr><p>EmitStatement</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FEmitScope" ><span>FEmitScope</span></a>&amp; Scope,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FormatType&amp; Format,<br />&nbsp;&nbsp;&nbsp;&nbsp;Types... Args<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FEmitShaderStatement" ><span>FEmitShaderS</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="EmitStatementWithDependencies"><nobr><p>EmitStatementWithDependencies</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FEmitScope" ><span>FEmitScope</span></a>&amp; Scope,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; <a id="content_link" href="../FEmitShaderNode" ><span>FEmitShaderNode</span></a>&#42; >...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FormatType&amp; Format,<br />&nbsp;&nbsp;&nbsp;&nbsp;Types... Args<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FEmitShaderStatement" ><span>FEmitShaderS</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="EmitStatementWithDependency"><nobr><p>EmitStatementWithDependency</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FEmitScope" ><span>FEmitScope</span></a>&amp; Scope,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FEmitShaderNode" ><span>FEmitShaderNode</span></a>&#42; Dependency,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FormatType&amp; Format,<br />&nbsp;&nbsp;&nbsp;&nbsp;Types... Args<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="Error"><nobr><p>Error</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const StringType&amp; InError<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="Errorf"><nobr><p>Errorf</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const FormatType&amp; Format,<br />&nbsp;&nbsp;&nbsp;&nbsp;Types... Args<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="Finalize"><nobr><p>Finalize()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>T &amp;</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FindData/2"><nobr><p>FindData()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const T &amp;</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FindData/1"><nobr><p>FindData()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FEmitScope" ><span>FEmitScope</span></a> &amp;...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FindEmitScope"><nobr><p>FindEmitScope</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FScope" ><span>FScope</span></a>&#42; Scope<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../UE__HLSLTree__EExpressionEvaluat-" ><span>EExpressionE</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetEvaluation"><nobr><p>GetEvaluation</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FExpression" ><span>FExpression</span></a>&#42; Expression,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FEmitScope" ><span>FEmitScope</span></a>&amp; Scope,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FRequestedType" ><span>FRequestedType</span></a>&amp; RequestedTyp...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FPreparedType" ><span>FPrepa</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetPreparedType"><nobr><p>GetPreparedType</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FExpression" ><span>FExpression</span></a>&#42; Expression<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FRequestedType" ><span>FRequestedTy</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetRequestedType"><nobr><p>GetRequestedType</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FExpression" ><span>FExpression</span></a>&#42; Expression<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../Shader/FType" ><span>Shader::FTyp</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetType"><nobr><p>GetType</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FExpression" ><span>FExpression</span></a>&#42; Expression<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FEmitShaderExpression" ><span>FEmitShaderE</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="InternalEmitExpression"><nobr><p>InternalEmitExpression</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FEmitScope" ><span>FEmitScope</span></a>&amp; Scope,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; <a id="content_link" href="../FEmitShaderNode" ><span>FEmitShaderNode</span></a>&#42; >...,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bInline,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Shader/FType" ><span>Shader::FType</span></a>&amp; Type,<br />&nbsp;&nbsp;&nbsp;&nbsp;FStringView Code<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FEmitScope" ><span>FEmitScope</span></a> &amp;...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="InternalEmitScope"><nobr><p>InternalEmitScope</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FScope" ><span>FScope</span></a>&#42; Scope<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FEmitShaderStatement" ><span>FEmitShaderS</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="InternalEmitStatement"><nobr><p>InternalEmitStatement</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FEmitScope" ><span>FEmitScope</span></a>&amp; Scope,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; <a id="content_link" href="../FEmitShaderNode" ><span>FEmitShaderNode</span></a>&#42; >...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../UE__HLSLTree__EEmitScopeFormat" ><span>EEmitScopeFormat</span></a> ScopeFormat,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FEmitScope" ><span>FEmitScope</span></a>&#42; NestedScope0,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FEmitScope" ><span>FEmitScope</span></a>&#42; NestedScope1,<br />&nbsp;&nbsp;&nbsp;&nbsp;FStringView Code0,<br />&nbsp;&nbsp;&nbsp;&nbsp;FStringView Code1<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="InternalError"><nobr><p>InternalError</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FStringView ErrorMessage<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="FCustomDataWrapper" ><span>FCustomDataW</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="InternalFindData"><nobr><p>InternalFindData</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Core/Hash/FXxHash64" ><span>FXxHash64</span></a> Hash<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FEmitScope" ><span>FEmitScope</span></a> &amp;...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="InternalPrepareScope"><nobr><p>InternalPrepareScope</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FScope" ><span>FScope</span></a>&#42; Scope,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FScope" ><span>FScope</span></a>&#42; ParentScope<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="InternalRegisterData"><nobr><p>InternalRegisterData</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Core/Hash/FXxHash64" ><span>FXxHash64</span></a> Hash,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="FCustomDataWrapper" ><span>FCustomDataWrapper</span></a>&#42; Data<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; ...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="MakeDependencies"><nobr><p>MakeDependencies</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;T&#42;&amp; Dependency<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="MarkInputType"><nobr><p>MarkInputType</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FExpression" ><span>FExpression</span></a>&#42; InExpressio...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Shader/FType" ><span>Shader::FType</span></a>&amp; Type<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="MarkScopeDead"><nobr><p>MarkScopeDead</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FEmitScope" ><span>FEmitScope</span></a>&amp; EmitParentScope,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FScope" ><span>FScope</span></a>&#42; Scope<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="MarkScopeEvaluation"><nobr><p>MarkScopeEvaluation</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FEmitScope" ><span>FEmitScope</span></a>&amp; EmitParentScope,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FScope" ><span>FScope</span></a>&#42; Scope,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../UE__HLSLTree__EExpressionEvaluat-" ><span>EExpressionEvaluation</span></a> Evaluation<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FPreparedType" ><span>FPreparedTyp</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="PrepareExpression"><nobr><p>PrepareExpression</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FExpression" ><span>FExpression</span></a>&#42; InExpressio...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FEmitScope" ><span>FEmitScope</span></a>&amp; Scope,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FRequestedType" ><span>FRequestedType</span></a>&amp; RequestedTyp...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FEmitScope" ><span>FEmitScope</span></a> &amp;...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="PrepareScope"><nobr><p>PrepareScope</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FScope" ><span>FScope</span></a>&#42; Scope<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FEmitScope" ><span>FEmitScope</span></a> &amp;...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="PrepareScopeWithParent"><nobr><p>PrepareScopeWithParent</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FScope" ><span>FScope</span></a>&#42; Scope,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FScope" ><span>FScope</span></a>&#42; ParentScope<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'classes');">
+        <p>Classes</p>
+    </div>
+<div id="classes">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:15%">
+			</th>
+			<th class="name-cell" style="width:20%">
+				<p>Name</p>
+			</th>
+			<th class="desc-cell" style="width:65%">
+				<p>Description</p>
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public class" title="Public class" width="18" data-src="./../../../../../../Images/api_class_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="FCustomDataWrapper"><p>FCustomDataWrapper</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public class" title="Public class" width="18" data-src="./../../../../../../Images/api_class_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="TCustomDataWrapper"><p>TCustomDataWrapper</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+			</table>
+</div>
+
+</div>
+</div>
+																	</div>
+					<!-- End of Markdown converted page content -->
+				</div>
+												<div id="recommendations"></div>			</div>
+						<div id="footer"></div>			
+									<div id="announcement">
+			<div style="display:inline-block;margin:5px;">
+				Help shape the future of Unreal Engine documentation! Tell us how we're doing so we can serve you better.
+			</div>
+			<div style="margin:5px;display:inline-block;">
+				<div class="btn action" style="margin-top:-6px;display:inline-block;" onclick="$('#announcement').hide();window.open('https://epicgames.questionpro.com/t/AVVbJZwedR');createCookie('announcement-read', new Date().getTime(), 30);">Take our survey</div>
+				<div class="btn btn-default" style="margin-top:-6px;display:inline-block;" onclick="$('#announcement').hide();createCookie('announcement-read', new Date().getTime(), 30);">Cancel</div>
+			</div>
+			<div class="btn-close" style="position:absolute;right:5px;top:10px;padding:3px;width:14px;height:14px;" onclick="$('#announcement').hide();"></div>
+			</div>
+					</div>
+	</div>
+</body>
+</html>

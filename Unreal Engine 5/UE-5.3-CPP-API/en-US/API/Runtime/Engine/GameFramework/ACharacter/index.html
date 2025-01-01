@@ -1,0 +1,3927 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="./../../../../../../Include/Javascript/common_en-US.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var time = new Date(0);
+		var preview = false;
+		var relativeHTMLPath = "./../../../../../../";
+				var pageid = 0;
+				var heroimage = "./../../../../../../Images/ue5-hero.png";
+				var lang = "en-US";
+				var basePath = document.location.pathname.substring(0, document.location.pathname.indexOf('/' + lang + '/') + lang.length + 1);
+		document.write('<base href="' +  encodeURI(basePath) + '/API/Runtime/Engine/GameFramework/ACharacter/" />');
+				var udnCSS = './../../../../../../Include/CSS/udn_public.css';
+		var udnLangCSS = '';
+				var udnOverrideCSS = './../../../../../../Include/CSS/skin_overrides.css';
+		var udnOverrideDarkCSS = './../../../../../../Include/CSS/skin_overrides_dark.css';
+		var fancyboxCSS = './../../../../../../Include/CSS/jquery.fancybox.css';
+		var jqueryuiCSS = './../../../../../../Include/CSS/jquery-ui.min.css';
+		var qtipCSS = './../../../../../../Include/CSS/jquery.qtip.css';
+		var prettifyCSS = './../../../../../../Include/CSS/prettify.css';
+		var navbarCSS = './../../../../../../Include/CSS/navBar.css';
+		var twentytwentyCSS = './../../../../../../Include/CSS/twentytwenty.css';
+		var recommendationsCSS = './../../../../../../Include/CSS/jquery.recommendations.css';
+	</script>
+    <title>ACharacter | Unreal Engine 5.2 Documentation</title>
+    	    <meta name=viewport content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Cache-control" content="no-store">
+    <script  src="./../../../../../../Include/Javascript/CustomEvent.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/jquery-3.4.0.min.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/udn.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/udn_extras.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/jquery-ui.min.js" type="text/javascript"></script>
+	    <script  src="./../../../../../../Include/Javascript/informational.js" type="text/javascript"></script>
+	    <script  src="./../../../../../../Include/Javascript/jquery.fancybox.pack.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/jquery.qtip.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/prettify.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/jquery.slimscroll.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/jquery.event.move.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/jquery.twentytwenty.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/lazysizes.min.js" type="text/javascript"></script>
+	    <script  src="./../../../../../../Include/Javascript/jquery.recommendations.js" type="text/javascript"></script>
+	
+    <link async rel="icon" href="./../../../../../../Include/Images/site_icon.png" type="image/x-icon" />
+    <link async rel="shortcut icon" href="./../../../../../../Include/Images/site_icon.png" type="image/x-icon" />
+    <link async href="./../../../../../../Include/Images/touch_icon.png" rel="apple-touch-icon" />
+    <link async href="./../../../../../../Include/Images/touch_icon_114.png" sizes="114x114" rel="apple-touch-icon" />    
+		<script  src="./../../../../../../Include/Javascript/CollapsibleLists.js" type="text/javascript"></script>
+	<script  src="./../../../../../../Include/Javascript/navigationBarUI.js"></script>
+	<script  src="./../../../../../../Include/Javascript/navigationBar.js"></script>
+		
+	<link rel="alternate" href="https://docs.unrealengine.com/latest/en-US/API/Runtime/Engine/GameFramework/ACharacter/" hreflang="x-default" />
+
+	<meta name="title" content="ACharacter" />
+<meta name="description" content="Characters are Pawns that have a mesh, collision, and built-in movement logic." />
+<meta name="availability" content="Public" />
+<meta name="crumbs" content="%ROOT%,API,API/Runtime,API/Runtime/Engine,API/Runtime/Engine/GameFramework" />
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta property="og:title" content="ACharacter" />
+	<meta property="og:description" content="Characters are Pawns that have a mesh, collision, and built-in movement logic." />
+		<meta property="og:image" content="https://docs.unrealengine.com/5.1/Images/placeholder-social.png" />
+	</head>
+<body id="webbgThree" style="visibility: hidden;" onload="document.body.style.visibility='visible';">
+			<script>window.__tracking_base = 'https://tracking.unrealengine.com';</script>
+	<script src="https://tracking.unrealengine.com/tracking.js" async></script>    <div id="webThree">
+				<div id="page_head">
+						<div id="head">
+				<div id="logo"></div>
+			</div>
+						<div id="pagenav">
+				<div class="crumbs" id="crumbs">
+<span id="versionContainer">
+	<span id="versionSelect" class="btn btn-version" onclick="ToggleMenu($('#versionMenu'), $(this));"></span>
+	<div id="versionMenu">
+		<div id="4_26" data-version="4.26" class="btn btn-select" onclick="createCookie('version', '4.26', 365);SwitchVersion('4.26');">Unreal Engine 4.26 Documentation</div>
+		<div id="4_27" data-version="4.27" class="btn btn-select" onclick="createCookie('version', '4.27', 365);SwitchVersion('4.27');">Unreal Engine 4.27 Documentation</div>
+		<div id="5_0" data-version="5.0" class="btn btn-select" onclick="createCookie('version', '5.0', 365);SwitchVersion('5.0');">Unreal Engine 5.0 Documentation</div>
+		<div id="5_1" data-version="5.1" class="btn btn-select" onclick="createCookie('version', '5.1', 365);SwitchVersion('5.1');">Unreal Engine 5.1 Documentation</div>
+		<div id="5_2" data-version="5.2" class="btn btn-select" onclick="createCookie('version', '5.2', 365);SwitchVersion('5.2');">Unreal Engine 5.2 Documentation</div>
+		<div id="5_3" data-version="5.3" class="btn btn-select" onclick="createCookie('version', '5.3', 365);SwitchVersion('5.3');">Unreal Engine 5.3 Documentation</div>
+	</div>
+</span>
+	<span class="separator">></span> <a id="parent_link" href="../../../../../API">Unreal Engine API Reference</a>
+
+	<span class="separator">></span> <a id="parent_link" href="../../../../Runtime">Runtime</a>
+
+	<span class="separator">></span> <a id="parent_link" href="../../../Engine">Engine</a>
+
+	<span class="separator">></span> <a id="parent_link" href="../../GameFramework">GameFramework</a>
+
+<span class="separator">></span> <span id="page">ACharacter</span>
+</div>				<div id="pageNavRight">
+								<!-- Start of Search -->
+												<div id="search_container">
+					<form name="bodySearch" method="get" action="https://www.unrealengine.com/en-US/bing-search" onsubmit="return validateSearch()">
+						<input type="image" src="./../../../../../../Include/Images/search_box_icon.png" class="searchbutton"/>
+						<input type="hidden" name="filter" value="Documentation" />
+						<input type="text" name="keyword" placeholder="Search Documentation..." class="searchbox" autocomplete="off"/>
+					</form>
+				</div>
+								<!-- End of Search -->
+				<div id="skinContainer">
+	<div id="skinSelect" class="btn btn-skin" onclick="ToggleMenu($('#skinMenu'), $(this));"></div>
+	<div id="skinMenu">
+		<div id="light" class="btn btn-select" onclick="createCookie('skin', 'light', 365);location.reload();">Light Theme</div>
+		<div id="dark" class="btn btn-select" onclick="createCookie('skin', 'dark', 365);location.reload();">Dark Theme</div>
+	</div>
+</div>				</div>
+			</div>
+		</div>						<div id="navWrapper">
+			<div id="nav-filter-container">
+				<div id="nav-filter-inner">
+					<form>
+						<input type="text" placeholder="Filter pages..." id="nav-filter" onchange="clearTimeout(filterTimer); filterTimer = setTimeout(updateNavTreeFilter,250, this.value);if(this.value.length == 0){$('#filter-clear').hide();}else{$('#filter-clear').show();}" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" />
+						<button class="close-icon" id="filter-clear" type="reset" onclick="clearTimeout(filterTimer); filterTimer = setTimeout(updateNavTreeFilter,250, '');$(this).hide();"></button>
+					</form>
+				</div>
+			</div>
+			<nav id="navPanel">
+			</nav>
+			<div id="navigation" title="Click to toggle navigation menu"><span>></span></div>
+		</div>		
+		<div id="splitter">
+		</div>
+				<div id="contentContainer">
+										<div id="pagedefault">
+				<div id="product-banner">
+	<div id="product-logo"></div>
+</div>				<div id="pagecontainer" style="padding-right:0px;">
+					<!-- Start of Markdown converted page content -->
+										<div class="hero  background">
+	<div class="imgContainer"><img src="./../../../../../../Images/ue5-hero.png" /></div>	<div class="info">
+		<div id="pageTitle">
+			<h1 id="H1TitleId">ACharacter</h1>
+		</div>
+		<h2 >Characters are Pawns that have a mesh, collision, and built-in movement logic.</h2>
+		<div id="access">
+			<div class="accessContainer">
+															</div>
+		</div>
+	</div>
+</div>															<div id="maincol">
+																																				<div class="heading expanded" onclick="sectionOnClick(this, 'hierarchy');">
+        <p>Inheritance Hierarchy</p>
+    </div>
+<div id="hierarchy">
+    <div class="hierarchy">
+	<table  class="hierarchy-table" cellspacing="0" id="hrch"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../../../CoreUObject/UObject/UObjectBase"><p>UObjectBase</p></a><table  class="hierarchy-table" cellspacing="0" id="hrch_1"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../../../CoreUObject/UObject/UObjectBaseUtility"><p>UObjectBaseUtility</p></a><table  class="hierarchy-table" cellspacing="0" id="hrch_1_1"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../../../CoreUObject/UObject/UObject"><p>UObject</p></a><table  class="hierarchy-table" cellspacing="0" id="hrch_1_1_1"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../AActor"><p>AActor</p></a><table  class="hierarchy-table" cellspacing="0" id="hrch_1_1_1_1"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../APawn"><p>APawn</p></a><table  class="hierarchy-table" cellspacing="0" id="hrch_1_1_1_1_1"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><p>ACharacter</p>
+<table  class="hierarchy-table" cellspacing="0" id="hrch_1_1_1_1_1_1"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../../../../Plugins/ArchVisCharacter/AArchVisCharacter"><p>AArchVisCharacter</p></a></td></tr><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../../../AIModule/EnvironmentQuery/AEQSTestingPawn"><p>AEQSTestingPawn</p></a></td></tr><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../../../../Plugins/Paper2D/PAPER2APaperCharacter"><p>PAPER2APaperCharacter</p></a></td></tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr></table>
+</div>
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'references');">
+        <p>References</p>
+    </div>
+<div id="references">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="normal-row">
+	<td class="name-cell">
+		<p>Module</p>
+	</td>
+	<td class="desc-cell">
+		<p><a id="content_link" href="../.." ><span>Engine</span></a></p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<p>Header</p>
+	</td>
+	<td class="desc-cell">
+		<p>&#47;Engine&#47;Source&#47;Runtime&#47;Engine&#47;Classes&#47;GameFramework&#47;Character.h</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<p>Include</p>
+	</td>
+	<td class="desc-cell">
+		<p>&#35;include &quot;GameFramework&#47;Character.h&quot;</p>
+	</td>
+</tr>
+			</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'syntax');">
+        <p>Syntax</p>
+    </div>
+<div id="syntax">
+    <div class="simplecode_api">
+	<p>class ACharacter : public <a id="content_link" href="../APawn" ><span>APawn</span></a>  </p>
+</div>
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'description');">
+        <p>Remarks</p>
+    </div>
+<div id="description">
+    <p>Characters are Pawns that have a mesh, collision, and built-in movement logic. They are responsible for all physical interaction between the player or AI and the world, and also implement basic networking and input models. They are designed for a vertically-oriented player representation that can walk, jump, fly, and swim through the world using CharacterMovementComponent.</p>
+</div><div class="syntax">
+	<div class="heading expanded" onclick="sectionOnClick(this, 'variables');">
+        <p>Variables</p>
+    </div>
+<div id="variables">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:8%">
+			</th>
+			<th class="type-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:15%">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>float</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>AnimRootMotionTranslationScale</p>
+	</td>
+	<td class="desc-cell">
+		<p>Scale to apply to root motion translation on this Character</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FBasedMovementInfo" ><span>FBasedMovementI</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="BasedMovement"><p>BasedMovement</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Info about our current movement base (object we are standing on).</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FQuat</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>BaseRotationOffset</p>
+	</td>
+	<td class="desc-cell">
+		<p>Saved rotation offset of mesh.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FVector</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>BaseTranslationOffset</p>
+	</td>
+	<td class="desc-cell">
+		<p>Saved translation offset of mesh.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>uint32: 1</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>bClientCheckEncroachmentOnNetUpdate</p>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>uint32: 1</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>bClientResimulateRootMotion</p>
+	</td>
+	<td class="desc-cell">
+		<p>If server disagrees with root motion track position, client has to resimulate root motion from last AckedMove.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>uint32: 1</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>bClientResimulateRootMotionSources</p>
+	</td>
+	<td class="desc-cell">
+		<p>If server disagrees with root motion state, client has to resimulate root motion from last AckedMove.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>uint32: 1</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>bClientUpdating</p>
+	</td>
+	<td class="desc-cell">
+		<p>When true, applying updates to network client (replaying saved moves for a locally controlled character)</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>uint32: 1</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>bClientWasFalling</p>
+	</td>
+	<td class="desc-cell">
+		<p>True if Pawn was initially falling when started to replay network moves.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>bInBaseReplication</p>
+	</td>
+	<td class="desc-cell">
+		<p>Flag that we are receiving replication of the based movement.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>uint32: 1</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>bIsCrouched</p>
+	</td>
+	<td class="desc-cell">
+		<p>Set by character movement to specify that this Character is currently crouched.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>uint32: 1</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>bPressedJump</p>
+	</td>
+	<td class="desc-cell">
+		<p>When true, player wants to jump</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>uint32:  1</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="bProxyIsJumpForceApplied"><p>bProxyIsJumpForceApplied</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Set to indicate that this Character is currently under the force of a jump (if JumpMaxHoldTime is non-zero).</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>uint32: 1</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="bServerMoveIgnoreRootMotion"><p>bServerMoveIgnoreRootMotion</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Disable root motion on the server.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>uint32: 1</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>bSimGravityDisabled</p>
+	</td>
+	<td class="desc-cell">
+		<p>Disable simulated gravity (set when character encroaches geometry on client, to keep it from falling through floors)</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>uint32:  1</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>bWasJumping</p>
+	</td>
+	<td class="desc-cell">
+		<p>Tracks whether or not the character was already jumping last frame.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../Animation/FRootMotionMovementParams" ><span>FRootMotionMove</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ClientRootMotionParams"><p>ClientRootMotionParams</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>For LocallyControlled Autonomous clients. Saved root motion data to be used by SavedMoves.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>float</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>CrouchedEyeHeight</p>
+	</td>
+	<td class="desc-cell">
+		<p>Default crouched eye height</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>int32</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="JumpCurrentCount"><p>JumpCurrentCount</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Tracks the current number of jumps performed.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>int32</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="JumpCurrentCountPreJump"><p>JumpCurrentCountPreJump</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Represents the current number of jumps performed before CheckJumpInput modifies JumpCurrentCount.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>float</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>JumpForceTimeRemaining</p>
+	</td>
+	<td class="desc-cell">
+		<p>Amount of jump force time remaining, if JumpMaxHoldTime > 0.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>float</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>JumpKeyHoldTime</p>
+	</td>
+	<td class="desc-cell">
+		<p>Jump key Held Time. This is the time that the player has held the jump key, in seconds.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>int32</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="JumpMaxCount"><p>JumpMaxCount</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>The max number of jumps the character can perform.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>float</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="JumpMaxHoldTime"><p>JumpMaxHoldTime</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>The max time the jump key can be held.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FLandedSignature" ><span>FLandedSignatur</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="LandedDelegate"><p>LandedDelegate</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called upon landing when falling, to perform actions based on the Hit result.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FMovementModeChangedSignature" ><span>FMovementModeCh</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="MovementModeChangedDelegate"><p>MovementModeChangedDelegate</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Multicast delegate for MovementMode changing.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>uint32</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>NumActorOverlapEventsCounter</p>
+	</td>
+	<td class="desc-cell">
+		<p>Incremented every time there is an Actor overlap event (start or stop) on this actor.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FCharacterMovementUpdatedSignatu-" ><span>FCharacterMovem</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnCharacterMovementUpdated"><p>OnCharacterMovementUpdated</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Event triggered at the end of a CharacterMovementComponent movement update.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FCharacterReachedApexSignature" ><span>FCharacterReach</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnReachedJumpApex"><p>OnReachedJumpApex</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Broadcast when Character's jump reaches its apex. Needs CharacterMovement->bNotifyApex = true</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FVector_NetQuan...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="PreNetReceivedGravityDirection"><p>PreNetReceivedGravityDirection</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Cached version of the replicated gravity direction before replication.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>float</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>ProxyJumpForceStartedTime</p>
+	</td>
+	<td class="desc-cell">
+		<p>Track last time a jump force started for a proxy.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>float</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>ReplayLastTransformUpdateTimeStamp</p>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FBasedMovementInfo" ><span>FBasedMovementI</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ReplicatedBasedMovement"><p>ReplicatedBasedMovement</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Replicated version of relative movement. Read-only on simulated proxies&#33;</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FVector_NetQuan...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ReplicatedGravityDirection"><p>ReplicatedGravityDirection</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>CharacterMovement Custom gravity direction replicated for simulated proxies.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>uint8</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ReplicatedMovementMode"><p>ReplicatedMovementMode</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>CharacterMovement MovementMode (and custom mode) replicated for simulated proxies.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>float</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>ReplicatedServerLastTransformUpdateTimeStamp</p>
+	</td>
+	<td class="desc-cell">
+		<p>CharacterMovement ServerLastTransformUpdateTimeStamp value, replicated to simulated proxies.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FRepRootMotionMontage" ><span>FRepRootMotionM</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RepRootMotion"><p>RepRootMotion</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Replicated Root Motion montage</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../FSimulatedRootMotionReplicatedMo-" ><span>FSimula</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RootMotionRepMoves"><p>RootMotionRepMoves</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Array of previously received root motion moves from the server.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FRootMotionSourceGroup" ><span>FRootMotionSour</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SavedRootMotion"><p>SavedRootMotion</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>For LocallyControlled Autonomous clients.</p>
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'constructor');">
+        <p>Constructors</p>
+    </div>
+<div id="constructor">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="__ctor"><nobr><p>ACharacter</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../CoreUObject/UObject/FObjectInitializer" ><span>FObjectInitializer</span></a>&amp; ObjectIn...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Default <a id="content_link" href="../../../CoreUObject/UObject/UObject" ><span>UObject</span></a> constructor.</p>
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'functions_0');">
+        <p>Functions</p>
+    </div>
+<div id="functions_0">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:8%;">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ApplyAsyncOutput"><nobr><p>ApplyAsyncOutput</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../FCharacterAsyncOutput" ><span>FCharacterAsyncOutput</span></a>&amp; Outpu...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ApplyDamageMomentum"><nobr><p>ApplyDamageMomentum</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float DamageTaken,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Engine/FDamageEvent" ><span>FDamageEvent</span></a> const&amp; DamageEvent,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../APawn" ><span>APawn</span></a>&#42; PawnInstigator,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../AActor" ><span>AActor</span></a>&#42; DamageCauser<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Apply momentum caused by damage.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="BaseChange"><nobr><p>BaseChange()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Event called after actor's base changes (if SetBase was requested to notify us with bNotifyPawn).</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CacheInitialMeshOffset"><nobr><p>CacheInitialMeshOffset</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector MeshRelativeLocation,<br />&nbsp;&nbsp;&nbsp;&nbsp;FRotator MeshRelativeRotation<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Cache mesh offset from capsule.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CanCrouch"><nobr><p>CanCrouch()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CanJump"><nobr><p>CanJump()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Check if the character can jump in the current state.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CanJumpInternal"><nobr><p>CanJumpInternal()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Customizable event to check if the character can jump in the current state.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CanJumpInternal_Implementation"><nobr><p>CanJumpInternal_Implementation()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Customizable event to check if the character can jump in the current state.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CanUseRootMotionRepMove"><nobr><p>CanUseRootMotionRepMove</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FSimulatedRootMotionReplicatedMo-" ><span>FSimulatedRootMotionReplicate</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Animation/FAnimMontageInstance" ><span>FAnimMontageInstance</span></a>&amp; Client...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>True if buffered move is usable to teleport client back to.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CheckJumpInput"><nobr><p>CheckJumpInput</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float DeltaTime<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Trigger jump if jump button has been pressed.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ClearJumpInput"><nobr><p>ClearJumpInput</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float DeltaTime<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Update jump input state after having checked input.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ClientAckGoodMove"><nobr><p>ClientAckGoodMove</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float TimeStamp<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>If no client adjustment is needed after processing received <a id="content_link" href="ServerMove" ><span>ServerMove()</span></a>, ack the good move so client can remove it from SavedMoves</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ClientAckGoodMove_Implementation"><nobr><p>ClientAckGoodMove_Implementation</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float TimeStamp<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>If no client adjustment is needed after processing received <a id="content_link" href="ServerMove" ><span>ServerMove()</span></a>, ack the good move so client can remove it from SavedMoves</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ClientAdjustPosition"><nobr><p>ClientAdjustPosition</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float TimeStamp,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector NewLoc,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector NewVel,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Components/UPrimitiveComponent" ><span>UPrimitiveComponent</span></a>&#42; NewBase,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Core/UObject/FName" ><span>FName</span></a> NewBaseBoneName,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bHasBase,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bBaseRelativePosition,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 ServerMovementMode<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Replicate position correction to client, associated with a timestamped servermove.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ClientAdjustPosition_Implementat-"><nobr><p>ClientAdjustPosition_Implementation</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float TimeStamp,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector NewLoc,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector NewVel,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Components/UPrimitiveComponent" ><span>UPrimitiveComponent</span></a>&#42; NewBase,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Core/UObject/FName" ><span>FName</span></a> NewBaseBoneName,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bHasBase,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bBaseRelativePosition,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 ServerMovementMode<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Replicate position correction to client, associated with a timestamped servermove.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ClientAdjustRootMotionPosition"><nobr><p>ClientAdjustRootMotionPosition</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float TimeStamp,<br />&nbsp;&nbsp;&nbsp;&nbsp;float ServerMontageTrackPosition,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector ServerLoc,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector_NetQuantizeNormal ServerRot...,<br />&nbsp;&nbsp;&nbsp;&nbsp;float ServerVelZ,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Components/UPrimitiveComponent" ><span>UPrimitiveComponent</span></a>&#42; ServerBas...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Core/UObject/FName" ><span>FName</span></a> ServerBoneName,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bHasBase,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bBaseRelativePosition,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 ServerMovementMode<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Replicate position correction to client when using root motion for movement.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ClientAdjustRoot-"><nobr><p>ClientAdjustRootMotionPosition_Implementation</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float TimeStamp,<br />&nbsp;&nbsp;&nbsp;&nbsp;float ServerMontageTrackPosition,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector ServerLoc,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector_NetQuantizeNormal ServerRot...,<br />&nbsp;&nbsp;&nbsp;&nbsp;float ServerVelZ,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Components/UPrimitiveComponent" ><span>UPrimitiveComponent</span></a>&#42; ServerBas...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Core/UObject/FName" ><span>FName</span></a> ServerBoneName,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bHasBase,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bBaseRelativePosition,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 ServerMovementMode<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Replicate position correction to client when using root motion for movement.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ClientAdjustRootMotionSourcePosi-"><nobr><p>ClientAdjustRootMotionSourcePosition</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float TimeStamp,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FRootMotionSourceGroup" ><span>FRootMotionSourceGroup</span></a> ServerRootMo...,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bHasAnimRootMotion,<br />&nbsp;&nbsp;&nbsp;&nbsp;float ServerMontageTrackPosition,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector ServerLoc,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector_NetQuantizeNormal ServerRot...,<br />&nbsp;&nbsp;&nbsp;&nbsp;float ServerVelZ,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Components/UPrimitiveComponent" ><span>UPrimitiveComponent</span></a>&#42; ServerBas...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Core/UObject/FName" ><span>FName</span></a> ServerBoneName,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bHasBase,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bBaseRelativePosition,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 ServerMovementMode<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Replicate root motion source correction to client when using root motion for movement.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ClientAdjustRoot-_1"><nobr><p>ClientAdjustRootMotionSourcePosition_Implementation</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float TimeStamp,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FRootMotionSourceGroup" ><span>FRootMotionSourceGroup</span></a> ServerRootMo...,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bHasAnimRootMotion,<br />&nbsp;&nbsp;&nbsp;&nbsp;float ServerMontageTrackPosition,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector ServerLoc,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector_NetQuantizeNormal ServerRot...,<br />&nbsp;&nbsp;&nbsp;&nbsp;float ServerVelZ,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Components/UPrimitiveComponent" ><span>UPrimitiveComponent</span></a>&#42; ServerBas...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Core/UObject/FName" ><span>FName</span></a> ServerBoneName,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bHasBase,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bBaseRelativePosition,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 ServerMovementMode<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Replicate root motion source correction to client when using root motion for movement.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ClientCheatFly"><nobr><p>ClientCheatFly()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ClientCheatFly_Implementation"><nobr><p>ClientCheatFly_Implementation()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ClientCheatGhost"><nobr><p>ClientCheatGhost()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ClientCheatGhost_Implementation"><nobr><p>ClientCheatGhost_Implementation()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ClientCheatWalk"><nobr><p>ClientCheatWalk()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ClientCheatWalk_Implementation"><nobr><p>ClientCheatWalk_Implementation()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ClientMoveResponsePacked"><nobr><p>ClientMoveResponsePacked</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FCharacterMoveResponsePackedBits" ><span>FCharacterMoveResponsePackedB</span></a>...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Client RPC that passes through to CharacterMovement (avoids RPC overhead for components).</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ClientMoveRespon-"><nobr><p>ClientMoveResponsePacked_Implementation</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FCharacterMoveResponsePackedBits" ><span>FCharacterMoveResponsePackedB</span></a>...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Client RPC that passes through to CharacterMovement (avoids RPC overhead for components).</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ClientMoveResponsePacked_Validat-"><nobr><p>ClientMoveResponsePacked_Validate</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FCharacterMoveResponsePackedBits" ><span>FCharacterMoveResponsePackedB</span></a>...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Client RPC that passes through to CharacterMovement (avoids RPC overhead for components).</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ClientVeryShortAdjustPosition"><nobr><p>ClientVeryShortAdjustPosition</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float TimeStamp,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector NewLoc,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Components/UPrimitiveComponent" ><span>UPrimitiveComponent</span></a>&#42; NewBase,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Core/UObject/FName" ><span>FName</span></a> NewBaseBoneName,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bHasBase,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bBaseRelativePosition,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 ServerMovementMode<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Bandwidth saving version, when velocity is zeroed</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ClientVeryShortA-"><nobr><p>ClientVeryShortAdjustPosition_Implementation</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float TimeStamp,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector NewLoc,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Components/UPrimitiveComponent" ><span>UPrimitiveComponent</span></a>&#42; NewBase,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Core/UObject/FName" ><span>FName</span></a> NewBaseBoneName,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bHasBase,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bBaseRelativePosition,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 ServerMovementMode<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Bandwidth saving version, when velocity is zeroed</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="Crouch"><nobr><p>Crouch</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bClientSimulation<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Request the character to start crouching.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="Falling"><nobr><p>Falling()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Called when the character's movement enters falling</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FillAsyncInput"><nobr><p>FillAsyncInput</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../FCharacterAsyncInput" ><span>FCharacterAsyncInput</span></a>&amp; Input<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Async simulation API</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>T &#42;</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FindComponentByClass/1"><nobr><p>FindComponentByClass()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>int32</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FindRootMotionRepMove"><nobr><p>FindRootMotionRepMove</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Animation/FAnimMontageInstance" ><span>FAnimMontageInstance</span></a>&amp; Client...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Find usable root motion replicated move from our buffer.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>float</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetAnimRootMotionTranslationScal-"><nobr><p>GetAnimRootMotionTranslationScale()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns current value of AnimRootMotionScale</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../Components/UArrowComponent" ><span>UArrowCompon</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetArrowComponent"><nobr><p>GetArrowComponent()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns ArrowComponent subobject</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FBasedMovementInfo" ><span>FBased</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetBasedMovement"><nobr><p>GetBasedMovement()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Accessor for BasedMovement</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FQuat</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetBaseRotationOffset"><nobr><p>GetBaseRotationOffset()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Get the saved rotation offset of mesh.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FRotator</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetBaseRotationOffsetRotator"><nobr><p>GetBaseRotationOffsetRotator()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Get the saved rotation offset of mesh.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FVector</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetBaseTranslationOffset"><nobr><p>GetBaseTranslationOffset()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Get the saved translation offset of mesh.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../Components/UCapsuleComponent" ><span>UCapsuleComp</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetCapsuleComponent"><nobr><p>GetCapsuleComponent()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns CapsuleComponent subobject</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>T &#42;</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetCharacterMovement/1"><nobr><p>GetCharacterMovement()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns CharacterMovement subobject</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../UCharacterMovementComponent" ><span>UCharacterMo</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetCharacterMovement/2"><nobr><p>GetCharacterMovement()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../Animation/UAnimMontage" ><span>UAnimMontage</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetCurrentMontage"><nobr><p>GetCurrentMontage()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Return current playing Montage</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>float</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetJumpMaxHoldTime"><nobr><p>GetJumpMaxHoldTime()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Get the maximum jump time for the character.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../Components/USkeletalMeshComponent" ><span>USkeletalMes</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetMesh"><nobr><p>GetMesh()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>END DEPRECATED RPCs.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FBasedMovementInfo" ><span>FBased</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetReplicatedBasedMovement"><nobr><p>GetReplicatedBasedMovement()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Accessor for ReplicatedBasedMovement</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FVector</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetReplicatedGravityDirection"><nobr><p>GetReplicatedGravityDirection()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns replicated gravity direction for simulated proxies</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>uint8</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetReplicatedMovementMode"><nobr><p>GetReplicatedMovementMode()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns ReplicatedMovementMode</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>float</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetReplicatedSer-"><nobr><p>GetReplicatedServerLastTransformUpdateTimeStamp()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Accessor for ReplicatedServerLastTransformUpdateTimeStamp.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../Animation/FAnimMontageInstance" ><span>FAnimMontage</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetRootMotionAnimMontageInstance"><nobr><p>GetRootMotionAnimMontageInstance()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Get <a id="content_link" href="../../Animation/FAnimMontageInstance" ><span>FAnimMontageInstance</span></a> playing RootMotion</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="HasAnyRootMotion"><nobr><p>HasAnyRootMotion()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>True if we are playing root motion from any source right now (anim root motion, root motion source)</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="InitializeAsyncOutput"><nobr><p>InitializeAsyncOutput</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../FCharacterAsyncOutput" ><span>FCharacterAsyncOutput</span></a>&amp; Output<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="IsJumpProvidingForce"><nobr><p>IsJumpProvidingForce()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>True if jump is actively providing a force, such as when the jump key is held and the time it has been held is less than JumpMaxHoldTime.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="IsPlayingNetworkedRootMotionMont-"><nobr><p>IsPlayingNetworkedRootMotionMontage()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>True if we are playing Root Motion right now, through a Montage with RootMotionMode == <a id="content_link" href="../../Animation/ERootMotionMode__Type" ><span>ERootMotionMode::RootMotionFromMontagesOnly</span></a>.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="IsPlayingRootMotion"><nobr><p>IsPlayingRootMotion()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>True if we are playing Anim root motion right now</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="Jump"><nobr><p>Jump()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Make the character jump on the next update.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="JumpIsAllowedInternal"><nobr><p>JumpIsAllowedInternal()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="K2_OnEndCrouch"><nobr><p>K2_OnEndCrouch</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float HalfHeightAdjust,<br />&nbsp;&nbsp;&nbsp;&nbsp;float ScaledHalfHeightAdjust<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Event when Character stops crouching.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="K2_OnMovementModeChanged"><nobr><p>K2_OnMovementModeChanged</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;EMovementMode PrevMovementMode,<br />&nbsp;&nbsp;&nbsp;&nbsp;EMovementMode NewMovementMode,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 PrevCustomMode,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 NewCustomMode<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Called from CharacterMovementComponent to notify the character that the movement mode has changed.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="K2_OnStartCrouch"><nobr><p>K2_OnStartCrouch</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float HalfHeightAdjust,<br />&nbsp;&nbsp;&nbsp;&nbsp;float ScaledHalfHeightAdjust<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Event when Character crouches.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="K2_UpdateCustomMovement"><nobr><p>K2_UpdateCustomMovement</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float DeltaTime<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Event for implementing custom character movement mode.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="Landed"><nobr><p>Landed</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Engine/FHitResult" ><span>FHitResult</span></a>&amp; Hit<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Called upon landing when falling, to perform actions based on the Hit result.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="LaunchCharacter"><nobr><p>LaunchCharacter</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector LaunchVelocity,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bXYOverride,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bZOverride<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Set a pending launch velocity on the Character.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="MoveBlockedBy"><nobr><p>MoveBlockedBy</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Engine/FHitResult" ><span>FHitResult</span></a>&amp; Impact<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Called when pawn's movement is blocked</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="NotifyJumpApex"><nobr><p>NotifyJumpApex()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Called when character's jump reaches Apex. Needs CharacterMovement->bNotifyApex = true</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnEndCrouch"><nobr><p>OnEndCrouch</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float HalfHeightAdjust,<br />&nbsp;&nbsp;&nbsp;&nbsp;float ScaledHalfHeightAdjust<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Called when Character stops crouching.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnJumped"><nobr><p>OnJumped()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Event fired when the character has just started jumping</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnJumped_Implementation"><nobr><p>OnJumped_Implementation()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Event fired when the character has just started jumping</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnLanded"><nobr><p>OnLanded</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Engine/FHitResult" ><span>FHitResult</span></a>&amp; Hit<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Called upon landing when falling, to perform actions based on the Hit result.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnLaunched"><nobr><p>OnLaunched</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector LaunchVelocity,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bXYOverride,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bZOverride<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Let blueprint know that we were launched</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnMovementModeChanged"><nobr><p>OnMovementModeChanged</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;EMovementMode PrevMovementMode,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 PreviousCustomMode<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Called from CharacterMovementComponent to notify the character that the movement mode has changed.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnRep_IsCrouched"><nobr><p>OnRep_IsCrouched()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Handle Crouching replicated from server</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnRep_ReplayLast-"><nobr><p>OnRep_ReplayLastTransformUpdateTimeStamp()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnRep_ReplicatedBasedMovement"><nobr><p>OnRep_ReplicatedBasedMovement()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Rep notify for ReplicatedBasedMovement</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnRep_RootMotion"><nobr><p>OnRep_RootMotion()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Handles replicated root motion properties on simulated proxies and position correction.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnStartCrouch"><nobr><p>OnStartCrouch</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float HalfHeightAdjust,<br />&nbsp;&nbsp;&nbsp;&nbsp;float ScaledHalfHeightAdjust<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Called when Character crouches. Called on non-owned Characters through bIsCrouched replication.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnUpdateSimulatedPosition"><nobr><p>OnUpdateSimulatedPosition</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector&amp; OldLocation,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FQuat&amp; OldRotation<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Called on client after position update is received to respond to the new location and rotation.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnWalkingOffLedge"><nobr><p>OnWalkingOffLedge</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector&amp; PreviousFloorImpact...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector&amp; PreviousFloorContac...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector&amp; PreviousLocation,<br />&nbsp;&nbsp;&nbsp;&nbsp;float TimeDelta<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Event fired when the Character is walking off a surface and is about to fall because CharacterMovement->CurrentFloor became unwalkable.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnWalkingOffLedge_Implementation"><nobr><p>OnWalkingOffLedge_Implementation</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector&amp; PreviousFloorImpact...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector&amp; PreviousFloorContac...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector&amp; PreviousLocation,<br />&nbsp;&nbsp;&nbsp;&nbsp;float TimeDelta<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Event fired when the Character is walking off a surface and is about to fall because CharacterMovement->CurrentFloor became unwalkable.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>float</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="PlayAnimMontage"><nobr><p>PlayAnimMontage</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Animation/UAnimMontage" ><span>UAnimMontage</span></a>&#42; AnimMontage,<br />&nbsp;&nbsp;&nbsp;&nbsp;float InPlayRate,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Core/UObject/FName" ><span>FName</span></a> StartSectionName<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Play Animation Montage on the character mesh.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RecalculateCrouchedEyeHeight"><nobr><p>RecalculateCrouchedEyeHeight()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Calculates the crouched eye height based on movement component settings</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ResetJumpState"><nobr><p>ResetJumpState()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Marks character as not trying to jump</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RestoreReplicatedMove"><nobr><p>RestoreReplicatedMove</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FSimulatedRootMotionReplicatedMo-" ><span>FSimulatedRootMotionReplicate</span></a>...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Restore actor to an old buffered move.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RootMotionDebugClientPrintOnScre-"><nobr><p>RootMotionDebugClientPrintOnScreen</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Core/Containers/FString" ><span>FString</span></a>&amp; InString<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RootMotionDebugC-"><nobr><p>RootMotionDebugClientPrintOnScreen_Implementation</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Core/Containers/FString" ><span>FString</span></a>&amp; InString<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SaveRelativeBasedMovement"><nobr><p>SaveRelativeBasedMovement</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector&amp; NewRelativeLocation,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FRotator&amp; NewRotation,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bRelativeRotation<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Save a new relative location in BasedMovement and a new rotation with is either relative or absolute.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ServerMove"><nobr><p>ServerMove</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float TimeStamp,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector_NetQuantize10 InAccel,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector_NetQuantize100 ClientLoc,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 CompressedMoveFlags,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 ClientRoll,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 View,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Components/UPrimitiveComponent" ><span>UPrimitiveComponent</span></a>&#42; ClientMov...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Core/UObject/FName" ><span>FName</span></a> ClientBaseBoneName,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 ClientMovementMode<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>BEGIN DEPRECATED RPCs that don't use variable sized payloads. Use ServerMovePacked and ClientMoveResponsePacked instead.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ServerMove_Implementation"><nobr><p>ServerMove_Implementation</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float TimeStamp,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector_NetQuantize10 InAccel,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector_NetQuantize100 ClientLoc,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 CompressedMoveFlags,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 ClientRoll,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 View,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Components/UPrimitiveComponent" ><span>UPrimitiveComponent</span></a>&#42; ClientMov...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Core/UObject/FName" ><span>FName</span></a> ClientBaseBoneName,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 ClientMovementMode<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>BEGIN DEPRECATED RPCs that don't use variable sized payloads. Use ServerMovePacked and ClientMoveResponsePacked instead.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ServerMove_Validate"><nobr><p>ServerMove_Validate</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float TimeStamp,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector_NetQuantize10 InAccel,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector_NetQuantize100 ClientLoc,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 CompressedMoveFlags,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 ClientRoll,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 View,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Components/UPrimitiveComponent" ><span>UPrimitiveComponent</span></a>&#42; ClientMov...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Core/UObject/FName" ><span>FName</span></a> ClientBaseBoneName,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 ClientMovementMode<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>BEGIN DEPRECATED RPCs that don't use variable sized payloads. Use ServerMovePacked and ClientMoveResponsePacked instead.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ServerMoveDual"><nobr><p>ServerMoveDual</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float TimeStamp0,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector_NetQuantize10 InAccel0,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 PendingFlags,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 View0,<br />&nbsp;&nbsp;&nbsp;&nbsp;float TimeStamp,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector_NetQuantize10 InAccel,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector_NetQuantize100 ClientLoc,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 NewFlags,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 ClientRoll,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 View,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Components/UPrimitiveComponent" ><span>UPrimitiveComponent</span></a>&#42; ClientMov...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Core/UObject/FName" ><span>FName</span></a> ClientBaseBoneName,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 ClientMovementMode<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Replicated function sent by client to server - contains client movement and view info for two moves.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ServerMoveDual_Implementation"><nobr><p>ServerMoveDual_Implementation</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float TimeStamp0,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector_NetQuantize10 InAccel0,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 PendingFlags,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 View0,<br />&nbsp;&nbsp;&nbsp;&nbsp;float TimeStamp,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector_NetQuantize10 InAccel,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector_NetQuantize100 ClientLoc,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 NewFlags,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 ClientRoll,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 View,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Components/UPrimitiveComponent" ><span>UPrimitiveComponent</span></a>&#42; ClientMov...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Core/UObject/FName" ><span>FName</span></a> ClientBaseBoneName,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 ClientMovementMode<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Replicated function sent by client to server - contains client movement and view info for two moves.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ServerMoveDual_Validate"><nobr><p>ServerMoveDual_Validate</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float TimeStamp0,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector_NetQuantize10 InAccel0,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 PendingFlags,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 View0,<br />&nbsp;&nbsp;&nbsp;&nbsp;float TimeStamp,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector_NetQuantize10 InAccel,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector_NetQuantize100 ClientLoc,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 NewFlags,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 ClientRoll,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 View,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Components/UPrimitiveComponent" ><span>UPrimitiveComponent</span></a>&#42; ClientMov...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Core/UObject/FName" ><span>FName</span></a> ClientBaseBoneName,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 ClientMovementMode<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Replicated function sent by client to server - contains client movement and view info for two moves.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ServerMoveDualHybridRootMotion"><nobr><p>ServerMoveDualHybridRootMotion</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float TimeStamp0,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector_NetQuantize10 InAccel0,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 PendingFlags,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 View0,<br />&nbsp;&nbsp;&nbsp;&nbsp;float TimeStamp,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector_NetQuantize10 InAccel,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector_NetQuantize100 ClientLoc,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 NewFlags,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 ClientRoll,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 View,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Components/UPrimitiveComponent" ><span>UPrimitiveComponent</span></a>&#42; ClientMov...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Core/UObject/FName" ><span>FName</span></a> ClientBaseBoneName,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 ClientMovementMode<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Replicated function sent by client to server - contains client movement and view info for two moves.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ServerMoveDualHy-"><nobr><p>ServerMoveDualHybridRootMotion_Implementation</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float TimeStamp0,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector_NetQuantize10 InAccel0,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 PendingFlags,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 View0,<br />&nbsp;&nbsp;&nbsp;&nbsp;float TimeStamp,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector_NetQuantize10 InAccel,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector_NetQuantize100 ClientLoc,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 NewFlags,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 ClientRoll,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 View,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Components/UPrimitiveComponent" ><span>UPrimitiveComponent</span></a>&#42; ClientMov...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Core/UObject/FName" ><span>FName</span></a> ClientBaseBoneName,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 ClientMovementMode<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Replicated function sent by client to server - contains client movement and view info for two moves.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ServerMoveDualHy-_1"><nobr><p>ServerMoveDualHybridRootMotion_Validate</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float TimeStamp0,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector_NetQuantize10 InAccel0,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 PendingFlags,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 View0,<br />&nbsp;&nbsp;&nbsp;&nbsp;float TimeStamp,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector_NetQuantize10 InAccel,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector_NetQuantize100 ClientLoc,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 NewFlags,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 ClientRoll,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 View,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Components/UPrimitiveComponent" ><span>UPrimitiveComponent</span></a>&#42; ClientMov...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Core/UObject/FName" ><span>FName</span></a> ClientBaseBoneName,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 ClientMovementMode<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Replicated function sent by client to server - contains client movement and view info for two moves.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ServerMoveDualNoBase"><nobr><p>ServerMoveDualNoBase</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float TimeStamp0,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector_NetQuantize10 InAccel0,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 PendingFlags,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 View0,<br />&nbsp;&nbsp;&nbsp;&nbsp;float TimeStamp,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector_NetQuantize10 InAccel,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector_NetQuantize100 ClientLoc,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 NewFlags,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 ClientRoll,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 View,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 ClientMovementMode<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Replicated function sent by client to server - contains client movement and view info for two moves.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ServerMoveDualNoBase_Implementat-"><nobr><p>ServerMoveDualNoBase_Implementation</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float TimeStamp0,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector_NetQuantize10 InAccel0,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 PendingFlags,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 View0,<br />&nbsp;&nbsp;&nbsp;&nbsp;float TimeStamp,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector_NetQuantize10 InAccel,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector_NetQuantize100 ClientLoc,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 NewFlags,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 ClientRoll,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 View,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 ClientMovementMode<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Replicated function sent by client to server - contains client movement and view info for two moves.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ServerMoveDualNoBase_Validate"><nobr><p>ServerMoveDualNoBase_Validate</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float TimeStamp0,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector_NetQuantize10 InAccel0,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 PendingFlags,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 View0,<br />&nbsp;&nbsp;&nbsp;&nbsp;float TimeStamp,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector_NetQuantize10 InAccel,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector_NetQuantize100 ClientLoc,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 NewFlags,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 ClientRoll,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 View,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 ClientMovementMode<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Replicated function sent by client to server - contains client movement and view info for two moves.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ServerMoveNoBase"><nobr><p>ServerMoveNoBase</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float TimeStamp,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector_NetQuantize10 InAccel,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector_NetQuantize100 ClientLoc,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 CompressedMoveFlags,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 ClientRoll,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 View,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 ClientMovementMode<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Replicated function sent by client to server.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ServerMoveNoBase_Implementation"><nobr><p>ServerMoveNoBase_Implementation</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float TimeStamp,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector_NetQuantize10 InAccel,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector_NetQuantize100 ClientLoc,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 CompressedMoveFlags,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 ClientRoll,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 View,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 ClientMovementMode<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Replicated function sent by client to server.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ServerMoveNoBase_Validate"><nobr><p>ServerMoveNoBase_Validate</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float TimeStamp,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector_NetQuantize10 InAccel,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector_NetQuantize100 ClientLoc,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 CompressedMoveFlags,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 ClientRoll,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 View,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 ClientMovementMode<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Replicated function sent by client to server.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ServerMoveOld"><nobr><p>ServerMoveOld</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float OldTimeStamp,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector_NetQuantize10 OldAccel,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 OldMoveFlags<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Resending an (important) old move. Process it if not already processed.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ServerMoveOld_Implementation"><nobr><p>ServerMoveOld_Implementation</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float OldTimeStamp,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector_NetQuantize10 OldAccel,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 OldMoveFlags<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Resending an (important) old move. Process it if not already processed.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ServerMoveOld_Validate"><nobr><p>ServerMoveOld_Validate</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float OldTimeStamp,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector_NetQuantize10 OldAccel,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 OldMoveFlags<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Resending an (important) old move. Process it if not already processed.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ServerMovePacked"><nobr><p>ServerMovePacked</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FCharacterServerMovePackedBits" ><span>FCharacterServerMovePackedBit</span></a>...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Server RPC that passes through to CharacterMovement (avoids RPC overhead for components).</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ServerMovePacked_Implementation"><nobr><p>ServerMovePacked_Implementation</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FCharacterServerMovePackedBits" ><span>FCharacterServerMovePackedBit</span></a>...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Server RPC that passes through to CharacterMovement (avoids RPC overhead for components).</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ServerMovePacked_Validate"><nobr><p>ServerMovePacked_Validate</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FCharacterServerMovePackedBits" ><span>FCharacterServerMovePackedBit</span></a>...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Server RPC that passes through to CharacterMovement (avoids RPC overhead for components).</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetAnimRootMotionTranslationScal-"><nobr><p>SetAnimRootMotionTranslationScale</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float InAnimRootMotionTranslationSc...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets scale to apply to root motion translation on this Character</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetBase"><nobr><p>SetBase</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Components/UPrimitiveComponent" ><span>UPrimitiveComponent</span></a>&#42; NewBase,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Core/UObject/FName" ><span>FName</span></a> BoneName,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bNotifyActor<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the component the Character is walking on, used by CharacterMovement walking movement to be able to follow dynamic objects.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ShouldNotifyLanded"><nobr><p>ShouldNotifyLanded</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Engine/FHitResult" ><span>FHitResult</span></a>&amp; Hit<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns true if the <a id="content_link" href="Landed" ><span>Landed()</span></a> event should be called.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SimulatedRootMotionPositionFixup"><nobr><p>SimulatedRootMotionPositionFixup</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float DeltaSeconds<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Position fix up for Simulated Proxies playing Root Motion</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="StopAnimMontage"><nobr><p>StopAnimMontage</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Animation/UAnimMontage" ><span>UAnimMontage</span></a>&#42; AnimMontage<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Stop Animation Montage.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="StopJumping"><nobr><p>StopJumping()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Stop the character from jumping on the next update.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UnCrouch"><nobr><p>UnCrouch</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bClientSimulation<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Request the character to stop crouching.</p>
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'functions_1');">
+        <p>Overridden from APawn</p>
+    </div>
+<div id="functions_1">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:8%;">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="DisplayDebug"><nobr><p>DisplayDebug</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Engine/UCanvas" ><span>UCanvas</span></a>&#42; Canvas,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../FDebugDisplayInfo" ><span>FDebugDisplayInfo</span></a>&amp; DebugDisp...,<br />&nbsp;&nbsp;&nbsp;&nbsp;float&amp; YL,<br />&nbsp;&nbsp;&nbsp;&nbsp;float&amp; YPos<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>float</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetDefaultHalfHeight"><nobr><p>GetDefaultHalfHeight()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns The half-height of the default Pawn, scaled by the component scale.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FVector</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetGravityDirection"><nobr><p>GetGravityDirection()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns vector direction of gravity</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FQuat</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetGravityTransform"><nobr><p>GetGravityTransform()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns a quaternion transforming from world space into gravity relative space</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../Components/UPrimitiveComponent" ><span>UPrimitiveCo</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetMovementBase"><nobr><p>GetMovementBase()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Return PrimitiveComponent we are based on (standing on, attached to, and moving on).</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../UPawnMovementComponent" ><span>UPawnMovemen</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetMovementComponent"><nobr><p>GetMovementComponent()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Return our PawnMovementComponent, if we have one.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="PawnClientRestart"><nobr><p>PawnClientRestart()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Called on the owning client of a player-controlled Pawn when it is restarted, this calls <a id="content_link" href="Restart" ><span>Restart()</span></a></p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="PossessedBy"><nobr><p>PossessedBy</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../AController" ><span>AController</span></a>&#42; NewController<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Called when this Pawn is possessed. Only called on the server (or in standalone).</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RecalculateBaseEyeHeight"><nobr><p>RecalculateBaseEyeHeight()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Set BaseEyeHeight based on current state.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="Restart"><nobr><p>Restart()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Called when the Pawn is being restarted (usually by being possessed by a Controller).</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetupPlayerInputComponent"><nobr><p>SetupPlayerInputComponent</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Components/UInputComponent" ><span>UInputComponent</span></a>&#42; PlayerInputCo...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Allows a Pawn to set up custom input bindings.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="TurnOff"><nobr><p>TurnOff()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Freeze pawn - stop sounds, animations, physics, weapon firing</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UnPossessed"><nobr><p>UnPossessed()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Called when our Controller no longer possesses us. Only called on the server (or in standalone).</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UpdateNavigationRelevance"><nobr><p>UpdateNavigationRelevance()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Update all components relevant for navigation generators to match bCanAffectNavigationGeneration flag</p>
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'functions_2');">
+        <p>Overridden from AActor</p>
+    </div>
+<div id="functions_2">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:8%;">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="BeginPlay"><nobr><p>BeginPlay()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Overridable native event for when play begins for this actor.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ClearCrossLevelReferences"><nobr><p>ClearCrossLevelReferences()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Do anything needed to clear out cross level references; Called from <a id="content_link" href="../../Engine/ULevel/PreSave/1" ><span>ULevel::PreSave</span></a></p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../Components/UActorComponent" ><span>UActorCompon</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FindComponentByClass/2"><nobr><p>FindComponentByClass</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../CoreUObject/Templates/TSubclassOf" ><span>TSubclassOf</span></a>&lt; <a id="content_link" href="../../Components/UActorComponent" ><span>UActorComponent</span></a> ...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Searches components array and returns first encountered component of the specified class, native version of GetComponentByClass</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetSimpleCollisionCylinder"><nobr><p>GetSimpleCollisionCylinder</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float&amp; CollisionRadius,<br />&nbsp;&nbsp;&nbsp;&nbsp;float&amp; CollisionHalfHeight<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Get axis-aligned cylinder around this actor, used for simple collision checks (ie Pawns reaching a destination).</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="NotifyActorBeginOverlap"><nobr><p>NotifyActorBeginOverlap</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../AActor" ><span>AActor</span></a>&#42; OtherActor<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Event when this actor overlaps another actor, for example a player walking into a trigger.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="NotifyActorEndOverlap"><nobr><p>NotifyActorEndOverlap</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../AActor" ><span>AActor</span></a>&#42; OtherActor<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Event when an actor no longer overlaps another actor, and they have separated.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnRep_ReplicatedMovement"><nobr><p>OnRep_ReplicatedMovement()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>ReplicatedMovement struct replication event</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="PostInitializeComponents"><nobr><p>PostInitializeComponents()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Allow actors to initialize themselves on the C++ side after all of their components have been initialized, only called during gameplay</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="PostNetReceiveLocationAndRotatio-"><nobr><p>PostNetReceiveLocationAndRotation()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Update location and rotation from ReplicatedMovement. Not called for simulated physics&#33;</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="PreReplication"><nobr><p>PreReplication</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../CoreUObject/UObject/IRepChangedPropertyTracker" ><span>IRepChangedPropertyTracker</span></a>&amp; Change...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Called on the actor right before replication occurs.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="PreReplicationForReplay"><nobr><p>PreReplicationForReplay</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../CoreUObject/UObject/IRepChangedPropertyTracker" ><span>IRepChangedPropertyTracker</span></a>&amp; Change...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Called on the actor right before replication occurs.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetReplicateMovement"><nobr><p>SetReplicateMovement</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bInReplicateMovement<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Set whether this actor's movement replicates to network clients.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="TornOff"><nobr><p>TornOff()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Networking - called on client when actor is torn off (bTearOff==true), meaning it's no longer replicated to clients.</p>
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'functions_3');">
+        <p>Overridden from UObject</p>
+    </div>
+<div id="functions_3">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:8%;">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetLifetimeReplicatedProps"><nobr><p>GetLifetimeReplicatedProps</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../CoreUObject/UObject/FLifetimeProperty" ><span>FLifetimeProperty</span></a> >&amp; OutLi...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns the properties used for network replication, this needs to be overridden by all actor classes with native replicated properties</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetReplicatedCustomConditionStat-"><nobr><p>GetReplicatedCustomConditionState</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../CoreUObject/UObject/FCustomPropertyConditionState" ><span>FCustomPropertyConditionState</span></a>&amp; Out...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Called when this actor begins replicating to initialize the state of custom property conditions</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="PostLoad"><nobr><p>PostLoad()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Do any object-specific cleanup required immediately after loading an object.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="PostNetReceive"><nobr><p>PostNetReceive()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Always called immediately after properties are received from the remote.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="PreNetReceive"><nobr><p>PreNetReceive()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Always called immediately before properties are received from the remote.</p>
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'functions_6');">
+        <p>Overridden from INavAgentInterface</p>
+    </div>
+<div id="functions_6">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:8%;">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FVector</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetNavAgentLocation"><nobr><p>GetNavAgentLocation()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Basically retrieved pawn's location on navmesh</p>
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'constants');">
+        <p>Constants</p>
+    </div>
+<div id="constants">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="name-cell" style="width:15%">
+				<p>Name</p>
+			</th>
+			<th class="desc-cell" style="width:85%">
+				<p>Description</p>
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="CapsuleComponentName"><p>CapsuleComponentName</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Name of the CapsuleComponent.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="CharacterMovementComponentName"><p>CharacterMovementComponentName</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Name of the CharacterMovement component.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="MeshComponentName"><p>MeshComponentName</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Name of the MeshComponent.</p>
+	</td>
+</tr>
+			</table>
+</div>
+
+</div>
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'seealso');">
+        <p>See Also</p>
+    </div>
+<div id="seealso">
+    <p><a id="content_link" href="../APawn" ><span>APawn</span></a>
+</p><p><a id="content_link" href="../UCharacterMovementComponent" ><span>UCharacterMovementComponent</span></a>
+</p><p><a id="content_link" href="https://docs.unrealengine.com/latest/INT/Gameplay/Framework/Pawn/Character/" ><span>https://docs.unrealengine.com/latest/INT/Gameplay/Framework/Pawn/Character/</span></a></p>
+</div>
+																	</div>
+					<!-- End of Markdown converted page content -->
+				</div>
+												<div id="recommendations"></div>			</div>
+						<div id="footer"></div>			
+									<div id="announcement">
+			<div style="display:inline-block;margin:5px;">
+				Help shape the future of Unreal Engine documentation! Tell us how we're doing so we can serve you better.
+			</div>
+			<div style="margin:5px;display:inline-block;">
+				<div class="btn action" style="margin-top:-6px;display:inline-block;" onclick="$('#announcement').hide();window.open('https://epicgames.questionpro.com/t/AVVbJZwedR');createCookie('announcement-read', new Date().getTime(), 30);">Take our survey</div>
+				<div class="btn btn-default" style="margin-top:-6px;display:inline-block;" onclick="$('#announcement').hide();createCookie('announcement-read', new Date().getTime(), 30);">Cancel</div>
+			</div>
+			<div class="btn-close" style="position:absolute;right:5px;top:10px;padding:3px;width:14px;height:14px;" onclick="$('#announcement').hide();"></div>
+			</div>
+					</div>
+	</div>
+</body>
+</html>

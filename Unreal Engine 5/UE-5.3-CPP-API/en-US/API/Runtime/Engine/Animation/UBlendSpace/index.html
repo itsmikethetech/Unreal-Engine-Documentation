@@ -1,0 +1,2245 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="./../../../../../../Include/Javascript/common_en-US.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var time = new Date(0);
+		var preview = false;
+		var relativeHTMLPath = "./../../../../../../";
+				var pageid = 0;
+				var heroimage = "./../../../../../../Images/ue5-hero.png";
+				var lang = "en-US";
+				var basePath = document.location.pathname.substring(0, document.location.pathname.indexOf('/' + lang + '/') + lang.length + 1);
+		document.write('<base href="' +  encodeURI(basePath) + '/API/Runtime/Engine/Animation/UBlendSpace/" />');
+				var udnCSS = './../../../../../../Include/CSS/udn_public.css';
+		var udnLangCSS = '';
+				var udnOverrideCSS = './../../../../../../Include/CSS/skin_overrides.css';
+		var udnOverrideDarkCSS = './../../../../../../Include/CSS/skin_overrides_dark.css';
+		var fancyboxCSS = './../../../../../../Include/CSS/jquery.fancybox.css';
+		var jqueryuiCSS = './../../../../../../Include/CSS/jquery-ui.min.css';
+		var qtipCSS = './../../../../../../Include/CSS/jquery.qtip.css';
+		var prettifyCSS = './../../../../../../Include/CSS/prettify.css';
+		var navbarCSS = './../../../../../../Include/CSS/navBar.css';
+		var twentytwentyCSS = './../../../../../../Include/CSS/twentytwenty.css';
+		var recommendationsCSS = './../../../../../../Include/CSS/jquery.recommendations.css';
+	</script>
+    <title>UBlendSpace | Unreal Engine 5.2 Documentation</title>
+    	    <meta name=viewport content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Cache-control" content="no-store">
+    <script  src="./../../../../../../Include/Javascript/CustomEvent.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/jquery-3.4.0.min.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/udn.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/udn_extras.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/jquery-ui.min.js" type="text/javascript"></script>
+	    <script  src="./../../../../../../Include/Javascript/informational.js" type="text/javascript"></script>
+	    <script  src="./../../../../../../Include/Javascript/jquery.fancybox.pack.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/jquery.qtip.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/prettify.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/jquery.slimscroll.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/jquery.event.move.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/jquery.twentytwenty.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/lazysizes.min.js" type="text/javascript"></script>
+	    <script  src="./../../../../../../Include/Javascript/jquery.recommendations.js" type="text/javascript"></script>
+	
+    <link async rel="icon" href="./../../../../../../Include/Images/site_icon.png" type="image/x-icon" />
+    <link async rel="shortcut icon" href="./../../../../../../Include/Images/site_icon.png" type="image/x-icon" />
+    <link async href="./../../../../../../Include/Images/touch_icon.png" rel="apple-touch-icon" />
+    <link async href="./../../../../../../Include/Images/touch_icon_114.png" sizes="114x114" rel="apple-touch-icon" />    
+		<script  src="./../../../../../../Include/Javascript/CollapsibleLists.js" type="text/javascript"></script>
+	<script  src="./../../../../../../Include/Javascript/navigationBarUI.js"></script>
+	<script  src="./../../../../../../Include/Javascript/navigationBar.js"></script>
+		
+	<link rel="alternate" href="https://docs.unrealengine.com/latest/en-US/API/Runtime/Engine/Animation/UBlendSpace/" hreflang="x-default" />
+
+	<meta name="title" content="UBlendSpace" />
+<meta name="description" content="Allows multiple animations to be blended between based on input parameters" />
+<meta name="availability" content="Public" />
+<meta name="crumbs" content="%ROOT%,API,API/Runtime,API/Runtime/Engine,API/Runtime/Engine/Animation" />
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta property="og:title" content="UBlendSpace" />
+	<meta property="og:description" content="Allows multiple animations to be blended between based on input parameters" />
+		<meta property="og:image" content="https://docs.unrealengine.com/5.1/Images/placeholder-social.png" />
+	</head>
+<body id="webbgThree" style="visibility: hidden;" onload="document.body.style.visibility='visible';">
+			<script>window.__tracking_base = 'https://tracking.unrealengine.com';</script>
+	<script src="https://tracking.unrealengine.com/tracking.js" async></script>    <div id="webThree">
+				<div id="page_head">
+						<div id="head">
+				<div id="logo"></div>
+			</div>
+						<div id="pagenav">
+				<div class="crumbs" id="crumbs">
+<span id="versionContainer">
+	<span id="versionSelect" class="btn btn-version" onclick="ToggleMenu($('#versionMenu'), $(this));"></span>
+	<div id="versionMenu">
+		<div id="4_26" data-version="4.26" class="btn btn-select" onclick="createCookie('version', '4.26', 365);SwitchVersion('4.26');">Unreal Engine 4.26 Documentation</div>
+		<div id="4_27" data-version="4.27" class="btn btn-select" onclick="createCookie('version', '4.27', 365);SwitchVersion('4.27');">Unreal Engine 4.27 Documentation</div>
+		<div id="5_0" data-version="5.0" class="btn btn-select" onclick="createCookie('version', '5.0', 365);SwitchVersion('5.0');">Unreal Engine 5.0 Documentation</div>
+		<div id="5_1" data-version="5.1" class="btn btn-select" onclick="createCookie('version', '5.1', 365);SwitchVersion('5.1');">Unreal Engine 5.1 Documentation</div>
+		<div id="5_2" data-version="5.2" class="btn btn-select" onclick="createCookie('version', '5.2', 365);SwitchVersion('5.2');">Unreal Engine 5.2 Documentation</div>
+		<div id="5_3" data-version="5.3" class="btn btn-select" onclick="createCookie('version', '5.3', 365);SwitchVersion('5.3');">Unreal Engine 5.3 Documentation</div>
+	</div>
+</span>
+	<span class="separator">></span> <a id="parent_link" href="../../../../../API">Unreal Engine API Reference</a>
+
+	<span class="separator">></span> <a id="parent_link" href="../../../../Runtime">Runtime</a>
+
+	<span class="separator">></span> <a id="parent_link" href="../../../Engine">Engine</a>
+
+	<span class="separator">></span> <a id="parent_link" href="../../Animation">Animation</a>
+
+<span class="separator">></span> <span id="page">UBlendSpace</span>
+</div>				<div id="pageNavRight">
+								<!-- Start of Search -->
+												<div id="search_container">
+					<form name="bodySearch" method="get" action="https://www.unrealengine.com/en-US/bing-search" onsubmit="return validateSearch()">
+						<input type="image" src="./../../../../../../Include/Images/search_box_icon.png" class="searchbutton"/>
+						<input type="hidden" name="filter" value="Documentation" />
+						<input type="text" name="keyword" placeholder="Search Documentation..." class="searchbox" autocomplete="off"/>
+					</form>
+				</div>
+								<!-- End of Search -->
+				<div id="skinContainer">
+	<div id="skinSelect" class="btn btn-skin" onclick="ToggleMenu($('#skinMenu'), $(this));"></div>
+	<div id="skinMenu">
+		<div id="light" class="btn btn-select" onclick="createCookie('skin', 'light', 365);location.reload();">Light Theme</div>
+		<div id="dark" class="btn btn-select" onclick="createCookie('skin', 'dark', 365);location.reload();">Dark Theme</div>
+	</div>
+</div>				</div>
+			</div>
+		</div>						<div id="navWrapper">
+			<div id="nav-filter-container">
+				<div id="nav-filter-inner">
+					<form>
+						<input type="text" placeholder="Filter pages..." id="nav-filter" onchange="clearTimeout(filterTimer); filterTimer = setTimeout(updateNavTreeFilter,250, this.value);if(this.value.length == 0){$('#filter-clear').hide();}else{$('#filter-clear').show();}" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" />
+						<button class="close-icon" id="filter-clear" type="reset" onclick="clearTimeout(filterTimer); filterTimer = setTimeout(updateNavTreeFilter,250, '');$(this).hide();"></button>
+					</form>
+				</div>
+			</div>
+			<nav id="navPanel">
+			</nav>
+			<div id="navigation" title="Click to toggle navigation menu"><span>></span></div>
+		</div>		
+		<div id="splitter">
+		</div>
+				<div id="contentContainer">
+										<div id="pagedefault">
+				<div id="product-banner">
+	<div id="product-logo"></div>
+</div>				<div id="pagecontainer" style="padding-right:0px;">
+					<!-- Start of Markdown converted page content -->
+										<div class="hero  background">
+	<div class="imgContainer"><img src="./../../../../../../Images/ue5-hero.png" /></div>	<div class="info">
+		<div id="pageTitle">
+			<h1 id="H1TitleId">UBlendSpace</h1>
+		</div>
+		<h2 >Allows multiple animations to be blended between based on input parameters</h2>
+		<div id="access">
+			<div class="accessContainer">
+															</div>
+		</div>
+	</div>
+</div>															<div id="maincol">
+																																				<div class="heading expanded" onclick="sectionOnClick(this, 'hierarchy');">
+        <p>Inheritance Hierarchy</p>
+    </div>
+<div id="hierarchy">
+    <div class="hierarchy">
+	<table  class="hierarchy-table" cellspacing="0" id="hrch"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../../../CoreUObject/UObject/UObjectBase"><p>UObjectBase</p></a><table  class="hierarchy-table" cellspacing="0" id="hrch_1"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../../../CoreUObject/UObject/UObjectBaseUtility"><p>UObjectBaseUtility</p></a><table  class="hierarchy-table" cellspacing="0" id="hrch_1_1"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../../../CoreUObject/UObject/UObject"><p>UObject</p></a><table  class="hierarchy-table" cellspacing="0" id="hrch_1_1_1"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../UAnimationAsset"><p>UAnimationAsset</p></a><table  class="hierarchy-table" cellspacing="0" id="hrch_1_1_1_1"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><p>UBlendSpace</p>
+<table  class="hierarchy-table" cellspacing="0" id="hrch_1_1_1_1_1"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../UAimOffsetBlendSpace"><p>UAimOffsetBlendSpace</p></a></td></tr><tr ><td  class="hierarchy-button-cell"><p><a href="javascript:hierarchyOnClick('hrch_1_1_1_1_1_2');"><img class="hierarchy-button-collapsed" id='hrch_1_1_1_1_1_2_button' src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="></span></a> </p>
+</td><td  class="hierarchy-label-cell"><a href="../UBlendSpace1D"><p>UBlendSpace1D</p></a><table  class="hierarchy-table-collapsed" cellspacing="0" id="hrch_1_1_1_1_1_2"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../UAimOffsetBlendSpace1D"><p>UAimOffsetBlendSpace1D</p></a></td></tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr></table>
+</div>
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'references');">
+        <p>References</p>
+    </div>
+<div id="references">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="normal-row">
+	<td class="name-cell">
+		<p>Module</p>
+	</td>
+	<td class="desc-cell">
+		<p><a id="content_link" href="../.." ><span>Engine</span></a></p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<p>Header</p>
+	</td>
+	<td class="desc-cell">
+		<p>&#47;Engine&#47;Source&#47;Runtime&#47;Engine&#47;Classes&#47;Animation&#47;BlendSpace.h</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<p>Include</p>
+	</td>
+	<td class="desc-cell">
+		<p>&#35;include &quot;Animation&#47;BlendSpace.h&quot;</p>
+	</td>
+</tr>
+			</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'syntax');">
+        <p>Syntax</p>
+    </div>
+<div id="syntax">
+    <div class="simplecode_api">
+	<p>class UBlendSpace :<br />&nbsp;&nbsp;&nbsp;&nbsp;public <a id="content_link" href="../UAnimationAsset" ><span>UAnimationAsset</span></a>,<br />&nbsp;&nbsp;&nbsp;&nbsp;public <a id="content_link" href="../../IInterpolationIndexProvider" ><span>IInterpolationIndexProvider</span></a>  </p>
+</div>
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'description');">
+        <p>Remarks</p>
+    </div>
+<div id="description">
+    <p>Allows multiple animations to be blended between based on input parameters</p>
+</div><div class="syntax">
+	<div class="heading expanded" onclick="sectionOnClick(this, 'variables');">
+        <p>Variables</p>
+    </div>
+<div id="variables">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:8%">
+			</th>
+			<th class="type-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:15%">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Core/Delegates/TObjectPtr" ><span>TObjectPtr</span></a>&lt; <a id="content_link" href="../UAnalysisProperties" ><span>UAn</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="AnalysisProperties"><p>AnalysisProperties</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Analysis properties for each axis.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>float</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>AnimLength</p>
+	</td>
+	<td class="desc-cell">
+		<p>This is the maximum length of any sample in the blendspace.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Core/Containers/TEnumAsByte" ><span>TEnumAsByte</span></a>&lt; EB...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="AxisToScaleAnimation"><p>AxisToScaleAnimation</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>If you have input smoothing, this specifies the axis on which to scale the animation playback speed.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="bAllowMeshSpaceBlending"><p>bAllowMeshSpaceBlending</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>If set then blending is performed in mesh space if there are per-bone sample smoothing overrides.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>bContainsRotationOffsetMeshSpaceSamples</p>
+	</td>
+	<td class="desc-cell">
+		<p>Indicates whether any samples have the flag to apply rotation offsets in mesh space</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="bInterpolateUsingGrid"><p>bInterpolateUsingGrid</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>If true then interpolation is done via a grid at runtime.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FBlendParameter" ><span>FBlendParameter</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="BlendParameters"><p>BlendParameters</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Blend Parameters for each axis.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FBlendSpaceData" ><span>FBlendSpaceData</span></a></p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>BlendSpaceData</p>
+	</td>
+	<td class="desc-cell">
+		<p>Container for the runtime data, which could be line segments, triangulation or tetrahedrons</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>bLoop</p>
+	</td>
+	<td class="desc-cell">
+		<p>The default looping behavior of this blend space. Asset players can override this</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>bTargetWeightInterpolationEaseInOut</p>
+	</td>
+	<td class="desc-cell">
+		<p>If set then this eases in/out the sample weight adjustments, using the speed to determine how much smoothing to apply.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Core/Delegates/TObjectPtr" ><span>TObjectPtr</span></a>&lt; <a id="content_link" href="../../../../Editor/Persona/UCachedAnalysisProperties" ><span>UCa</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CachedAnalysisProperties"><p>CachedAnalysisProperties</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Cached properties used to initialize properties when newly created.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Core/Containers/TArray" ><span>TArray</span></a>&lt; int32 ></p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>DimensionIndices</p>
+	</td>
+	<td class="desc-cell">
+		<p>The order in which to use the dimensions in the data - e.g. [1, 2] means a 2D blend using Y and Z</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Core/Containers/TArray" ><span>TArray</span></a>&lt; struct ...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GridSamples"><p>GridSamples</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Grid samples, indexing scheme imposed by subclass</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FInterpolationParameter" ><span>FInterpolationP</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="InterpolationParam"><p>InterpolationParam</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Input Smoothing parameters for each input axis</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../FPerBoneInterpolation" ><span>FPerBon</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ManualPerBoneOverrides"><p>ManualPerBoneOverrides</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Per bone sample smoothing settings, which affect the specified bone and all its descendants in the skeleton.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Core/Containers/TEnumAsByte" ><span>TEnumAsByte</span></a>&lt; <a id="content_link" href="../ENotifyTriggerMode__Type" ><span>EN</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="NotifyTriggerMode"><p>NotifyTriggerMode</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>The current mode used by the BlendSpace to decide which animation notifies to fire.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>EBlendSpacePerB...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="PerBoneBlendMode"><p>PerBoneBlendMode</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>There are two ways to use per pone sample smoothing: Blend profiles and manually maintaining the per bone overrides.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FBlendSpaceBlendProfile" ><span>FBlendSpaceBlen</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="PerBoneBlendProfile"><p>PerBoneBlendProfile</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Reference to a blend profile of the corresponding skeleton to be used for per bone smoothing in case the per bone blend mode is set to use a blend profile.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../FPerBoneInterpolation" ><span>FPerBon</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="PerBoneBlendValues"><p>PerBoneBlendValues</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Stores the actual bone references and their smoothing interpolation speeds used by the blend space.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>EPreferredTrian...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="PreferredTriangulationDirection"><p>PreferredTriangulationDirection</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Preferred edge direction when the triangulation has to make an arbitrary choice</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Core/Delegates/TObjectPtr" ><span>TObjectPtr</span></a>&lt; <a id="content_link" href="../UAnimSequence" ><span>UAn</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="PreviewBasePose"><p>PreviewBasePose</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Preview Base pose for additive BlendSpace</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FVector[3]</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>PreviousAxisMinMaxValues</p>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>float[3]</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>PreviousGridSpacings</p>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Core/Containers/TArray" ><span>TArray</span></a>&lt; struct ...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SampleData"><p>SampleData</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Sample animation data</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>int32</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SampleIndexWithMarkers"><p>SampleIndexWithMarkers</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Track index to get marker data from.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>float</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="TargetWeightInterpolationSpeedPe-"><p>TargetWeightInterpolationSpeedPerSec</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>If greater than zero, this is the speed at which the sample weights are allowed to change.</p>
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'constructor');">
+        <p>Constructors</p>
+    </div>
+<div id="constructor">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="__ctor"><nobr><p>UBlendSpace</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../CoreUObject/UObject/FObjectInitializer" ><span>FObjectInitializer</span></a>&amp; ObjectIn...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'functions_0');">
+        <p>Functions</p>
+    </div>
+<div id="functions_0">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:8%;">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>int32</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="AddSample/1"><nobr><p>AddSample</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector&amp; SampleValue<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Add samples</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>int32</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="AddSample/2"><nobr><p>AddSample</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../UAnimSequence" ><span>UAnimSequence</span></a>&#42; AnimationSequen...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector&amp; SampleValue<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Add samples</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ContainsMatchingSamples"><nobr><p>ContainsMatchingSamples</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;EAdditiveAnimationType AdditiveType<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns whether or not all animation set on the blend space samples match the given additive type</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ContainsNonAdditiveSamples"><nobr><p>ContainsNonAdditiveSamples()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FVector</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ConvertBlendInputToGridSpace"><nobr><p>ConvertBlendInputToGridSpace</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector&amp; BlendInput<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Translates BlendInput to grid space</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="DeleteSample"><nobr><p>DeleteSample</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const int32 BlendSampleIndex<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Delete samples</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="DoesAnimationMatchExistingSample-"><nobr><p>DoesAnimationMatchExistingSamples</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../UAnimSequence" ><span>UAnimSequence</span></a>&#42; Animation...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Check if the blend spaces contains samples whos additive type match that of the animation sequence</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="EditSampleValue"><nobr><p>EditSampleValue</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const int32 BlendSampleIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector&amp; NewValue<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Edit samples</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ExpandRangeForSample"><nobr><p>ExpandRangeForSample</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector&amp; SampleValue<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FVector</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FilterInput"><nobr><p>FilterInput</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FBlendFilter" ><span>FBlendFilter</span></a>&#42; Filter,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector&amp; BlendInput,<br />&nbsp;&nbsp;&nbsp;&nbsp;float DeltaTime<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Interpolate BlendInput based on Filter data</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ForEachImmutableSample"><nobr><p>ForEachImmutableSample</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Core/GenericPlatform/TFunctionRef" ><span>TFunctionRef</span></a>&lt; void(const <a id="content_link" href="../FBlendSample" ><span>FBle</span></a>...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Allows the user to iterate through all the data samples available in the blend space.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>float</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetAnimationLengthFromSampleData"><nobr><p>GetAnimationLengthFromSampleData</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../FBlendSampleData" ><span>FBlendSampleData</span></a> >&amp; ...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Utility function to calculate animation length from sample data list</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetAnimationPose/5"><nobr><p>GetAnimationPose</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../FBlendSampleData" ><span>FBlendSampleData</span></a> >&amp; BlendS...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; <a id="content_link" href="../FPoseLink" ><span>FPoseLink</span></a> > InPoseLinks,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FAnimExtractContext" ><span>FAnimExtractContext</span></a>&amp; Extract...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FPoseContext" ><span>FPoseContext</span></a>&amp; Output<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetAnimationPose/4"><nobr><p>GetAnimationPose</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../FBlendSampleData" ><span>FBlendSampleData</span></a> >&amp; BlendS...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FAnimExtractContext" ><span>FAnimExtractContext</span></a>&amp; Extract...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FAnimationPoseData" ><span>FAnimationPoseData</span></a>&amp; OutAnimationPo...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>EBlendSpaceA...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetAxisToScale"><nobr><p>GetAxisToScale()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns the axis which can be used to scale animation speed.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FBlendParameter" ><span>FBlend</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetBlendParameter"><nobr><p>GetBlendParameter</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const int32 Index<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Accessor for blend parameter</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FBlendSample" ><span>FBlend</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetBlendSample"><nobr><p>GetBlendSample</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const int32 SampleIndex<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns the Blend Sample at the given index, will assert on invalid indices</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../../../Core/Containers/TArray" ><span>TArray</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetBlendSamples"><nobr><p>GetBlendSamples()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Get this blend spaces sample data</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FBlendSpaceData" ><span>FBlend</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetBlendSpaceData"><nobr><p>GetBlendSpaceData()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns the runtime triangulation etc data</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FVector</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetClampedAndWrappedBlendInput"><nobr><p>GetClampedAndWrappedBlendInput</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector&amp; BlendInput<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns the blend input after clamping and/or wrapping</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FVector</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetClampedBlendInput"><nobr><p>GetClampedBlendInput</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector&amp; BlendInput<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns the blend input clamped to the valid range, unless that axis has been set to wrap in which case no clamping is done</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FVector</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetGridPosition/1"><nobr><p>GetGridPosition</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 GridIndex<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns the sample position associated with the elements returned by GetGridSamples</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FVector</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetGridPosition/2"><nobr><p>GetGridPosition</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 GridX,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 GridY<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns the sample position associated with the coordinates</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FEditorElement" ><span>FEdito</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetGridSampleInternal"><nobr><p>GetGridSampleInternal</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 Index<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns the grid element at <a id="content_link" href="../../../Chaos/Chaos/Index" ><span>Index</span></a> or NULL if <a id="content_link" href="../../../Chaos/Chaos/Index" ><span>Index</span></a> is not valid</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../../../Core/Containers/TArray" ><span>TArray</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetGridSamples"><nobr><p>GetGridSamples()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Return GridSamples from this BlendSpace</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FVector</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetNormalizedBlendInput"><nobr><p>GetNormalizedBlendInput</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector&amp; BlendInput<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Translates BlendInput to grid space</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>int32</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetNumberOfBlendSamples"><nobr><p>GetNumberOfBlendSamples()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Get the number of sample points for this blend space</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetRawSamplesFromBlendInput"><nobr><p>GetRawSamplesFromBlendInput</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector&amp; BlendInput,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../FGridBlendSample" ><span>FGridBlendSample</span></a>, TInlineAl...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Get Grid Samples from BlendInput, From Input, it will populate OutGridSamples with the closest grid points.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetSamplesFromBlendInput"><nobr><p>GetSamplesFromBlendInput</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector&amp; BlendInput,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../FBlendSampleData" ><span>FBlendSampleData</span></a> >&amp; OutSam...,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32&amp; InOutCachedTriangulationInd...,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bCombineAnimations<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Get Grid Samples from BlendInput It will return all samples that has weight > KINDA_SMALL_NUMBER</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="InitializeFilter"><nobr><p>InitializeFilter</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FBlendFilter" ><span>FBlendFilter</span></a>&#42; Filter,<br />&nbsp;&nbsp;&nbsp;&nbsp;int NumDimensions<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Initialize BlendSpace filtering for runtime.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="InitializePerBoneBlend"><nobr><p>InitializePerBoneBlend()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Initialize Per Bone Blend</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="InterpolateWeightOfSampleData"><nobr><p>InterpolateWeightOfSampleData</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float DeltaTime,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../FBlendSampleData" ><span>FBlendSampleData</span></a> >&amp; ...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../FBlendSampleData" ><span>FBlendSampleData</span></a> >&amp; ...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../FBlendSampleData" ><span>FBlendSampleData</span></a> >&amp; FinalS...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Utility function to interpolate weight of samples from OldSampleDataList to NewSampleDataList and copy back the interpolated result to FinalSampleDataList</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="IsAnimationCompatible"><nobr><p>IsAnimationCompatible</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../UAnimSequence" ><span>UAnimSequence</span></a>&#42; Animation...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Check if the animation sequence additive type is compatible with this blend space</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="IsAnimationCompatibleWithSkeleto-"><nobr><p>IsAnimationCompatibleWithSkeleton</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../UAnimSequence" ><span>UAnimSequence</span></a>&#42; Animation...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Check if the animation sequence's skeleton is compatible with this blendspace</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="IsSameSamplePoint"><nobr><p>IsSameSamplePoint</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector&amp; SamplePointA,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector&amp; SamplePointB<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Checks if the given samples points overlap</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="IsSampleWithinBounds"><nobr><p>IsSampleWithinBounds</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector&amp; SampleValue<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="IsTooCloseToExistingSamplePoint"><nobr><p>IsTooCloseToExistingSamplePoint</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector&amp; SampleValue,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 OriginalIndex<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Check if given sample value isn't too close to existing sample point</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="IsValidAdditiveType"><nobr><p>IsValidAdditiveType</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;EAdditiveAnimationType AdditiveType<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns whether or not the given additive animation type is compatible with the blendspace type</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="IsValidBlendSampleIndex"><nobr><p>IsValidBlendSampleIndex</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const int32 SampleIndex<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Check whether or not the sample index is valid in combination with the stored sample data</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ReplaceSampleAnimation"><nobr><p>ReplaceSampleAnimation</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const int32 BlendSampleIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../UAnimSequence" ><span>UAnimSequence</span></a>&#42; AnimationSequen...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Update animation on grid sample</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ResampleData"><nobr><p>ResampleData()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Runs triangulation/segmentation to update our grid and BlendSpaceData structures</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ResetToRefPose"><nobr><p>ResetToRefPose</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../FCompactPose" ><span>FCompactPose</span></a>&amp; OutPose<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Reset to reference pose. It does apply different refpose based on additive or not</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RuntimeValidateMarkerData"><nobr><p>RuntimeValidateMarkerData()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetBlendSpaceData/1"><nobr><p>SetBlendSpaceData</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../FBlendSpaceSegment" ><span>FBlendSpaceSegment</span></a> > ...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets up BlendSpaceData based on Line elements</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ShouldAnimationBeAdditive"><nobr><p>ShouldAnimationBeAdditive()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Check if the the blendspace contains additive samples only</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SnapSamplesToClosestGridPoint"><nobr><p>SnapSamplesToClosestGridPoint()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>If around border, snap to the border to avoid empty hole of data that is not valid</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="TickFollowerSamples"><nobr><p>TickFollowerSamples</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../FBlendSampleData" ><span>FBlendSampleData</span></a> >&amp; Sample...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const int32 HighestWeightIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FAnimAssetTickContext" ><span>FAnimAssetTickContext</span></a>&amp; Context,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bResetMarkerDataOnFollowers,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bLooping,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../UMirrorDataTable" ><span>UMirrorDataTable</span></a>&#42; Mirror...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Ticks the samples in SampleDataList apart from the HighestWeightIndex one.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UpdateBlendSamples"><nobr><p>UpdateBlendSamples</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector&amp; InBlendSpacePositio...,<br />&nbsp;&nbsp;&nbsp;&nbsp;float InDeltaTime,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../FBlendSampleData" ><span>FBlendSampleData</span></a> >&amp; InOutS...,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32&amp; InOutCachedTriangulationInd...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Updates a cached set of blend samples according to internal parameters, blendspace position and a delta time.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UpdateBlendSpacesUsingAnimSequen-"><nobr><p>UpdateBlendSpacesUsingAnimSequence</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../UAnimSequenceBase" ><span>UAnimSequenceBase</span></a>&#42; Sequence<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Validates sample data for blendspaces using the given animation sequence</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UpdateFilterParams"><nobr><p>UpdateFilterParams</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FBlendFilter" ><span>FBlendFilter</span></a>&#42; Filter<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Update BlendSpace filtering parameters - values that don't require a full initialization</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UpdatePreviewBasePose"><nobr><p>UpdatePreviewBasePose()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ValidateAnimationSequence"><nobr><p>ValidateAnimationSequence</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../UAnimSequence" ><span>UAnimSequence</span></a>&#42; Animation...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Validate that the given animation sequence and contained blendspace data</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ValidateSampleData"><nobr><p>ValidateSampleData()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Validates the contained data</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ValidateSampleValue"><nobr><p>ValidateSampleValue</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector&amp; SampleValue,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 OriginalIndex<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Validates supplied blend sample against current contents of blendspace</p>
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'functions_1');">
+        <p>Overridden from UAnimationAsset</p>
+    </div>
+<div id="functions_1">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:8%;">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetAllAnimationSequencesReferred"><nobr><p>GetAllAnimationSequencesReferred</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../UAnimationAsset" ><span>UAnimationAsset</span></a>&#42; >&amp; A...,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bRecursive<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Retrieve all animations that are used by this asset</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>int32</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetMarkerUpdateCounter"><nobr><p>GetMarkerUpdateCounter()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>float</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetPlayLength"><nobr><p>GetPlayLength()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>This is used in editor only when used for transition getter this doesn't mean max time.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../Core/UObject/FName" ><span>FNam</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetUniqueMarkerNames"><nobr><p>GetUniqueMarkerNames()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Return a list of unique marker names for blending compatibility</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="IsValidAdditive"><nobr><p>IsValidAdditive()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Return true if this is valid additive animation false otherwise</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ReplaceReferredAnimations"><nobr><p>ReplaceReferredAnimations</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Core/Containers/TMap" ><span>TMap</span></a>&lt; <a id="content_link" href="../UAnimationAsset" ><span>UAnimationAsset</span></a>&#42;, ...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Replace this assets references to other animations based on ReplacementMap</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="TickAssetPlayer"><nobr><p>TickAssetPlayer</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FAnimTickRecord" ><span>FAnimTickRecord</span></a>&amp; Instance,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FAnimNotifyQueue" ><span>FAnimNotifyQueue</span></a>&amp; NotifyQueue,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FAnimAssetTickContext" ><span>FAnimAssetTickContext</span></a>&amp; Context<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Advances the asset player instance</p>
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'functions_2');">
+        <p>Overridden from UObject</p>
+    </div>
+<div id="functions_2">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:8%;">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetResourceSizeEx"><nobr><p>GetResourceSizeEx</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Core/ProfilingDebugging/FResourceSizeEx" ><span>FResourceSizeEx</span></a>&amp; CumulativeResourc...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Get the size of the object/resource for use in memory tools or to display to artists/LDs in the Editor This is the extended version which separates up the used memory into different memory regions (the actual definition of which may be platform specific).</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="PostEditChangeProperty"><nobr><p>PostEditChangeProperty</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../CoreUObject/UObject/FPropertyChangedEvent" ><span>FPropertyChangedEvent</span></a>&amp; PropertyCha...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Called when a property on this object has been modified externally</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="PostLoad"><nobr><p>PostLoad()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Do any object-specific cleanup required immediately after loading an object.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="PreEditChange"><nobr><p>PreEditChange</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../CoreUObject/UObject/FProperty" ><span>FProperty</span></a>&#42; PropertyAboutToChan...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>This is called when a property is about to be modified externally</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="Serialize"><nobr><p>Serialize</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Core/Serialization/FArchive" ><span>FArchive</span></a>&amp; Ar<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Handles reading, writing, and reference collecting using <a id="content_link" href="../../../Core/Serialization/FArchive" ><span>FArchive</span></a>.</p>
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'functions_7');">
+        <p>Overridden from IInterpolationIndexProvider</p>
+    </div>
+<div id="functions_7">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:8%;">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Core/Templates/TSharedPtr" ><span>TSharedPtr</span></a>&lt; ...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetPerBoneInterpolationData"><nobr><p>GetPerBoneInterpolationData</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../USkeleton" ><span>USkeleton</span></a>&#42; Skeleton<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sorts the PerBoneBlend data into a form that can be repeatedly used in GetPerBoneInterpolationIndex</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>int32</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetPerBoneInterpolationIndex"><nobr><p>GetPerBoneInterpolationIndex</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../AnimationCore/FCompactPoseBoneIndex" ><span>FCompactPoseBoneIndex</span></a>&amp; InCom...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../FBoneContainer" ><span>FBoneContainer</span></a>&amp; RequiredBone...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../IInterpolationIndexProvider/FPerBoneInterpolationData" ><span>IInterpolationIndexProvider::</span></a>...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Get PerBoneInterpolationIndex for the input BoneIndex If nothing found, return INDEX_NONE</p>
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'deprecatedvariables');">
+        <p>Deprecated Variables</p>
+    </div>
+<div id="deprecatedvariables">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:8%">
+			</th>
+			<th class="type-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:15%">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>bRotationBlendInMeshSpace_DEPRECATED</p>
+	</td>
+	<td class="desc-cell">
+		<p>This property is deprecated. Please use/see bContainsRotationOffsetMeshSpaceSamples instead</p>
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'deprecatedfunctions');">
+        <p>Deprecated Functions</p>
+    </div>
+<div id="deprecatedfunctions">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:8%;">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetAnimationPose/1"><nobr><p>GetAnimationPose</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../FBlendSampleData" ><span>FBlendSampleData</span></a> >&amp; BlendS...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FAnimationPoseData" ><span>FAnimationPoseData</span></a>&amp; OutAnimationPo...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Use GetAnimationPose with extraction context signature</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetAnimationPose/2"><nobr><p>GetAnimationPose</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../FBlendSampleData" ><span>FBlendSampleData</span></a> >&amp; BlendS...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../FCompactPose" ><span>FCompactPose</span></a>&amp; OutPose,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FBlendedCurve" ><span>FBlendedCurve</span></a>&amp; OutCurve<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Use GetAnimationPose with other signature</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetAnimationPose/3"><nobr><p>GetAnimationPose</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../FBlendSampleData" ><span>FBlendSampleData</span></a> >&amp; BlendS...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; <a id="content_link" href="../FPoseLink" ><span>FPoseLink</span></a> > InPoseLinks,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FPoseContext" ><span>FPoseContext</span></a>&amp; Output<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Use GetAnimationPose with extraction context signature</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UpdateSampleAnimation"><nobr><p>UpdateSampleAnimation</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../UAnimSequence" ><span>UAnimSequence</span></a>&#42; AnimationSequen...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector&amp; SampleValue<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Please use ReplaceSampleAnimation instead</p>
+	</td>
+</tr>
+	</table>
+</div>
+
+</div>
+</div>
+																	</div>
+					<!-- End of Markdown converted page content -->
+				</div>
+												<div id="recommendations"></div>			</div>
+						<div id="footer"></div>			
+									<div id="announcement">
+			<div style="display:inline-block;margin:5px;">
+				Help shape the future of Unreal Engine documentation! Tell us how we're doing so we can serve you better.
+			</div>
+			<div style="margin:5px;display:inline-block;">
+				<div class="btn action" style="margin-top:-6px;display:inline-block;" onclick="$('#announcement').hide();window.open('https://epicgames.questionpro.com/t/AVVbJZwedR');createCookie('announcement-read', new Date().getTime(), 30);">Take our survey</div>
+				<div class="btn btn-default" style="margin-top:-6px;display:inline-block;" onclick="$('#announcement').hide();createCookie('announcement-read', new Date().getTime(), 30);">Cancel</div>
+			</div>
+			<div class="btn-close" style="position:absolute;right:5px;top:10px;padding:3px;width:14px;height:14px;" onclick="$('#announcement').hide();"></div>
+			</div>
+					</div>
+	</div>
+</body>
+</html>

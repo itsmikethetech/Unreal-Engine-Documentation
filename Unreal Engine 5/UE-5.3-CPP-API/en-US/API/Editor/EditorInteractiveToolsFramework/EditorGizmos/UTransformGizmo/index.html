@@ -1,0 +1,3684 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="./../../../../../../Include/Javascript/common_en-US.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var time = new Date(0);
+		var preview = false;
+		var relativeHTMLPath = "./../../../../../../";
+				var pageid = 0;
+				var heroimage = "./../../../../../../Images/ue5-hero.png";
+				var lang = "en-US";
+				var basePath = document.location.pathname.substring(0, document.location.pathname.indexOf('/' + lang + '/') + lang.length + 1);
+		document.write('<base href="' +  encodeURI(basePath) + '/API/Editor/EditorInteractiveToolsFramework/EditorGizmos/UTransformGizmo/" />');
+				var udnCSS = './../../../../../../Include/CSS/udn_public.css';
+		var udnLangCSS = '';
+				var udnOverrideCSS = './../../../../../../Include/CSS/skin_overrides.css';
+		var udnOverrideDarkCSS = './../../../../../../Include/CSS/skin_overrides_dark.css';
+		var fancyboxCSS = './../../../../../../Include/CSS/jquery.fancybox.css';
+		var jqueryuiCSS = './../../../../../../Include/CSS/jquery-ui.min.css';
+		var qtipCSS = './../../../../../../Include/CSS/jquery.qtip.css';
+		var prettifyCSS = './../../../../../../Include/CSS/prettify.css';
+		var navbarCSS = './../../../../../../Include/CSS/navBar.css';
+		var twentytwentyCSS = './../../../../../../Include/CSS/twentytwenty.css';
+		var recommendationsCSS = './../../../../../../Include/CSS/jquery.recommendations.css';
+	</script>
+    <title>UTransformGizmo | Unreal Engine 5.2 Documentation</title>
+    	    <meta name=viewport content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Cache-control" content="no-store">
+    <script  src="./../../../../../../Include/Javascript/CustomEvent.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/jquery-3.4.0.min.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/udn.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/udn_extras.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/jquery-ui.min.js" type="text/javascript"></script>
+	    <script  src="./../../../../../../Include/Javascript/informational.js" type="text/javascript"></script>
+	    <script  src="./../../../../../../Include/Javascript/jquery.fancybox.pack.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/jquery.qtip.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/prettify.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/jquery.slimscroll.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/jquery.event.move.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/jquery.twentytwenty.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/lazysizes.min.js" type="text/javascript"></script>
+	    <script  src="./../../../../../../Include/Javascript/jquery.recommendations.js" type="text/javascript"></script>
+	
+    <link async rel="icon" href="./../../../../../../Include/Images/site_icon.png" type="image/x-icon" />
+    <link async rel="shortcut icon" href="./../../../../../../Include/Images/site_icon.png" type="image/x-icon" />
+    <link async href="./../../../../../../Include/Images/touch_icon.png" rel="apple-touch-icon" />
+    <link async href="./../../../../../../Include/Images/touch_icon_114.png" sizes="114x114" rel="apple-touch-icon" />    
+		<script  src="./../../../../../../Include/Javascript/CollapsibleLists.js" type="text/javascript"></script>
+	<script  src="./../../../../../../Include/Javascript/navigationBarUI.js"></script>
+	<script  src="./../../../../../../Include/Javascript/navigationBar.js"></script>
+		
+	<link rel="alternate" href="https://docs.unrealengine.com/latest/en-US/API/Editor/EditorInteractiveToolsFramework/EditorGizmos/UTransformGizmo/" hreflang="x-default" />
+
+	<meta name="title" content="UTransformGizmo" />
+<meta name="description" content="[UTransformGizmo](API\Editor\EditorInteractiveToolsFramework\EditorGizmos\UTransformGizmo) provides standard Transformation Gizmo interactions, applied to a [UTransformProxy](API\Runtime\InteractiveToolsFramework\BaseGizmos\UTransformProxy) target object." />
+<meta name="availability" content="Public" />
+<meta name="crumbs" content="%ROOT%,API,API/Editor,API/Editor/EditorInteractiveToolsFramework,API/Editor/EditorInteractiveToolsFramework/EditorGizmos" />
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta property="og:title" content="UTransformGizmo" />
+	<meta property="og:description" content="[UTransformGizmo](API\Editor\EditorInteractiveToolsFramework\EditorGizmos\UTransformGizmo) provides standard Transformation Gizmo interactions, applied to a [UTransformProxy](API\Runtime\InteractiveToolsFramework\BaseGizmos\UTransformProxy) target object." />
+		<meta property="og:image" content="https://docs.unrealengine.com/5.1/Images/placeholder-social.png" />
+	</head>
+<body id="webbgThree" style="visibility: hidden;" onload="document.body.style.visibility='visible';">
+			<script>window.__tracking_base = 'https://tracking.unrealengine.com';</script>
+	<script src="https://tracking.unrealengine.com/tracking.js" async></script>    <div id="webThree">
+				<div id="page_head">
+						<div id="head">
+				<div id="logo"></div>
+			</div>
+						<div id="pagenav">
+				<div class="crumbs" id="crumbs">
+<span id="versionContainer">
+	<span id="versionSelect" class="btn btn-version" onclick="ToggleMenu($('#versionMenu'), $(this));"></span>
+	<div id="versionMenu">
+		<div id="4_26" data-version="4.26" class="btn btn-select" onclick="createCookie('version', '4.26', 365);SwitchVersion('4.26');">Unreal Engine 4.26 Documentation</div>
+		<div id="4_27" data-version="4.27" class="btn btn-select" onclick="createCookie('version', '4.27', 365);SwitchVersion('4.27');">Unreal Engine 4.27 Documentation</div>
+		<div id="5_0" data-version="5.0" class="btn btn-select" onclick="createCookie('version', '5.0', 365);SwitchVersion('5.0');">Unreal Engine 5.0 Documentation</div>
+		<div id="5_1" data-version="5.1" class="btn btn-select" onclick="createCookie('version', '5.1', 365);SwitchVersion('5.1');">Unreal Engine 5.1 Documentation</div>
+		<div id="5_2" data-version="5.2" class="btn btn-select" onclick="createCookie('version', '5.2', 365);SwitchVersion('5.2');">Unreal Engine 5.2 Documentation</div>
+		<div id="5_3" data-version="5.3" class="btn btn-select" onclick="createCookie('version', '5.3', 365);SwitchVersion('5.3');">Unreal Engine 5.3 Documentation</div>
+	</div>
+</span>
+	<span class="separator">></span> <a id="parent_link" href="../../../../../API">Unreal Engine API Reference</a>
+
+	<span class="separator">></span> <a id="parent_link" href="../../../../Editor">Editor</a>
+
+	<span class="separator">></span> <a id="parent_link" href="../../../EditorInteractiveToolsFramework">EditorInteractiveToolsFramework</a>
+
+	<span class="separator">></span> <a id="parent_link" href="../../EditorGizmos">EditorGizmos</a>
+
+<span class="separator">></span> <span id="page">UTransformGizmo</span>
+</div>				<div id="pageNavRight">
+								<!-- Start of Search -->
+												<div id="search_container">
+					<form name="bodySearch" method="get" action="https://www.unrealengine.com/en-US/bing-search" onsubmit="return validateSearch()">
+						<input type="image" src="./../../../../../../Include/Images/search_box_icon.png" class="searchbutton"/>
+						<input type="hidden" name="filter" value="Documentation" />
+						<input type="text" name="keyword" placeholder="Search Documentation..." class="searchbox" autocomplete="off"/>
+					</form>
+				</div>
+								<!-- End of Search -->
+				<div id="skinContainer">
+	<div id="skinSelect" class="btn btn-skin" onclick="ToggleMenu($('#skinMenu'), $(this));"></div>
+	<div id="skinMenu">
+		<div id="light" class="btn btn-select" onclick="createCookie('skin', 'light', 365);location.reload();">Light Theme</div>
+		<div id="dark" class="btn btn-select" onclick="createCookie('skin', 'dark', 365);location.reload();">Dark Theme</div>
+	</div>
+</div>				</div>
+			</div>
+		</div>						<div id="navWrapper">
+			<div id="nav-filter-container">
+				<div id="nav-filter-inner">
+					<form>
+						<input type="text" placeholder="Filter pages..." id="nav-filter" onchange="clearTimeout(filterTimer); filterTimer = setTimeout(updateNavTreeFilter,250, this.value);if(this.value.length == 0){$('#filter-clear').hide();}else{$('#filter-clear').show();}" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" />
+						<button class="close-icon" id="filter-clear" type="reset" onclick="clearTimeout(filterTimer); filterTimer = setTimeout(updateNavTreeFilter,250, '');$(this).hide();"></button>
+					</form>
+				</div>
+			</div>
+			<nav id="navPanel">
+			</nav>
+			<div id="navigation" title="Click to toggle navigation menu"><span>></span></div>
+		</div>		
+		<div id="splitter">
+		</div>
+				<div id="contentContainer">
+										<div id="pagedefault">
+				<div id="product-banner">
+	<div id="product-logo"></div>
+</div>				<div id="pagecontainer" style="padding-right:0px;">
+					<!-- Start of Markdown converted page content -->
+										<div class="hero  background">
+	<div class="imgContainer"><img src="./../../../../../../Images/ue5-hero.png" /></div>	<div class="info">
+		<div id="pageTitle">
+			<h1 id="H1TitleId">UTransformGizmo</h1>
+		</div>
+		<h2 >[UTransformGizmo](API\Editor\EditorInteractiveToolsFramework\EditorGizmos\UTransformGizmo) provides standard Transformation Gizmo interactions, applied to a [UTransformProxy](API\Runtime\InteractiveToolsFramework\BaseGizmos\UTransformProxy) target object.</h2>
+		<div id="access">
+			<div class="accessContainer">
+															</div>
+		</div>
+	</div>
+</div>															<div id="maincol">
+																																				<div class="heading expanded" onclick="sectionOnClick(this, 'hierarchy');">
+        <p>Inheritance Hierarchy</p>
+    </div>
+<div id="hierarchy">
+    <div class="hierarchy">
+	<table  class="hierarchy-table" cellspacing="0" id="hrch"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../../../../Runtime/CoreUObject/UObject/UObjectBase"><p>UObjectBase</p></a><table  class="hierarchy-table" cellspacing="0" id="hrch_1"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../../../../Runtime/CoreUObject/UObject/UObjectBaseUtility"><p>UObjectBaseUtility</p></a><table  class="hierarchy-table" cellspacing="0" id="hrch_1_1"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../../../../Runtime/CoreUObject/UObject/UObject"><p>UObject</p></a><table  class="hierarchy-table" cellspacing="0" id="hrch_1_1_1"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../../../../Runtime/InteractiveToolsFramework/UInteractiveGizmo"><p>UInteractiveGizmo</p></a><table  class="hierarchy-table" cellspacing="0" id="hrch_1_1_1_1"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><p>UTransformGizmo</p>
+<table  class="hierarchy-table" cellspacing="0" id="hrch_1_1_1_1_1"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../UEditorTransformGizmo"><p>UEditorTransformGizmo</p></a></td></tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr></table>
+</div>
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'references');">
+        <p>References</p>
+    </div>
+<div id="references">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="normal-row">
+	<td class="name-cell">
+		<p>Module</p>
+	</td>
+	<td class="desc-cell">
+		<p><a id="content_link" href="../.." ><span>EditorInteractiveToolsFramework</span></a></p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<p>Header</p>
+	</td>
+	<td class="desc-cell">
+		<p>&#47;Engine&#47;Source&#47;Editor&#47;Experimental&#47;EditorInteractiveToolsFramework&#47;Public&#47;EditorGizmos&#47;TransformGizmo.h</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<p>Include</p>
+	</td>
+	<td class="desc-cell">
+		<p>&#35;include &quot;EditorGizmos&#47;TransformGizmo.h&quot;</p>
+	</td>
+</tr>
+			</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'syntax');">
+        <p>Syntax</p>
+    </div>
+<div id="syntax">
+    <div class="simplecode_api">
+	<p>class UTransformGizmo :<br />&nbsp;&nbsp;&nbsp;&nbsp;public <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/UInteractiveGizmo" ><span>UInteractiveGizmo</span></a>,<br />&nbsp;&nbsp;&nbsp;&nbsp;public <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/BaseBehaviors/IHoverBehaviorTarget" ><span>IHoverBehaviorTarget</span></a>,<br />&nbsp;&nbsp;&nbsp;&nbsp;public <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/BaseBehaviors/IClickDragBehaviorTarget" ><span>IClickDragBehaviorTarget</span></a>  </p>
+</div>
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'description');">
+        <p>Remarks</p>
+    </div>
+<div id="description">
+    <p><a id="content_link" href="" ><span>UTransformGizmo</span></a> provides standard Transformation Gizmo interactions, applied to a <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/BaseGizmos/UTransformProxy" ><span>UTransformProxy</span></a> target object. <a id="content_link" href="../../../../Developer/AutomationDriver/By" ><span>By</span></a> default the Gizmo will be a standard XYZ translate/rotate Gizmo (axis and plane translation).</p>
+</div><div class="syntax">
+	<div class="heading expanded" onclick="sectionOnClick(this, 'variables');">
+        <p>Variables</p>
+    </div>
+<div id="variables">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:8%">
+			</th>
+			<th class="type-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:15%">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Delegates/TObjectPtr" ><span>TObjectPtr</span></a>&lt; <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/BaseGizmos/UTransformProxy" ><span>UTr</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ActiveTarget"><p>ActiveTarget</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>The active target object for the Gizmo</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Delegates/TObjectPtr" ><span>TObjectPtr</span></a>&lt; <a id="content_link" href="../../../../Runtime/Engine/Materials/UMaterialInstanceDynamic" ><span>UMa</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="AxisMaterialX"><p>AxisMaterialX</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Delegates/TObjectPtr" ><span>TObjectPtr</span></a>&lt; <a id="content_link" href="../../../../Runtime/Engine/Materials/UMaterialInstanceDynamic" ><span>UMa</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="AxisMaterialY"><p>AxisMaterialY</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Delegates/TObjectPtr" ><span>TObjectPtr</span></a>&lt; <a id="content_link" href="../../../../Runtime/Engine/Materials/UMaterialInstanceDynamic" ><span>UMa</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="AxisMaterialZ"><p>AxisMaterialZ</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>bDisallowNegativeScaling</p>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>bGridSizeIsExplicit</p>
+	</td>
+	<td class="desc-cell">
+		<p>Optional grid size which overrides the Context Grid</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>bInInteraction</p>
+	</td>
+	<td class="desc-cell">
+		<p>Whether gizmo is interacting.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>bRotationGridSizeIsExplicit</p>
+	</td>
+	<td class="desc-cell">
+		<p>Optional grid size which overrides the Context Rotation Grid</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>bSnapToWorldGrid</p>
+	</td>
+	<td class="desc-cell">
+		<p>If true, then when using world frame, Axis and Plane translation snap to the world grid via the ContextQueriesAPI (in PositionSnapFunction)</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>bSnapToWorldRotGrid</p>
+	</td>
+	<td class="desc-cell">
+		<p>If true, then when using world frame, Axis and Plane translation snap to the world grid via the ContextQueriesAPI (in RotationSnapFunction)</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>bVisible</p>
+	</td>
+	<td class="desc-cell">
+		<p>Whether gizmo is visible.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Delegates/TObjectPtr" ><span>TObjectPtr</span></a>&lt; <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/BaseGizmos/UGizmoConstantFrameAxisSource" ><span>UGi</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CameraAxisSource"><p>CameraAxisSource</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Axis that points towards camera, X/Y plane tangents aligned to right/up.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Delegates/TObjectPtr" ><span>TObjectPtr</span></a>&lt; <a id="content_link" href="../../../../Runtime/Engine/Materials/UMaterialInstanceDynamic" ><span>UMa</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CurrentAxisMater-"><p>CurrentAxisMaterial</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Containers/TEnumAsByte" ><span>TEnumAsByte</span></a>&lt; <a id="content_link" href="../../../../Runtime/Core/Math/EAxisList__Type" ><span>EA</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CurrentAxisToDra-"><p>CurrentAxisToDraw</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Currently rendered axis list</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>EGizmoTransform...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CurrentMode"><p>CurrentMode</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Currently rendered transform mode</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FTransform</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>CurrentTransform</p>
+	</td>
+	<td class="desc-cell">
+		<p>Current transform</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/GenericPlatform/TFunction" ><span>TFunction</span></a>&lt; cons...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CustomizationFun-"><p>CustomizationFunction</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Customization function (to override default material or increment gizmo size for example)</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Templates/TUniqueFunction" ><span>TUniqueFunction</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="DestinationAlign-"><p>DestinationAlignmentRayCaster</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FVector</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>ExplicitGridSize</p>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FRotator</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>ExplicitRotationGridSize</p>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Delegates/TObjectPtr" ><span>TObjectPtr</span></a>&lt; <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/BaseGizmos/UGizmoElementGroup" ><span>UGi</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GizmoElementRoot"><p>GizmoElementRoot</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Root of renderable gizmo elements</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Delegates/TObjectPtr" ><span>TObjectPtr</span></a>&lt; <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/BaseGizmos/UGizmoViewContext" ><span>UGi</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GizmoViewContext"><p>GizmoViewContext</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Gizmo view context, needed for screen space interactions</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Delegates/TObjectPtr" ><span>TObjectPtr</span></a>&lt; <a id="content_link" href="../../../../Runtime/Engine/Materials/UMaterialInstanceDynamic" ><span>UMa</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GreyMaterial"><p>GreyMaterial</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Delegates/TObjectPtr" ><span>TObjectPtr</span></a>&lt; <a id="content_link" href="../../../../Runtime/Engine/Materials/UMaterialInterface" ><span>UMa</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GridMaterial"><p>GridMaterial</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Delegates/TObjectPtr" ><span>TObjectPtr</span></a>&lt; <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/BaseGizmos/UGizmoElementHitMultiTarget" ><span>UGi</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="HitTarget"><p>HitTarget</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>The hit target object</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>float</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>InteractionAxisCurrParam</p>
+	</td>
+	<td class="desc-cell">
+		<p>Active interaction current hit param (only valid between state target BeginModify/EndModify)</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FVector</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>InteractionAxisDirection</p>
+	</td>
+	<td class="desc-cell">
+		<p>Active world space axis (only valid between state target BeginModify/EndModify)</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Containers/TEnumAsByte" ><span>TEnumAsByte</span></a>&lt; <a id="content_link" href="../../../../Runtime/Core/Math/EAxisList__Type" ><span>EA</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="InteractionAxisL-"><p>InteractionAxisList</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>The values below are used in the context of a single click-drag interaction, ie if bInInteraction = true They otherwise should be considered uninitializedActive axis type (only valid between state target BeginModify/EndModify)</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FVector</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>InteractionAxisOrigin</p>
+	</td>
+	<td class="desc-cell">
+		<p>Active world space axis origin (only valid between state target BeginModify/EndModify)</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>float</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>InteractionAxisStartParam</p>
+	</td>
+	<td class="desc-cell">
+		<p>Active interaction start hit param (only valid between state target BeginModify/EndModify)</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>float</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>InteractionCurrAngle</p>
+	</td>
+	<td class="desc-cell">
+		<p>Active interaction rotation curr angle (only valid between state target BeginModify/EndModify)</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FVector</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>InteractionPlanarAxisX</p>
+	</td>
+	<td class="desc-cell">
+		<p>Active world space axis X used for planar (only valid between state target BeginModify/EndModify)</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FVector</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>InteractionPlanarAxisY</p>
+	</td>
+	<td class="desc-cell">
+		<p>Active world space axis Y used for planar (only valid between state target BeginModify/EndModify)</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FVector</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>InteractionPlanarCurrPoint</p>
+	</td>
+	<td class="desc-cell">
+		<p>Active interaction current point planar (only valid between state target BeginModify/EndModify)</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FVector</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>InteractionPlanarNormal</p>
+	</td>
+	<td class="desc-cell">
+		<p>Active world space normal used for planar (only valid between state target BeginModify/EndModify)</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FVector</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>InteractionPlanarOrigin</p>
+	</td>
+	<td class="desc-cell">
+		<p>Active world space planar origin (only valid between state target BeginModify/EndModify)</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FVector</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>InteractionPlanarStartPoint</p>
+	</td>
+	<td class="desc-cell">
+		<p>Active interaction start point planar (only valid between state target BeginModify/EndModify)</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FVector2D</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>InteractionScreenAxisDirection</p>
+	</td>
+	<td class="desc-cell">
+		<p>Active interaction screen axis dir (only valid between state target BeginModify/EndModify)</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FVector2D</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>InteractionScreenCurrPos</p>
+	</td>
+	<td class="desc-cell">
+		<p>Active interaction screen current pos (only valid between state target BeginModify/EndModify)</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FVector2D</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>InteractionScreenEndPos</p>
+	</td>
+	<td class="desc-cell">
+		<p>Active interaction screen end pos (only valid between state target BeginModify/EndModify)</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FVector2D</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>InteractionScreenStartPos</p>
+	</td>
+	<td class="desc-cell">
+		<p>Active interaction screen start pos (only valid between state target BeginModify/EndModify)</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>float</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>InteractionStartAngle</p>
+	</td>
+	<td class="desc-cell">
+		<p>Active interaction rotation start angle (only valid between state target BeginModify/EndModify)</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>ETransformGizmo...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="LastHitPart"><p>LastHitPart</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Last hit part</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Delegates/TObjectPtr" ><span>TObjectPtr</span></a>&lt; <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/BaseBehaviors/UClickDragInputBehavior" ><span>UCl</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="MouseBehavior"><p>MouseBehavior</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>The mouse click behavior of the gizmo is accessible so that it can be modified to use different mouse keys.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../../Runtime/Core/GenericPlatform/TFunction" ><span>TFuncti</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnClickDragFunct-"><p>OnClickDragFunctions</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Array of function pointers, indexed by gizmo part id, to handle click drag behavior</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../../Runtime/Core/GenericPlatform/TFunction" ><span>TFuncti</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnClickPressFunc-"><p>OnClickPressFunctions</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Array of function pointers, indexed by gizmo part id, to handle click press behavior</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../../Runtime/Core/GenericPlatform/TFunction" ><span>TFuncti</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnClickReleaseFu-"><p>OnClickReleaseFunctions</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Array of function pointers, indexed by gizmo part id, to handle click release behavior</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../../Runtime/Core/GenericPlatform/TFunction" ><span>TFuncti</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnUpdateHoverFun-"><p>OnUpdateHoverFunctions</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Array of function pointers, indexed by gizmo part id, to handle update hovering state</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../../../Runtime/Core/GenericPlatform/TFunction" ><span>TFuncti</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnUpdateInteract-"><p>OnUpdateInteractingFunctions</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Array of function pointers, indexed by gizmo part id, to handle update interacting state</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Delegates/TObjectPtr" ><span>TObjectPtr</span></a>&lt; <a id="content_link" href="../../../../Runtime/Engine/Materials/UMaterialInstanceDynamic" ><span>UMa</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OpaquePlaneMater-"><p>OpaquePlaneMaterialXY</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Delegates/TObjectPtr" ><span>TObjectPtr</span></a>&lt; <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/BaseGizmos/UGizmoElementCircle" ><span>UGi</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RotateArcballInn-_1"><p>RotateArcballInnerElement</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Rotate arcball inner circle</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Delegates/TObjectPtr" ><span>TObjectPtr</span></a>&lt; <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/BaseGizmos/UGizmoElementCircle" ><span>UGi</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RotateArcballOut-_1"><p>RotateArcballOuterElement</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Rotate arcball outer circle</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Delegates/TObjectPtr" ><span>TObjectPtr</span></a>&lt; <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/BaseGizmos/UGizmoElementCircle" ><span>UGi</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RotateOuterCircl-_2"><p>RotateOuterCircleElement</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Rotate outer circle</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Delegates/TObjectPtr" ><span>TObjectPtr</span></a>&lt; <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/BaseGizmos/UGizmoElementCircle" ><span>UGi</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RotateScreenSpac-_2"><p>RotateScreenSpaceElement</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Rotate screen space circle</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Delegates/TObjectPtr" ><span>TObjectPtr</span></a>&lt; <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/BaseGizmos/UGizmoElementTorus" ><span>UGi</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RotateXAxisEleme-"><p>RotateXAxisElement</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Rotate X Axis</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Delegates/TObjectPtr" ><span>TObjectPtr</span></a>&lt; <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/BaseGizmos/UGizmoElementTorus" ><span>UGi</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RotateYAxisEleme-"><p>RotateYAxisElement</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Rotate Y Axis</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Delegates/TObjectPtr" ><span>TObjectPtr</span></a>&lt; <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/BaseGizmos/UGizmoElementTorus" ><span>UGi</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RotateZAxisEleme-"><p>RotateZAxisElement</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Rotate Z Axis</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>double</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>ScaleMultiplier</p>
+	</td>
+	<td class="desc-cell">
+		<p>Percentage-based scale multiplier</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Delegates/TObjectPtr" ><span>TObjectPtr</span></a>&lt; <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/BaseGizmos/UGizmoElementRectangle" ><span>UGi</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ScalePlanarXYEle-"><p>ScalePlanarXYElement</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Scale planar XY handle</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Delegates/TObjectPtr" ><span>TObjectPtr</span></a>&lt; <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/BaseGizmos/UGizmoElementRectangle" ><span>UGi</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ScalePlanarXZEle-"><p>ScalePlanarXZElement</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Scale planar XZ handle</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Delegates/TObjectPtr" ><span>TObjectPtr</span></a>&lt; <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/BaseGizmos/UGizmoElementRectangle" ><span>UGi</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ScalePlanarYZEle-"><p>ScalePlanarYZElement</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Scale planar YZ handle</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Delegates/TObjectPtr" ><span>TObjectPtr</span></a>&lt; <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/BaseGizmos/UGizmoElementBox" ><span>UGi</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ScaleUniformElem-"><p>ScaleUniformElement</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Uniform scale object</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Delegates/TObjectPtr" ><span>TObjectPtr</span></a>&lt; <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/BaseGizmos/UGizmoElementArrow" ><span>UGi</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ScaleXAxisElemen-"><p>ScaleXAxisElement</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Scale X Axis object</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Delegates/TObjectPtr" ><span>TObjectPtr</span></a>&lt; <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/BaseGizmos/UGizmoElementArrow" ><span>UGi</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ScaleYAxisElemen-"><p>ScaleYAxisElement</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Scale Y Axis object</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Delegates/TObjectPtr" ><span>TObjectPtr</span></a>&lt; <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/BaseGizmos/UGizmoElementArrow" ><span>UGi</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ScaleZAxisElemen-"><p>ScaleZAxisElement</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Scale Z Axis object</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Templates/TUniqueFunction" ><span>TUniqueFunction</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ShouldAlignDesti-"><p>ShouldAlignDestination</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>These are used to let the translation subgizmos use raycasts into the scene to align the gizmo with scene geometry.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/CoreUObject/UObject/TScriptInterface" ><span>TScriptInterfac</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="StateTarget"><p>StateTarget</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>The state target is created internally during <a id="content_link" href="SetActiveTarget" ><span>SetActiveTarget()</span></a> if no one is provided.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/CoreUObject/UObject/TScriptInterface" ><span>TScriptInterfac</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="TransformGizmoSo-"><p>TransformGizmoSource</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Transform Gizmo Source</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Delegates/TObjectPtr" ><span>TObjectPtr</span></a>&lt; <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/BaseGizmos/UGizmoElementRectangle" ><span>UGi</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="TranslatePlanarX-"><p>TranslatePlanarXYElement</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Translate planar XY handle</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Delegates/TObjectPtr" ><span>TObjectPtr</span></a>&lt; <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/BaseGizmos/UGizmoElementRectangle" ><span>UGi</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="TranslatePlanarX-_1"><p>TranslatePlanarXZElement</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Translate planar XZ handle</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Delegates/TObjectPtr" ><span>TObjectPtr</span></a>&lt; <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/BaseGizmos/UGizmoElementRectangle" ><span>UGi</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="TranslatePlanarY-"><p>TranslatePlanarYZElement</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Translate planar YZ handle</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Delegates/TObjectPtr" ><span>TObjectPtr</span></a>&lt; <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/BaseGizmos/UGizmoElementRectangle" ><span>UGi</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="TranslateScreenS-_1"><p>TranslateScreenSpaceElement</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Translate screen-space</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Delegates/TObjectPtr" ><span>TObjectPtr</span></a>&lt; <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/BaseGizmos/UGizmoElementArrow" ><span>UGi</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="TranslateXAxisEl-"><p>TranslateXAxisElement</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Gizmo Objects, used for rendering and hit testingTranslate X Axis</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Delegates/TObjectPtr" ><span>TObjectPtr</span></a>&lt; <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/BaseGizmos/UGizmoElementArrow" ><span>UGi</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="TranslateYAxisEl-"><p>TranslateYAxisElement</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Translate Y Axis</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Delegates/TObjectPtr" ><span>TObjectPtr</span></a>&lt; <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/BaseGizmos/UGizmoElementArrow" ><span>UGi</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="TranslateZAxisEl-"><p>TranslateZAxisElement</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Translate Z Axis</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Delegates/TObjectPtr" ><span>TObjectPtr</span></a>&lt; <a id="content_link" href="../../../../Runtime/Engine/Materials/UMaterialInterface" ><span>UMa</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="TransparentVerte-"><p>TransparentVertexColorMaterial</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Materials and colors to be used when drawing the items for each axis</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/Core/Delegates/TObjectPtr" ><span>TObjectPtr</span></a>&lt; <a id="content_link" href="../../../../Runtime/Engine/Materials/UMaterialInstanceDynamic" ><span>UMa</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="WhiteMaterial"><p>WhiteMaterial</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'functions_0');">
+        <p>Functions</p>
+    </div>
+<div id="functions_0">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:8%;">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ApplyRotateDelta"><nobr><p>ApplyRotateDelta</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const FQuat&amp; InRotateDelta<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Apply rotate delta to transform proxy</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ApplyScaleDelta"><nobr><p>ApplyScaleDelta</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector&amp; InScaleDelta<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Apply scale delta to transform proxy</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ApplyTranslateDe-"><nobr><p>ApplyTranslateDelta</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector&amp; InTranslateDelta<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Apply transform delta methodsApply translate delta to transform proxy</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ClearActiveTarge-"><nobr><p>ClearActiveTarget()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Clear the active target object for the Gizmo</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FQuat</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ComputeAngularRo-"><nobr><p>ComputeAngularRotateDelta</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;double InStartAngle,<br />&nbsp;&nbsp;&nbsp;&nbsp;double InEndAngle<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Compute rotate delta based on start/end angles</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FQuat</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ComputeAxisRotat-"><nobr><p>ComputeAxisRotateDelta</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector2D&amp; InStartPos,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector2D&amp; InEndPos<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Compute rotate delta based on screen-space start/end positions</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FVector</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ComputeAxisTrans-"><nobr><p>ComputeAxisTranslateDelta</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;double InStartParam,<br />&nbsp;&nbsp;&nbsp;&nbsp;double InEndParam<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Compute translate axis delta based on start/end params</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FVector</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ComputePlanarTra-"><nobr><p>ComputePlanarTranslateDelta</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector&amp; InStartPoint,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector&amp; InEndPoint<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Compute translate planar delta based on world space start/end points</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FVector</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ComputeScaleDelt-"><nobr><p>ComputeScaleDelta</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector2D&amp; InStartPos,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector2D&amp; InEndPos,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector2D&amp; OutScreenDelta<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Compute scale delta based on screen space start/end positions</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="EnableMode"><nobr><p>EnableMode</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;EGizmoTransformMode InGizmoMode,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../../Runtime/Core/Math/EAxisList__Type" ><span>EAxisList::Type</span></a> InAxisListToDraw<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Enable the given mode with the specified axes, EAxisList::Type::None will hide objects associated with mode</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="EnablePlanarObje-"><nobr><p>EnablePlanarObjects</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bTranslate,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bEnableX,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bEnableY,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bEnableZ<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Enable planar handles used by translate and scale</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="EnableRotate"><nobr><p>EnableRotate</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../../Runtime/Core/Math/EAxisList__Type" ><span>EAxisList::Type</span></a> InAxisListToDraw<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Enable rotate using specified axis list</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="EnableScale"><nobr><p>EnableScale</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../../Runtime/Core/Math/EAxisList__Type" ><span>EAxisList::Type</span></a> InAxisListToDraw<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Enable scale using specified axis list</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="EnableTranslate"><nobr><p>EnableTranslate</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../../Runtime/Core/Math/EAxisList__Type" ><span>EAxisList::Type</span></a> InAxisListToDraw<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Enable translate using specified axis list</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FTransform</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetGizmoTransfor-"><nobr><p>GetGizmoTransform()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Get gizmo transform based on cached current transform.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>uint32</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetMaxPartIdenti-"><nobr><p>GetMaxPartIdentifier()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Get max part identifier.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>float</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetNearestRayPar-"><nobr><p>GetNearestRayParamToInteractionAxis</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputDeviceRay" ><span>FInputDeviceRay</span></a>&amp; InRay<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Get nearest param along input ray to the current interaction axis</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetRayParamInter-"><nobr><p>GetRayParamIntersectionWithInteractionPlane</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputDeviceRay" ><span>FInputDeviceRay</span></a>&amp; InRay,<br />&nbsp;&nbsp;&nbsp;&nbsp;float&amp; OutHitParam<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Return true if input ray intersects current interaction plane and return param along ray in OutHitParam</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FVector2D</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetScreenProject-"><nobr><p>GetScreenProjectedAxis</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/BaseGizmos/UGizmoViewContext" ><span>UGizmoViewContext</span></a>&#42; View,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector&amp; InLocalAxis,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FTransform&amp; InLocalToWorld<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Screen-space helper methodReturns 2D vector projection of input axis onto input view plane</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FVector2D</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetScreenRotateA-"><nobr><p>GetScreenRotateAxisDir</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector&amp; InAxis0,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector&amp; InAxis1<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Get screen-space axis for rotation drag</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FVector</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetWorldAxis"><nobr><p>GetWorldAxis</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector&amp; InAxis<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Get current interaction axis</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/BaseGizmos/UGizmoElementRectangle" ><span>UGizmoElemen</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="MakePlanarHandle"><nobr><p>MakePlanarHandle</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;ETransformGizmoPartIdentifier InPar...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector&amp; InUpDirection,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector&amp; InSideDirection,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector&amp; InPlaneNormal,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../../Runtime/Engine/Materials/UMaterialInterface" ><span>UMaterialInterface</span></a>&#42; InMaterial,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/Core/Math/FLinearColor" ><span>FLinearColor</span></a>&amp; InVertexColor<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Construct planar axis handle</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/BaseGizmos/UGizmoElementTorus" ><span>UGizmoElemen</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="MakeRotateAxis"><nobr><p>MakeRotateAxis</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;ETransformGizmoPartIdentifier InPar...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector&amp; TorusAxis0,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector&amp; TorusAxis1,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../../Runtime/Engine/Materials/UMaterialInterface" ><span>UMaterialInterface</span></a>&#42; InMaterial,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../../Runtime/Engine/Materials/UMaterialInterface" ><span>UMaterialInterface</span></a>&#42; InCurrentM...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Construct rotate axis handle</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/BaseGizmos/UGizmoElementCircle" ><span>UGizmoElemen</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="MakeRotateCircle-"><nobr><p>MakeRotateCircleHandle</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;ETransformGizmoPartIdentifier InPar...,<br />&nbsp;&nbsp;&nbsp;&nbsp;float InRadius,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/Core/Math/FLinearColor" ><span>FLinearColor</span></a>&amp; InColor,<br />&nbsp;&nbsp;&nbsp;&nbsp;float bFill<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Construct rotate screen space handle</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/BaseGizmos/UGizmoElementArrow" ><span>UGizmoElemen</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="MakeScaleAxis"><nobr><p>MakeScaleAxis</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;ETransformGizmoPartIdentifier InPar...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector&amp; InAxisDir,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector&amp; InSideDir,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../../Runtime/Engine/Materials/UMaterialInterface" ><span>UMaterialInterface</span></a>&#42; InMaterial<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Construct scale axis handle</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/BaseGizmos/UGizmoElementArrow" ><span>UGizmoElemen</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="MakeTranslateAxi-"><nobr><p>MakeTranslateAxis</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;ETransformGizmoPartIdentifier InPar...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector&amp; InAxisDir,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector&amp; InSideDir,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../../Runtime/Engine/Materials/UMaterialInterface" ><span>UMaterialInterface</span></a>&#42; InMaterial<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Construct translate axis handle</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/BaseGizmos/UGizmoElementRectangle" ><span>UGizmoElemen</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="MakeTranslateScr-"><nobr><p>MakeTranslateScreenSpaceHandle()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Construct translate screen space handle</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/BaseGizmos/UGizmoElementBox" ><span>UGizmoElemen</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="MakeUniformScale-"><nobr><p>MakeUniformScaleHandle()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Construct uniform scale handle</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnClickDragRotat-"><nobr><p>OnClickDragRotateAxis</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputDeviceRay" ><span>FInputDeviceRay</span></a>&amp; DragPos<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Handle click drag for rotate axis</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnClickDragScale"><nobr><p>OnClickDragScale</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputDeviceRay" ><span>FInputDeviceRay</span></a>&amp; DragPos<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Handle click drag for all scale</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnClickDragScale-"><nobr><p>OnClickDragScaleAxis</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputDeviceRay" ><span>FInputDeviceRay</span></a>&amp; DragPos<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Handle click drag for scale axes</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnClickDragScale-_1"><nobr><p>OnClickDragScalePlanar</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputDeviceRay" ><span>FInputDeviceRay</span></a>&amp; DragPos<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Handle click drag for scale planar</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnClickDragScale-_2"><nobr><p>OnClickDragScaleXYZ</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputDeviceRay" ><span>FInputDeviceRay</span></a>&amp; DragPos<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Handle click drag for uniform scale</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnClickDragScree-_1"><nobr><p>OnClickDragScreenSpaceRotate</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputDeviceRay" ><span>FInputDeviceRay</span></a>&amp; DragPos<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Handle click drag for screen-space rotate</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnClickDragScree-"><nobr><p>OnClickDragScreenSpaceTranslate</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputDeviceRay" ><span>FInputDeviceRay</span></a>&amp; DragPos<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Handle click drag for screen-space translate</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnClickDragTrans-"><nobr><p>OnClickDragTranslateAxis</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputDeviceRay" ><span>FInputDeviceRay</span></a>&amp; DragPos<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Handle click drag for translate axes</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnClickDragTrans-_1"><nobr><p>OnClickDragTranslatePlanar</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputDeviceRay" ><span>FInputDeviceRay</span></a>&amp; DragPos<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Handle click drag for translate planar</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnClickPressAxis"><nobr><p>OnClickPressAxis</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputDeviceRay" ><span>FInputDeviceRay</span></a>&amp; PressPos<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Handle click press for translate axes</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnClickPressPlan-"><nobr><p>OnClickPressPlanar</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputDeviceRay" ><span>FInputDeviceRay</span></a>&amp; PressPos<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Handle click press for generic planar</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnClickPressRota-"><nobr><p>OnClickPressRotateXAxis</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputDeviceRay" ><span>FInputDeviceRay</span></a>&amp; PressPos<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Rotate interaction methodsHandle click press for rotate X axis</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnClickPressRota-_1"><nobr><p>OnClickPressRotateYAxis</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputDeviceRay" ><span>FInputDeviceRay</span></a>&amp; PressPos<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Handle click press for rotate Y axis</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnClickPressRota-_2"><nobr><p>OnClickPressRotateZAxis</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputDeviceRay" ><span>FInputDeviceRay</span></a>&amp; PressPos<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Handle click press for rotate Z axis</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnClickPressScal-_7"><nobr><p>OnClickPressScale</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputDeviceRay" ><span>FInputDeviceRay</span></a>&amp; PressPos<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Handle click press for all scale methods</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnClickPressScal-"><nobr><p>OnClickPressScaleXAxis</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputDeviceRay" ><span>FInputDeviceRay</span></a>&amp; PressPos<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Scale click-drag handling methodsHandle click press for scale X axis</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnClickPressScal-_3"><nobr><p>OnClickPressScaleXYPlanar</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputDeviceRay" ><span>FInputDeviceRay</span></a>&amp; PressPos<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Handle click press for scale XY planar</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnClickPressScal-_6"><nobr><p>OnClickPressScaleXYZ</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputDeviceRay" ><span>FInputDeviceRay</span></a>&amp; PressPos<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Handle click press for uniform scale</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnClickPressScal-_5"><nobr><p>OnClickPressScaleXZPlanar</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputDeviceRay" ><span>FInputDeviceRay</span></a>&amp; PressPos<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Handle click press for scale XZ planar</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnClickPressScal-_1"><nobr><p>OnClickPressScaleYAxis</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputDeviceRay" ><span>FInputDeviceRay</span></a>&amp; PressPos<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Handle click press for scale Y axis</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnClickPressScal-_4"><nobr><p>OnClickPressScaleYZPlanar</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputDeviceRay" ><span>FInputDeviceRay</span></a>&amp; PressPos<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Handle click press for scale YZ planar</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnClickPressScal-_2"><nobr><p>OnClickPressScaleZAxis</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputDeviceRay" ><span>FInputDeviceRay</span></a>&amp; PressPos<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Handle click press for scale Z axis</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnClickPressScre-_1"><nobr><p>OnClickPressScreenSpaceRotate</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputDeviceRay" ><span>FInputDeviceRay</span></a>&amp; PressPos<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Screen-space rotate interaction methodsHandle click press for screen-space rotate</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnClickPressScre-"><nobr><p>OnClickPressScreenSpaceTranslate</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputDeviceRay" ><span>FInputDeviceRay</span></a>&amp; PressPos<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Screen-space translate interaction methodsHandle click press for screen-space translate</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnClickPressTran-"><nobr><p>OnClickPressTranslateXAxis</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputDeviceRay" ><span>FInputDeviceRay</span></a>&amp; PressPos<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Translate axis click-drag handling methods Handle click press for translate X axis</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnClickPressTran-_3"><nobr><p>OnClickPressTranslateXYPlanar</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputDeviceRay" ><span>FInputDeviceRay</span></a>&amp; PressPos<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Translate and scale planar click-drag handling methodsHandle click press for translate XY planar</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnClickPressTran-_5"><nobr><p>OnClickPressTranslateXZPlanar</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputDeviceRay" ><span>FInputDeviceRay</span></a>&amp; PressPos<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Handle click press for translate XZ planar</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnClickPressTran-_1"><nobr><p>OnClickPressTranslateYAxis</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputDeviceRay" ><span>FInputDeviceRay</span></a>&amp; PressPos<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Handle click press for translate Y axis</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnClickPressTran-_4"><nobr><p>OnClickPressTranslateYZPlanar</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputDeviceRay" ><span>FInputDeviceRay</span></a>&amp; PressPos<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Handle click press for translate YZ planar</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnClickPressTran-_2"><nobr><p>OnClickPressTranslateZAxis</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputDeviceRay" ><span>FInputDeviceRay</span></a>&amp; PressPos<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Handle click press for translate Z axis</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnClickReleaseRo-"><nobr><p>OnClickReleaseRotateAxis</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputDeviceRay" ><span>FInputDeviceRay</span></a>&amp; ReleasePos<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Handle click release for rotate axes</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnClickReleaseSc-_2"><nobr><p>OnClickReleaseScaleAxis</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputDeviceRay" ><span>FInputDeviceRay</span></a>&amp; ReleasePos<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Handle click release for scale axes</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnClickReleaseSc-_3"><nobr><p>OnClickReleaseScalePlanar</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputDeviceRay" ><span>FInputDeviceRay</span></a>&amp; ReleasePos<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Handle click release for scale planar</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnClickReleaseSc-_4"><nobr><p>OnClickReleaseScaleXYZ</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputDeviceRay" ><span>FInputDeviceRay</span></a>&amp; ReleasePos<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Handle click release for uniform scale</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnClickReleaseSc-_1"><nobr><p>OnClickReleaseScreenSpaceRotate</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputDeviceRay" ><span>FInputDeviceRay</span></a>&amp; ReleasePos<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Handle click release for screen-space rotate</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnClickReleaseSc-"><nobr><p>OnClickReleaseScreenSpaceTranslate</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputDeviceRay" ><span>FInputDeviceRay</span></a>&amp; ReleasePos<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Handle click release for screen-space translate</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnClickReleaseTr-"><nobr><p>OnClickReleaseTranslateAxis</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputDeviceRay" ><span>FInputDeviceRay</span></a>&amp; ReleasePos<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Handle click release for translate axes</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnClickReleaseTr-_1"><nobr><p>OnClickReleaseTranslatePlanar</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputDeviceRay" ><span>FInputDeviceRay</span></a>&amp; ReleasePos<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Handle click release for translate planar</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="PositionSnapFunc-"><nobr><p>PositionSnapFunction</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector&amp; WorldPosition,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVector&amp; SnappedPositionOut<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Axis and Plane TransformSources use this function to execute worldgrid snap queries.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FQuat</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RotationSnapFunc-"><nobr><p>RotationSnapFunction</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const FQuat&amp; DeltaRotation<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetActiveTarget"><nobr><p>SetActiveTarget</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/BaseGizmos/UTransformProxy" ><span>UTransformProxy</span></a>&#42; Target,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/IToolContextTransactionProvider" ><span>IToolContextTransactionProvider</span></a>&#4...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/BaseGizmos/IGizmoStateTarget" ><span>IGizmoStateTarget</span></a>&#42; InStateTarg...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Set the active target object for the Gizmo</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetCustomization-"><nobr><p>SetCustomizationFunction</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/Core/GenericPlatform/TFunction" ><span>TFunction</span></a>&lt; const <a id="content_link" href="../FGizmoCustomization" ><span>FGizmoCustom</span></a>...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Set customization function for this Gizmo</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetDisallowNegat-"><nobr><p>SetDisallowNegativeScaling</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bDisallow<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p><a id="content_link" href="../../../../Developer/AutomationDriver/By" ><span>By</span></a> default, the nonuniform scale components can scale negatively.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetNewChildScale"><nobr><p>SetNewChildScale</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector&amp; NewChildScale<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Explicitly set the child scale.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetupBehaviors"><nobr><p>SetupBehaviors()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Setup behaviors</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetupMaterials"><nobr><p>SetupMaterials()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Setup materials</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetupOnClickFunc-"><nobr><p>SetupOnClickFunctions()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Setup on click functions</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetVisibility"><nobr><p>SetVisibility</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bVisible<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Set visibility for this Gizmo</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UpdateCameraAxis-"><nobr><p>UpdateCameraAxisSource()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Internal function that updates CameraAxisSource by getting current view state from GizmoManager</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputRayHit" ><span>FInputRayHit</span></a></p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UpdateHoveredPar-"><nobr><p>UpdateHoveredPart</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputDeviceRay" ><span>FInputDeviceRay</span></a>&amp; DevicePos<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Determine hit part and update hover state based on current input ray</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UpdateHoverState"><nobr><p>UpdateHoverState</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bInHover,<br />&nbsp;&nbsp;&nbsp;&nbsp;ETransformGizmoPartIdentifier InPar...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Update hover state for given part id</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UpdateInteractin-"><nobr><p>UpdateInteractingState</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bInInteracting,<br />&nbsp;&nbsp;&nbsp;&nbsp;ETransformGizmoPartIdentifier InPar...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Update interacting state for given part id</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UpdateMode"><nobr><p>UpdateMode()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Update current gizmo mode based on transform source</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="VerifyPartIdenti-"><nobr><p>VerifyPartIdentifier</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 InPartIdentifier<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Verify part identifier is within recognized range of transform gizmo part ids.</p>
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'functions_1');">
+        <p>Overridden from UInteractiveGizmo</p>
+    </div>
+<div id="functions_1">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:8%;">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="Render"><nobr><p>Render</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/IToolsContextRenderAPI" ><span>IToolsContextRenderAPI</span></a>&#42; Render...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Allow the Gizmo to do any custom drawing (ie via PDI/RHI)</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="Setup"><nobr><p>Setup()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Called by GizmoManager to initialize the Gizmo <em>after</em> GizmoBuilder::BuildGizmo() has been called</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="Shutdown"><nobr><p>Shutdown()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Called by GizmoManager to shut down the Gizmo</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="Tick"><nobr><p>Tick</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float DeltaTime<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Allow the Gizmo to do any necessary processing on Tick</p>
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'functions_6');">
+        <p>Overridden from IHoverBehaviorTarget</p>
+    </div>
+<div id="functions_6">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:8%;">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputRayHit" ><span>FInputRayHit</span></a></p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="BeginHoverSequen-"><nobr><p>BeginHoverSequenceHitTest</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputDeviceRay" ><span>FInputDeviceRay</span></a>&amp; DevicePos<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p><a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/BaseBehaviors/IHoverBehaviorTarget" ><span>IHoverBehaviorTarget</span></a> implementation.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnBeginHover"><nobr><p>OnBeginHover</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputDeviceRay" ><span>FInputDeviceRay</span></a>&amp; DevicePos<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Initialize hover sequence at given position</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnEndHover"><nobr><p>OnEndHover()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Terminate active hover sequence</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnUpdateHover"><nobr><p>OnUpdateHover</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputDeviceRay" ><span>FInputDeviceRay</span></a>&amp; DevicePos<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Update active hover sequence with new input position</p>
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'functions_8');">
+        <p>Overridden from IClickDragBehaviorTarget</p>
+    </div>
+<div id="functions_8">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:8%;">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputRayHit" ><span>FInputRayHit</span></a></p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CanBeginClickDra-"><nobr><p>CanBeginClickDragSequence</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputDeviceRay" ><span>FInputDeviceRay</span></a>&amp; PressPos<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p><a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/BaseBehaviors/IClickDragBehaviorTarget" ><span>IClickDragBehaviorTarget</span></a> implementation.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnClickDrag"><nobr><p>OnClickDrag</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputDeviceRay" ><span>FInputDeviceRay</span></a>&amp; DragPos<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Notify Target that input position has changed</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnClickPress"><nobr><p>OnClickPress</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputDeviceRay" ><span>FInputDeviceRay</span></a>&amp; PressPos<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Notify Target that click press ocurred</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnClickRelease"><nobr><p>OnClickRelease</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/InteractiveToolsFramework/FInputDeviceRay" ><span>FInputDeviceRay</span></a>&amp; ReleasePos<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Notify Target that click release occurred</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnTerminateDragS-"><nobr><p>OnTerminateDragSequence()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Notify Target that click-drag sequence has been explicitly terminated (eg by escape key)</p>
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'constants');">
+        <p>Constants</p>
+    </div>
+<div id="constants">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="name-cell" style="width:15%">
+				<p>Name</p>
+			</th>
+			<th class="desc-cell" style="width:85%">
+				<p>Description</p>
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="ArcBallColor"><p>ArcBallColor</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>A linear, 32-bit/component floating point RGBA color.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="AxisColorX"><p>AxisColorX</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="AxisColorY"><p>AxisColorY</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>A linear, 32-bit/component floating point RGBA color.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="AxisColorZ"><p>AxisColorZ</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>A linear, 32-bit/component floating point RGBA color.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="AxisLengthOffset"><p>AxisLengthOffset</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="AxisRadius"><p>AxisRadius</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="AxisTransp"><p>AxisTransp</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="CurrentColor"><p>CurrentColor</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>A linear, 32-bit/component floating point RGBA color.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="GreyColor"><p>GreyColor</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>A linear, 32-bit/component floating point RGBA color.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="LargeOuterAlpha"><p>LargeOuterAlpha</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="PlanarHandleOffs-"><p>PlanarHandleOffset</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="PlanarHandleSize"><p>PlanarHandleSize</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="PlaneColorXY"><p>PlaneColorXY</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>A linear, 32-bit/component floating point RGBA color.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="RotateArcballCir-"><p>RotateArcballCircleColor</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="RotateArcballInn-"><p>RotateArcballInnerRadius</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Rotate constants.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="RotateArcballOut-"><p>RotateArcballOuterRadius</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="RotateArcballSph-"><p>RotateArcballSphereRadius</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="RotateAxisInnerR-"><p>RotateAxisInnerRadius</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="RotateAxisInnerS-"><p>RotateAxisInnerSlices</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="RotateAxisNumSeg-"><p>RotateAxisNumSegments</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="RotateAxisOuterR-"><p>RotateAxisOuterRadius</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="RotateOuterCircl-_1"><p>RotateOuterCircleColor</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="RotateOuterCircl-"><p>RotateOuterCircleRadius</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="RotateScreenSpac-_1"><p>RotateScreenSpaceCircleColor</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="RotateScreenSpac-"><p>RotateScreenSpaceRadius</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="ScaleAxisCubeDim"><p>ScaleAxisCubeDim</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="ScaleAxisLength"><p>ScaleAxisLength</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="ScreenAxisColor"><p>ScreenAxisColor</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>A linear, 32-bit/component floating point RGBA color.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="ScreenSpaceColor"><p>ScreenSpaceColor</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>A linear, 32-bit/component floating point RGBA color.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="TranslateAxisCon-"><p>TranslateAxisConeAngle</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="TranslateAxisCon-_1"><p>TranslateAxisConeHeight</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="TranslateAxisCon-_2"><p>TranslateAxisConeRadius</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="TranslateAxisLen-"><p>TranslateAxisLength</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="TranslateScreenS-"><p>TranslateScreenSpaceHandleSize</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="WhiteColor"><p>WhiteColor</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>A linear, 32-bit/component floating point RGBA color.</p>
+	</td>
+</tr>
+			</table>
+</div>
+
+</div>
+</div>
+																	</div>
+					<!-- End of Markdown converted page content -->
+				</div>
+												<div id="recommendations"></div>			</div>
+						<div id="footer"></div>			
+									<div id="announcement">
+			<div style="display:inline-block;margin:5px;">
+				Help shape the future of Unreal Engine documentation! Tell us how we're doing so we can serve you better.
+			</div>
+			<div style="margin:5px;display:inline-block;">
+				<div class="btn action" style="margin-top:-6px;display:inline-block;" onclick="$('#announcement').hide();window.open('https://epicgames.questionpro.com/t/AVVbJZwedR');createCookie('announcement-read', new Date().getTime(), 30);">Take our survey</div>
+				<div class="btn btn-default" style="margin-top:-6px;display:inline-block;" onclick="$('#announcement').hide();createCookie('announcement-read', new Date().getTime(), 30);">Cancel</div>
+			</div>
+			<div class="btn-close" style="position:absolute;right:5px;top:10px;padding:3px;width:14px;height:14px;" onclick="$('#announcement').hide();"></div>
+			</div>
+					</div>
+	</div>
+</body>
+</html>

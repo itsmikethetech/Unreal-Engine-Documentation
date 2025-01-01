@@ -1,0 +1,1880 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="./../../../Include/Javascript/common_en-US.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var time = new Date(0);
+		var preview = false;
+		var relativeHTMLPath = "./../../../";
+				var pageid = 0;
+				var heroimage = "./../../../Images/ue5-hero.png";
+				var lang = "en-US";
+				var basePath = document.location.pathname.substring(0, document.location.pathname.indexOf('/' + lang + '/') + lang.length + 1);
+		document.write('<base href="' +  encodeURI(basePath) + '/BlueprintAPI/EventDispatchers/" />');
+				var udnCSS = './../../../Include/CSS/udn_public.css';
+		var udnLangCSS = '';
+				var udnOverrideCSS = './../../../Include/CSS/skin_overrides.css';
+		var udnOverrideDarkCSS = './../../../Include/CSS/skin_overrides_dark.css';
+		var fancyboxCSS = './../../../Include/CSS/jquery.fancybox.css';
+		var jqueryuiCSS = './../../../Include/CSS/jquery-ui.min.css';
+		var qtipCSS = './../../../Include/CSS/jquery.qtip.css';
+		var prettifyCSS = './../../../Include/CSS/prettify.css';
+		var navbarCSS = './../../../Include/CSS/navBar.css';
+		var twentytwentyCSS = './../../../Include/CSS/twentytwenty.css';
+		var recommendationsCSS = './../../../Include/CSS/jquery.recommendations.css';
+	</script>
+    <title>Event Dispatchers | Unreal Engine 5.2 Documentation</title>
+    	    <meta name=viewport content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Cache-control" content="no-store">
+    <script  src="./../../../Include/Javascript/CustomEvent.js" type="text/javascript"></script>
+    <script  src="./../../../Include/Javascript/jquery-3.4.0.min.js" type="text/javascript"></script>
+    <script  src="./../../../Include/Javascript/udn.js" type="text/javascript"></script>
+    <script  src="./../../../Include/Javascript/udn_extras.js" type="text/javascript"></script>
+    <script  src="./../../../Include/Javascript/jquery-ui.min.js" type="text/javascript"></script>
+	    <script  src="./../../../Include/Javascript/informational.js" type="text/javascript"></script>
+	    <script  src="./../../../Include/Javascript/jquery.fancybox.pack.js" type="text/javascript"></script>
+    <script  src="./../../../Include/Javascript/jquery.qtip.js" type="text/javascript"></script>
+    <script  src="./../../../Include/Javascript/prettify.js" type="text/javascript"></script>
+    <script  src="./../../../Include/Javascript/jquery.slimscroll.js" type="text/javascript"></script>
+    <script  src="./../../../Include/Javascript/jquery.event.move.js" type="text/javascript"></script>
+    <script  src="./../../../Include/Javascript/jquery.twentytwenty.js" type="text/javascript"></script>
+    <script  src="./../../../Include/Javascript/lazysizes.min.js" type="text/javascript"></script>
+	    <script  src="./../../../Include/Javascript/jquery.recommendations.js" type="text/javascript"></script>
+	
+    <link async rel="icon" href="./../../../Include/Images/site_icon.png" type="image/x-icon" />
+    <link async rel="shortcut icon" href="./../../../Include/Images/site_icon.png" type="image/x-icon" />
+    <link async href="./../../../Include/Images/touch_icon.png" rel="apple-touch-icon" />
+    <link async href="./../../../Include/Images/touch_icon_114.png" sizes="114x114" rel="apple-touch-icon" />    
+		<script  src="./../../../Include/Javascript/CollapsibleLists.js" type="text/javascript"></script>
+	<script  src="./../../../Include/Javascript/navigationBarUI.js"></script>
+	<script  src="./../../../Include/Javascript/navigationBar.js"></script>
+		
+	<link rel="alternate" href="https://docs.unrealengine.com/latest/en-US/BlueprintAPI/EventDispatchers/" hreflang="x-default" />
+
+	<meta name="title" content="Event Dispatchers" />
+<meta name="description" content="Event Dispatchers" />
+<meta name="availability" content="Public" />
+<meta name="crumbs" content="%ROOT%,BlueprintAPI" />
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta property="og:title" content="Event Dispatchers" />
+	<meta property="og:description" content="Event Dispatchers" />
+		<meta property="og:image" content="https://docs.unrealengine.com/5.1/Images/placeholder-social.png" />
+	</head>
+<body id="webbgThree" style="visibility: hidden;" onload="document.body.style.visibility='visible';">
+			<script>window.__tracking_base = 'https://tracking.unrealengine.com';</script>
+	<script src="https://tracking.unrealengine.com/tracking.js" async></script>    <div id="webThree">
+				<div id="page_head">
+						<div id="head">
+				<div id="logo"></div>
+			</div>
+						<div id="pagenav">
+				<div class="crumbs" id="crumbs">
+<span id="versionContainer">
+	<span id="versionSelect" class="btn btn-version" onclick="ToggleMenu($('#versionMenu'), $(this));"></span>
+	<div id="versionMenu">
+		<div id="4_26" data-version="4.26" class="btn btn-select" onclick="createCookie('version', '4.26', 365);SwitchVersion('4.26');">Unreal Engine 4.26 Documentation</div>
+		<div id="4_27" data-version="4.27" class="btn btn-select" onclick="createCookie('version', '4.27', 365);SwitchVersion('4.27');">Unreal Engine 4.27 Documentation</div>
+		<div id="5_0" data-version="5.0" class="btn btn-select" onclick="createCookie('version', '5.0', 365);SwitchVersion('5.0');">Unreal Engine 5.0 Documentation</div>
+		<div id="5_1" data-version="5.1" class="btn btn-select" onclick="createCookie('version', '5.1', 365);SwitchVersion('5.1');">Unreal Engine 5.1 Documentation</div>
+		<div id="5_2" data-version="5.2" class="btn btn-select" onclick="createCookie('version', '5.2', 365);SwitchVersion('5.2');">Unreal Engine 5.2 Documentation</div>
+		<div id="5_3" data-version="5.3" class="btn btn-select" onclick="createCookie('version', '5.3', 365);SwitchVersion('5.3');">Unreal Engine 5.3 Documentation</div>
+	</div>
+</span>
+	<span class="separator">></span> <a id="parent_link" href="../../BlueprintAPI">Unreal Engine Blueprint API Reference</a>
+
+<span class="separator">></span> <span id="page">Event Dispatchers</span>
+</div>				<div id="pageNavRight">
+								<!-- Start of Search -->
+												<div id="search_container">
+					<form name="bodySearch" method="get" action="https://www.unrealengine.com/en-US/bing-search" onsubmit="return validateSearch()">
+						<input type="image" src="./../../../Include/Images/search_box_icon.png" class="searchbutton"/>
+						<input type="hidden" name="filter" value="Documentation" />
+						<input type="text" name="keyword" placeholder="Search Documentation..." class="searchbox" autocomplete="off"/>
+					</form>
+				</div>
+								<!-- End of Search -->
+				<div id="skinContainer">
+	<div id="skinSelect" class="btn btn-skin" onclick="ToggleMenu($('#skinMenu'), $(this));"></div>
+	<div id="skinMenu">
+		<div id="light" class="btn btn-select" onclick="createCookie('skin', 'light', 365);location.reload();">Light Theme</div>
+		<div id="dark" class="btn btn-select" onclick="createCookie('skin', 'dark', 365);location.reload();">Dark Theme</div>
+	</div>
+</div>				</div>
+			</div>
+		</div>						<div id="navWrapper">
+			<div id="nav-filter-container">
+				<div id="nav-filter-inner">
+					<form>
+						<input type="text" placeholder="Filter pages..." id="nav-filter" onchange="clearTimeout(filterTimer); filterTimer = setTimeout(updateNavTreeFilter,250, this.value);if(this.value.length == 0){$('#filter-clear').hide();}else{$('#filter-clear').show();}" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" />
+						<button class="close-icon" id="filter-clear" type="reset" onclick="clearTimeout(filterTimer); filterTimer = setTimeout(updateNavTreeFilter,250, '');$(this).hide();"></button>
+					</form>
+				</div>
+			</div>
+			<nav id="navPanel">
+			</nav>
+			<div id="navigation" title="Click to toggle navigation menu"><span>></span></div>
+		</div>		
+		<div id="splitter">
+		</div>
+				<div id="contentContainer">
+										<div id="pagedefault">
+				<div id="product-banner">
+	<div id="product-logo"></div>
+</div>				<div id="pagecontainer" style="padding-right:0px;">
+					<!-- Start of Markdown converted page content -->
+										<div class="hero  background">
+	<div class="imgContainer"><img src="./../../../Images/ue5-hero.png" /></div>	<div class="info">
+		<div id="pageTitle">
+			<h1 id="H1TitleId">Event Dispatchers</h1>
+		</div>
+		<h2 >Event Dispatchers</h2>
+		<div id="access">
+			<div class="accessContainer">
+															</div>
+		</div>
+	</div>
+</div>															<div id="maincol">
+																																				<div class="toc">
+<div style="position:relative;">
+    <div class="title">
+    On this page
+    </div>
+<div id="tocScroll">
+    <ul>
+	    		    			    <li id="">
+	<p><a id="toc_link" href="#actions">Actions</a></p>
+	</li>		    	        </ul>
+</div>
+</div>
+</div>
+<h2 id="actions">Actions</h2>
+<div class="member-list">
+	<table cellspacing="0">
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Added"><p>Added</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="ApplicationFaile-"><p>Application Failed to Register for Remote Notifications Delegate</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>called when the application fails to register for remote notifications</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="ApplicationHasEnteredForegroundD-"><p>Application Has Entered Foreground Delegate</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called when the application is returning to the foreground (reverse any processing done in the EnterBackground delegate)</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="ApplicationHasReactivatedDelegat-"><p>Application Has Reactivated Delegate</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called when the application has been reactivated (reverse any processing done in the Deactivate delegate)</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="ApplicationReceivedLocalNotifica-"><p>Application Received Local Notification Delegate</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>called when the application receives a local notification</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="ApplicationReceivedRemoteNotific-"><p>Application Received Remote Notification Delegate</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>called when the application receives a remote notification</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="ApplicationRecei-"><p>Application Received Screen Orientation Changed Notification Delegate</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>called when the application receives a screen orientation change notification</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="ApplicationReceivedStartupArgume-"><p>Application Received Startup Arguments Delegate</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called with arguments passed to the application on statup, perhaps meta data passed on by another application which launched this one.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="ApplicationRegisteredforRemoteNo-"><p>Application Registered for Remote Notifications Delegate</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>called when the user grants permission to register for remote notifications</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="ApplicationRegisteredforUserNoti-"><p>Application Registered for User Notifications Delegate</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>called when the user grants permission to register for notifications</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="ApplicationShouldUnloadResources-"><p>Application Should Unload Resources Delegate</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called when the OS is running low on resources and asks the application to free up any cached resources, drop graphics quality etc.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="ApplicationWillDeactivateDelegat-"><p>Application Will Deactivate Delegate</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>This is called when the application is about to be deactivated (e.g., due to a phone call or SMS or the sleep button).
+The game should be paused if possible, etc...</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="ApplicationWillEnterBackgroundDe-"><p>Application Will Enter Background Delegate</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>This is called when the application is being backgrounded (e.g., due to switching
+to another app or closing it via the home button)
+The game should release shared resources, save state, etc..., since it can be
+terminated from the background state without any further warning.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="ApplicationWillTerminateDelegate"><p>Application Will Terminate Delegate</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>This <em>may</em> be called when the application is getting terminated by the OS.
+There is no guarantee that this will ever be called on a mobile device,
+save state when ApplicationWillEnterBackgroundDelegate is called instead.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="ASAAnchorLocatedDelegate"><p>ASAAnchor Located Delegate</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="ASALocateAnchorsCompleteDelegate"><p>ASALocate Anchors Complete Delegate</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="ASASessionUpdatedDelegate"><p>ASASession Updated Delegate</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Blocked"><p>Blocked</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Cancelled"><p>Cancelled</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="CaptureComplete"><p>Capture Complete</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Changed"><p>Changed</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Complete"><p>Complete</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Completed"><p>Completed</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="CreateEvent"><p>Create Event</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>K2Node Create Delegate</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="DidNotSpawn"><p>Did Not Spawn</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called when we can't spawn: on clients or potentially on server if they fail to spawn (rare)</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="EventReceived"><p>Event Received</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Failure"><p>Failure</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called when a message is broadcast on the specified channel. Use GetPayload() to request the message payload.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Finished"><p>Finished</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called when animation has been completed</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="HMDConnectCanceledDelegate"><p>HMDConnect Canceled Delegate</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>This will be called when the user declines to connect the HMD when prompted to do so by a system dialog. (PS4 Only)</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="HMDLostDelegate"><p>HMDLost Delegate</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>This will be called when connection to HMD is lost.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="HMDPutonHeadDelegate"><p>HMDPut on Head Delegate</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>This will be called when the HMD detects that it has been put on by a player.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="HMDRecenteredDelegate"><p>HMDRecentered Delegate</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>This will be called when the application is asked for VR headset recenter.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="HMDReconnectedDelegate"><p>HMDReconnected Delegate</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>This will be called when connection to HMD is restored.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="HMDRemovedfromHeadDelegate"><p>HMDRemoved from Head Delegate</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>This will be called when the HMD detects that it has been taken off by a player (disconnecting the hmd also causes it to register as taken off).</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="HMDTrackingInitializedDelegate"><p>HMDTracking Initialized Delegate</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>This will be called on Morpheus when the HMD is done initializing and therefore
+reprojection will start functioning.
+The app can continue now. (PS4 Only)</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="HMDTrackingIniti-"><p>HMDTracking Initializing and Needs HMDTo be Tracked Delegate</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>This will be called on Morpheus if the HMD starts up and is not fully initialized (in NOT_STARTED or CALIBRATING states).
+The HMD will stay in NOT_STARTED until it is successfully position tracked.  Until it exits NOT_STARTED orientation
+based reprojection does not happen.  Therefore we do not update rotation at all to avoid user discomfort.
+Instructions to get the hmd tracked should be shown to the user.
+Sony may fix this eventually. (PS4 Only)</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="InvalidHandle"><p>Invalid Handle</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="MeshModified"><p>MeshModified</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Blueprintable event called when mesh is modified, in the same cases as OnMeshChanged</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="MoveCompleted"><p>MoveCompleted</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Blueprint notification that we've completed the current movement request</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnAccept"><p>On Accept</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnActivate"><p>On Activate</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnActorJoined"><p>On Actor Joined</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Delegate to notify external objects when an actor join</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnActorLeft"><p>On Actor Left</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Delegate to notify external objects when an actor leave</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnAISpawned"><p>On AISpawned</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called when a single AI finished spawning</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnAllAISPawned"><p>On All AISPawned</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called when a all AI finished spawning</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnAllMontageInstancesEnded"><p>On All Montage Instances Ended</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called when all Montage instances have ended.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnApplied"><p>On Applied</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnAudioEnvelopeValue"><p>On Audio Envelope Value</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnAudioFadeChangeEvent"><p>On Audio Fade Change Event</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>If bound, broadcast on fade start (with fade time) instead of manually altering audio device's primary volume directly</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnAudioFinished"><p>On Audio Finished</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called when we finish playing audio, either because it played to completion or because a Stop() call turned it off early</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnAudioMultiEnvelopeValue"><p>On Audio Multi Envelope Value</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnAudioPlayStateChanged"><p>On Audio Play State Changed</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>This function returns the Targeted Audio Component's current Play State.
+Playing, if the sound is currently playing.
+Stopped, if the sound is stopped.
+Paused, if the sound is currently playing, but paused.
+Fading In, if the sound is in the process of Fading In.
+Fading Out, if the sound is in the process of Fading Out.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnAudioPlaybackPercent"><p>On Audio Playback Percent</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called as a sound plays on the audio component to allow BP to perform actions based on playback percentage.
+Computed as samples played divided by total samples, taking into account pitch.
+Not currently implemented on all platforms.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnAudioSingleEnvelopeValue"><p>On Audio Single Envelope Value</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnAudioVirtualizationChanged"><p>On Audio Virtualization Changed</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called when virtualization state changes</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnBeginPIE"><p>On Begin PIE</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Expose Begin PIE to blueprints.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnBlendOut"><p>On Blend Out</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called when Montage starts blending out and is not interrupted</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnBreakingEvents"><p>On Breaking Events</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called when new breaking events are available.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnButtonBaseClicked"><p>On Button Base Clicked</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnButtonBaseDoubleClicked"><p>On Button Base Double Clicked</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnCancel"><p>On Cancel</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnCancelled"><p>On Cancelled</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnChange"><p>On Change</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnCollisionEvents"><p>On Collision Events</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called when new collision events are available.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnCommit"><p>On Commit</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnCompleted"><p>On Completed</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnConfigCamera"><p>On Config Camera</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>A dynamic delegate can be assigned through blueprint. Will be called before ARSession started and returns
+an array of supported ARCore camera config.
+</p><p>The array will always return 3 camera configs. The GPU texture resolutions
+are the same in all three configs. Currently, most devices provide GPU
+texture resolution of 1920 x 1080, but devices might provide higher or lower
+resolution textures, depending on device capabilities. The CPU image
+resolutions returned are VGA, 720p, and a resolution matching the GPU
+texture.
+</p><p>Bind this delegate if you want to choose a specific camera config in your app. Call
+UGoogleARCoreSessionFunctionLibrary::ConfigARCoreCamera after the delegate is triggered.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnConfirm"><p>On Confirm</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnConstraintBroken"><p>On Constraint Broken</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Notification when constraint is broken.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnDataLayerInstanceRuntimeStateC-"><p>On Data Layer Instance Runtime State Changed</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnDataLayerRuntimeStateChanged"><p>On Data Layer Runtime State Changed</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnDespawningFinishedEvent"><p>On Despawning Finished Event</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called once DoDespawning completes and all mass agents spawned by this spawner have been despawned.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnDirectLinkChange"><p>On Direct Link Change</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Dynamic delegate used to trigger an event in the Game when there is
+a change in the DirectLink network</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnDownShift"><p>On Down Shift</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnDragCancelled"><p>On Drag Cancelled</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnDragged"><p>On Dragged</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnDrop"><p>On Drop</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnEndPIE"><p>On End PIE</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Expose End PIE to blueprints.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnEnvelopeFollowerUpdate"><p>On Envelope Follower Update</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnFail"><p>On Fail</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnFailed"><p>On Failed</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnFailure"><p>On Failure</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called when ending the match fails</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnFinish"><p>On Finish</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnFinished"><p>On Finished</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnFinishedPlaying"><p>On Finished Playing</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Event called whenever a non-looping flipbook finishes playing (either reaching the beginning or the end, depending on the play direction)</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnForceFeedbackFinished"><p>On Force Feedback Finished</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>called when we finish playing audio, either because it played to completion or because a Stop() call turned it off early</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnGameUserSettingsUINeedsUpdate"><p>On Game User Settings UINeeds Update</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnGenerateData"><p>On Generate Data</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnHearNoise"><p>On Hear Noise</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Delegate to execute when we hear a noise from a Pawn's PawnNoiseEmitterComponent.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnHoveredButtonBaseChanged"><p>On Hovered Button Base Changed</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnInstigatedAnyDamage"><p>On Instigated Any Damage</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called when the controller has instigated damage in any way</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnInterptoReverse"><p>On Interp to Reverse</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called when InterpTo impacts something and reverse is enabled.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnInterptoStop"><p>On Interp to Stop</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called when InterpTo has come to a stop.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnInterrupted"><p>On Interrupted</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called when Montage has been interrupted (or failed to play)</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnKilled"><p>On Killed</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnLanded"><p>On Landed</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnLatestOverallLoudnessResults"><p>On Latest Overall Loudness Results</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Delegate to receive the latest overall loudness results.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnLatestOverallMeterResults"><p>On Latest Overall Meter Results</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Delegate to receive the latest overall meter results.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnLatestPerChannelLoudnessResult-"><p>On Latest Per Channel Loudness Results</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Delegate to receive the latest per-channel loudness results.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnLatestPerChannelMeterResults"><p>On Latest Per Channel Meter Results</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Delegate to receive the latest per-channel meter results.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnLatestSpectrumResults"><p>On Latest Spectrum Results</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Delegate to receive the latest per-channel Spectrum results. If bDownmixToMono setting is true, results will be in channel index 0.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnLevelHidden"><p>On Level Hidden</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called when level is no longer visible, may not be removed from world yet</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnLevelLoaded"><p>On Level Loaded</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called when level is streamed in</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnLevelShown"><p>On Level Shown</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called when level is added to the world and is visible</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnLevelUnloaded"><p>On Level Unloaded</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called when level is streamed out</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnLoadFailure"><p>On Load Failure</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnLowPowerModeDelegate"><p>On Low Power Mode Delegate</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called when we are in low power mode</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnMeshTrackerUpdated"><p>On Mesh Tracker Updated</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Activated whenever new information about this mesh tracker is detected.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnModelLoaded"><p>On Model Loaded</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnMontageBlendingOut"><p>On Montage Blending Out</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called when a montage starts blending out, whether interrupted or finished</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnMontageEnded"><p>On Montage Ended</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called when a montage has ended, whether interrupted or finished</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnMontageStarted"><p>On Montage Started</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called when a montage has started</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnMoveFinished"><p>On Move Finished</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnMovetoFailed"><p>On Move to Failed</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnNotifyBegin"><p>On Notify Begin</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnNotifyEnd"><p>On Notify End</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnOverallLoudnessResults"><p>On Overall Loudness Results</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Delegate to receive all overall loudness results since last delegate call.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnOverallMeterResults"><p>On Overall Meter Results</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Delegate to receive all overall meter results since last delegate call.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnOverlap"><p>On Overlap</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnParameterChanged"><p>On Parameter Changed</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnParticleBurst"><p>On Particle Burst</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnParticleCollide"><p>On Particle Collide</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnParticleDeath"><p>On Particle Death</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnParticleSpawn"><p>On Particle Spawn</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnPerChannelLoudnessResults"><p>On Per Channel Loudness Results</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Delegate to receive all loudness results, per-channel, since last delegate call.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnPerChannelMeterResults"><p>On Per Channel Meter Results</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Delegate to receive all meter results, per-channel, since last delegate call.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnPerceptionUpdated"><p>On Perception Updated</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Might want to move these to special "BP_AIPerceptionComponent"</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnPerformAction"><p>On Perform Action</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnPick"><p>On Pick</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnPlasticDeformation"><p>On Plastic Deformation</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Notification when constraint plasticity drive target changes.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnPress"><p>On Press</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnProjectileBounce"><p>On Projectile Bounce</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called when projectile impacts something and bounces are enabled.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnProjectileStop"><p>On Projectile Stop</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called when projectile has come to a stop (velocity is below simulation threshold, bounces are disabled, or it is forcibly stopped).</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnRelease"><p>On Release</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnRemovalEvents"><p>On Removal Events</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called when new trailing events are available.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnRemoved"><p>On Removed</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnRenderFinished"><p>On Render Finished</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Assign a function to this delegate to get notified when each individual job is finished.
+</p><p>THIS WILL ONLY BE CALLED IF USING THE RENDERJOB CONVENIENCE FUNCTION.
+</p><p>Because there can only be one job in the queue when using RenderJob, this will be called when
+the render is complete, and the executor has been released. This allows you to queue up another
+job immediately as a result of the OnRenderFinished callback.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnRequestComplete"><p>On Request Complete</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnRequestFailed"><p>On Request Failed</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnResetDelegate"><p>On Reset Delegate</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called when InterpTo reached the end and reset back to start .</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnRevLimiterHit"><p>On Rev Limiter Hit</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnRevLimiterStateChanged"><p>On Rev Limiter State Changed</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnSceneEnded"><p>On Scene Ended</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Delegate to notify external objects when this is scene is completed after all montages played by the scene section blended out.
+Will not be broadcasted if one or more montages have 'bEnableAutoBlendOut' set to 'false'.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnSectionEndTimeReached"><p>On Section End Time Reached</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Delegate to notify once the scene play time reaches the duration defined by the longest played montage of the selected section.
+This delegate should be used if one or more montages have 'bEnableAutoBlendOut' set to 'false'.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnSeePawn"><p>On See Pawn</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Delegate to execute when we see a Pawn.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnSelectedButtonBaseChanged"><p>On Selected Button Base Changed</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnSelectionCleared"><p>On Selection Cleared</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnSetupTests"><p>On Setup Tests</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnSmartLinkReached"><p>On Smart Link Reached</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnSpawningFinishedEvent"><p>On Spawning Finished Event</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called once DoSpawning completes and all entities have been spawned.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnSpectrumResults"><p>On Spectrum Results</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Delegate to receive all Spectrum results, per-channel, since last delegate call. If bDownmixToMono setting is true, results will be in channel index 0.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnStateEnded"><p>On State Ended</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Invoked if 'EndAbilityState' is called or if 'EndAbility' is called and this state is active.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnStateInterrupted"><p>On State Interrupted</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Invoked if the ability was interrupted and this state is active.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnStopped"><p>On Stopped</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnSubmixRecordedFileDone"><p>On Submix Recorded File Done</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Blueprint delegate for when a recorded file is finished exporting.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnSucceeded"><p>On Succeeded</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnSuccess"><p>On Success</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called when there is a successful In-App Purchase transaction</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnSync"><p>On Sync</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnSystemFinished"><p>On System Finished</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called when the particle system is done</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnTargetLocationReached"><p>On Target Location Reached</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnTargetPerceptionForgotten"><p>On Target Perception Forgotten</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Notifies all bound delegates that the perception info has been forgotten for a given target.
+The notification get broadcast when all stimuli of a given target expire. Note that this
+functionality requires the the actor forgetting must be enabled via AIPerceptionSystem.bForgetStaleActors.
+</p><p>@param       SourceActor     Actor associated to the stimulus (can not be null)
+@param       Stimulus        Updated stimulus</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnTargetPerceptionInfoUpdated"><p>On Target Perception Info Updated</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Notifies all bound objects that perception info has been updated for a given target.
+The notification is broadcasted for any received stimulus or on change of state
+according to the stimulus configuration.
+</p><p>Note - This delegate will be called even if source actor is no longer valid
+by the time a stimulus gets processed so it is better to use source id for bookkeeping.
+</p><p>@param       UpdateInfo      Data structure providing information related to the updated perceptual data</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnTargetPerceptionUpdated"><p>On Target Perception Updated</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Notifies all bound objects that perception info has been updated for a given target.
+The notification is broadcasted for any received stimulus or on change of state
+according to the stimulus configuration.
+</p><p>Note - This delegate will not be called if source actor is no longer valid
+by the time a stimulus gets processed.
+Use OnTargetPerceptionInfoUpdated providing a source id to handle those cases.
+</p><p>@param       SourceActor     Actor associated to the stimulus (can not be null)
+@param       Stimulus        Updated stimulus</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnTargetReady"><p>On Target Ready</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called when the targeting request has been completed and results are ready</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnTemperatureChangeDelegate"><p>On Temperature Change Delegate</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called when temperature level has changed, and receives the severity</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnTestFinished"><p>On Test Finished</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called when the test is finished. Use it to clean up</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnTestPrepare"><p>On Test Prepare</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called when the test is ready to prepare</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnTestStart"><p>On Test Start</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called when the test is started</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnTestsBegin"><p>On Tests Begin</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnTestsComplete"><p>On Tests Complete</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnTimeExpired"><p>On Time Expired</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>called when time runs out</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnTimedOut"><p>On Timed Out</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnTimedOutandDestinationReached"><p>On Timed Out and Destination Reached</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnTrailingEvents"><p>On Trailing Events</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called when new trailing events are available.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnUnvirtualized"><p>On Unvirtualized</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnUpShift"><p>On Up Shift</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnVelocityChage"><p>On Velocity Chage</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Delegate called when velocity requirements are met</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnVirtualized"><p>On Virtualized</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnWaitBeginDelegate"><p>On Wait Begin Delegate</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called when InterpTo has come to a stop but will resume when possible.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnWaitEndDelegate"><p>On Wait End Delegate</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called when InterpTo has resumed following a stop.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnActivated"><p>OnActivated</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called when the activation state of this output provider changes.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnARActorSpawned"><p>OnARActorSpawned</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnARActorToBeDestroyed"><p>OnARActorToBeDestroyed</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnAssetPostImport"><p>OnAssetPostImport</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnAssetPostLODImport"><p>OnAssetPostLODImport</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnAssetPreImport"><p>OnAssetPreImport</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnAssetReimport"><p>OnAssetReimport</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnConnectionsReinitialized"><p>OnConnectionsReinitialized</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called when ReinitializeConnections is called.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnInputDeviceConnectionChange"><p>OnInputDeviceConnectionChange</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Callback for when an input device connection state has changed (a new gamepad was connected or disconnected)</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnNavigationGenerationFinished"><p>OnNavigationGenerationFinished</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnPawnControllerChanged"><p>OnPawnControllerChanged</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>gets triggered shortly after a pawn's controller is set. Most of the time
+it signals that the Controller has changed but in edge cases (like during
+replication) it might end up broadcasting the same pawn-controller pair
+more than once</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="OnUserInputDevicePairingChange"><p>OnUserInputDevicePairingChange</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Callback when an input device has changed pairings (the owning platform user has changed for that device)</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="PathUpdatedNotifier"><p>Path Updated Notifier</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="PlatformChangedtoLaptopModeDeleg-"><p>Platform Changed to Laptop Mode Delegate</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>This is called when a convertible laptop changed into laptop mode.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="PlatformChangedtoTabletModeDeleg-"><p>Platform Changed to Tablet Mode Delegate</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>This is called when a convertible laptop changed into tablet mode.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Removed"><p>Removed</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Result"><p>Result</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Called when a message is broadcast on the specified channel. Use GetPayload() to request the message payload.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Success"><p>Success</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Targeted"><p>Targeted</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="TimeElapsed"><p>Time Elapsed</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Triggered"><p>Triggered</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>This delegate will be triggered when the trigger condition has been met.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="ValidData"><p>Valid Data</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="VRControllerRecenteredDelegate"><p>VRController Recentered Delegate</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>This will be called when the VR system recenters a controller.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="XRInteractionProfileChangedDeleg-"><p>XRInteraction Profile Changed Delegate</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>This will be called whenever the interaction profile is altered.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="XRPlayAreaChangedDelegate"><p>XRPlay Area Changed Delegate</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>This will be called whenever the play area is altered.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="XRTrackingOriginChangedDelegate"><p>XRTracking Origin Changed Delegate</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>This will be called whenever the tracking origin is altered.</p>
+	</td>
+</tr>
+			</table>
+</div>
+
+																	</div>
+					<!-- End of Markdown converted page content -->
+				</div>
+												<div id="recommendations"></div>			</div>
+						<div id="footer"></div>			
+									<div id="announcement">
+			<div style="display:inline-block;margin:5px;">
+				Help shape the future of Unreal Engine documentation! Tell us how we're doing so we can serve you better.
+			</div>
+			<div style="margin:5px;display:inline-block;">
+				<div class="btn action" style="margin-top:-6px;display:inline-block;" onclick="$('#announcement').hide();window.open('https://epicgames.questionpro.com/t/AVVbJZwedR');createCookie('announcement-read', new Date().getTime(), 30);">Take our survey</div>
+				<div class="btn btn-default" style="margin-top:-6px;display:inline-block;" onclick="$('#announcement').hide();createCookie('announcement-read', new Date().getTime(), 30);">Cancel</div>
+			</div>
+			<div class="btn-close" style="position:absolute;right:5px;top:10px;padding:3px;width:14px;height:14px;" onclick="$('#announcement').hide();"></div>
+			</div>
+					</div>
+	</div>
+</body>
+</html>

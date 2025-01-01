@@ -1,0 +1,4413 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="./../../../../../Include/Javascript/common_en-US.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var time = new Date(0);
+		var preview = false;
+		var relativeHTMLPath = "./../../../../../";
+				var pageid = 0;
+				var heroimage = "./../../../../../Images/ue5-hero.png";
+				var lang = "en-US";
+				var basePath = document.location.pathname.substring(0, document.location.pathname.indexOf('/' + lang + '/') + lang.length + 1);
+		document.write('<base href="' +  encodeURI(basePath) + '/API/Plugins/Niagara/INiagaraModule/" />');
+				var udnCSS = './../../../../../Include/CSS/udn_public.css';
+		var udnLangCSS = '';
+				var udnOverrideCSS = './../../../../../Include/CSS/skin_overrides.css';
+		var udnOverrideDarkCSS = './../../../../../Include/CSS/skin_overrides_dark.css';
+		var fancyboxCSS = './../../../../../Include/CSS/jquery.fancybox.css';
+		var jqueryuiCSS = './../../../../../Include/CSS/jquery-ui.min.css';
+		var qtipCSS = './../../../../../Include/CSS/jquery.qtip.css';
+		var prettifyCSS = './../../../../../Include/CSS/prettify.css';
+		var navbarCSS = './../../../../../Include/CSS/navBar.css';
+		var twentytwentyCSS = './../../../../../Include/CSS/twentytwenty.css';
+		var recommendationsCSS = './../../../../../Include/CSS/jquery.recommendations.css';
+	</script>
+    <title>INiagaraModule | Unreal Engine 5.2 Documentation</title>
+    	    <meta name=viewport content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Cache-control" content="no-store">
+    <script  src="./../../../../../Include/Javascript/CustomEvent.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/jquery-3.4.0.min.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/udn.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/udn_extras.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/jquery-ui.min.js" type="text/javascript"></script>
+	    <script  src="./../../../../../Include/Javascript/informational.js" type="text/javascript"></script>
+	    <script  src="./../../../../../Include/Javascript/jquery.fancybox.pack.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/jquery.qtip.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/prettify.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/jquery.slimscroll.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/jquery.event.move.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/jquery.twentytwenty.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/lazysizes.min.js" type="text/javascript"></script>
+	    <script  src="./../../../../../Include/Javascript/jquery.recommendations.js" type="text/javascript"></script>
+	
+    <link async rel="icon" href="./../../../../../Include/Images/site_icon.png" type="image/x-icon" />
+    <link async rel="shortcut icon" href="./../../../../../Include/Images/site_icon.png" type="image/x-icon" />
+    <link async href="./../../../../../Include/Images/touch_icon.png" rel="apple-touch-icon" />
+    <link async href="./../../../../../Include/Images/touch_icon_114.png" sizes="114x114" rel="apple-touch-icon" />    
+		<script  src="./../../../../../Include/Javascript/CollapsibleLists.js" type="text/javascript"></script>
+	<script  src="./../../../../../Include/Javascript/navigationBarUI.js"></script>
+	<script  src="./../../../../../Include/Javascript/navigationBar.js"></script>
+		
+	<link rel="alternate" href="https://docs.unrealengine.com/latest/en-US/API/Plugins/Niagara/INiagaraModule/" hreflang="x-default" />
+
+	<meta name="title" content="INiagaraModule" />
+<meta name="description" content="Niagara module interface" />
+<meta name="availability" content="Public" />
+<meta name="crumbs" content="%ROOT%,API,API/Plugins,API/Plugins/Niagara" />
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta property="og:title" content="INiagaraModule" />
+	<meta property="og:description" content="Niagara module interface" />
+		<meta property="og:image" content="https://docs.unrealengine.com/5.1/Images/placeholder-social.png" />
+	</head>
+<body id="webbgThree" style="visibility: hidden;" onload="document.body.style.visibility='visible';">
+			<script>window.__tracking_base = 'https://tracking.unrealengine.com';</script>
+	<script src="https://tracking.unrealengine.com/tracking.js" async></script>    <div id="webThree">
+				<div id="page_head">
+						<div id="head">
+				<div id="logo"></div>
+			</div>
+						<div id="pagenav">
+				<div class="crumbs" id="crumbs">
+<span id="versionContainer">
+	<span id="versionSelect" class="btn btn-version" onclick="ToggleMenu($('#versionMenu'), $(this));"></span>
+	<div id="versionMenu">
+		<div id="4_26" data-version="4.26" class="btn btn-select" onclick="createCookie('version', '4.26', 365);SwitchVersion('4.26');">Unreal Engine 4.26 Documentation</div>
+		<div id="4_27" data-version="4.27" class="btn btn-select" onclick="createCookie('version', '4.27', 365);SwitchVersion('4.27');">Unreal Engine 4.27 Documentation</div>
+		<div id="5_0" data-version="5.0" class="btn btn-select" onclick="createCookie('version', '5.0', 365);SwitchVersion('5.0');">Unreal Engine 5.0 Documentation</div>
+		<div id="5_1" data-version="5.1" class="btn btn-select" onclick="createCookie('version', '5.1', 365);SwitchVersion('5.1');">Unreal Engine 5.1 Documentation</div>
+		<div id="5_2" data-version="5.2" class="btn btn-select" onclick="createCookie('version', '5.2', 365);SwitchVersion('5.2');">Unreal Engine 5.2 Documentation</div>
+		<div id="5_3" data-version="5.3" class="btn btn-select" onclick="createCookie('version', '5.3', 365);SwitchVersion('5.3');">Unreal Engine 5.3 Documentation</div>
+	</div>
+</span>
+	<span class="separator">></span> <a id="parent_link" href="../../../../API">Unreal Engine API Reference</a>
+
+	<span class="separator">></span> <a id="parent_link" href="../../../Plugins">Plugins</a>
+
+	<span class="separator">></span> <a id="parent_link" href="../../Niagara">Niagara</a>
+
+<span class="separator">></span> <span id="page">INiagaraModule</span>
+</div>				<div id="pageNavRight">
+								<!-- Start of Search -->
+												<div id="search_container">
+					<form name="bodySearch" method="get" action="https://www.unrealengine.com/en-US/bing-search" onsubmit="return validateSearch()">
+						<input type="image" src="./../../../../../Include/Images/search_box_icon.png" class="searchbutton"/>
+						<input type="hidden" name="filter" value="Documentation" />
+						<input type="text" name="keyword" placeholder="Search Documentation..." class="searchbox" autocomplete="off"/>
+					</form>
+				</div>
+								<!-- End of Search -->
+				<div id="skinContainer">
+	<div id="skinSelect" class="btn btn-skin" onclick="ToggleMenu($('#skinMenu'), $(this));"></div>
+	<div id="skinMenu">
+		<div id="light" class="btn btn-select" onclick="createCookie('skin', 'light', 365);location.reload();">Light Theme</div>
+		<div id="dark" class="btn btn-select" onclick="createCookie('skin', 'dark', 365);location.reload();">Dark Theme</div>
+	</div>
+</div>				</div>
+			</div>
+		</div>						<div id="navWrapper">
+			<div id="nav-filter-container">
+				<div id="nav-filter-inner">
+					<form>
+						<input type="text" placeholder="Filter pages..." id="nav-filter" onchange="clearTimeout(filterTimer); filterTimer = setTimeout(updateNavTreeFilter,250, this.value);if(this.value.length == 0){$('#filter-clear').hide();}else{$('#filter-clear').show();}" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" />
+						<button class="close-icon" id="filter-clear" type="reset" onclick="clearTimeout(filterTimer); filterTimer = setTimeout(updateNavTreeFilter,250, '');$(this).hide();"></button>
+					</form>
+				</div>
+			</div>
+			<nav id="navPanel">
+			</nav>
+			<div id="navigation" title="Click to toggle navigation menu"><span>></span></div>
+		</div>		
+		<div id="splitter">
+		</div>
+				<div id="contentContainer">
+										<div id="pagedefault">
+				<div id="product-banner">
+	<div id="product-logo"></div>
+</div>				<div id="pagecontainer" style="padding-right:0px;">
+					<!-- Start of Markdown converted page content -->
+										<div class="hero  background">
+	<div class="imgContainer"><img src="./../../../../../Images/ue5-hero.png" /></div>	<div class="info">
+		<div id="pageTitle">
+			<h1 id="H1TitleId">INiagaraModule</h1>
+		</div>
+		<h2 >Niagara module interface</h2>
+		<div id="access">
+			<div class="accessContainer">
+															</div>
+		</div>
+	</div>
+</div>															<div id="maincol">
+																																				<div class="heading expanded" onclick="sectionOnClick(this, 'hierarchy');">
+        <p>Inheritance Hierarchy</p>
+    </div>
+<div id="hierarchy">
+    <div class="hierarchy">
+	<table  class="hierarchy-table" cellspacing="0" id="hrch"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../../../Runtime/Core/Modules/IModuleInterface"><p>IModuleInterface</p></a><table  class="hierarchy-table" cellspacing="0" id="hrch_1"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><p>INiagaraModule</p>
+</td></tr></table></td></tr></table>
+</div>
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'references');">
+        <p>References</p>
+    </div>
+<div id="references">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="normal-row">
+	<td class="name-cell">
+		<p>Module</p>
+	</td>
+	<td class="desc-cell">
+		<p><a id="content_link" href=".." ><span>Niagara</span></a></p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<p>Header</p>
+	</td>
+	<td class="desc-cell">
+		<p>&#47;Engine&#47;Plugins&#47;FX&#47;Niagara&#47;Source&#47;Niagara&#47;Public&#47;NiagaraModule.h</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<p>Include</p>
+	</td>
+	<td class="desc-cell">
+		<p>&#35;include &quot;NiagaraModule.h&quot;</p>
+	</td>
+</tr>
+			</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'syntax');">
+        <p>Syntax</p>
+    </div>
+<div id="syntax">
+    <div class="simplecode_api">
+	<p>class INiagaraModule : public <a id="content_link" href="../../../Runtime/Core/Modules/IModuleInterface" ><span>IModuleInterface</span></a>  </p>
+</div>
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'description');">
+        <p>Remarks</p>
+    </div>
+<div id="description">
+    <p>Niagara module interface</p>
+</div><div class="syntax">
+	<div class="heading expanded" onclick="sectionOnClick(this, 'variables');">
+        <p>Variables</p>
+    </div>
+<div id="variables">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:8%">
+			</th>
+			<th class="type-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:15%">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="FOnAbortSystemCompile" ><span>FOnAbortSystemC</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="AbortSystemCompileDelegate"><p>AbortSystemCompileDelegate</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="FCheckCompilationResult" ><span>FCheckCompilati</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CompilationResultDelegate"><p>CompilationResultDelegate</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Templates/TSharedPtr" ><span>TSharedPtr</span></a>&lt; <a id="content_link" href="../INiagaraEditorOnlyDataUtilities" ><span>INi</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="EditorOnlyDataUtilities"><p>EditorOnlyDataUtilities</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="FOnCacheGraphTraversal" ><span>FOnCacheGraphTr</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GraphTraversalCacheDelegate"><p>GraphTraversalCacheDelegate</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Templates/TSharedPtr" ><span>TSharedPtr</span></a>&lt; <a id="content_link" href="../INiagaraMergeManager" ><span>INi</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="MergeManager"><p>MergeManager</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="FOnProcessQueue" ><span>FOnProcessQueue</span></a></p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>OnProcessQueue</p>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="FOnPollSystemCompile" ><span>FOnPollSystemCo</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="PollSystemCompileDelegate"><p>PollSystemCompileDelegate</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="FOnPrecompile" ><span>FOnPrecompile</span></a></p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>PrecompileDelegate</p>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="FOnPrecompileDuplicate" ><span>FOnPrecompileDu</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="PrecompileDuplicateDelegate"><p>PrecompileDuplicateDelegate</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="FOnRequestCompileSystem" ><span>FOnRequestCompi</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RequestCompileSystemDelegate"><p>RequestCompileSystemDelegate</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="FScriptCompiler" ><span>FScriptCompiler</span></a></p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>ScriptCompilerDelegate</p>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'functions_0');">
+        <p>Functions</p>
+    </div>
+<div id="functions_0">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:8%;">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="AbortSystemCompile"><nobr><p>AbortSystemCompile</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FNiagaraCompilationTaskHandle" ><span>FNiagaraCompilationTaskHandle</span></a><br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Templates/TSharedPtr" ><span>TSharedPtr</span></a>&lt; ...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CacheGraphTraversal"><nobr><p>CacheGraphTraversal</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/CoreUObject/UObject/UObject" ><span>UObject</span></a>&#42; InObj,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Misc/FGuid" ><span>FGuid</span></a> Version<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="DataChannelsEnabled"><nobr><p>DataChannelsEnabled()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GeneratePerfBaselines"><nobr><p>GeneratePerfBaselines</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../UNiagaraEffectType" ><span>UNiagaraEffectType</span></a>&#42; > ...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Templates/TSharedPtr" ><span>TSharedPtr</span></a>&lt; ...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetCompileJobResult"><nobr><p>GetCompileJobResult</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 JobID,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bWait,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FNiagaraScriptCompileMetrics" ><span>FNiagaraScriptCompileMetrics</span></a>&amp; Metr...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FNiagaraDebu...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetDebuggerClient"><nobr><p>GetDebuggerClient()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../INiagaraEditorOnlyDataUtilities" ><span>INiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetEditorOnlyDataUtilities"><nobr><p>GetEditorOnlyDataUtilities()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>float</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetGlobalSpawnCountScale"><nobr><p>GetGlobalSpawnCountScale()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>float</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetGlobalSystemCountScale"><nobr><p>GetGlobalSystemCountScale()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../INiagaraMergeManager" ><span>INiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetMergeManager"><nobr><p>GetMergeManager()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_BeginDefaults"><nobr><p>GetVar_BeginDefaults()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_CallID"><nobr><p>GetVar_CallID()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_DataInstance_Alive"><nobr><p>GetVar_DataInstance_Alive()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Emitter_Age"><nobr><p>GetVar_Emitter_Age()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Emitter_Determinism"><nobr><p>GetVar_Emitter_Determinism()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Emitter_InterpolatedSpawn"><nobr><p>GetVar_Emitter_InterpolatedSpawn()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Emitter_InterpSpawnStartD-"><nobr><p>GetVar_Emitter_InterpSpawnStartDt()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Emitter_LocalSpace"><nobr><p>GetVar_Emitter_LocalSpace()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Emitter_OverrideGlobalSpa-"><nobr><p>GetVar_Emitter_OverrideGlobalSpawnCountScale()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Emitter_RandomSeed"><nobr><p>GetVar_Emitter_RandomSeed()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Emitter_SimulationTarget"><nobr><p>GetVar_Emitter_SimulationTarget()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Emitter_SpawnGroup"><nobr><p>GetVar_Emitter_SpawnGroup()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Emitter_SpawnInterval"><nobr><p>GetVar_Emitter_SpawnInterval()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Emitter_SpawnRate"><nobr><p>GetVar_Emitter_SpawnRate()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Engine_DeltaTime"><nobr><p>GetVar_Engine_DeltaTime()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Engine_Emitter_InstanceSe-"><nobr><p>GetVar_Engine_Emitter_InstanceSeed()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Engine_Emitter_NumParticl-"><nobr><p>GetVar_Engine_Emitter_NumParticles()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Engine_Emitter_Simulation-"><nobr><p>GetVar_Engine_Emitter_SimulationPosition()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Engine_Emitter_SpawnCount-"><nobr><p>GetVar_Engine_Emitter_SpawnCountScale()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Engine_Emitter_TotalSpawn-"><nobr><p>GetVar_Engine_Emitter_TotalSpawnedParticles()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Engine_ExecutionCount"><nobr><p>GetVar_Engine_ExecutionCount()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Engine_GlobalSpawnCountSc-"><nobr><p>GetVar_Engine_GlobalSpawnCountScale()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Engine_GlobalSystemScale"><nobr><p>GetVar_Engine_GlobalSystemScale()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Engine_InvDeltaTime"><nobr><p>GetVar_Engine_InvDeltaTime()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Engine_NumSystemInstances"><nobr><p>GetVar_Engine_NumSystemInstances()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Engine_Owner_ExecutionSta-"><nobr><p>GetVar_Engine_Owner_ExecutionState()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Engine_Owner_LODDistance"><nobr><p>GetVar_Engine_Owner_LODDistance()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Engine_Owner_LODDistanceF-"><nobr><p>GetVar_Engine_Owner_LODDistanceFraction()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Engine_Owner_LWC_Tile"><nobr><p>GetVar_Engine_Owner_LWC_Tile()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Engine_Owner_Position"><nobr><p>GetVar_Engine_Owner_Position()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Engine_Owner_Rotation"><nobr><p>GetVar_Engine_Owner_Rotation()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Engine_Owner_Scale"><nobr><p>GetVar_Engine_Owner_Scale()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Engine_Owner_SystemLocalT-"><nobr><p>GetVar_Engine_Owner_SystemLocalToWorld()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Engine_Owner_SystemLocalT-_1"><nobr><p>GetVar_Engine_Owner_SystemLocalToWorldNoScale()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Engine_Ow-"><nobr><p>GetVar_Engine_Owner_SystemLocalToWorldTransposed()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Engine_Owner_SystemWorldT-"><nobr><p>GetVar_Engine_Owner_SystemWorldToLocal()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Engine_Owner_SystemWorldT-_1"><nobr><p>GetVar_Engine_Owner_SystemWorldToLocalNoScale()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Engine_Ow-_1"><nobr><p>GetVar_Engine_Owner_SystemWorldToLocalTransposed()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Engine_Owner_TimeSinceRen-"><nobr><p>GetVar_Engine_Owner_TimeSinceRendered()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Engine_Owner_Velocity"><nobr><p>GetVar_Engine_Owner_Velocity()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Engine_Owner_XAxis"><nobr><p>GetVar_Engine_Owner_XAxis()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Engine_Owner_YAxis"><nobr><p>GetVar_Engine_Owner_YAxis()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Engine_Owner_ZAxis"><nobr><p>GetVar_Engine_Owner_ZAxis()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Engine_QualityLevel"><nobr><p>GetVar_Engine_QualityLevel()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Engine_RealTime"><nobr><p>GetVar_Engine_RealTime()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Engine_System_Age"><nobr><p>GetVar_Engine_System_Age()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Engine_System_CurrentTime-"><nobr><p>GetVar_Engine_System_CurrentTimeStep()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Engine_System_NumEmitters"><nobr><p>GetVar_Engine_System_NumEmitters()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Engine_System_NumEmitters-"><nobr><p>GetVar_Engine_System_NumEmittersAlive()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Engine_System_NumParticle-"><nobr><p>GetVar_Engine_System_NumParticles()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Engine_System_NumTimeStep-"><nobr><p>GetVar_Engine_System_NumTimeSteps()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Engine_System_RandomSeed"><nobr><p>GetVar_Engine_System_RandomSeed()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Engine_System_Significanc-"><nobr><p>GetVar_Engine_System_SignificanceIndex()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Engine_System_TickCount"><nobr><p>GetVar_Engine_System_TickCount()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Engine_System_TimeStepFra-"><nobr><p>GetVar_Engine_System_TimeStepFraction()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Engine_Time"><nobr><p>GetVar_Engine_Time()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Engine_WorldDeltaTime"><nobr><p>GetVar_Engine_WorldDeltaTime()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_FunctionDebugState"><nobr><p>GetVar_FunctionDebugState()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Particles_CameraOffset"><nobr><p>GetVar_Particles_CameraOffset()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Particles_Color"><nobr><p>GetVar_Particles_Color()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Particles_ComponentsEnabl-"><nobr><p>GetVar_Particles_ComponentsEnabled()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Particles_DynamicMaterial-"><nobr><p>GetVar_Particles_DynamicMaterialParameter()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Particles_DynamicMaterial-_1"><nobr><p>GetVar_Particles_DynamicMaterialParameter1()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Particles_DynamicMaterial-_2"><nobr><p>GetVar_Particles_DynamicMaterialParameter2()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Particles_DynamicMaterial-_3"><nobr><p>GetVar_Particles_DynamicMaterialParameter3()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Particles_ID"><nobr><p>GetVar_Particles_ID()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Particles_Lifetime"><nobr><p>GetVar_Particles_Lifetime()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Particles_LightEnabled"><nobr><p>GetVar_Particles_LightEnabled()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Particles_LightExponent"><nobr><p>GetVar_Particles_LightExponent()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Particles_LightRadius"><nobr><p>GetVar_Particles_LightRadius()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Particles_LightVolumetric-"><nobr><p>GetVar_Particles_LightVolumetricScattering()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Particles_MaterialRandom"><nobr><p>GetVar_Particles_MaterialRandom()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Particles_MeshIndex"><nobr><p>GetVar_Particles_MeshIndex()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Particles_MeshOrientation"><nobr><p>GetVar_Particles_MeshOrientation()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Particles_NormalizedAge"><nobr><p>GetVar_Particles_NormalizedAge()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Particles_PivotOffset"><nobr><p>GetVar_Particles_PivotOffset()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Particles_Position"><nobr><p>GetVar_Particles_Position()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Particles_RibbonFacing"><nobr><p>GetVar_Particles_RibbonFacing()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Particles_RibbonID"><nobr><p>GetVar_Particles_RibbonID()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Particles_RibbonLinkOrder"><nobr><p>GetVar_Particles_RibbonLinkOrder()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Particles_RibbonTwist"><nobr><p>GetVar_Particles_RibbonTwist()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Particles_RibbonU0Overrid-"><nobr><p>GetVar_Particles_RibbonU0Override()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Particles_RibbonU1Overrid-"><nobr><p>GetVar_Particles_RibbonU1Override()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Particles_RibbonUVDistanc-"><nobr><p>GetVar_Particles_RibbonUVDistance()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Particles_RibbonV0RangeOv-"><nobr><p>GetVar_Particles_RibbonV0RangeOverride()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Particles_RibbonV1RangeOv-"><nobr><p>GetVar_Particles_RibbonV1RangeOverride()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Particles_RibbonWidth"><nobr><p>GetVar_Particles_RibbonWidth()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Particles_Scale"><nobr><p>GetVar_Particles_Scale()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Particles_SpriteAlignment"><nobr><p>GetVar_Particles_SpriteAlignment()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Particles_SpriteFacing"><nobr><p>GetVar_Particles_SpriteFacing()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Particles_SpriteRotation"><nobr><p>GetVar_Particles_SpriteRotation()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Particles_SpriteSize"><nobr><p>GetVar_Particles_SpriteSize()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Particles_SubImageIndex"><nobr><p>GetVar_Particles_SubImageIndex()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Particles_UniqueID"><nobr><p>GetVar_Particles_UniqueID()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Particles_UVScale"><nobr><p>GetVar_Particles_UVScale()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Particles_Velocity"><nobr><p>GetVar_Particles_Velocity()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_Particles_VisibilityTag"><nobr><p>GetVar_Particles_VisibilityTag()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_ScriptContext"><nobr><p>GetVar_ScriptContext()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FNiagaraVariable" ><span>FNiaga</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetVar_ScriptUsage"><nobr><p>GetVar_ScriptUsage()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnAssetLoaded"><nobr><p>OnAssetLoaded</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/CoreUObject/UObject/UObject" ><span>UObject</span></a>&#42; Asset<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnBeginFrame"><nobr><p>OnBeginFrame()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnDataChannelsEnabledChanged"><nobr><p>OnDataChannelsEnabledChanged</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/HAL/IConsoleVariable" ><span>IConsoleVariable</span></a>&#42; Variable<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnPostEngineInit"><nobr><p>OnPostEngineInit()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnPostGarbageCollect"><nobr><p>OnPostGarbageCollect()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnPreExit"><nobr><p>OnPreExit()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnUseGlobalFXBudgetChanged"><nobr><p>OnUseGlobalFXBudgetChanged</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/HAL/IConsoleVariable" ><span>IConsoleVariable</span></a>&#42; Variable<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnWorldBeginTearDown"><nobr><p>OnWorldBeginTearDown</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Engine/UWorld" ><span>UWorld</span></a>&#42; World<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnWorldTickStart"><nobr><p>OnWorldTickStart</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Engine/UWorld" ><span>UWorld</span></a>&#42; World,<br />&nbsp;&nbsp;&nbsp;&nbsp;ELevelTick TickType,<br />&nbsp;&nbsp;&nbsp;&nbsp;float DeltaSeconds<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="PollSystemCompile"><nobr><p>PollSystemCompile</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FNiagaraCompilationTaskHandle" ><span>FNiagaraCompilationTaskHandle</span></a>,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FNiagaraSystemAsyncCompileResult-" ><span>FNiagaraSystemAsyncCompileResults</span></a>&amp;,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Templates/TSharedPtr" ><span>TSharedPtr</span></a>&lt; ...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="Precompile"><nobr><p>Precompile</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/CoreUObject/UObject/UObject" ><span>UObject</span></a>&#42; InObj,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Misc/FGuid" ><span>FGuid</span></a> Version<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Templates/TSharedPtr" ><span>TSharedPtr</span></a>&lt; ...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="PrecompileDuplicate"><nobr><p>PrecompileDuplicate</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FNiagaraCompileRequestDataBase" ><span>FNiagaraCompileRequestDataBas</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../UNiagaraSystem" ><span>UNiagaraSystem</span></a>&#42; OwningSystem,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../UNiagaraEmitter" ><span>UNiagaraEmitter</span></a>&#42; OwningEmitter,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../UNiagaraScript" ><span>UNiagaraScript</span></a>&#42; TargetScript,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Misc/FGuid" ><span>FGuid</span></a> TargetVersion<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ProcessShaderCompilationQueue"><nobr><p>ProcessShaderCompilationQueue()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RefreshDataChannels"><nobr><p>RefreshDataChannels()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Delegates/FDelegateHandle" ><span>FDelegateHan</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RegisterAbortSystemCompile"><nobr><p>RegisterAbortSystemCompile</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="FOnAbortSystemCompile" ><span>FOnAbortSystemCompile</span></a> AbortSystemCo...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Delegates/FDelegateHandle" ><span>FDelegateHan</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RegisterCompileResultDelegate"><nobr><p>RegisterCompileResultDelegate</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="FCheckCompilationResult" ><span>FCheckCompilationResult</span></a> ResultDeleg...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RegisterEditorOnlyDataUtilities"><nobr><p>RegisterEditorOnlyDataUtilities</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Templates/TSharedRef" ><span>TSharedRef</span></a>&lt; <a id="content_link" href="../INiagaraEditorOnlyDataUtilities" ><span>INiagaraEditorOnlyDataU</span></a>...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Delegates/FDelegateHandle" ><span>FDelegateHan</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RegisterGraphTraversalCacher"><nobr><p>RegisterGraphTraversalCacher</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="FOnCacheGraphTraversal" ><span>FOnCacheGraphTraversal</span></a> PreCompiler<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RegisterMergeManager"><nobr><p>RegisterMergeManager</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Templates/TSharedRef" ><span>TSharedRef</span></a>&lt; <a id="content_link" href="../INiagaraMergeManager" ><span>INiagaraMergeManager</span></a> > ...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Delegates/FDelegateHandle" ><span>FDelegateHan</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RegisterPollSystemCompile"><nobr><p>RegisterPollSystemCompile</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="FOnPollSystemCompile" ><span>FOnPollSystemCompile</span></a> PollSystemComp...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Delegates/FDelegateHandle" ><span>FDelegateHan</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RegisterPrecompileDuplicator"><nobr><p>RegisterPrecompileDuplicator</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="FOnPrecompileDuplicate" ><span>FOnPrecompileDuplicate</span></a> PreCompileDu...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Delegates/FDelegateHandle" ><span>FDelegateHan</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RegisterPrecompiler"><nobr><p>RegisterPrecompiler</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="FOnPrecompile" ><span>FOnPrecompile</span></a> PreCompiler<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Delegates/FDelegateHandle" ><span>FDelegateHan</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RegisterRequestCompileSystem"><nobr><p>RegisterRequestCompileSystem</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="FOnRequestCompileSystem" ><span>FOnRequestCompileSystem</span></a> RequestComp...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Delegates/FDelegateHandle" ><span>FDelegateHan</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RegisterScriptCompiler"><nobr><p>RegisterScriptCompiler</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="FScriptCompiler" ><span>FScriptCompiler</span></a> ScriptCompiler<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>int32</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RenderStatPerfBaselines"><nobr><p>RenderStatPerfBaselines</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Engine/UWorld" ><span>UWorld</span></a>&#42; World,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/FViewport" ><span>FViewport</span></a>&#42; Viewport,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/FCanvas" ><span>FCanvas</span></a>&#42; Canvas,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 X,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 Y,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector&#42; ViewLocation,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FRotator&#42; ViewRotation<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FNiagaraCompilationTaskHandle" ><span>FNiagaraComp</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RequestCompileSystem"><nobr><p>RequestCompileSystem</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../UNiagaraSystem" ><span>UNiagaraSystem</span></a>&#42; System,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bForce<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RequestRefreshDataChannels"><nobr><p>RequestRefreshDataChannels()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ResetOnProcessShaderCompilationQ-"><nobr><p>ResetOnProcessShaderCompilationQueue</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Delegates/FDelegateHandle" ><span>FDelegateHandle</span></a> DelegateHandle<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Delegates/FDelegateHandle" ><span>FDelegateHan</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetOnProcessShaderCompilationQue-"><nobr><p>SetOnProcessShaderCompilationQueue</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="FOnProcessQueue" ><span>FOnProcessQueue</span></a> InOnProcessQueue<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ShutdownRenderingResources"><nobr><p>ShutdownRenderingResources()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>int32</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="StartScriptCompileJob"><nobr><p>StartScriptCompileJob</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FNiagaraCompileRequestDataBase" ><span>FNiagaraCompileRequestDataBas</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FNiagaraCompileRequestDuplicateD-" ><span>FNiagaraCompileRequestDuplica</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FNiagaraCompileOptions" ><span>FNiagaraCompileOptions</span></a>&amp; InCo...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ToggleStatPerfBaselines"><nobr><p>ToggleStatPerfBaselines</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/Engine/UWorld" ><span>UWorld</span></a>&#42; World,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Engine/FCommonViewportClient" ><span>FCommonViewportClient</span></a>&#42; Viewpor...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const TCHAR&#42; Stream<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UnregisterAbortSystemCompile"><nobr><p>UnregisterAbortSystemCompile</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Delegates/FDelegateHandle" ><span>FDelegateHandle</span></a> DelegateHandle<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UnregisterCompileResultDelegate"><nobr><p>UnregisterCompileResultDelegate</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Delegates/FDelegateHandle" ><span>FDelegateHandle</span></a> DelegateHandle<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UnregisterEditorOnlyDataUtilitie-"><nobr><p>UnregisterEditorOnlyDataUtilities</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Templates/TSharedRef" ><span>TSharedRef</span></a>&lt; <a id="content_link" href="../INiagaraEditorOnlyDataUtilities" ><span>INiagaraEditorOnlyDataU</span></a>...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UnregisterGraphTraversalCacher"><nobr><p>UnregisterGraphTraversalCacher</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Delegates/FDelegateHandle" ><span>FDelegateHandle</span></a> DelegateHandle<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UnregisterMergeManager"><nobr><p>UnregisterMergeManager</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Templates/TSharedRef" ><span>TSharedRef</span></a>&lt; <a id="content_link" href="../INiagaraMergeManager" ><span>INiagaraMergeManager</span></a> > ...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UnregisterPollSystemCompile"><nobr><p>UnregisterPollSystemCompile</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Delegates/FDelegateHandle" ><span>FDelegateHandle</span></a> DelegateHandle<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UnregisterPrecompileDuplicator"><nobr><p>UnregisterPrecompileDuplicator</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Delegates/FDelegateHandle" ><span>FDelegateHandle</span></a> DelegateHandle<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UnregisterPrecompiler"><nobr><p>UnregisterPrecompiler</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Delegates/FDelegateHandle" ><span>FDelegateHandle</span></a> DelegateHandle<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UnregisterRequestCompileSystem"><nobr><p>UnregisterRequestCompileSystem</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Delegates/FDelegateHandle" ><span>FDelegateHandle</span></a> DelegateHandle<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UnregisterScriptCompiler"><nobr><p>UnregisterScriptCompiler</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Delegates/FDelegateHandle" ><span>FDelegateHandle</span></a> DelegateHandle<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UseGlobalFXBudget"><nobr><p>UseGlobalFXBudget()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'functions_1');">
+        <p>Overridden from IModuleInterface</p>
+    </div>
+<div id="functions_1">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:8%;">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ShutdownModule"><nobr><p>ShutdownModule()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Called before the module is unloaded, right before the module object is destroyed.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="StartupModule"><nobr><p>StartupModule()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Called right after the module DLL has been loaded and the module object has been created Load dependent modules here, and they will be guaranteed to be available during ShutdownModule.</p>
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'typedefs');">
+        <p>Typedefs</p>
+    </div>
+<div id="typedefs">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="name-cell" style="width:15%">
+				<p>Name</p>
+			</th>
+			<th class="desc-cell" style="width:85%">
+				<p>Description</p>
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="CompileRequestDuplicatePtr"><p>CompileRequestDuplicatePtr</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="CompileRequestPtr"><p>CompileRequestPtr</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="FCheckCompilationResult"><p>FCheckCompilationResult</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="FOnAbortSystemCompile"><p>FOnAbortSystemCompile</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="FOnCacheGraphTraversal"><p>FOnCacheGraphTraversal</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="FOnPollSystemCompile"><p>FOnPollSystemCompile</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="FOnPrecompile"><p>FOnPrecompile</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="FOnPrecompileDuplicate"><p>FOnPrecompileDuplicate</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="FOnProcessQueue"><p>FOnProcessQueue</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="FOnRequestCompileSystem"><p>FOnRequestCompileSystem</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="FScriptCompiler"><p>FScriptCompiler</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="GraphCachedDataPtr"><p>GraphCachedDataPtr</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+			</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'constants');">
+        <p>Constants</p>
+    </div>
+<div id="constants">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="name-cell" style="width:15%">
+				<p>Name</p>
+			</th>
+			<th class="desc-cell" style="width:85%">
+				<p>Description</p>
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="bDataChannelRefreshRequested"><p>bDataChannelRefreshRequested</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="bDataChannelsEnabled"><p>bDataChannelsEnabled</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="bUseGlobalFXBudget"><p>bUseGlobalFXBudget</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="DataInstance_Alive"><p>DataInstance_Alive</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Emitter_Age"><p>Emitter_Age</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Emitter_Determinism"><p>Emitter_Determinism</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Emitter_InterpolatedSpawn"><p>Emitter_InterpolatedSpawn</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Emitter_InterpSpawnStartDt"><p>Emitter_InterpSpawnStartDt</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Emitter_LocalSpace"><p>Emitter_LocalSpace</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Emitter_OverrideGlobalSpawnCount-"><p>Emitter_OverrideGlobalSpawnCountScale</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Emitter_RandomSeed"><p>Emitter_RandomSeed</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Emitter_SimulationTarget"><p>Emitter_SimulationTarget</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Emitter_SpawnGroup"><p>Emitter_SpawnGroup</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Emitter_SpawnInterval"><p>Emitter_SpawnInterval</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Emitter_SpawnRate"><p>Emitter_SpawnRate</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Engine_DeltaTime"><p>Engine_DeltaTime</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Engine_Emitter_InstanceSeed"><p>Engine_Emitter_InstanceSeed</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Engine_Emitter_NumParticles"><p>Engine_Emitter_NumParticles</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Engine_Emitter_SimulationPositio-"><p>Engine_Emitter_SimulationPosition</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Engine_Emitter_SpawnCountScale"><p>Engine_Emitter_SpawnCountScale</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Engine_Emitter_TotalSpawnedParti-"><p>Engine_Emitter_TotalSpawnedParticles</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Engine_ExecutionCount"><p>Engine_ExecutionCount</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Engine_GlobalSpawnCountScale"><p>Engine_GlobalSpawnCountScale</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Engine_GlobalSystemScale"><p>Engine_GlobalSystemScale</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Engine_InvDeltaTime"><p>Engine_InvDeltaTime</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Engine_NumSystemInstances"><p>Engine_NumSystemInstances</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Engine_Owner_ExecutionState"><p>Engine_Owner_ExecutionState</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Engine_Owner_LODDistance"><p>Engine_Owner_LODDistance</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Engine_Owner_LODDistanceFraction"><p>Engine_Owner_LODDistanceFraction</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Engine_Owner_LWC_Tile"><p>Engine_Owner_LWC_Tile</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Engine_Owner_Position"><p>Engine_Owner_Position</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Engine_Owner_Rotation"><p>Engine_Owner_Rotation</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Engine_Owner_Scale"><p>Engine_Owner_Scale</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Engine_Owner_SystemLocalToWorld"><p>Engine_Owner_SystemLocalToWorld</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Engine_Owner_SystemLocalToWorldN-"><p>Engine_Owner_SystemLocalToWorldNoScale</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Engine_Owner_SystemLocalToWorldT-"><p>Engine_Owner_SystemLocalToWorldTransposed</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Engine_Owner_SystemWorldToLocal"><p>Engine_Owner_SystemWorldToLocal</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Engine_Owner_SystemWorldToLocalN-"><p>Engine_Owner_SystemWorldToLocalNoScale</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Engine_Owner_SystemWorldToLocalT-"><p>Engine_Owner_SystemWorldToLocalTransposed</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Engine_Owner_TimeSinceRendered"><p>Engine_Owner_TimeSinceRendered</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Engine_Owner_Velocity"><p>Engine_Owner_Velocity</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Engine_Owner_XAxis"><p>Engine_Owner_XAxis</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Engine_Owner_YAxis"><p>Engine_Owner_YAxis</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Engine_Owner_ZAxis"><p>Engine_Owner_ZAxis</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Engine_QualityLevel"><p>Engine_QualityLevel</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Engine_RealTime"><p>Engine_RealTime</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Engine_System_Age"><p>Engine_System_Age</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Engine_System_CurrentTimeStep"><p>Engine_System_CurrentTimeStep</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Engine_System_NumEmitters"><p>Engine_System_NumEmitters</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Engine_System_NumEmittersAlive"><p>Engine_System_NumEmittersAlive</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Engine_System_NumParticles"><p>Engine_System_NumParticles</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Engine_System_NumTimeSteps"><p>Engine_System_NumTimeSteps</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Engine_System_RandomSeed"><p>Engine_System_RandomSeed</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Engine_System_SignificanceIndex"><p>Engine_System_SignificanceIndex</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Engine_System_TickCount"><p>Engine_System_TickCount</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Engine_System_TimeStepFraction"><p>Engine_System_TimeStepFraction</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Engine_Time"><p>Engine_Time</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Engine_WorldDeltaTime"><p>Engine_WorldDeltaTime</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="EngineEffectsQuality"><p>EngineEffectsQuality</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="EngineGlobalSpawnCountScale"><p>EngineGlobalSpawnCountScale</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="EngineGlobalSystemCountScale"><p>EngineGlobalSystemCountScale</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="FunctionDebugState"><p>FunctionDebugState</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Particles_CameraOffset"><p>Particles_CameraOffset</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Particles_Color"><p>Particles_Color</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Particles_ComponentsEnabled"><p>Particles_ComponentsEnabled</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Particles_DynamicMaterialParamet-"><p>Particles_DynamicMaterialParameter</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Particles_DynamicMaterialParamet-_1"><p>Particles_DynamicMaterialParameter1</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Particles_DynamicMaterialParamet-_2"><p>Particles_DynamicMaterialParameter2</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Particles_DynamicMaterialParamet-_3"><p>Particles_DynamicMaterialParameter3</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Particles_ID"><p>Particles_ID</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Particles_Lifetime"><p>Particles_Lifetime</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Particles_LightEnabled"><p>Particles_LightEnabled</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Particles_LightExponent"><p>Particles_LightExponent</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Particles_LightRadius"><p>Particles_LightRadius</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Particles_LightVolumetricScatter-"><p>Particles_LightVolumetricScattering</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Particles_MaterialRandom"><p>Particles_MaterialRandom</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Particles_MeshIndex"><p>Particles_MeshIndex</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Particles_MeshOrientation"><p>Particles_MeshOrientation</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Particles_NormalizedAge"><p>Particles_NormalizedAge</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Particles_PivotOffset"><p>Particles_PivotOffset</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Particles_Position"><p>Particles_Position</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Particles_RibbonFacing"><p>Particles_RibbonFacing</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Particles_RibbonID"><p>Particles_RibbonID</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Particles_RibbonLinkOrder"><p>Particles_RibbonLinkOrder</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Particles_RibbonTwist"><p>Particles_RibbonTwist</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Particles_RibbonU0Override"><p>Particles_RibbonU0Override</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Particles_RibbonU1Override"><p>Particles_RibbonU1Override</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Particles_RibbonUVDistance"><p>Particles_RibbonUVDistance</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Particles_RibbonV0RangeOverride"><p>Particles_RibbonV0RangeOverride</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Particles_RibbonV1RangeOverride"><p>Particles_RibbonV1RangeOverride</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Particles_RibbonWidth"><p>Particles_RibbonWidth</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Particles_Scale"><p>Particles_Scale</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Particles_SpriteAlignment"><p>Particles_SpriteAlignment</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Particles_SpriteFacing"><p>Particles_SpriteFacing</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Particles_SpriteRotation"><p>Particles_SpriteRotation</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Particles_SpriteSize"><p>Particles_SpriteSize</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Particles_SubImageIndex"><p>Particles_SubImageIndex</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Particles_UniqueID"><p>Particles_UniqueID</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Particles_UVScale"><p>Particles_UVScale</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Particles_Velocity"><p>Particles_Velocity</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Particles_VisibilityTag"><p>Particles_VisibilityTag</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="ScriptContext"><p>ScriptContext</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="ScriptUsage"><p>ScriptUsage</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Translator_BeginDefaults"><p>Translator_BeginDefaults</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="Translator_CallID"><p>Translator_CallID</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+			</table>
+</div>
+
+</div>
+</div>
+																	</div>
+					<!-- End of Markdown converted page content -->
+				</div>
+												<div id="recommendations"></div>			</div>
+						<div id="footer"></div>			
+									<div id="announcement">
+			<div style="display:inline-block;margin:5px;">
+				Help shape the future of Unreal Engine documentation! Tell us how we're doing so we can serve you better.
+			</div>
+			<div style="margin:5px;display:inline-block;">
+				<div class="btn action" style="margin-top:-6px;display:inline-block;" onclick="$('#announcement').hide();window.open('https://epicgames.questionpro.com/t/AVVbJZwedR');createCookie('announcement-read', new Date().getTime(), 30);">Take our survey</div>
+				<div class="btn btn-default" style="margin-top:-6px;display:inline-block;" onclick="$('#announcement').hide();createCookie('announcement-read', new Date().getTime(), 30);">Cancel</div>
+			</div>
+			<div class="btn-close" style="position:absolute;right:5px;top:10px;padding:3px;width:14px;height:14px;" onclick="$('#announcement').hide();"></div>
+			</div>
+					</div>
+	</div>
+</body>
+</html>

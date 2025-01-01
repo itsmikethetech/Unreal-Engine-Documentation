@@ -1,0 +1,1824 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="./../../../../../Include/Javascript/common_en-US.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var time = new Date(0);
+		var preview = false;
+		var relativeHTMLPath = "./../../../../../";
+				var pageid = 0;
+				var heroimage = "./../../../../../Images/ue5-hero.png";
+				var lang = "en-US";
+				var basePath = document.location.pathname.substring(0, document.location.pathname.indexOf('/' + lang + '/') + lang.length + 1);
+		document.write('<base href="' +  encodeURI(basePath) + '/API/Runtime/Engine/FAnimationRuntime/" />');
+				var udnCSS = './../../../../../Include/CSS/udn_public.css';
+		var udnLangCSS = '';
+				var udnOverrideCSS = './../../../../../Include/CSS/skin_overrides.css';
+		var udnOverrideDarkCSS = './../../../../../Include/CSS/skin_overrides_dark.css';
+		var fancyboxCSS = './../../../../../Include/CSS/jquery.fancybox.css';
+		var jqueryuiCSS = './../../../../../Include/CSS/jquery-ui.min.css';
+		var qtipCSS = './../../../../../Include/CSS/jquery.qtip.css';
+		var prettifyCSS = './../../../../../Include/CSS/prettify.css';
+		var navbarCSS = './../../../../../Include/CSS/navBar.css';
+		var twentytwentyCSS = './../../../../../Include/CSS/twentytwenty.css';
+		var recommendationsCSS = './../../../../../Include/CSS/jquery.recommendations.css';
+	</script>
+    <title>FAnimationRuntime | Unreal Engine 5.2 Documentation</title>
+    	    <meta name=viewport content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Cache-control" content="no-store">
+    <script  src="./../../../../../Include/Javascript/CustomEvent.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/jquery-3.4.0.min.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/udn.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/udn_extras.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/jquery-ui.min.js" type="text/javascript"></script>
+	    <script  src="./../../../../../Include/Javascript/informational.js" type="text/javascript"></script>
+	    <script  src="./../../../../../Include/Javascript/jquery.fancybox.pack.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/jquery.qtip.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/prettify.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/jquery.slimscroll.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/jquery.event.move.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/jquery.twentytwenty.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/lazysizes.min.js" type="text/javascript"></script>
+	    <script  src="./../../../../../Include/Javascript/jquery.recommendations.js" type="text/javascript"></script>
+	
+    <link async rel="icon" href="./../../../../../Include/Images/site_icon.png" type="image/x-icon" />
+    <link async rel="shortcut icon" href="./../../../../../Include/Images/site_icon.png" type="image/x-icon" />
+    <link async href="./../../../../../Include/Images/touch_icon.png" rel="apple-touch-icon" />
+    <link async href="./../../../../../Include/Images/touch_icon_114.png" sizes="114x114" rel="apple-touch-icon" />    
+		<script  src="./../../../../../Include/Javascript/CollapsibleLists.js" type="text/javascript"></script>
+	<script  src="./../../../../../Include/Javascript/navigationBarUI.js"></script>
+	<script  src="./../../../../../Include/Javascript/navigationBar.js"></script>
+		
+	<link rel="alternate" href="https://docs.unrealengine.com/latest/en-US/API/Runtime/Engine/FAnimationRuntime/" hreflang="x-default" />
+
+	<meta name="title" content="FAnimationRuntime" />
+<meta name="description" content="In AnimationRunTime Library, we extract animation data based on Skeleton hierarchy, not ref pose hierarchy." />
+<meta name="availability" content="Public" />
+<meta name="crumbs" content="%ROOT%,API,API/Runtime,API/Runtime/Engine" />
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta property="og:title" content="FAnimationRuntime" />
+	<meta property="og:description" content="In AnimationRunTime Library, we extract animation data based on Skeleton hierarchy, not ref pose hierarchy." />
+		<meta property="og:image" content="https://docs.unrealengine.com/5.1/Images/placeholder-social.png" />
+	</head>
+<body id="webbgThree" style="visibility: hidden;" onload="document.body.style.visibility='visible';">
+			<script>window.__tracking_base = 'https://tracking.unrealengine.com';</script>
+	<script src="https://tracking.unrealengine.com/tracking.js" async></script>    <div id="webThree">
+				<div id="page_head">
+						<div id="head">
+				<div id="logo"></div>
+			</div>
+						<div id="pagenav">
+				<div class="crumbs" id="crumbs">
+<span id="versionContainer">
+	<span id="versionSelect" class="btn btn-version" onclick="ToggleMenu($('#versionMenu'), $(this));"></span>
+	<div id="versionMenu">
+		<div id="4_26" data-version="4.26" class="btn btn-select" onclick="createCookie('version', '4.26', 365);SwitchVersion('4.26');">Unreal Engine 4.26 Documentation</div>
+		<div id="4_27" data-version="4.27" class="btn btn-select" onclick="createCookie('version', '4.27', 365);SwitchVersion('4.27');">Unreal Engine 4.27 Documentation</div>
+		<div id="5_0" data-version="5.0" class="btn btn-select" onclick="createCookie('version', '5.0', 365);SwitchVersion('5.0');">Unreal Engine 5.0 Documentation</div>
+		<div id="5_1" data-version="5.1" class="btn btn-select" onclick="createCookie('version', '5.1', 365);SwitchVersion('5.1');">Unreal Engine 5.1 Documentation</div>
+		<div id="5_2" data-version="5.2" class="btn btn-select" onclick="createCookie('version', '5.2', 365);SwitchVersion('5.2');">Unreal Engine 5.2 Documentation</div>
+		<div id="5_3" data-version="5.3" class="btn btn-select" onclick="createCookie('version', '5.3', 365);SwitchVersion('5.3');">Unreal Engine 5.3 Documentation</div>
+	</div>
+</span>
+	<span class="separator">></span> <a id="parent_link" href="../../../../API">Unreal Engine API Reference</a>
+
+	<span class="separator">></span> <a id="parent_link" href="../../../Runtime">Runtime</a>
+
+	<span class="separator">></span> <a id="parent_link" href="../../Engine">Engine</a>
+
+<span class="separator">></span> <span id="page">FAnimationRuntime</span>
+</div>				<div id="pageNavRight">
+								<!-- Start of Search -->
+												<div id="search_container">
+					<form name="bodySearch" method="get" action="https://www.unrealengine.com/en-US/bing-search" onsubmit="return validateSearch()">
+						<input type="image" src="./../../../../../Include/Images/search_box_icon.png" class="searchbutton"/>
+						<input type="hidden" name="filter" value="Documentation" />
+						<input type="text" name="keyword" placeholder="Search Documentation..." class="searchbox" autocomplete="off"/>
+					</form>
+				</div>
+								<!-- End of Search -->
+				<div id="skinContainer">
+	<div id="skinSelect" class="btn btn-skin" onclick="ToggleMenu($('#skinMenu'), $(this));"></div>
+	<div id="skinMenu">
+		<div id="light" class="btn btn-select" onclick="createCookie('skin', 'light', 365);location.reload();">Light Theme</div>
+		<div id="dark" class="btn btn-select" onclick="createCookie('skin', 'dark', 365);location.reload();">Dark Theme</div>
+	</div>
+</div>				</div>
+			</div>
+		</div>						<div id="navWrapper">
+			<div id="nav-filter-container">
+				<div id="nav-filter-inner">
+					<form>
+						<input type="text" placeholder="Filter pages..." id="nav-filter" onchange="clearTimeout(filterTimer); filterTimer = setTimeout(updateNavTreeFilter,250, this.value);if(this.value.length == 0){$('#filter-clear').hide();}else{$('#filter-clear').show();}" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" />
+						<button class="close-icon" id="filter-clear" type="reset" onclick="clearTimeout(filterTimer); filterTimer = setTimeout(updateNavTreeFilter,250, '');$(this).hide();"></button>
+					</form>
+				</div>
+			</div>
+			<nav id="navPanel">
+			</nav>
+			<div id="navigation" title="Click to toggle navigation menu"><span>></span></div>
+		</div>		
+		<div id="splitter">
+		</div>
+				<div id="contentContainer">
+										<div id="pagedefault">
+				<div id="product-banner">
+	<div id="product-logo"></div>
+</div>				<div id="pagecontainer" style="padding-right:0px;">
+					<!-- Start of Markdown converted page content -->
+										<div class="hero  background">
+	<div class="imgContainer"><img src="./../../../../../Images/ue5-hero.png" /></div>	<div class="info">
+		<div id="pageTitle">
+			<h1 id="H1TitleId">FAnimationRuntime</h1>
+		</div>
+		<h2 >In AnimationRunTime Library, we extract animation data based on Skeleton hierarchy, not ref pose hierarchy.</h2>
+		<div id="access">
+			<div class="accessContainer">
+															</div>
+		</div>
+	</div>
+</div>															<div id="maincol">
+																																				<div class="heading expanded" onclick="sectionOnClick(this, 'references');">
+        <p>References</p>
+    </div>
+<div id="references">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="normal-row">
+	<td class="name-cell">
+		<p>Module</p>
+	</td>
+	<td class="desc-cell">
+		<p><a id="content_link" href=".." ><span>Engine</span></a></p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<p>Header</p>
+	</td>
+	<td class="desc-cell">
+		<p>&#47;Engine&#47;Source&#47;Runtime&#47;Engine&#47;Public&#47;AnimationRuntime.h</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<p>Include</p>
+	</td>
+	<td class="desc-cell">
+		<p>&#35;include &quot;AnimationRuntime.h&quot;</p>
+	</td>
+</tr>
+			</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'syntax');">
+        <p>Syntax</p>
+    </div>
+<div id="syntax">
+    <div class="simplecode_api">
+	<p>class FAnimationRuntime  </p>
+</div>
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'description');">
+        <p>Remarks</p>
+    </div>
+<div id="description">
+    <p>In AnimationRunTime Library, we extract animation data based on Skeleton hierarchy, not ref pose hierarchy. Ref pose will need to be re-mapped later</p>
+</div><div class="syntax">
+	<div class="heading expanded" onclick="sectionOnClick(this, 'functions_0');">
+        <p>Functions</p>
+    </div>
+<div id="functions_0">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:8%;">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="AccumulateAdditivePose/1"><nobr><p>AccumulateAdditivePose</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Animation/FAnimationPoseData" ><span>FAnimationPoseData</span></a>&amp; BaseAnimationP...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../Animation/FAnimationPoseData" ><span>FAnimationPoseData</span></a>&amp; Additive...,<br />&nbsp;&nbsp;&nbsp;&nbsp;float Weight,<br />&nbsp;&nbsp;&nbsp;&nbsp;enum EAdditiveAnimationType Additiv...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="AccumulateLocalSpaceAdditivePose/1"><nobr><p>AccumulateLocalSpaceAdditivePose</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Animation/FAnimationPoseData" ><span>FAnimationPoseData</span></a>&amp; BaseAnimationP...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../Animation/FAnimationPoseData" ><span>FAnimationPoseData</span></a>&amp; Additive...,<br />&nbsp;&nbsp;&nbsp;&nbsp;float Weight<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="AccumulateMeshSp-/1"><nobr><p>AccumulateMeshSpaceRotationAdditiveToLocalPose</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Animation/FAnimationPoseData" ><span>FAnimationPoseData</span></a>&amp; BaseAnimationP...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../Animation/FAnimationPoseData" ><span>FAnimationPoseData</span></a>&amp; MeshSpac...,<br />&nbsp;&nbsp;&nbsp;&nbsp;float Weight<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>ETypeAdvance...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="AdvanceTime"><nobr><p>AdvanceTime</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool&amp; bAllowLooping,<br />&nbsp;&nbsp;&nbsp;&nbsp;const float&amp; MoveDelta,<br />&nbsp;&nbsp;&nbsp;&nbsp;float&amp; InOutTime,<br />&nbsp;&nbsp;&nbsp;&nbsp;const float&amp; EndTime<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Advance CurrentTime to CurrentTime + MoveDelta.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="AppendActiveMorphTargets"><nobr><p>AppendActiveMorphTargets</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../Engine/USkeletalMesh" ><span>USkeletalMesh</span></a>&#42; InSkeleta...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Core/Containers/TMap" ><span>TMap</span></a>&lt; <a id="content_link" href="../../Core/UObject/FName" ><span>FName</span></a>, float >&amp; InMorp...,<br />&nbsp;&nbsp;&nbsp;&nbsp;FMorphTargetWeightMap&amp; InOutActive...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; float >&amp; InOutMorphTargetW...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Combine CurveKeys (that reference morph targets by name) and ActiveAnims (that reference morphs by reference) into the ActiveMorphTargets array.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ApplyWeightToTransform"><nobr><p>ApplyWeightToTransform</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FBoneContainer" ><span>FBoneContainer</span></a>&amp; RequiredBone...,<br />&nbsp;&nbsp;&nbsp;&nbsp;FTransformArrayA2&amp; Atoms,<br />&nbsp;&nbsp;&nbsp;&nbsp;float Weight<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Apply Weight to the Transform Atoms = Weight &#42; Atoms at the end</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="BlendPosesPerBoneFilter/2"><nobr><p>BlendPosesPerBoneFilter</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a>&amp; BasePose,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a> >&amp; Blen...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Animation/FBlendedCurve" ><span>FBlendedCurve</span></a>&amp; BaseCurve,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../Animation/FBlendedCurve" ><span>FBlendedCurve</span></a> >&amp; Ble...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Animation/FStackAttributeContainer" ><span>UE::Anim::FStackAttributeContainer</span></a> ...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../Animation/FStackAttributeContainer" ><span>UE::Anim::FStackAttri</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Animation/FAnimationPoseData" ><span>FAnimationPoseData</span></a>&amp; OutAnimationPo...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../Animation/FPerBoneBlendWeight" ><span>FPerBoneBlendWeight</span></a> >&amp; Bon...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="EBlendPosesPerBoneFilterFlags" ><span>EBlendPosesPerBoneFilterFlags</span></a> blend...,<br />&nbsp;&nbsp;&nbsp;&nbsp;enum <a id="content_link" href="../Animation/ECurveBlendOption__Type" ><span>ECurveBlendOption::Type</span></a> CurveB...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="BlendPosesTogether/2"><nobr><p>BlendPosesTogether</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const <a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a> > So...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const <a id="content_link" href="../Animation/FBlendedCurve" ><span>FBlendedCurve</span></a> > S...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const <a id="content_link" href="../Animation/FStackAttributeContainer" ><span>UE::Anim::FStackA</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const float > SourceWei...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Animation/FAnimationPoseData" ><span>FAnimationPoseData</span></a>&amp; OutAnimationPo...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="BlendPosesTogether/4"><nobr><p>BlendPosesTogether</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const <a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a> > So...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const <a id="content_link" href="../Animation/FBlendedCurve" ><span>FBlendedCurve</span></a> > S...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const <a id="content_link" href="../Animation/FStackAttributeContainer" ><span>UE::Anim::FStackA</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const float > SourceWei...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const int32 > SourceWei...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Animation/FAnimationPoseData" ><span>FAnimationPoseData</span></a>&amp; OutPoseData<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="BlendPosesTogetherIndirect/2"><nobr><p>BlendPosesTogetherIndirect</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const <a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a>&#42...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const <a id="content_link" href="../Animation/FBlendedCurve" ><span>FBlendedCurve</span></a>&#4...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const <a id="content_link" href="../Animation/FStackAttributeContainer" ><span>UE::Anim::FStackA</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const float > SourceWei...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Animation/FAnimationPoseData" ><span>FAnimationPoseData</span></a>&amp; OutPoseData<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="BlendPosesTogetherPerBone/4"><nobr><p>BlendPosesTogetherPerBone</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const <a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a> > So...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const <a id="content_link" href="../Animation/FBlendedCurve" ><span>FBlendedCurve</span></a> > S...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const <a id="content_link" href="../Animation/FStackAttributeContainer" ><span>UE::Anim::FStackA</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../IInterpolationIndexProvider" ><span>IInterpolationIndexProvider</span></a>&amp;...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const <a id="content_link" href="../Animation/FBlendSampleData" ><span>FBlendSampleData</span></a> ...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const int32 > BlendSamp...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Animation/FAnimationPoseData" ><span>FAnimationPoseData</span></a>&amp; OutAnimationPo...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="BlendPosesTogetherPerBone/2"><nobr><p>BlendPosesTogetherPerBone</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const <a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a> > So...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const <a id="content_link" href="../Animation/FBlendedCurve" ><span>FBlendedCurve</span></a> > S...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const <a id="content_link" href="../Animation/FStackAttributeContainer" ><span>UE::Anim::FStackA</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../IInterpolationIndexProvider" ><span>IInterpolationIndexProvider</span></a>&amp;...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const <a id="content_link" href="../Animation/FBlendSampleData" ><span>FBlendSampleData</span></a> ...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Animation/FAnimationPoseData" ><span>FAnimationPoseData</span></a>&amp; OutAnimationPo...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="BlendPosesTogetherPerBoneInMeshS-/2"><nobr><p>BlendPosesTogetherPerBoneInMeshSpace</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; <a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a> > SourcePo...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const <a id="content_link" href="../Animation/FBlendedCurve" ><span>FBlendedCurve</span></a> > S...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const <a id="content_link" href="../Animation/FStackAttributeContainer" ><span>UE::Anim::FStackA</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../Animation/UBlendSpace" ><span>UBlendSpace</span></a>&#42; BlendSpace,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const <a id="content_link" href="../Animation/FBlendSampleData" ><span>FBlendSampleData</span></a> ...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Animation/FAnimationPoseData" ><span>FAnimationPoseData</span></a>&amp; OutAnimationPo...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Blends together a set of local space (not mesh space) poses, each with a given weight.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="BlendTwoPosesTogether/1"><nobr><p>BlendTwoPosesTogether</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../Animation/FAnimationPoseData" ><span>FAnimationPoseData</span></a>&amp; SourcePo...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../Animation/FAnimationPoseData" ><span>FAnimationPoseData</span></a>&amp; SourcePo...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const float WeightOfPoseOne,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Animation/FAnimationPoseData" ><span>FAnimationPoseData</span></a>&amp; OutAnimationPo...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="BlendTwoPosesTogetherPerBone/1"><nobr><p>BlendTwoPosesTogetherPerBone</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../Animation/FAnimationPoseData" ><span>FAnimationPoseData</span></a>&amp; SourcePo...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../Animation/FAnimationPoseData" ><span>FAnimationPoseData</span></a>&amp; SourcePo...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; float >&amp; WeightsOfSo...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Animation/FAnimationPoseData" ><span>FAnimationPoseData</span></a>&amp; OutAnimationPo...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CombineWithAdditiveAnimations"><nobr><p>CombineWithAdditiveAnimations</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 NumAdditivePoses,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FTransformArrayA2&#42;&#42; ...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const float&#42; SourceAdditiveWei...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FBoneContainer" ><span>FBoneContainer</span></a>&amp; RequiredBone...,<br />&nbsp;&nbsp;&nbsp;&nbsp;FTransformArrayA2&amp; Atoms<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ContainsNaN"><nobr><p>ContainsNaN</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; FBoneIndexType >&amp; Required...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Animation/FA2Pose" ><span>FA2Pose</span></a>&amp; Pose<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ConvertBoneSpaceTransformToCS"><nobr><p>ConvertBoneSpaceTransformToCS</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const FTransform&amp; ComponentTransfo...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FCSPose" ><span>FCSPose</span></a>&lt; <a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a> >&amp; MeshBases,<br />&nbsp;&nbsp;&nbsp;&nbsp;FTransform&amp; InOutBoneSpaceTM,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../AnimationCore/FCompactPoseBoneIndex" ><span>FCompactPoseBoneIndex</span></a> BoneIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;EBoneControlSpace Space<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Convert a FTransform in a specified bone space to ComponentSpace.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ConvertCSTransformToBoneSpace"><nobr><p>ConvertCSTransformToBoneSpace</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const FTransform&amp; ComponentTransfo...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FCSPose" ><span>FCSPose</span></a>&lt; <a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a> >&amp; MeshBases,<br />&nbsp;&nbsp;&nbsp;&nbsp;FTransform&amp; InOutCSBoneTM,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../AnimationCore/FCompactPoseBoneIndex" ><span>FCompactPoseBoneIndex</span></a> BoneIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;EBoneControlSpace Space<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Convert a ComponentSpace FTransform to specified bone space.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ConvertMeshRotationPoseToLocalSp-"><nobr><p>ConvertMeshRotationPoseToLocalSpace</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a>&amp; Pose<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Convert a MeshSpaceRotation pose to Local Space. Rotations are NOT normalized.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ConvertPoseToAdditive"><nobr><p>ConvertPoseToAdditive</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a>&amp; TargetPose,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a>&amp; BasePose<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Convert TargetPose into an AdditivePose, by doing TargetPose = TargetPose - BasePose</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ConvertPoseToMeshRotation"><nobr><p>ConvertPoseToMeshRotation</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a>&amp; LocalPose<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Convert LocalPose into MeshSpaceRotations. Rotations are NOT normalized.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ConvertPoseToMeshSpace"><nobr><p>ConvertPoseToMeshSpace</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; FTransform >&amp; LocalT...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; FTransform >&amp; MeshSpaceTra...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FBoneContainer" ><span>FBoneContainer</span></a>&amp; RequiredBone...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Convert LocalTransforms into MeshSpaceTransforms over RequiredBones.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ConvertTransformToAdditive"><nobr><p>ConvertTransformToAdditive</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FTransform&amp; TargetTrasnform,<br />&nbsp;&nbsp;&nbsp;&nbsp;const FTransform&amp; BaseTransform<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Convert transform to additive</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CreateMaskWeights/1"><nobr><p>CreateMaskWeights</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../Animation/FPerBoneBlendWeight" ><span>FPerBoneBlendWeight</span></a> >&amp; Bon...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../Animation/AnimData/FInputBlendPose" ><span>FInputBlendPose</span></a> >&amp; B...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../Animation/USkeleton" ><span>USkeleton</span></a>&#42; Skeleton<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Create Mask Weight for skeleton joints, not per mesh or per required bones You'll have to filter properly with correct mesh joint or required bones The depth should not change based on LOD or mesh or skeleton They still should contain same depth</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CreateMaskWeights/2"><nobr><p>CreateMaskWeights</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../Animation/FPerBoneBlendWeight" ><span>FPerBoneBlendWeight</span></a> >&amp; Bon...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; class <a id="content_link" href="../Animation/UBlendProfile" ><span>UBlendProfile</span></a>&amp;...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../Animation/USkeleton" ><span>USkeleton</span></a>&#42; Skeleton<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Create Mask Weight for skeleton joints, not per mesh or per required bones Individual alphas are read from a BlendProfile using a BlendMask mode</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="EnsureParentsPresent"><nobr><p>EnsureParentsPresent</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; FBoneIndexType >&amp; BoneIndi...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FReferenceSkeleton" ><span>FReferenceSkeleton</span></a>&amp; RefSkele...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Utility for taking an array of bone indices and ensuring that all parents are present (ie. all bones between those in the array and the root are present).</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ExcludeBonesWithNoParents"><nobr><p>ExcludeBonesWithNoParents</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; int32 >&amp; BoneIndices,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FReferenceSkeleton" ><span>FReferenceSkeleton</span></a>&amp; RefSkele...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; int32 >&amp; FilteredRequiredB...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FillUpComponentSpaceTransforms"><nobr><p>FillUpComponentSpaceTransforms</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FReferenceSkeleton" ><span>FReferenceSkeleton</span></a>&amp; RefSkele...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const FTransform ...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; FTransform >&amp; ComponentSpa...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FillUpComponentSpaceTransformsRe-"><nobr><p>FillUpComponentSpaceTransformsRefPose</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../Animation/USkeleton" ><span>USkeleton</span></a>&#42; Skeleton,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; FTransform >&amp; ComponentSpa...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FillUpComponentS-/1"><nobr><p>FillUpComponentSpaceTransformsRetargetBasePose</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../Animation/USkeleton" ><span>USkeleton</span></a>&#42; Skeleton,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; FTransform >&amp; ComponentSpa...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FillUpComponentS-/2"><nobr><p>FillUpComponentSpaceTransformsRetargetBasePose</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../Engine/USkeletalMesh" ><span>USkeletalMesh</span></a>&#42; Mesh,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; FTransform >&amp; ComponentSpa...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FillWithRefPose"><nobr><p>FillWithRefPose</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; FTransform >&amp; OutAtoms,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FBoneContainer" ><span>FBoneContainer</span></a>&amp; RequiredBone...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Fill ref pose</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FillWithRetargetBaseRefPose"><nobr><p>FillWithRetargetBaseRefPose</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a>&amp; OutPose,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../Engine/USkeletalMesh" ><span>USkeletalMesh</span></a>&#42; Mesh<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Fill with retarget base ref pose but this isn't used during run-time, so it always copies all of them</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FTransform</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetComponentSpaceRefPose"><nobr><p>GetComponentSpaceRefPose</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../AnimationCore/FCompactPoseBoneIndex" ><span>FCompactPoseBoneIndex</span></a>&amp; Compa...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FBoneContainer" ><span>FBoneContainer</span></a>&amp; BoneContaine...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Get Reference Component Space Transform</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FTransform</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetComponentSpaceTransform"><nobr><p>GetComponentSpaceTransform</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FReferenceSkeleton" ><span>FReferenceSkeleton</span></a>&amp; RefSkele...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const FTransform ...,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 BoneIndex<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Space bases</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FTransform</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetComponentSpaceTransformRefPos-"><nobr><p>GetComponentSpaceTransformRefPose</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FReferenceSkeleton" ><span>FReferenceSkeleton</span></a>&amp; RefSkele...,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 BoneIndex<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Space bases</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const FTrans...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetComponentSpaceTransformWithCa-"><nobr><p>GetComponentSpaceTransformWithCache</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FReferenceSkeleton" ><span>FReferenceSkeleton</span></a>&amp; InRefSke...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; FTransform >&amp; InBone...,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 BoneIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; FTransform >&amp; CachedTransf...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; bool >&amp; CachedTransformRea...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Calculate the component-space bone transform for the specified bone.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetKeyIndicesFromTime/2"><nobr><p>GetKeyIndicesFromTime</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;int32&amp; OutKeyIndex1,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32&amp; OutKeyIndex2,<br />&nbsp;&nbsp;&nbsp;&nbsp;float&amp; OutAlpha,<br />&nbsp;&nbsp;&nbsp;&nbsp;const double Time,<br />&nbsp;&nbsp;&nbsp;&nbsp;const int32 NumKeys,<br />&nbsp;&nbsp;&nbsp;&nbsp;const double SequenceLength,<br />&nbsp;&nbsp;&nbsp;&nbsp;double FramesPerSecond<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Get Key Indices (start/end with alpha from start) with input parameter Time, NumKeys from % from StartKeyIndex, meaning (CurrentKeyIndex(float)-StartKeyIndex)/(EndKeyIndex-StartKeyIndex) by this Start-End, it will be between 0-(NumKeys-1), not number of Pos/Rot key tracks The FramesPerSecond parameter must be the sample rate of the animation data, for example 30.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetKeyIndicesFromTime/1"><nobr><p>GetKeyIndicesFromTime</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;int32&amp; OutKeyIndex1,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32&amp; OutKeyIndex2,<br />&nbsp;&nbsp;&nbsp;&nbsp;float&amp; OutAlpha,<br />&nbsp;&nbsp;&nbsp;&nbsp;const double Time,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Core/Misc/FFrameRate" ><span>FFrameRate</span></a>&amp; FrameRate,<br />&nbsp;&nbsp;&nbsp;&nbsp;const int32 NumberOfKeys<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Get KeyIndices using <a id="content_link" href="../../Core/Misc/FFrameRate/AsFrameTime" ><span>FFrameRate::AsFrameTime</span></a> to calculate the keys and alpha value</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FTransform</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetSpaceTransform/2"><nobr><p>GetSpaceTransform</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Animation/FA2CSPose" ><span>FA2CSPose</span></a>&amp; Pose,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 Index<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FA2Pose/FA2CSPose Interfaces for template functions.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FTransform</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetSpaceTransform/1"><nobr><p>GetSpaceTransform</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Animation/FA2Pose" ><span>FA2Pose</span></a>&amp; Pose,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 Index<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FA2Pose/FA2CSPose Interfaces for template functions.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>int32</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetStringDistance"><nobr><p>GetStringDistance</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Core/Containers/FString" ><span>FString</span></a>&amp; First,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Core/Containers/FString" ><span>FString</span></a>&amp; Second<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Calculate distance how close two strings are.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="HasWeight"><nobr><p>HasWeight</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float Weight<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="InitializeTransform"><nobr><p>InitializeTransform</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FBoneContainer" ><span>FBoneContainer</span></a>&amp; RequiredBone...,<br />&nbsp;&nbsp;&nbsp;&nbsp;FTransformArrayA2&amp; Atoms<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="IsFullWeight"><nobr><p>IsFullWeight</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float Weight<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Weight utility functions</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="LerpBoneTransforms"><nobr><p>LerpBoneTransforms</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; FTransform >&amp; A,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; FTransform >&amp; B,<br />&nbsp;&nbsp;&nbsp;&nbsp;float Alpha,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; FBoneIndexType >&amp; Re...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Lerp for BoneTransforms. Stores results in A. Performs A = Lerp(A, B, Alpha);</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="LerpPoses"><nobr><p>LerpPoses</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a>&amp; PoseA,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a>&amp; PoseB,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Animation/FBlendedCurve" ><span>FBlendedCurve</span></a>&amp; CurveA,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../Animation/FBlendedCurve" ><span>FBlendedCurve</span></a>&amp; CurveB,<br />&nbsp;&nbsp;&nbsp;&nbsp;float Alpha<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Lerp for <a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a>.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="LerpPosesPerBone"><nobr><p>LerpPosesPerBone</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a>&amp; PoseA,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a>&amp; PoseB,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Animation/FBlendedCurve" ><span>FBlendedCurve</span></a>&amp; CurveA,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../Animation/FBlendedCurve" ><span>FBlendedCurve</span></a>&amp; CurveB,<br />&nbsp;&nbsp;&nbsp;&nbsp;float Alpha,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; float >&amp; PerBoneWeig...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Lerp for <a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a>.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="LerpPosesWithBoneIndexList"><nobr><p>LerpPosesWithBoneIndexList</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a>&amp; PoseA,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a>&amp; PoseB,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Animation/FBlendedCurve" ><span>FBlendedCurve</span></a>&amp; CurveA,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../Animation/FBlendedCurve" ><span>FBlendedCurve</span></a>&amp; CurveB,<br />&nbsp;&nbsp;&nbsp;&nbsp;float Alpha,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../AnimationCore/FCompactPoseBoneIndex" ><span>FCompactPoseBoneIndex</span></a>...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Lerp for <a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a>.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="MakeSkeletonRefPoseFromMesh"><nobr><p>MakeSkeletonRefPoseFromMesh</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../Engine/USkeletalMesh" ><span>USkeletalMesh</span></a>&#42; InMesh,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../Animation/USkeleton" ><span>USkeleton</span></a>&#42; InSkeleton,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; FTransform >&amp; OutBoneBuffe...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="MirrorCurves"><nobr><p>MirrorCurves</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Animation/FBlendedCurve" ><span>FBlendedCurve</span></a>&amp; Curves,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../Animation/UMirrorDataTable" ><span>UMirrorDataTable</span></a>&amp; MirrorData...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Mirror (swap) curves with the specified MirrorDataTable.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="MirrorPose/1"><nobr><p>MirrorPose</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a>&amp; Pose,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../Animation/UMirrorDataTable" ><span>UMirrorDataTable</span></a>&amp; MirrorData...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Mirror a pose with the specified MirrorDataTable.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="MirrorPose/2"><nobr><p>MirrorPose</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a>&amp; Pose,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Math/EAxis__Type" ><span>EAxis::Type</span></a> MirrorAxis,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../AnimationCore/FCompactPoseBoneIndex" ><span>FCompactPoseBoneIndex</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const TCustomBoneIndexArray&lt; FQuat,...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Mirror Pose using cached mirror bones and components space arrays.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FQuat</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="MirrorQuat"><nobr><p>MirrorQuat</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const FQuat&amp; Q,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Math/EAxis__Type" ><span>EAxis::Type</span></a> MirrorAxis<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Mirror a quaternion across the specified mirror axis</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FVector</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="MirrorVector"><nobr><p>MirrorVector</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVector&amp; V,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Math/EAxis__Type" ><span>EAxis::Type</span></a> MirrorAxis<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Mirror a vector across the specified mirror axis</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="NormalizeRotations/1"><nobr><p>NormalizeRotations</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FTransformArrayA2&amp; Atoms<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="NormalizeRotations/2"><nobr><p>NormalizeRotations</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FBoneContainer" ><span>FBoneContainer</span></a>&amp; RequiredBone...,<br />&nbsp;&nbsp;&nbsp;&nbsp;FTransformArrayA2&amp; Atoms<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RetargetBoneTransform/1"><nobr><p>RetargetBoneTransform</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../Animation/USkeleton" ><span>USkeleton</span></a>&#42; SourceSkeleto...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Core/UObject/FName" ><span>FName</span></a>&amp; RetargetSource,<br />&nbsp;&nbsp;&nbsp;&nbsp;FTransform&amp; BoneTransform,<br />&nbsp;&nbsp;&nbsp;&nbsp;const int32 SkeletonBoneIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../AnimationCore/FCompactPoseBoneIndex" ><span>FCompactPoseBoneIndex</span></a>&amp; BoneI...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FBoneContainer" ><span>FBoneContainer</span></a>&amp; RequiredBone...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bIsBakedAdditive<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Retarget a single bone transform, to apply right after extraction.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RetargetBoneTransform/2"><nobr><p>RetargetBoneTransform</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../Animation/USkeleton" ><span>USkeleton</span></a>&#42; MySkeleton,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Core/UObject/FName" ><span>FName</span></a>&amp; SourceName,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; FTransform >&amp; Retarg...,<br />&nbsp;&nbsp;&nbsp;&nbsp;FTransform&amp; BoneTransform,<br />&nbsp;&nbsp;&nbsp;&nbsp;const int32 SkeletonBoneIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../AnimationCore/FCompactPoseBoneIndex" ><span>FCompactPoseBoneIndex</span></a>&amp; BoneI...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FBoneContainer" ><span>FBoneContainer</span></a>&amp; RequiredBone...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bIsBakedAdditive<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Retarget a single bone transform, to apply right after extraction.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetSpaceTransform/1"><nobr><p>SetSpaceTransform</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Animation/FA2Pose" ><span>FA2Pose</span></a>&amp; Pose,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 Index,<br />&nbsp;&nbsp;&nbsp;&nbsp;FTransform&amp; NewTransform<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetSpaceTransform/2"><nobr><p>SetSpaceTransform</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Animation/FA2CSPose" ><span>FA2CSPose</span></a>&amp; Pose,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 Index,<br />&nbsp;&nbsp;&nbsp;&nbsp;FTransform&amp; NewTransform<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="TickBlendWeight"><nobr><p>TickBlendWeight</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float DeltaTime,<br />&nbsp;&nbsp;&nbsp;&nbsp;float DesiredWeight,<br />&nbsp;&nbsp;&nbsp;&nbsp;float&amp; Weight,<br />&nbsp;&nbsp;&nbsp;&nbsp;float&amp; BlendTime<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UpdateDesiredBoneWeight"><nobr><p>UpdateDesiredBoneWeight</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../Animation/FPerBoneBlendWeight" ><span>FPerBoneBlendWeight</span></a> >...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../Animation/FPerBoneBlendWeight" ><span>FPerBoneBlendWeight</span></a> >&amp; Tar...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; float >&amp; BlendWeight...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'enums');">
+        <p>Enums</p>
+    </div>
+<div id="enums">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:15%">
+			</th>
+			<th class="name-cell" style="width:20%">
+				<p>Name</p>
+			</th>
+			<th class="desc-cell" style="width:65%">
+				<p>Description</p>
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public enum" title="Public enum" width="18" data-src="./../../../../../Images/api_enum_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="EBlendPosesPerBoneFilterFlags"><p>EBlendPosesPerBoneFilterFlags</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Blending flags for BlendPosesPerBoneFilter</p>
+	</td>
+</tr>
+			</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'deprecatedfunctions');">
+        <p>Deprecated Functions</p>
+    </div>
+<div id="deprecatedfunctions">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:8%;">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="AccumulateAdditivePose/2"><nobr><p>AccumulateAdditivePose</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a>&amp; BasePose,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a>&amp; AdditivePose,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Animation/FBlendedCurve" ><span>FBlendedCurve</span></a>&amp; BaseCurve,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../Animation/FBlendedCurve" ><span>FBlendedCurve</span></a>&amp; AdditiveCurve,<br />&nbsp;&nbsp;&nbsp;&nbsp;float Weight,<br />&nbsp;&nbsp;&nbsp;&nbsp;enum EAdditiveAnimationType Additiv...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Use AccumulateAdditivePose with other signature</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="AccumulateLocalSpaceAdditivePose/2"><nobr><p>AccumulateLocalSpaceAdditivePose</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a>&amp; BasePose,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a>&amp; AdditivePose,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Animation/FBlendedCurve" ><span>FBlendedCurve</span></a>&amp; BaseCurve,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../Animation/FBlendedCurve" ><span>FBlendedCurve</span></a>&amp; AdditiveCurve,<br />&nbsp;&nbsp;&nbsp;&nbsp;float Weight<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Use AccumulateAdditivePose with other signature</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="AccumulateMeshSp-/2"><nobr><p>AccumulateMeshSpaceRotationAdditiveToLocalPose</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a>&amp; BasePose,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a>&amp; MeshSpaceRotat...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Animation/FBlendedCurve" ><span>FBlendedCurve</span></a>&amp; BaseCurve,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../Animation/FBlendedCurve" ><span>FBlendedCurve</span></a>&amp; AdditiveCurve,<br />&nbsp;&nbsp;&nbsp;&nbsp;float Weight<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Use AccumulateAdditivePose with other signature</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="BlendPosesPerBoneFilter/1"><nobr><p>BlendPosesPerBoneFilter</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a>&amp; BasePose,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a> >&amp; Blen...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Animation/FBlendedCurve" ><span>FBlendedCurve</span></a>&amp; BaseCurve,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../Animation/FBlendedCurve" ><span>FBlendedCurve</span></a> >&amp; Ble...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a>&amp; OutPose,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Animation/FBlendedCurve" ><span>FBlendedCurve</span></a>&amp; OutCurve,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../Animation/FPerBoneBlendWeight" ><span>FPerBoneBlendWeight</span></a> >&amp; Bon...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="EBlendPosesPerBoneFilterFlags" ><span>EBlendPosesPerBoneFilterFlags</span></a> blend...,<br />&nbsp;&nbsp;&nbsp;&nbsp;enum <a id="content_link" href="../Animation/ECurveBlendOption__Type" ><span>ECurveBlendOption::Type</span></a> CurveB...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Please use the BlendPosesPerBoneFilterwith different signature.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="BlendPosesTogether/1"><nobr><p>BlendPosesTogether</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const <a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a> > So...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const <a id="content_link" href="../Animation/FBlendedCurve" ><span>FBlendedCurve</span></a> > S...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const float > SourceWei...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a>&amp; ResultPose,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Animation/FBlendedCurve" ><span>FBlendedCurve</span></a>&amp; ResultCurve<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Use BlendPosesTogether with other signature</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="BlendPosesTogether/3"><nobr><p>BlendPosesTogether</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const <a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a> > So...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const <a id="content_link" href="../Animation/FBlendedCurve" ><span>FBlendedCurve</span></a> > S...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const float > SourceWei...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const int32 > SourceWei...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a>&amp; ResultPose,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Animation/FBlendedCurve" ><span>FBlendedCurve</span></a>&amp; ResultCurve<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Use BlendPosesTogether with other signature</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="BlendPosesTogetherIndirect/1"><nobr><p>BlendPosesTogetherIndirect</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const <a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a>&#42...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const <a id="content_link" href="../Animation/FBlendedCurve" ><span>FBlendedCurve</span></a>&#4...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const float > SourceWei...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a>&amp; ResultPose,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Animation/FBlendedCurve" ><span>FBlendedCurve</span></a>&amp; ResultCurve<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Use BlendPosesTogetherIndirect with other signature</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="BlendPosesTogetherPerBone/1"><nobr><p>BlendPosesTogetherPerBone</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const <a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a> > So...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const <a id="content_link" href="../Animation/FBlendedCurve" ><span>FBlendedCurve</span></a> > S...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../IInterpolationIndexProvider" ><span>IInterpolationIndexProvider</span></a>&amp;...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const <a id="content_link" href="../Animation/FBlendSampleData" ><span>FBlendSampleData</span></a> ...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a>&amp; ResultPose,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Animation/FBlendedCurve" ><span>FBlendedCurve</span></a>&amp; ResultCurve<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Use BlendPosesTogetherPerBone with other signature</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="BlendPosesTogetherPerBone/3"><nobr><p>BlendPosesTogetherPerBone</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const <a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a> > So...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const <a id="content_link" href="../Animation/FBlendedCurve" ><span>FBlendedCurve</span></a> > S...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../IInterpolationIndexProvider" ><span>IInterpolationIndexProvider</span></a>&amp;...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const <a id="content_link" href="../Animation/FBlendSampleData" ><span>FBlendSampleData</span></a> ...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const int32 > BlendSamp...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a>&amp; ResultPose,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Animation/FBlendedCurve" ><span>FBlendedCurve</span></a>&amp; ResultCurve<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Use BlendPosesTogetherPerBone with other signature</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="BlendPosesTogetherPerBoneInMeshS-/1"><nobr><p>BlendPosesTogetherPerBoneInMeshSpace</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; <a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a> > SourcePo...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const <a id="content_link" href="../Animation/FBlendedCurve" ><span>FBlendedCurve</span></a> > S...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../Animation/UBlendSpace" ><span>UBlendSpace</span></a>&#42; BlendSpace,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const <a id="content_link" href="../Animation/FBlendSampleData" ><span>FBlendSampleData</span></a> ...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a>&amp; OutResultPose,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Animation/FBlendedCurve" ><span>FBlendedCurve</span></a>&amp; OutResultCurve<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Use BlendPosesTogetherPerBone with other signature</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="BlendTransformsByWeight"><nobr><p>BlendTransformsByWeight</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FTransform&amp; OutTransform,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; FTransform >&amp; Transf...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; float >&amp; Weights<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Please use BlendTransform() for weighted blending</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="BlendTwoPosesTogether/2"><nobr><p>BlendTwoPosesTogether</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a>&amp; SourcePose1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a>&amp; SourcePose2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../Animation/FBlendedCurve" ><span>FBlendedCurve</span></a>&amp; SourceCurve1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../Animation/FBlendedCurve" ><span>FBlendedCurve</span></a>&amp; SourceCurve2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const float WeightOfPose1,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a>&amp; ResultPose,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Animation/FBlendedCurve" ><span>FBlendedCurve</span></a>&amp; ResultCurve<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Use BlendTwoPosesTogether with other signature</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="BlendTwoPosesTogetherPerBone/2"><nobr><p>BlendTwoPosesTogetherPerBone</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a>&amp; SourcePose1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a>&amp; SourcePose2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../Animation/FBlendedCurve" ><span>FBlendedCurve</span></a>&amp; SourceCurve1,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../Animation/FBlendedCurve" ><span>FBlendedCurve</span></a>&amp; SourceCurve2,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; float >&amp; WeightsOfSo...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FCompactPose" ><span>FCompactPose</span></a>&amp; ResultPose,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../Animation/FBlendedCurve" ><span>FBlendedCurve</span></a>&amp; ResultCurve<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Use BlendTwoPosesTogether with other signature</p>
+	</td>
+</tr>
+	</table>
+</div>
+
+</div>
+</div>
+																	</div>
+					<!-- End of Markdown converted page content -->
+				</div>
+												<div id="recommendations"></div>			</div>
+						<div id="footer"></div>			
+									<div id="announcement">
+			<div style="display:inline-block;margin:5px;">
+				Help shape the future of Unreal Engine documentation! Tell us how we're doing so we can serve you better.
+			</div>
+			<div style="margin:5px;display:inline-block;">
+				<div class="btn action" style="margin-top:-6px;display:inline-block;" onclick="$('#announcement').hide();window.open('https://epicgames.questionpro.com/t/AVVbJZwedR');createCookie('announcement-read', new Date().getTime(), 30);">Take our survey</div>
+				<div class="btn btn-default" style="margin-top:-6px;display:inline-block;" onclick="$('#announcement').hide();createCookie('announcement-read', new Date().getTime(), 30);">Cancel</div>
+			</div>
+			<div class="btn-close" style="position:absolute;right:5px;top:10px;padding:3px;width:14px;height:14px;" onclick="$('#announcement').hide();"></div>
+			</div>
+					</div>
+	</div>
+</body>
+</html>

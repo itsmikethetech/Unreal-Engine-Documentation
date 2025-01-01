@@ -1,0 +1,1410 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="./../../../../../../../Include/Javascript/common_en-US.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var time = new Date(0);
+		var preview = false;
+		var relativeHTMLPath = "./../../../../../../../";
+				var pageid = 0;
+				var heroimage = "./../../../../../../../Images/ue5-hero.png";
+				var lang = "en-US";
+				var basePath = document.location.pathname.substring(0, document.location.pathname.indexOf('/' + lang + '/') + lang.length + 1);
+		document.write('<base href="' +  encodeURI(basePath) + '/API/Runtime/IrisCore/Iris/ReplicationSystem/UObjectReplicationBridge/" />');
+				var udnCSS = './../../../../../../../Include/CSS/udn_public.css';
+		var udnLangCSS = '';
+				var udnOverrideCSS = './../../../../../../../Include/CSS/skin_overrides.css';
+		var udnOverrideDarkCSS = './../../../../../../../Include/CSS/skin_overrides_dark.css';
+		var fancyboxCSS = './../../../../../../../Include/CSS/jquery.fancybox.css';
+		var jqueryuiCSS = './../../../../../../../Include/CSS/jquery-ui.min.css';
+		var qtipCSS = './../../../../../../../Include/CSS/jquery.qtip.css';
+		var prettifyCSS = './../../../../../../../Include/CSS/prettify.css';
+		var navbarCSS = './../../../../../../../Include/CSS/navBar.css';
+		var twentytwentyCSS = './../../../../../../../Include/CSS/twentytwenty.css';
+		var recommendationsCSS = './../../../../../../../Include/CSS/jquery.recommendations.css';
+	</script>
+    <title>UObjectReplicationBridge | Unreal Engine 5.2 Documentation</title>
+    	    <meta name=viewport content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Cache-control" content="no-store">
+    <script  src="./../../../../../../../Include/Javascript/CustomEvent.js" type="text/javascript"></script>
+    <script  src="./../../../../../../../Include/Javascript/jquery-3.4.0.min.js" type="text/javascript"></script>
+    <script  src="./../../../../../../../Include/Javascript/udn.js" type="text/javascript"></script>
+    <script  src="./../../../../../../../Include/Javascript/udn_extras.js" type="text/javascript"></script>
+    <script  src="./../../../../../../../Include/Javascript/jquery-ui.min.js" type="text/javascript"></script>
+	    <script  src="./../../../../../../../Include/Javascript/informational.js" type="text/javascript"></script>
+	    <script  src="./../../../../../../../Include/Javascript/jquery.fancybox.pack.js" type="text/javascript"></script>
+    <script  src="./../../../../../../../Include/Javascript/jquery.qtip.js" type="text/javascript"></script>
+    <script  src="./../../../../../../../Include/Javascript/prettify.js" type="text/javascript"></script>
+    <script  src="./../../../../../../../Include/Javascript/jquery.slimscroll.js" type="text/javascript"></script>
+    <script  src="./../../../../../../../Include/Javascript/jquery.event.move.js" type="text/javascript"></script>
+    <script  src="./../../../../../../../Include/Javascript/jquery.twentytwenty.js" type="text/javascript"></script>
+    <script  src="./../../../../../../../Include/Javascript/lazysizes.min.js" type="text/javascript"></script>
+	    <script  src="./../../../../../../../Include/Javascript/jquery.recommendations.js" type="text/javascript"></script>
+	
+    <link async rel="icon" href="./../../../../../../../Include/Images/site_icon.png" type="image/x-icon" />
+    <link async rel="shortcut icon" href="./../../../../../../../Include/Images/site_icon.png" type="image/x-icon" />
+    <link async href="./../../../../../../../Include/Images/touch_icon.png" rel="apple-touch-icon" />
+    <link async href="./../../../../../../../Include/Images/touch_icon_114.png" sizes="114x114" rel="apple-touch-icon" />    
+		<script  src="./../../../../../../../Include/Javascript/CollapsibleLists.js" type="text/javascript"></script>
+	<script  src="./../../../../../../../Include/Javascript/navigationBarUI.js"></script>
+	<script  src="./../../../../../../../Include/Javascript/navigationBar.js"></script>
+		
+	<link rel="alternate" href="https://docs.unrealengine.com/latest/en-US/API/Runtime/IrisCore/Iris/ReplicationSystem/UObjectReplicationBridge/" hreflang="x-default" />
+
+	<meta name="title" content="UObjectReplicationBridge" />
+<meta name="description" content="Partial implementation of ReplicationBridge that can be used as a foundation for implementing support for replicating objects derived from [UObject](API\Runtime\CoreUObject\UObject\UObject)" />
+<meta name="availability" content="Public" />
+<meta name="crumbs" content="%ROOT%,API,API/Runtime,API/Runtime/IrisCore,API/Runtime/IrisCore/Iris,API/Runtime/IrisCore/Iris/ReplicationSystem" />
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta property="og:title" content="UObjectReplicationBridge" />
+	<meta property="og:description" content="Partial implementation of ReplicationBridge that can be used as a foundation for implementing support for replicating objects derived from [UObject](API\Runtime\CoreUObject\UObject\UObject)" />
+		<meta property="og:image" content="https://docs.unrealengine.com/5.1/Images/placeholder-social.png" />
+	</head>
+<body id="webbgThree" style="visibility: hidden;" onload="document.body.style.visibility='visible';">
+			<script>window.__tracking_base = 'https://tracking.unrealengine.com';</script>
+	<script src="https://tracking.unrealengine.com/tracking.js" async></script>    <div id="webThree">
+				<div id="page_head">
+						<div id="head">
+				<div id="logo"></div>
+			</div>
+						<div id="pagenav">
+				<div class="crumbs" id="crumbs">
+<span id="versionContainer">
+	<span id="versionSelect" class="btn btn-version" onclick="ToggleMenu($('#versionMenu'), $(this));"></span>
+	<div id="versionMenu">
+		<div id="4_26" data-version="4.26" class="btn btn-select" onclick="createCookie('version', '4.26', 365);SwitchVersion('4.26');">Unreal Engine 4.26 Documentation</div>
+		<div id="4_27" data-version="4.27" class="btn btn-select" onclick="createCookie('version', '4.27', 365);SwitchVersion('4.27');">Unreal Engine 4.27 Documentation</div>
+		<div id="5_0" data-version="5.0" class="btn btn-select" onclick="createCookie('version', '5.0', 365);SwitchVersion('5.0');">Unreal Engine 5.0 Documentation</div>
+		<div id="5_1" data-version="5.1" class="btn btn-select" onclick="createCookie('version', '5.1', 365);SwitchVersion('5.1');">Unreal Engine 5.1 Documentation</div>
+		<div id="5_2" data-version="5.2" class="btn btn-select" onclick="createCookie('version', '5.2', 365);SwitchVersion('5.2');">Unreal Engine 5.2 Documentation</div>
+		<div id="5_3" data-version="5.3" class="btn btn-select" onclick="createCookie('version', '5.3', 365);SwitchVersion('5.3');">Unreal Engine 5.3 Documentation</div>
+	</div>
+</span>
+	<span class="separator">></span> <a id="parent_link" href="../../../../../../API">Unreal Engine API Reference</a>
+
+	<span class="separator">></span> <a id="parent_link" href="../../../../../Runtime">Runtime</a>
+
+	<span class="separator">></span> <a id="parent_link" href="../../../../IrisCore">IrisCore</a>
+
+	<span class="separator">></span> <a id="parent_link" href="../../../Iris">Iris</a>
+
+	<span class="separator">></span> <a id="parent_link" href="../../ReplicationSystem">ReplicationSystem</a>
+
+<span class="separator">></span> <span id="page">UObjectReplicationBridge</span>
+</div>				<div id="pageNavRight">
+								<!-- Start of Search -->
+												<div id="search_container">
+					<form name="bodySearch" method="get" action="https://www.unrealengine.com/en-US/bing-search" onsubmit="return validateSearch()">
+						<input type="image" src="./../../../../../../../Include/Images/search_box_icon.png" class="searchbutton"/>
+						<input type="hidden" name="filter" value="Documentation" />
+						<input type="text" name="keyword" placeholder="Search Documentation..." class="searchbox" autocomplete="off"/>
+					</form>
+				</div>
+								<!-- End of Search -->
+				<div id="skinContainer">
+	<div id="skinSelect" class="btn btn-skin" onclick="ToggleMenu($('#skinMenu'), $(this));"></div>
+	<div id="skinMenu">
+		<div id="light" class="btn btn-select" onclick="createCookie('skin', 'light', 365);location.reload();">Light Theme</div>
+		<div id="dark" class="btn btn-select" onclick="createCookie('skin', 'dark', 365);location.reload();">Dark Theme</div>
+	</div>
+</div>				</div>
+			</div>
+		</div>						<div id="navWrapper">
+			<div id="nav-filter-container">
+				<div id="nav-filter-inner">
+					<form>
+						<input type="text" placeholder="Filter pages..." id="nav-filter" onchange="clearTimeout(filterTimer); filterTimer = setTimeout(updateNavTreeFilter,250, this.value);if(this.value.length == 0){$('#filter-clear').hide();}else{$('#filter-clear').show();}" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" />
+						<button class="close-icon" id="filter-clear" type="reset" onclick="clearTimeout(filterTimer); filterTimer = setTimeout(updateNavTreeFilter,250, '');$(this).hide();"></button>
+					</form>
+				</div>
+			</div>
+			<nav id="navPanel">
+			</nav>
+			<div id="navigation" title="Click to toggle navigation menu"><span>></span></div>
+		</div>		
+		<div id="splitter">
+		</div>
+				<div id="contentContainer">
+										<div id="pagedefault">
+				<div id="product-banner">
+	<div id="product-logo"></div>
+</div>				<div id="pagecontainer" style="padding-right:0px;">
+					<!-- Start of Markdown converted page content -->
+										<div class="hero  background">
+	<div class="imgContainer"><img src="./../../../../../../../Images/ue5-hero.png" /></div>	<div class="info">
+		<div id="pageTitle">
+			<h1 id="H1TitleId">UObjectReplicationBridge</h1>
+		</div>
+		<h2 >Partial implementation of ReplicationBridge that can be used as a foundation for implementing support for replicating objects derived from [UObject](API\Runtime\CoreUObject\UObject\UObject)</h2>
+		<div id="access">
+			<div class="accessContainer">
+															</div>
+		</div>
+	</div>
+</div>															<div id="maincol">
+																																				<div class="heading expanded" onclick="sectionOnClick(this, 'hierarchy');">
+        <p>Inheritance Hierarchy</p>
+    </div>
+<div id="hierarchy">
+    <div class="hierarchy">
+	<table  class="hierarchy-table" cellspacing="0" id="hrch"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../../../../CoreUObject/UObject/UObjectBase"><p>UObjectBase</p></a><table  class="hierarchy-table" cellspacing="0" id="hrch_1"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../../../../CoreUObject/UObject/UObjectBaseUtility"><p>UObjectBaseUtility</p></a><table  class="hierarchy-table" cellspacing="0" id="hrch_1_1"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../../../../CoreUObject/UObject/UObject"><p>UObject</p></a><table  class="hierarchy-table" cellspacing="0" id="hrch_1_1_1"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../UReplicationBridge"><p>UReplicationBridge</p></a><table  class="hierarchy-table" cellspacing="0" id="hrch_1_1_1_1"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><p>UObjectReplicationBridge</p>
+<table  class="hierarchy-table" cellspacing="0" id="hrch_1_1_1_1_1"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../../../../Engine/Net/Iris/ReplicationSystem/UActorReplicationBridge"><p>UActorReplicationBridge</p></a></td></tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr></table>
+</div>
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'references');">
+        <p>References</p>
+    </div>
+<div id="references">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="normal-row">
+	<td class="name-cell">
+		<p>Module</p>
+	</td>
+	<td class="desc-cell">
+		<p><a id="content_link" href="../../.." ><span>IrisCore</span></a></p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<p>Header</p>
+	</td>
+	<td class="desc-cell">
+		<p>&#47;Engine&#47;Source&#47;Runtime&#47;Experimental&#47;Iris&#47;Core&#47;Public&#47;Iris&#47;ReplicationSystem&#47;ObjectReplicationBridge.h</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<p>Include</p>
+	</td>
+	<td class="desc-cell">
+		<p>&#35;include &quot;Iris&#47;ReplicationSystem&#47;ObjectReplicationBridge.h&quot;</p>
+	</td>
+</tr>
+			</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'syntax');">
+        <p>Syntax</p>
+    </div>
+<div id="syntax">
+    <div class="simplecode_api">
+	<p>class UObjectReplicationBridge : public <a id="content_link" href="../UReplicationBridge" ><span>UReplicationBridge</span></a>  </p>
+</div>
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'description');">
+        <p>Remarks</p>
+    </div>
+<div id="description">
+    <p>Partial implementation of ReplicationBridge that can be used as a foundation for implementing support for replicating objects derived from <a id="content_link" href="../../../../CoreUObject/UObject/UObject" ><span>UObject</span></a></p>
+</div><div class="syntax">
+	<div class="heading expanded" onclick="sectionOnClick(this, 'constructor');">
+        <p>Constructors</p>
+    </div>
+<div id="constructor">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="__ctor"><nobr><p>UObjectReplicationBridge()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'destructor');">
+        <p>Destructors</p>
+    </div>
+<div id="destructor">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="__dtor"><nobr><p>~UObjectReplicationBridge()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'functions_0');">
+        <p>Functions</p>
+    </div>
+<div id="functions_0">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:8%;">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="AddDependentObje-"><nobr><p>AddDependentObject</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../UReplicationBridge/FNetRefHandle" ><span>FNetRefHandle</span></a> Parent,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../UReplicationBridge/FNetRefHandle" ><span>FNetRefHandle</span></a> DependentObject,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../UE__Net__EDepend-" ><span>UE::Net::EDependentObjectScheduling</span></a>...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Adds a dependent object.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="AddStaticDestruc-"><nobr><p>AddStaticDestructionInfo</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Core/Containers/FString" ><span>FString</span></a>&amp; ObjectPath,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../CoreUObject/UObject/UObject" ><span>UObject</span></a>&#42; Outer,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../UReplicationBridge/FEndReplicationP-" ><span>FEndReplicationParameters</span></a>&amp; P...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Add static destruction info, this is used when stably named objects are destroyed prior to starting replication</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FObjectReplicati-_1" ><span>FObjectRepli</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="BeginInstantiate-"><nobr><p>BeginInstantiateFromRemote</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../UReplicationBridge/FNetRefHandle" ><span>FNetRefHandle</span></a> SubObjectOwnerHandle,<br />&nbsp;&nbsp;&nbsp;&nbsp;const UE::Net::FNetObjectResolveCon...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="FCreationHeader" ><span>FCreationHeader</span></a>&#42; Header<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Called when we instantiate/find object instance requested by remote.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../UReplicationBridge/FNetRefHandle" ><span>FNetRefHandl</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="BeginReplication/3"><nobr><p>BeginReplication</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../UReplicationBridge/FNetRefHandle" ><span>FNetRefHandle</span></a> OwnerHandle,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../../CoreUObject/UObject/UObject" ><span>UObject</span></a>&#42; Instance,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../UReplicationBridge/FNetRefHandle" ><span>FNetRefHandle</span></a> InsertRelativeToSubOb...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../UReplicationBridge/ESubObjectInsert-" ><span>ESubObjectInsertionOrder</span></a> InsertionO...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="FCreateNetRefHan-" ><span>FCreateNetRefHandleParams</span></a>&amp; P...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Begin replicating the Instance as a subobject of the OwnerHandle.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../UReplicationBridge/FNetRefHandle" ><span>FNetRefHandl</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="BeginReplication/2"><nobr><p>BeginReplication</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../UReplicationBridge/FNetRefHandle" ><span>FNetRefHandle</span></a> OwnerHandle,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../../CoreUObject/UObject/UObject" ><span>UObject</span></a>&#42; Instance,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="FCreateNetRefHan-" ><span>FCreateNetRefHandleParams</span></a>&amp; P...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Create handle and start replicating the Instance as a SubObject of the OwnerHandle.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../UReplicationBridge/FNetRefHandle" ><span>FNetRefHandl</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="BeginReplication/1"><nobr><p>BeginReplication</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../../CoreUObject/UObject/UObject" ><span>UObject</span></a>&#42; Instance,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="FCreateNetRefHan-" ><span>FCreateNetRefHandleParams</span></a>&amp; P...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Begin replicating the Instance and return a valid NetRefHandle for the Instance if successful.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>uint8</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ConvertPollFrequ-"><nobr><p>ConvertPollFrequencyIntoFrames</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float PollFrequency<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Transform a poll frequency (in updates per second) to an equivalent number of frames.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="DestroyInstanceF-"><nobr><p>DestroyInstanceFromRemote</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../../CoreUObject/UObject/UObject" ><span>UObject</span></a>&#42; Instance,<br />&nbsp;&nbsp;&nbsp;&nbsp;EReplicationBridgeDestroyInstanceRe...,<br />&nbsp;&nbsp;&nbsp;&nbsp;EReplicationBridgeDestroyInstanceFl...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Destroy or tear-off the game instance on request from remote.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="EndInstantiateFr-"><nobr><p>EndInstantiateFromRemote</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../UReplicationBridge/FNetRefHandle" ><span>FNetRefHandle</span></a> Handle<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Invoked after remote NetHandle has been created and initial state is applied.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="EndReplication"><nobr><p>EndReplication</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../../CoreUObject/UObject/UObject" ><span>UObject</span></a>&#42; Instance,<br />&nbsp;&nbsp;&nbsp;&nbsp;EEndReplicationFlags EndReplication...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../UReplicationBridge/FEndReplicationP-" ><span>FEndReplicationParameters</span></a>&#42; Par...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Stop replicating the object.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FindOrCachePollF-"><nobr><p>FindOrCachePollFrequency</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../CoreUObject/UObject/UClass" ><span>UClass</span></a>&#42; Class,<br />&nbsp;&nbsp;&nbsp;&nbsp;float&amp; OutPollPeriod<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Finds the final poll frequency for a class and cache it for future lookups.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ForceUpdateWants-"><nobr><p>ForceUpdateWantsToBeDormantObject</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../UReplicationBridge/FNetRefHandle" ><span>FNetRefHandle</span></a> Handle<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Trigger replication of dirty state for object wanting to be dormant.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetClassPollFreq-"><nobr><p>GetClassPollFrequency</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../CoreUObject/UObject/UClass" ><span>UClass</span></a>&#42; Class,<br />&nbsp;&nbsp;&nbsp;&nbsp;float&amp; OutPollPeriod<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Find the poll period of a class if it was configured with an override.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>float</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetMaxTickRate"><nobr><p>GetMaxTickRate()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Current max tick rate set by the engine</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../CoreUObject/UObject/UObject" ><span>UObject</span></a> &#42...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetObjectFromRef-"><nobr><p>GetObjectFromReferenceHandle</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../UReplicationBridge/FNetRefHandle" ><span>FNetRefHandle</span></a> RefHandle<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Lookup the <a id="content_link" href="../../../../CoreUObject/UObject/UObject" ><span>UObject</span></a> associated with the provided Handle.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetObjectWantsTo-"><nobr><p>GetObjectWantsToBeDormant</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../UReplicationBridge/FNetRefHandle" ><span>FNetRefHandle</span></a> Handle<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns whether the object wants to be dormant.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../Core/FNetObjectReference" ><span>UE::Net::FNe</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetOrCreateObjec-/2"><nobr><p>GetOrCreateObjectReference</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Core/Containers/FString" ><span>FString</span></a>&amp; Path,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../CoreUObject/UObject/UObject" ><span>UObject</span></a>&#42; Outer<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Get or create NetObjectReference for object identified by path relative to outer.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../Core/FNetObjectReference" ><span>UE::Net::FNe</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetOrCreateObjec-/1"><nobr><p>GetOrCreateObjectReference</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../CoreUObject/UObject/UObject" ><span>UObject</span></a>&#42; Instance<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Get or create NetObjectReference for object instance.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>float</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetPollFrequency-"><nobr><p>GetPollFrequencyOfRootObject</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../CoreUObject/UObject/UObject" ><span>UObject</span></a>&#42; ReplicatedObjec...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns the poll frequency of a specific root object.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../CoreUObject/UObject/UObject" ><span>UObject</span></a> &#42...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetReplicatedObj-"><nobr><p>GetReplicatedObject</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../UReplicationBridge/FNetRefHandle" ><span>FNetRefHandle</span></a> Handle<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Get the Object from a replicated handle, if the handle is invalid or not is a replicated handle the function will return nullptr</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../UReplicationBridge/FNetRefHandle" ><span>FNetRefHandl</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetReplicatedRef-/2"><nobr><p>GetReplicatedRefHandle</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../UReplicationBridge/FNetHandle" ><span>FNetHandle</span></a> Handle<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Get NetRefHandle from a NetHandle.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../UReplicationBridge/FNetRefHandle" ><span>FNetRefHandl</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetReplicatedRef-/1"><nobr><p>GetReplicatedRefHandle</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../CoreUObject/UObject/UObject" ><span>UObject</span></a>&#42; Object<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Get NetRefHandle from a replicated <a id="content_link" href="../../../../CoreUObject/UObject/UObject" ><span>UObject</span></a>.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="LoadConfig"><nobr><p>LoadConfig()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Re-initialize config-driven parameters found in ObjectReplicationBridgeConfig.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ObjectLevelHasFi-"><nobr><p>ObjectLevelHasFinishedLoading</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../../CoreUObject/UObject/UObject" ><span>UObject</span></a>&#42; Object<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns true of the level that the Object belongs to has finished loading.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OnInstantiatedFr-"><nobr><p>OnInstantiatedFromRemote</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../../CoreUObject/UObject/UObject" ><span>UObject</span></a>&#42; Instance,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="FCreationHeader" ><span>FCreationHeader</span></a>&#42; InHeade...,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 ConnectionId<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Invoked before we start applying state data to instance on remote end.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="FCreationHeader" ><span>FCreationHea</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ReadCreationHead-"><nobr><p>ReadCreationHeader</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Serialization/FNetSerializationContext" ><span>UE::Net::FNetSerializationContext</span></a>&amp;...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Create Header and read data required to instantiate the Handle.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ReinitPollFreque-"><nobr><p>ReinitPollFrequency()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Re-initialize the poll frequency of all replicated root objects.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RemapPathForPIE"><nobr><p>RemapPathForPIE</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 ConnectionId,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../../Core/Containers/FString" ><span>FString</span></a>&amp; Path,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bReading<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>PIE package name remapping support.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RemoveDependentO-"><nobr><p>RemoveDependentObject</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../UReplicationBridge/FNetRefHandle" ><span>FNetRefHandle</span></a> Parent,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../UReplicationBridge/FNetRefHandle" ><span>FNetRefHandle</span></a> DependentObject<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Remove dependent object from parent.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../../CoreUObject/UObject/UObject" ><span>UObject</span></a> &#42...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ResolveObjectRef-"><nobr><p>ResolveObjectReference</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Core/FNetObjectReference" ><span>UE::Net::FNetObjectReference</span></a> ...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const UE::Net::FNetObjectResolveCon...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Try to resolve <a id="content_link" href="../../../../CoreUObject/UObject/UObject" ><span>UObject</span></a> from NetObjectReference, this function tries to resolve the object by loading if necessary.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetInstanceGetWo-"><nobr><p>SetInstanceGetWorldObjectInfoFunction</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="FInstanceGetWorl-" ><span>FInstanceGetWorldObjectInfoFunction</span></a>...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Set the function that we should call to get the world location of an object.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetInstancePreUp-"><nobr><p>SetInstancePreUpdateFunction</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="FInstancePreUpda-" ><span>FInstancePreUpdateFunction</span></a> InPreUpd...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Set the function that we should call before copying state data.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetMaxTickRate"><nobr><p>SetMaxTickRate</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float InMaxTickRate<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Change the max tick rate to match the one from the engine</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetObjectWantsTo-"><nobr><p>SetObjectWantsToBeDormant</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../UReplicationBridge/FNetRefHandle" ><span>FNetRefHandle</span></a> Handle,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bWantsToBeDormant<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Set whether object should go dormant.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetPollWithObjec-"><nobr><p>SetPollWithObject</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../UReplicationBridge/FNetRefHandle" ><span>FNetRefHandle</span></a> ObjectToPollWith,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../UReplicationBridge/FNetRefHandle" ><span>FNetRefHandle</span></a> Object<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Force polling of Object when ObjectToPollWith is polled.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetShouldSubclas-"><nobr><p>SetShouldSubclassUseSameFilterFunction</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../../Core/GenericPlatform/TFunction" ><span>TFunction</span></a>&lt; bool(const <a id="content_link" href="../../../../CoreUObject/UObject/UClass" ><span>UClass</span></a>&#42;C...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Set the function used to determine whether two classes are to be considered equal when it comes to filtering.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetShouldUseDefa-"><nobr><p>SetShouldUseDefaultSpatialFilterFunction</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../../Core/GenericPlatform/TFunction" ><span>TFunction</span></a>&lt; bool(const <a id="content_link" href="../../../../CoreUObject/UObject/UClass" ><span>UClass</span></a>&#42;)...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Set the function used to determine whether an object should use the default spatial filter unless the class is configured to use some other filter.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetSubObjectNetC-"><nobr><p>SetSubObjectNetCondition</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../UReplicationBridge/FNetRefHandle" ><span>FNetRefHandle</span></a> SubObjectHandle,<br />&nbsp;&nbsp;&nbsp;&nbsp;ELifetimeCondition Condition<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Set NetCondition for a subobject, the condition is used to determine if the SubObject should replicate or not.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="WriteCreationHea-"><nobr><p>WriteCreationHeader</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Serialization/FNetSerializationContext" ><span>UE::Net::FNetSerializationContext</span></a>&amp;...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../UReplicationBridge/FNetRefHandle" ><span>FNetRefHandle</span></a> Handle<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>$IRIS TODO: Consider moving these methods to separate interface to allow for a single ObjectReplicationBridge to support different type specific methods to its own interface and allow for a single bridge to support multiple subtypes? We will see what we need when we start to Serialize data we might not even want to expose virtual methods for doing this, and instead provide support for specifying a "creation state" that works exactly as any other state but only ever is replicated when we first instantiate an object of the specific type Write data required to instantiate the Handle.</p>
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'functions_1');">
+        <p>Overridden from UReplicationBridge</p>
+    </div>
+<div id="functions_1">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:8%;">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FReplicationBrid-" ><span>FReplication</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CreateNetRefHand-"><nobr><p>CreateNetRefHandleFromRemote</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../UReplicationBridge/FNetRefHandle" ><span>FNetRefHandle</span></a> SubObjectOwnerNetHand...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../UReplicationBridge/FNetRefHandle" ><span>FNetRefHandle</span></a> WantedNetHandle,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FReplicationBrid-_1" ><span>FReplicationBridgeSerializationCont</span></a>...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Read data required to instantiate NetObject from bitstream.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="Deinitialize"><nobr><p>Deinitialize()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Deinitializes the bridge. Is called during ReplicationSystem deinitialization.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="DetachInstance"><nobr><p>DetachInstance</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../UReplicationBridge/FNetRefHandle" ><span>FNetRefHandle</span></a> Handle<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Called when we detach instance protocol from the local instance</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="DetachInstanceFr-"><nobr><p>DetachInstanceFromRemote</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../UReplicationBridge/FNetRefHandle" ><span>FNetRefHandle</span></a> Handle,<br />&nbsp;&nbsp;&nbsp;&nbsp;EReplicationBridgeDestroyInstanceRe...,<br />&nbsp;&nbsp;&nbsp;&nbsp;EReplicationBridgeDestroyInstanceFl...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Called when the instance is detached from the protocol on request by the remote.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="Initialize"><nobr><p>Initialize</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../UReplicationSystem" ><span>UReplicationSystem</span></a>&#42; InReplicat...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Initializes the bridge. Is called during ReplicationSystem initialization.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="PostApplyInitial-"><nobr><p>PostApplyInitialState</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../UReplicationBridge/FNetRefHandle" ><span>FNetRefHandle</span></a> Handle<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Invoke after we have applied the initial state for an object.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="PreSendUpdate"><nobr><p>PreSendUpdate()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Invoked before ReplicationSystem copies dirty state data.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="PreSendUpdateSin-"><nobr><p>PreSendUpdateSingleHandle</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../UReplicationBridge/FNetRefHandle" ><span>FNetRefHandle</span></a> Handle<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Invoked before ReplicationSystem copies dirty state data for a single replicated object.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="PruneStaleObject-"><nobr><p>PruneStaleObjects()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Invoked post garbage collect to allow us to detect stale objects</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UpdateInstancesW-"><nobr><p>UpdateInstancesWorldLocation()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Update world locations in FWorldLocations for objects that support it.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="WriteNetRefHandl-"><nobr><p>WriteNetRefHandleCreationInfo</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../FReplicationBrid-_1" ><span>FReplicationBridgeSerializationCont</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../UReplicationBridge/FNetRefHandle" ><span>FNetRefHandle</span></a> Handle<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Write data required to instantiate NetObject remotely to bitstream.</p>
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'classes');">
+        <p>Classes</p>
+    </div>
+<div id="classes">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:15%">
+			</th>
+			<th class="name-cell" style="width:20%">
+				<p>Name</p>
+			</th>
+			<th class="desc-cell" style="width:65%">
+				<p>Description</p>
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public struct" title="Public struct" width="18" data-src="./../../../../../../../Images/api_struct_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="FCreateNetRefHan-"><p>FCreateNetRefHandleParams</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public struct" title="Public struct" width="18" data-src="./../../../../../../../Images/api_struct_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="FCreationHeader"><p>FCreationHeader</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+			</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'typedefs');">
+        <p>Typedefs</p>
+    </div>
+<div id="typedefs">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="name-cell" style="width:15%">
+				<p>Name</p>
+			</th>
+			<th class="desc-cell" style="width:85%">
+				<p>Description</p>
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="FInstanceGetWorl-"><p>FInstanceGetWorldObjectInfoFunction</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Helper method to get the world location &amp; cull distance for replicated instances with the HasWorldLocation trait.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="FInstancePreUpda-"><p>FInstancePreUpdateFunction</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Helper method that calls provided PreUpdateFunction and polls state data for all replicated instances with the NeedsPoll trait.</p>
+	</td>
+</tr>
+			</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'constants');">
+        <p>Constants</p>
+    </div>
+<div id="constants">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="name-cell" style="width:15%">
+				<p>Name</p>
+			</th>
+			<th class="desc-cell" style="width:85%">
+				<p>Description</p>
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="DefaultCreateNet-"><p>DefaultCreateNetRefHandleParams</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+			</table>
+</div>
+
+</div>
+</div>
+																	</div>
+					<!-- End of Markdown converted page content -->
+				</div>
+												<div id="recommendations"></div>			</div>
+						<div id="footer"></div>			
+									<div id="announcement">
+			<div style="display:inline-block;margin:5px;">
+				Help shape the future of Unreal Engine documentation! Tell us how we're doing so we can serve you better.
+			</div>
+			<div style="margin:5px;display:inline-block;">
+				<div class="btn action" style="margin-top:-6px;display:inline-block;" onclick="$('#announcement').hide();window.open('https://epicgames.questionpro.com/t/AVVbJZwedR');createCookie('announcement-read', new Date().getTime(), 30);">Take our survey</div>
+				<div class="btn btn-default" style="margin-top:-6px;display:inline-block;" onclick="$('#announcement').hide();createCookie('announcement-read', new Date().getTime(), 30);">Cancel</div>
+			</div>
+			<div class="btn-close" style="position:absolute;right:5px;top:10px;padding:3px;width:14px;height:14px;" onclick="$('#announcement').hide();"></div>
+			</div>
+					</div>
+	</div>
+</body>
+</html>

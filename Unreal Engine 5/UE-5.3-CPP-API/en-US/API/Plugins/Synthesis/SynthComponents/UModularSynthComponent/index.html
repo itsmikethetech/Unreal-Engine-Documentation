@@ -1,0 +1,1609 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="./../../../../../../Include/Javascript/common_en-US.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var time = new Date(0);
+		var preview = false;
+		var relativeHTMLPath = "./../../../../../../";
+				var pageid = 0;
+				var heroimage = "./../../../../../../Images/ue5-hero.png";
+				var lang = "en-US";
+				var basePath = document.location.pathname.substring(0, document.location.pathname.indexOf('/' + lang + '/') + lang.length + 1);
+		document.write('<base href="' +  encodeURI(basePath) + '/API/Plugins/Synthesis/SynthComponents/UModularSynthComponent/" />');
+				var udnCSS = './../../../../../../Include/CSS/udn_public.css';
+		var udnLangCSS = '';
+				var udnOverrideCSS = './../../../../../../Include/CSS/skin_overrides.css';
+		var udnOverrideDarkCSS = './../../../../../../Include/CSS/skin_overrides_dark.css';
+		var fancyboxCSS = './../../../../../../Include/CSS/jquery.fancybox.css';
+		var jqueryuiCSS = './../../../../../../Include/CSS/jquery-ui.min.css';
+		var qtipCSS = './../../../../../../Include/CSS/jquery.qtip.css';
+		var prettifyCSS = './../../../../../../Include/CSS/prettify.css';
+		var navbarCSS = './../../../../../../Include/CSS/navBar.css';
+		var twentytwentyCSS = './../../../../../../Include/CSS/twentytwenty.css';
+		var recommendationsCSS = './../../../../../../Include/CSS/jquery.recommendations.css';
+	</script>
+    <title>UModularSynthComponent | Unreal Engine 5.2 Documentation</title>
+    	    <meta name=viewport content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Cache-control" content="no-store">
+    <script  src="./../../../../../../Include/Javascript/CustomEvent.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/jquery-3.4.0.min.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/udn.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/udn_extras.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/jquery-ui.min.js" type="text/javascript"></script>
+	    <script  src="./../../../../../../Include/Javascript/informational.js" type="text/javascript"></script>
+	    <script  src="./../../../../../../Include/Javascript/jquery.fancybox.pack.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/jquery.qtip.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/prettify.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/jquery.slimscroll.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/jquery.event.move.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/jquery.twentytwenty.js" type="text/javascript"></script>
+    <script  src="./../../../../../../Include/Javascript/lazysizes.min.js" type="text/javascript"></script>
+	    <script  src="./../../../../../../Include/Javascript/jquery.recommendations.js" type="text/javascript"></script>
+	
+    <link async rel="icon" href="./../../../../../../Include/Images/site_icon.png" type="image/x-icon" />
+    <link async rel="shortcut icon" href="./../../../../../../Include/Images/site_icon.png" type="image/x-icon" />
+    <link async href="./../../../../../../Include/Images/touch_icon.png" rel="apple-touch-icon" />
+    <link async href="./../../../../../../Include/Images/touch_icon_114.png" sizes="114x114" rel="apple-touch-icon" />    
+		<script  src="./../../../../../../Include/Javascript/CollapsibleLists.js" type="text/javascript"></script>
+	<script  src="./../../../../../../Include/Javascript/navigationBarUI.js"></script>
+	<script  src="./../../../../../../Include/Javascript/navigationBar.js"></script>
+		
+	<link rel="alternate" href="https://docs.unrealengine.com/latest/en-US/API/Plugins/Synthesis/SynthComponents/UModularSynthComponent/" hreflang="x-default" />
+
+	<meta name="title" content="UModularSynthComponent" />
+<meta name="description" content="[UModularSynthComponent](API\Plugins\Synthesis\SynthComponents\UModularSynthComponent) Implementation of a [USynthComponent](API\Runtime\AudioMixer\Components\USynthComponent)." />
+<meta name="availability" content="Public" />
+<meta name="crumbs" content="%ROOT%,API,API/Plugins,API/Plugins/Synthesis,API/Plugins/Synthesis/SynthComponents" />
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta property="og:title" content="UModularSynthComponent" />
+	<meta property="og:description" content="[UModularSynthComponent](API\Plugins\Synthesis\SynthComponents\UModularSynthComponent) Implementation of a [USynthComponent](API\Runtime\AudioMixer\Components\USynthComponent)." />
+		<meta property="og:image" content="https://docs.unrealengine.com/5.1/Images/placeholder-social.png" />
+	</head>
+<body id="webbgThree" style="visibility: hidden;" onload="document.body.style.visibility='visible';">
+			<script>window.__tracking_base = 'https://tracking.unrealengine.com';</script>
+	<script src="https://tracking.unrealengine.com/tracking.js" async></script>    <div id="webThree">
+				<div id="page_head">
+						<div id="head">
+				<div id="logo"></div>
+			</div>
+						<div id="pagenav">
+				<div class="crumbs" id="crumbs">
+<span id="versionContainer">
+	<span id="versionSelect" class="btn btn-version" onclick="ToggleMenu($('#versionMenu'), $(this));"></span>
+	<div id="versionMenu">
+		<div id="4_26" data-version="4.26" class="btn btn-select" onclick="createCookie('version', '4.26', 365);SwitchVersion('4.26');">Unreal Engine 4.26 Documentation</div>
+		<div id="4_27" data-version="4.27" class="btn btn-select" onclick="createCookie('version', '4.27', 365);SwitchVersion('4.27');">Unreal Engine 4.27 Documentation</div>
+		<div id="5_0" data-version="5.0" class="btn btn-select" onclick="createCookie('version', '5.0', 365);SwitchVersion('5.0');">Unreal Engine 5.0 Documentation</div>
+		<div id="5_1" data-version="5.1" class="btn btn-select" onclick="createCookie('version', '5.1', 365);SwitchVersion('5.1');">Unreal Engine 5.1 Documentation</div>
+		<div id="5_2" data-version="5.2" class="btn btn-select" onclick="createCookie('version', '5.2', 365);SwitchVersion('5.2');">Unreal Engine 5.2 Documentation</div>
+		<div id="5_3" data-version="5.3" class="btn btn-select" onclick="createCookie('version', '5.3', 365);SwitchVersion('5.3');">Unreal Engine 5.3 Documentation</div>
+	</div>
+</span>
+	<span class="separator">></span> <a id="parent_link" href="../../../../../API">Unreal Engine API Reference</a>
+
+	<span class="separator">></span> <a id="parent_link" href="../../../../Plugins">Plugins</a>
+
+	<span class="separator">></span> <a id="parent_link" href="../../../Synthesis">Synthesis</a>
+
+	<span class="separator">></span> <a id="parent_link" href="../../SynthComponents">SynthComponents</a>
+
+<span class="separator">></span> <span id="page">UModularSynthComponent</span>
+</div>				<div id="pageNavRight">
+								<!-- Start of Search -->
+												<div id="search_container">
+					<form name="bodySearch" method="get" action="https://www.unrealengine.com/en-US/bing-search" onsubmit="return validateSearch()">
+						<input type="image" src="./../../../../../../Include/Images/search_box_icon.png" class="searchbutton"/>
+						<input type="hidden" name="filter" value="Documentation" />
+						<input type="text" name="keyword" placeholder="Search Documentation..." class="searchbox" autocomplete="off"/>
+					</form>
+				</div>
+								<!-- End of Search -->
+				<div id="skinContainer">
+	<div id="skinSelect" class="btn btn-skin" onclick="ToggleMenu($('#skinMenu'), $(this));"></div>
+	<div id="skinMenu">
+		<div id="light" class="btn btn-select" onclick="createCookie('skin', 'light', 365);location.reload();">Light Theme</div>
+		<div id="dark" class="btn btn-select" onclick="createCookie('skin', 'dark', 365);location.reload();">Dark Theme</div>
+	</div>
+</div>				</div>
+			</div>
+		</div>						<div id="navWrapper">
+			<div id="nav-filter-container">
+				<div id="nav-filter-inner">
+					<form>
+						<input type="text" placeholder="Filter pages..." id="nav-filter" onchange="clearTimeout(filterTimer); filterTimer = setTimeout(updateNavTreeFilter,250, this.value);if(this.value.length == 0){$('#filter-clear').hide();}else{$('#filter-clear').show();}" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" />
+						<button class="close-icon" id="filter-clear" type="reset" onclick="clearTimeout(filterTimer); filterTimer = setTimeout(updateNavTreeFilter,250, '');$(this).hide();"></button>
+					</form>
+				</div>
+			</div>
+			<nav id="navPanel">
+			</nav>
+			<div id="navigation" title="Click to toggle navigation menu"><span>></span></div>
+		</div>		
+		<div id="splitter">
+		</div>
+				<div id="contentContainer">
+										<div id="pagedefault">
+				<div id="product-banner">
+	<div id="product-logo"></div>
+</div>				<div id="pagecontainer" style="padding-right:0px;">
+					<!-- Start of Markdown converted page content -->
+										<div class="hero  background">
+	<div class="imgContainer"><img src="./../../../../../../Images/ue5-hero.png" /></div>	<div class="info">
+		<div id="pageTitle">
+			<h1 id="H1TitleId">UModularSynthComponent</h1>
+		</div>
+		<h2 >[UModularSynthComponent](API\Plugins\Synthesis\SynthComponents\UModularSynthComponent) Implementation of a [USynthComponent](API\Runtime\AudioMixer\Components\USynthComponent).</h2>
+		<div id="access">
+			<div class="accessContainer">
+															</div>
+		</div>
+	</div>
+</div>															<div id="maincol">
+																																				<div class="heading expanded" onclick="sectionOnClick(this, 'hierarchy');">
+        <p>Inheritance Hierarchy</p>
+    </div>
+<div id="hierarchy">
+    <div class="hierarchy">
+	<table  class="hierarchy-table" cellspacing="0" id="hrch"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../../../../Runtime/CoreUObject/UObject/UObjectBase"><p>UObjectBase</p></a><table  class="hierarchy-table" cellspacing="0" id="hrch_1"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../../../../Runtime/CoreUObject/UObject/UObjectBaseUtility"><p>UObjectBaseUtility</p></a><table  class="hierarchy-table" cellspacing="0" id="hrch_1_1"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../../../../Runtime/CoreUObject/UObject/UObject"><p>UObject</p></a><table  class="hierarchy-table" cellspacing="0" id="hrch_1_1_1"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../../../../Runtime/Engine/Components/UActorComponent"><p>UActorComponent</p></a><table  class="hierarchy-table" cellspacing="0" id="hrch_1_1_1_1"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../../../../Runtime/Engine/Components/USceneComponent"><p>USceneComponent</p></a><table  class="hierarchy-table" cellspacing="0" id="hrch_1_1_1_1_1"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../../../../Runtime/AudioMixer/Components/USynthComponent"><p>USynthComponent</p></a><table  class="hierarchy-table" cellspacing="0" id="hrch_1_1_1_1_1_1"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><p>UModularSynthComponent</p>
+</td></tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr></table>
+</div>
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'references');">
+        <p>References</p>
+    </div>
+<div id="references">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="normal-row">
+	<td class="name-cell">
+		<p>Module</p>
+	</td>
+	<td class="desc-cell">
+		<p><a id="content_link" href="../.." ><span>Synthesis</span></a></p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<p>Header</p>
+	</td>
+	<td class="desc-cell">
+		<p>&#47;Engine&#47;Plugins&#47;Runtime&#47;Synthesis&#47;Source&#47;Synthesis&#47;Classes&#47;SynthComponents&#47;EpicSynth1Component.h</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<p>Include</p>
+	</td>
+	<td class="desc-cell">
+		<p>&#35;include &quot;SynthComponents&#47;EpicSynth1Component.h&quot;</p>
+	</td>
+</tr>
+			</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'syntax');">
+        <p>Syntax</p>
+    </div>
+<div id="syntax">
+    <div class="simplecode_api">
+	<p>UCLASS&#40;ClassGroup&#61;Synth, Meta&#61;&#40;BlueprintSpawnableComponent&#41;&#41;<br />class UModularSynthComponent : public <a id="content_link" href="../../../../Runtime/AudioMixer/Components/USynthComponent" ><span>USynthComponent</span></a>  </p>
+</div>
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'description');">
+        <p>Remarks</p>
+    </div>
+<div id="description">
+    <p><a id="content_link" href="" ><span>UModularSynthComponent</span></a> Implementation of a <a id="content_link" href="../../../../Runtime/AudioMixer/Components/USynthComponent" ><span>USynthComponent</span></a>.</p>
+</div><div class="syntax">
+	<div class="heading expanded" onclick="sectionOnClick(this, 'variables');">
+        <p>Variables</p>
+    </div>
+<div id="variables">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:8%">
+			</th>
+			<th class="type-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:15%">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../FEpicSynth1" ><span>Audio::FEpicSyn</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="EpicSynth1"><p>EpicSynth1</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../../Images/api_variable_public.png" />
+
+<img class="  lazyload" alt="UProperty" title="UProperty" width="18" data-src="./../../../../../../Images/api_variable_meta.png" />
+
+<img class="  lazyload" alt="Category, EditAnywhere, Meta" title="Category, EditAnywhere, Meta" width="18" data-src="./../../../../../../Images/api_variable_meta_editor.png" />
+
+<img class="  lazyload" alt="BlueprintReadOnly" title="BlueprintReadOnly" width="18" data-src="./../../../../../../Images/api_variable_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>int32</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>VoiceCount</p>
+	</td>
+	<td class="desc-cell">
+		<p>The voice count to use for the synthesizer. Cannot be changed.</p>
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'constructor');">
+        <p>Constructors</p>
+    </div>
+<div id="constructor">
+    <p>No constructors are accessible with public or protected access.</p>
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'functions_0');">
+        <p>Functions</p>
+    </div>
+<div id="functions_0">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:8%;">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../FPatchId" ><span>FPatchId</span></a></p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CreatePatch"><nobr><p>CreatePatch</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../ESynth1PatchSource" ><span>ESynth1PatchSource</span></a> PatchSourc...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../FSynth1PatchCable" ><span>FSynth1PatchCable</span></a> >&amp;...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bEnableByDefault<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Creates a new modular synth patch between a modulation source and a set of modulation destinations.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="NoteOff"><nobr><p>NoteOff</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const float Note,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bAllNotesOff,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bKillAllNotes<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Stop the note (will only do anything if a voice is playing with that note)</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="NoteOn"><nobr><p>NoteOn</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const float Note,<br />&nbsp;&nbsp;&nbsp;&nbsp;const int32 Velocity,<br />&nbsp;&nbsp;&nbsp;&nbsp;const float Duration<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Play a new note. Optionally pass in a duration to automatically turn off the note.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetAttackTime"><nobr><p>SetAttackTime</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float AttackTimeMsec<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the envelope attack time in msec.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetChorusDepth"><nobr><p>SetChorusDepth</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float Depth<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the chorus depth.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetChorusEnabled"><nobr><p>SetChorusEnabled</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;bool EnableChorus<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets whether or not chorus is enabled.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetChorusFeedback"><nobr><p>SetChorusFeedback</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float Feedback<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the chorus feedback.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetChorusFrequency"><nobr><p>SetChorusFrequency</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float Frequency<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the chorus frequency.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetDecayTime"><nobr><p>SetDecayTime</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float DecayTimeMsec<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the envelope decay time in msec.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetEnableLegato"><nobr><p>SetEnableLegato</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;bool LegatoEnabled<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets whether or not to use legato for the synthesizer.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetEnablePatch"><nobr><p>SetEnablePatch</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../FPatchId" ><span>FPatchId</span></a> PatchId,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bIsEnabled<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetEnablePolyphony"><nobr><p>SetEnablePolyphony</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bEnablePolyphony<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets whether or not to use polyphony for the synthesizer.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetEnableRetrigger"><nobr><p>SetEnableRetrigger</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;bool RetriggerEnabled<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets whether or not to retrigger envelope per note on.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetEnableUnison"><nobr><p>SetEnableUnison</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;bool EnableUnison<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets whether or not the synth is in unison mode (i.e. no spread)</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetFilterAlgorithm"><nobr><p>SetFilterAlgorithm</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../ESynthFilterAlgorithm" ><span>ESynthFilterAlgorithm</span></a> FilterAlgorit...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the filter algorithm.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetFilterFrequency"><nobr><p>SetFilterFrequency</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float FilterFrequencyHz<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the filter cutoff frequency in hz.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetFilterFrequen-"><nobr><p>SetFilterFrequencyMod</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float FilterFrequencyHz<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the filter cutoff frequency in hz.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetFilterQ"><nobr><p>SetFilterQ</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float FilterQ<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the filter Q (resonance)</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetFilterQMod"><nobr><p>SetFilterQMod</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float FilterQ<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets a modulated filter Q (resonance)</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetFilterType"><nobr><p>SetFilterType</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../ESynthFilterType" ><span>ESynthFilterType</span></a> FilterType<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the filter type.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category, Meta" title="BlueprintCallable, Category, Meta" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetGainDb"><nobr><p>SetGainDb</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float GainDb<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the synth gain in decibels.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetLFOFrequency"><nobr><p>SetLFOFrequency</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 LFOIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;float FrequencyHz<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the LFO frequency in hz</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetLFOFrequencyMod"><nobr><p>SetLFOFrequencyMod</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 LFOIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;float FrequencyModHz<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the LFO frequency modulation in hz</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetLFOGain"><nobr><p>SetLFOGain</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 LFOIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;float Gain<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the LFO gain factor</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetLFOGainMod"><nobr><p>SetLFOGainMod</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 LFOIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;float GainMod<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the LFO gain mod factor (external modulation)</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetLFOMode"><nobr><p>SetLFOMode</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 LFOIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../ESynthLFOMode" ><span>ESynthLFOMode</span></a> LFOMode<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the LFO type</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetLFOPatch"><nobr><p>SetLFOPatch</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 LFOIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../ESynthLFOPatchType" ><span>ESynthLFOPatchType</span></a> LFOPatchType<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the LFO patch type. LFO patch determines what parameter is modulated by the LFO.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetLFOType"><nobr><p>SetLFOType</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 LFOIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../ESynthLFOType" ><span>ESynthLFOType</span></a> LFOType<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the LFO type</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetModEnvAttackTime"><nobr><p>SetModEnvAttackTime</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const float AttackTimeMsec<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the envelope modulator attack time in msec.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetModEnvBiasInvert"><nobr><p>SetModEnvBiasInvert</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bInvert<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets whether or not to invert the bias output of the envelope modulator.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetModEnvBiasPatch"><nobr><p>SetModEnvBiasPatch</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../ESynthModEnvBiasPatch" ><span>ESynthModEnvBiasPatch</span></a> InPatch...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets whether or not to modulate a param based on the envelope. Uses bias envelope output (offset from sustain gain).</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetModEnvDecayTime"><nobr><p>SetModEnvDecayTime</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const float DecayTimeMsec<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the envelope modulator attack time in msec.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetModEnvDepth"><nobr><p>SetModEnvDepth</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const float Depth<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the envelope modulator depth (amount to apply the output modulation)</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetModEnvInvert"><nobr><p>SetModEnvInvert</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bInvert<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets whether or not to invert the envelope modulator.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetModEnvPatch"><nobr><p>SetModEnvPatch</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../ESynthModEnvPatch" ><span>ESynthModEnvPatch</span></a> InPatchType<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets whether or not to modulate a param based on the envelope. Uses bias envelope output (offset from sustain gain).</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetModEnvReleaseTime"><nobr><p>SetModEnvReleaseTime</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const float Release<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the envelope modulator release.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetModEnvSustainGain"><nobr><p>SetModEnvSustainGain</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const float SustainGain<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the envelope modulator sustain gain.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetOscCents"><nobr><p>SetOscCents</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 OscIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;float Cents<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the oscillator cents.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetOscFrequencyMod"><nobr><p>SetOscFrequencyMod</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 OscIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;float OscFreqMod<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Set the oscillator frequency modulation</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetOscGain"><nobr><p>SetOscGain</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 OscIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;float OscGain<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Set the oscillator gain.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetOscGainMod"><nobr><p>SetOscGainMod</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 OscIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;float OscGainMod<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Set the oscillator gain modulation.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetOscOctave"><nobr><p>SetOscOctave</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 OscIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;float Octave<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the oscillator octaves</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetOscPulsewidth"><nobr><p>SetOscPulsewidth</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 OscIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;float Pulsewidth<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the square wave pulsewidth [0.0, 1.0].</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetOscSemitones"><nobr><p>SetOscSemitones</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 OscIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;float Semitones<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the oscillator semitones.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetOscSync"><nobr><p>SetOscSync</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bIsSynced<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Set whether or not to follow the phase of osc2 to osc1.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetOscType"><nobr><p>SetOscType</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 OscIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../ESynth1OscType" ><span>ESynth1OscType</span></a> OscType<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Set the oscillator type.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetPan"><nobr><p>SetPan</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float Pan<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the pan of the synth [-1.0, 1.0].</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetPitchBend"><nobr><p>SetPitchBend</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float PitchBend<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the synth pitch bend amount.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetPortamento"><nobr><p>SetPortamento</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float Portamento<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the synth portamento [0.0, 1.0].</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetReleaseTime"><nobr><p>SetReleaseTime</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float ReleaseTimeMsec<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the envelope release time in msec.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetSpread"><nobr><p>SetSpread</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float Spread<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the amount of spread of the oscillators. [0.0, 1.0].</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetStereoDelayFe-"><nobr><p>SetStereoDelayFeedback</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float DelayFeedback<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the amount of stereo delay feedback [0.0, 1.0].</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetStereoDelayIs-"><nobr><p>SetStereoDelayIsEnabled</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;bool StereoDelayEnabled<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets whether not stereo delay is enabled.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetStereoDelayMode"><nobr><p>SetStereoDelayMode</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../ESynthStereoDelayMode" ><span>ESynthStereoDelayMode</span></a> StereoDelayMo...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets whether not stereo delay is enabled.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetStereoDelayRatio"><nobr><p>SetStereoDelayRatio</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float DelayRatio<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the amount of stereo delay ratio between left and right delay lines [0.0, 1.0].</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetStereoDelayTime"><nobr><p>SetStereoDelayTime</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float DelayTimeMsec<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the amount of stereo delay time in msec.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetStereoDelayWe-"><nobr><p>SetStereoDelayWetlevel</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float DelayWetlevel<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the amount of stereo delay wetlevel [0.0, 1.0].</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetSustainGain"><nobr><p>SetSustainGain</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float SustainGain<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the envelope sustain gain value.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="UFunction" title="UFunction" width="18" data-src="./../../../../../../Images/api_function_meta.png" />
+
+<img class="  lazyload" alt="BlueprintCallable, Category" title="BlueprintCallable, Category" width="18" data-src="./../../../../../../Images/api_function_meta_blueprint.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetSynthPreset"><nobr><p>SetSynthPreset</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../FModularSynthPreset" ><span>FModularSynthPreset</span></a>&amp; SynthPr...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Sets the preset struct for the synth.</p>
+	</td>
+</tr>
+	</table>
+</div>
+
+</div>
+</div>
+																	</div>
+					<!-- End of Markdown converted page content -->
+				</div>
+												<div id="recommendations"></div>			</div>
+						<div id="footer"></div>			
+									<div id="announcement">
+			<div style="display:inline-block;margin:5px;">
+				Help shape the future of Unreal Engine documentation! Tell us how we're doing so we can serve you better.
+			</div>
+			<div style="margin:5px;display:inline-block;">
+				<div class="btn action" style="margin-top:-6px;display:inline-block;" onclick="$('#announcement').hide();window.open('https://epicgames.questionpro.com/t/AVVbJZwedR');createCookie('announcement-read', new Date().getTime(), 30);">Take our survey</div>
+				<div class="btn btn-default" style="margin-top:-6px;display:inline-block;" onclick="$('#announcement').hide();createCookie('announcement-read', new Date().getTime(), 30);">Cancel</div>
+			</div>
+			<div class="btn-close" style="position:absolute;right:5px;top:10px;padding:3px;width:14px;height:14px;" onclick="$('#announcement').hide();"></div>
+			</div>
+					</div>
+	</div>
+</body>
+</html>

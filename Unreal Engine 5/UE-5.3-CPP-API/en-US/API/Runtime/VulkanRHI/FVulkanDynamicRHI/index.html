@@ -1,0 +1,3837 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="./../../../../../Include/Javascript/common_en-US.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var time = new Date(0);
+		var preview = false;
+		var relativeHTMLPath = "./../../../../../";
+				var pageid = 0;
+				var heroimage = "./../../../../../Images/ue5-hero.png";
+				var lang = "en-US";
+				var basePath = document.location.pathname.substring(0, document.location.pathname.indexOf('/' + lang + '/') + lang.length + 1);
+		document.write('<base href="' +  encodeURI(basePath) + '/API/Runtime/VulkanRHI/FVulkanDynamicRHI/" />');
+				var udnCSS = './../../../../../Include/CSS/udn_public.css';
+		var udnLangCSS = '';
+				var udnOverrideCSS = './../../../../../Include/CSS/skin_overrides.css';
+		var udnOverrideDarkCSS = './../../../../../Include/CSS/skin_overrides_dark.css';
+		var fancyboxCSS = './../../../../../Include/CSS/jquery.fancybox.css';
+		var jqueryuiCSS = './../../../../../Include/CSS/jquery-ui.min.css';
+		var qtipCSS = './../../../../../Include/CSS/jquery.qtip.css';
+		var prettifyCSS = './../../../../../Include/CSS/prettify.css';
+		var navbarCSS = './../../../../../Include/CSS/navBar.css';
+		var twentytwentyCSS = './../../../../../Include/CSS/twentytwenty.css';
+		var recommendationsCSS = './../../../../../Include/CSS/jquery.recommendations.css';
+	</script>
+    <title>FVulkanDynamicRHI | Unreal Engine 5.2 Documentation</title>
+    	    <meta name=viewport content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Cache-control" content="no-store">
+    <script  src="./../../../../../Include/Javascript/CustomEvent.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/jquery-3.4.0.min.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/udn.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/udn_extras.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/jquery-ui.min.js" type="text/javascript"></script>
+	    <script  src="./../../../../../Include/Javascript/informational.js" type="text/javascript"></script>
+	    <script  src="./../../../../../Include/Javascript/jquery.fancybox.pack.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/jquery.qtip.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/prettify.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/jquery.slimscroll.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/jquery.event.move.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/jquery.twentytwenty.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/lazysizes.min.js" type="text/javascript"></script>
+	    <script  src="./../../../../../Include/Javascript/jquery.recommendations.js" type="text/javascript"></script>
+	
+    <link async rel="icon" href="./../../../../../Include/Images/site_icon.png" type="image/x-icon" />
+    <link async rel="shortcut icon" href="./../../../../../Include/Images/site_icon.png" type="image/x-icon" />
+    <link async href="./../../../../../Include/Images/touch_icon.png" rel="apple-touch-icon" />
+    <link async href="./../../../../../Include/Images/touch_icon_114.png" sizes="114x114" rel="apple-touch-icon" />    
+		<script  src="./../../../../../Include/Javascript/CollapsibleLists.js" type="text/javascript"></script>
+	<script  src="./../../../../../Include/Javascript/navigationBarUI.js"></script>
+	<script  src="./../../../../../Include/Javascript/navigationBar.js"></script>
+		
+	<link rel="alternate" href="https://docs.unrealengine.com/latest/en-US/API/Runtime/VulkanRHI/FVulkanDynamicRHI/" hreflang="x-default" />
+
+	<meta name="title" content="FVulkanDynamicRHI" />
+<meta name="description" content="The interface which is implemented by the dynamically bound RHI." />
+<meta name="availability" content="Public" />
+<meta name="crumbs" content="%ROOT%,API,API/Runtime,API/Runtime/VulkanRHI" />
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta property="og:title" content="FVulkanDynamicRHI" />
+	<meta property="og:description" content="The interface which is implemented by the dynamically bound RHI." />
+		<meta property="og:image" content="https://docs.unrealengine.com/5.1/Images/placeholder-social.png" />
+	</head>
+<body id="webbgThree" style="visibility: hidden;" onload="document.body.style.visibility='visible';">
+			<script>window.__tracking_base = 'https://tracking.unrealengine.com';</script>
+	<script src="https://tracking.unrealengine.com/tracking.js" async></script>    <div id="webThree">
+				<div id="page_head">
+						<div id="head">
+				<div id="logo"></div>
+			</div>
+						<div id="pagenav">
+				<div class="crumbs" id="crumbs">
+<span id="versionContainer">
+	<span id="versionSelect" class="btn btn-version" onclick="ToggleMenu($('#versionMenu'), $(this));"></span>
+	<div id="versionMenu">
+		<div id="4_26" data-version="4.26" class="btn btn-select" onclick="createCookie('version', '4.26', 365);SwitchVersion('4.26');">Unreal Engine 4.26 Documentation</div>
+		<div id="4_27" data-version="4.27" class="btn btn-select" onclick="createCookie('version', '4.27', 365);SwitchVersion('4.27');">Unreal Engine 4.27 Documentation</div>
+		<div id="5_0" data-version="5.0" class="btn btn-select" onclick="createCookie('version', '5.0', 365);SwitchVersion('5.0');">Unreal Engine 5.0 Documentation</div>
+		<div id="5_1" data-version="5.1" class="btn btn-select" onclick="createCookie('version', '5.1', 365);SwitchVersion('5.1');">Unreal Engine 5.1 Documentation</div>
+		<div id="5_2" data-version="5.2" class="btn btn-select" onclick="createCookie('version', '5.2', 365);SwitchVersion('5.2');">Unreal Engine 5.2 Documentation</div>
+		<div id="5_3" data-version="5.3" class="btn btn-select" onclick="createCookie('version', '5.3', 365);SwitchVersion('5.3');">Unreal Engine 5.3 Documentation</div>
+	</div>
+</span>
+	<span class="separator">></span> <a id="parent_link" href="../../../../API">Unreal Engine API Reference</a>
+
+	<span class="separator">></span> <a id="parent_link" href="../../../Runtime">Runtime</a>
+
+	<span class="separator">></span> <a id="parent_link" href="../../VulkanRHI">VulkanRHI</a>
+
+<span class="separator">></span> <span id="page">FVulkanDynamicRHI</span>
+</div>				<div id="pageNavRight">
+								<!-- Start of Search -->
+												<div id="search_container">
+					<form name="bodySearch" method="get" action="https://www.unrealengine.com/en-US/bing-search" onsubmit="return validateSearch()">
+						<input type="image" src="./../../../../../Include/Images/search_box_icon.png" class="searchbutton"/>
+						<input type="hidden" name="filter" value="Documentation" />
+						<input type="text" name="keyword" placeholder="Search Documentation..." class="searchbox" autocomplete="off"/>
+					</form>
+				</div>
+								<!-- End of Search -->
+				<div id="skinContainer">
+	<div id="skinSelect" class="btn btn-skin" onclick="ToggleMenu($('#skinMenu'), $(this));"></div>
+	<div id="skinMenu">
+		<div id="light" class="btn btn-select" onclick="createCookie('skin', 'light', 365);location.reload();">Light Theme</div>
+		<div id="dark" class="btn btn-select" onclick="createCookie('skin', 'dark', 365);location.reload();">Dark Theme</div>
+	</div>
+</div>				</div>
+			</div>
+		</div>						<div id="navWrapper">
+			<div id="nav-filter-container">
+				<div id="nav-filter-inner">
+					<form>
+						<input type="text" placeholder="Filter pages..." id="nav-filter" onchange="clearTimeout(filterTimer); filterTimer = setTimeout(updateNavTreeFilter,250, this.value);if(this.value.length == 0){$('#filter-clear').hide();}else{$('#filter-clear').show();}" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" />
+						<button class="close-icon" id="filter-clear" type="reset" onclick="clearTimeout(filterTimer); filterTimer = setTimeout(updateNavTreeFilter,250, '');$(this).hide();"></button>
+					</form>
+				</div>
+			</div>
+			<nav id="navPanel">
+			</nav>
+			<div id="navigation" title="Click to toggle navigation menu"><span>></span></div>
+		</div>		
+		<div id="splitter">
+		</div>
+				<div id="contentContainer">
+										<div id="pagedefault">
+				<div id="product-banner">
+	<div id="product-logo"></div>
+</div>				<div id="pagecontainer" style="padding-right:0px;">
+					<!-- Start of Markdown converted page content -->
+										<div class="hero  background">
+	<div class="imgContainer"><img src="./../../../../../Images/ue5-hero.png" /></div>	<div class="info">
+		<div id="pageTitle">
+			<h1 id="H1TitleId">FVulkanDynamicRHI</h1>
+		</div>
+		<h2 >The interface which is implemented by the dynamically bound RHI.</h2>
+		<div id="access">
+			<div class="accessContainer">
+															</div>
+		</div>
+	</div>
+</div>															<div id="maincol">
+																																				<div class="heading expanded" onclick="sectionOnClick(this, 'hierarchy');">
+        <p>Inheritance Hierarchy</p>
+    </div>
+<div id="hierarchy">
+    <div class="hierarchy">
+	<table  class="hierarchy-table" cellspacing="0" id="hrch"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../../RHI/FDynamicRHI"><p>FDynamicRHI</p></a><table  class="hierarchy-table" cellspacing="0" id="hrch_1"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><a href="../IVulkanDynamicRHI"><p>IVulkanDynamicRHI</p></a><table  class="hierarchy-table" cellspacing="0" id="hrch_1_1"><tr ><td  class="hierarchy-button-cell"><p><img class="hierarchy-spacer" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="> </p>
+</td><td  class="hierarchy-label-cell"><p>FVulkanDynamicRHI</p>
+</td></tr></table></td></tr></table></td></tr></table>
+</div>
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'references');">
+        <p>References</p>
+    </div>
+<div id="references">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="normal-row">
+	<td class="name-cell">
+		<p>Module</p>
+	</td>
+	<td class="desc-cell">
+		<p><a id="content_link" href=".." ><span>VulkanRHI</span></a></p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<p>Header</p>
+	</td>
+	<td class="desc-cell">
+		<p>&#47;Engine&#47;Source&#47;Runtime&#47;VulkanRHI&#47;Public&#47;VulkanDynamicRHI.h</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<p>Include</p>
+	</td>
+	<td class="desc-cell">
+		<p>&#35;include &quot;VulkanDynamicRHI.h&quot;</p>
+	</td>
+</tr>
+			</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'syntax');">
+        <p>Syntax</p>
+    </div>
+<div id="syntax">
+    <div class="simplecode_api">
+	<p>class FVulkanDynamicRHI : public <a id="content_link" href="../IVulkanDynamicRHI" ><span>IVulkanDynamicRHI</span></a>  </p>
+</div>
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'description');">
+        <p>Remarks</p>
+    </div>
+<div id="description">
+    <p>The interface which is implemented by the dynamically bound RHI.</p>
+</div><div class="syntax">
+	<div class="heading expanded" onclick="sectionOnClick(this, 'variables');">
+        <p>Variables</p>
+    </div>
+<div id="variables">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:8%">
+			</th>
+			<th class="type-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:15%">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="EActiveDebugLayerExtension" ><span>EActiveDebugLay</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ActiveDebugLayerExtension"><p>ActiveDebugLayerExtension</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>uint32</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>ApiVersion</p>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>bIsStandaloneStereoDevice</p>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FVulkanDevice &amp;...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="Device"><p>Device</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../Core/Templates/TRefCountPtr" ><span>TRefCountPtr</span></a>&lt; F...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="DrawingViewport"><p>DrawingViewport</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>The viewport which is currently being drawn.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>VkInstance</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>Instance</p>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; const A...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="InstanceExtensions"><p>InstanceExtensions</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; const A...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="InstanceLayers"><p>InstanceLayers</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FCriticalSectio...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="LockBufferCS"><p>LockBufferCS</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FOptionalVulkanInstanceExtension-" ><span>FOptionalVulkan</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="OptionalInstanceExtensions"><p>OptionalInstanceExtensions</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../Core/HAL/IConsoleObject" ><span>IConsoleObject</span></a> ...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RebuildPipelineCacheCmd"><p>RebuildPipelineCacheCmd</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../Core/HAL/IConsoleObject" ><span>IConsoleObject</span></a> ...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SavePipelineCacheCmd"><p>SavePipelineCacheCmd</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public variable" title="Public variable" width="18" data-src="./../../../../../Images/api_variable_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>uint32</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<p>TotalPresentCount</p>
+	</td>
+	<td class="desc-cell">
+		<p>Historical number of times we've presented any and all viewports.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected variable" title="Protected variable" width="18" data-src="./../../../../../Images/api_variable_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; FVulkan...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="Viewports"><p>Viewports</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>A list of all viewport RHIs that have been created.</p>
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'constructor');">
+        <p>Constructors</p>
+    </div>
+<div id="constructor">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="__ctor"><nobr><p>FVulkanDynamicRHI()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Initialization constructor.</p>
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'destructor');">
+        <p>Destructors</p>
+    </div>
+<div id="destructor">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="__dtor"><nobr><p>~FVulkanDynamicRHI()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Destructor</p>
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'functions_0');">
+        <p>Functions</p>
+    </div>
+<div id="functions_0">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:8%;">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CreateInstance"><nobr><p>CreateInstance()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="DestroySwapChain"><nobr><p>DestroySwapChain()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="" ><span>FVulkanDynam</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="Get"><nobr><p>Get()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>uint32</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetApiVersion"><nobr><p>GetApiVersion()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FVulkanDevic...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetDevice"><nobr><p>GetDevice()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>VkInstance</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetInstance"><nobr><p>GetInstance()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetInstanceExtensions"><nobr><p>GetInstanceExtensions()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetInstanceLayers"><nobr><p>GetInstanceLayers()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const <a id="content_link" href="../FOptionalVulkanInstanceExtension-" ><span>FOptio</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetOptionalExtensions"><nobr><p>GetOptionalExtensions()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; FVul...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetViewports"><nobr><p>GetViewports()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="InitDevice"><nobr><p>InitDevice</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FVulkanDevice&#42; Device<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="InitGPU"><nobr><p>InitGPU</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FVulkanDevice&#42; Device<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="InitInstance"><nobr><p>InitInstance()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="InternalUnlockTexture2D"><nobr><p>InternalUnlockTexture2D</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bFromRenderingThread,<br />&nbsp;&nbsp;&nbsp;&nbsp;FRHITexture2D&#42; Texture,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 MipIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bLockWithinMiptail<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="InternalUpdateTexture2D"><nobr><p>InternalUpdateTexture2D</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHICommandListBase" ><span>FRHICommandListBase</span></a>&amp; RHICmdList,<br />&nbsp;&nbsp;&nbsp;&nbsp;FRHITexture2D&#42; TextureRHI,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 MipIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../RHI/FUpdateTextureRegion2D" ><span>FUpdateTextureRegion2D</span></a>&amp; Upda...,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 SourcePitch,<br />&nbsp;&nbsp;&nbsp;&nbsp;const uint8&#42; SourceData<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="InternalUpdateTexture3D"><nobr><p>InternalUpdateTexture3D</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHICommandListBase" ><span>FRHICommandListBase</span></a>&amp; RHICmdList,<br />&nbsp;&nbsp;&nbsp;&nbsp;FRHITexture3D&#42; TextureRHI,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 MipIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../RHI/FUpdateTextureRegion3D" ><span>FUpdateTextureRegion3D</span></a>&amp; Upda...,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 SourceRowPitch,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 SourceDepthPitch,<br />&nbsp;&nbsp;&nbsp;&nbsp;const uint8&#42; SourceData<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RebuildPipelineCache"><nobr><p>RebuildPipelineCache()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RecreateSwapChain"><nobr><p>RecreateSwapChain</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;void&#42; NewNativeWindow<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SavePipelineCache"><nobr><p>SavePipelineCache()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SelectDevice"><nobr><p>SelectDevice()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; cons...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetupInstanceLayers"><nobr><p>SetupInstanceLayers</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FVulkanInstanceExtensionArray&amp; UEE...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Static void WriteEndFrameTimestamp(void&#42;);</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SetupValidationRequests"><nobr><p>SetupValidationRequests()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="SupportsDebugUtilsExt"><nobr><p>SupportsDebugUtilsExt()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Protected function" title="Protected function" width="18" data-src="./../../../../../Images/api_function_protected.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UpdateUniformBuffer"><nobr><p>UpdateUniformBuffer</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHICommandListBase" ><span>FRHICommandListBase</span></a>&amp; RHICmdList,<br />&nbsp;&nbsp;&nbsp;&nbsp;FVulkanUniformBuffer&#42; UniformB...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const void&#42; Contents<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="VulkanSetImageLayout"><nobr><p>VulkanSetImageLayout</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;VkCommandBuffer CmdBuffer,<br />&nbsp;&nbsp;&nbsp;&nbsp;VkImage Image,<br />&nbsp;&nbsp;&nbsp;&nbsp;VkImageLayout OldLayout,<br />&nbsp;&nbsp;&nbsp;&nbsp;VkImageLayout NewLayout,<br />&nbsp;&nbsp;&nbsp;&nbsp;const VkImageSubresourceRange&amp; Sub...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'functions_1');">
+        <p>Overridden from IVulkanDynamicRHI</p>
+    </div>
+<div id="functions_1">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:8%;">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FTexture2DAr...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHICreateTexture2DArrayFromResou-"><nobr><p>RHICreateTexture2DArrayFromResource</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;EPixelFormat Format,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 SizeX,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 SizeY,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 ArraySize,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 NumMips,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 NumSamples,<br />&nbsp;&nbsp;&nbsp;&nbsp;VkImage Resource,<br />&nbsp;&nbsp;&nbsp;&nbsp;ETextureCreateFlags Flags,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../RHI/FClearValueBinding" ><span>FClearValueBinding</span></a>&amp; ClearVal...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FTexture2DRH...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHICreateTexture2DFromResource"><nobr><p>RHICreateTexture2DFromResource</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;EPixelFormat Format,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 SizeX,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 SizeY,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 NumMips,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 NumSamples,<br />&nbsp;&nbsp;&nbsp;&nbsp;VkImage Resource,<br />&nbsp;&nbsp;&nbsp;&nbsp;ETextureCreateFlags Flags,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../RHI/FClearValueBinding" ><span>FClearValueBinding</span></a>&amp; ClearVal...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FTextureCube...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHICreateTextureCubeFromResource"><nobr><p>RHICreateTextureCubeFromResource</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;EPixelFormat Format,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 Size,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bArray,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 ArraySize,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 NumMips,<br />&nbsp;&nbsp;&nbsp;&nbsp;VkImage Resource,<br />&nbsp;&nbsp;&nbsp;&nbsp;ETextureCreateFlags Flags,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../RHI/FClearValueBinding" ><span>FClearValueBinding</span></a>&amp; ClearVal...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIDoesAdapterMatchDevice"><nobr><p>RHIDoesAdapterMatchDevice</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const void&#42; InAdapterId<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIFinishExternalComputeWork"><nobr><p>RHIFinishExternalComputeWork</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;VkCommandBuffer InCommandBuffer<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>VkCommandBuf...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIGetActiveVkCommandBuffer"><nobr><p>RHIGetActiveVkCommandBuffer()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; VkEx...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIGetAllDeviceExtensions"><nobr><p>RHIGetAllDeviceExtensions</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;VkPhysicalDevice InPhysicalDevice<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; VkEx...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIGetAllInstanceExtensions"><nobr><p>RHIGetAllInstanceExtensions()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FVulkanRHIAllocationInfo" ><span>FVulkanRHIAl</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIGetAllocationInfo"><nobr><p>RHIGetAllocationInfo</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHITexture" ><span>FRHITexture</span></a>&#42; InTexture<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>uint64</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIGetGraphicsAdapterLUID"><nobr><p>RHIGetGraphicsAdapterLUID</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;VkPhysicalDevice InPhysicalDevice<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>uint32</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIGetGraphicsQueueFamilyIndex"><nobr><p>RHIGetGraphicsQueueFamilyIndex()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>uint32</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIGetGraphicsQueueIndex"><nobr><p>RHIGetGraphicsQueueIndex()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>VkQueue</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIGetGraphicsVkQueue"><nobr><p>RHIGetGraphicsVkQueue()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../FVulkanRHIImageViewInfo" ><span>FVulkanRHIIm</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIGetImageViewInfo"><nobr><p>RHIGetImageViewInfo</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHITexture" ><span>FRHITexture</span></a>&#42; InTexture<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>VkFormat</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIGetSwapChainVkFormat"><nobr><p>RHIGetSwapChainVkFormat</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;EPixelFormat InFormat<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>VkFormat</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIGetViewVkFormat"><nobr><p>RHIGetViewVkFormat</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHITexture" ><span>FRHITexture</span></a>&#42; InTexture<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const VkAllo...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIGetVkAllocationCallbacks"><nobr><p>RHIGetVkAllocationCallbacks()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>VkDevice</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIGetVkDevice"><nobr><p>RHIGetVkDevice()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void &#42;</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIGetVkDeviceProcAddr"><nobr><p>RHIGetVkDeviceProcAddr</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const char&#42; InName<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>VkImage</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIGetVkImage"><nobr><p>RHIGetVkImage</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHITexture" ><span>FRHITexture</span></a>&#42; InTexture<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>VkInstance</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIGetVkInstance"><nobr><p>RHIGetVkInstance()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>VkPhysicalDe...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIGetVkPhysicalDevice"><nobr><p>RHIGetVkPhysicalDevice()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const uint8 ...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIGetVulkanDeviceUUID"><nobr><p>RHIGetVulkanDeviceUUID()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>uint32</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIGetVulkanVersion"><nobr><p>RHIGetVulkanVersion()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIRegisterWork"><nobr><p>RHIRegisterWork</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 NumPrimitives<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHISetImageLayout"><nobr><p>RHISetImageLayout</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;VkImage Image,<br />&nbsp;&nbsp;&nbsp;&nbsp;VkImageLayout OldLayout,<br />&nbsp;&nbsp;&nbsp;&nbsp;VkImageLayout NewLayout,<br />&nbsp;&nbsp;&nbsp;&nbsp;const VkImageSubresourceRange&amp; Sub...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHISetUploadImageLayout"><nobr><p>RHISetUploadImageLayout</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;VkImage Image,<br />&nbsp;&nbsp;&nbsp;&nbsp;VkImageLayout OldLayout,<br />&nbsp;&nbsp;&nbsp;&nbsp;VkImageLayout NewLayout,<br />&nbsp;&nbsp;&nbsp;&nbsp;const VkImageSubresourceRange&amp; Sub...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHISubmitUploadCommandBuffer"><nobr><p>RHISubmitUploadCommandBuffer()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHISupportsEXTFragmentDensityMap-"><nobr><p>RHISupportsEXTFragmentDensityMap2()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIVerifyResult"><nobr><p>RHIVerifyResult</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;VkResult Result,<br />&nbsp;&nbsp;&nbsp;&nbsp;const ANSICHAR&#42; VkFuntion,<br />&nbsp;&nbsp;&nbsp;&nbsp;const ANSICHAR&#42; Filename,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 Line<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'functions_2');">
+        <p>Overridden from FDynamicRHI</p>
+    </div>
+<div id="functions_2">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:8%;">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FTexture2DRH...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="AsyncReallocateTexture2D_RenderT-"><nobr><p>AsyncReallocateTexture2D_RenderThread</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHICommandListImmediate" ><span>FRHICommandListImmediate</span></a>&amp; RHICmdLi...,<br />&nbsp;&nbsp;&nbsp;&nbsp;FRHITexture2D&#42; Texture2D,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 NewMipCount,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 NewSizeX,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 NewSizeY,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/HAL/FThreadSafeCounter" ><span>FThreadSafeCounter</span></a>&#42; RequestSta...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>ETextureReal...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FinalizeAsyncRea-"><nobr><p>FinalizeAsyncReallocateTexture2D_RenderThread</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHICommandListImmediate" ><span>FRHICommandListImmediate</span></a>&amp; RHICmdLi...,<br />&nbsp;&nbsp;&nbsp;&nbsp;FRHITexture2D&#42; Texture2D,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bBlockUntilCompleted<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const TCHAR ...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetName"><nobr><p>GetName()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="Init"><nobr><p>Init()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Initializes the RHI; separate from <a id="content_link" href="../../RHI/IDynamicRHIModule/CreateRHI" ><span>IDynamicRHIModule::CreateRHI</span></a> so that GDynamicRHI is set when it is called.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void &#42;</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="LockBuffer_BottomOfPipe"><nobr><p>LockBuffer_BottomOfPipe</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHICommandListBase" ><span>FRHICommandListBase</span></a>&amp; RHICmdList,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHIBuffer" ><span>FRHIBuffer</span></a>&#42; Buffer,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 Offset,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 SizeRHI,<br />&nbsp;&nbsp;&nbsp;&nbsp;EResourceLockMode LockMode<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Buffer Lock/Unlock.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void &#42;</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="LockTexture2D_RenderThread"><nobr><p>LockTexture2D_RenderThread</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHICommandListImmediate" ><span>FRHICommandListImmediate</span></a>&amp; RHICmdLi...,<br />&nbsp;&nbsp;&nbsp;&nbsp;FRHITexture2D&#42; Texture,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 MipIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;EResourceLockMode LockMode,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32&amp; DestStride,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bLockWithinMiptail,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bNeedsDefaultRHIFlush,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint64&#42; OutLockedByteCount<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="PostInit"><nobr><p>PostInit()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Called after the RHI is initialized; before the render thread is started.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIAcquireThreadOwnership"><nobr><p>RHIAcquireThreadOwnership()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Flush RHI Thread.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIAdvanceFrameForGetViewportBac-"><nobr><p>RHIAdvanceFrameForGetViewportBackBuffer</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHIViewport" ><span>FRHIViewport</span></a>&#42; Viewport<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Only relevant with an RHI thread, this advances the backbuffer for the purpose of GetViewportBackBuffer FlushType: Thread safe</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIAliasTextureResources"><nobr><p>RHIAliasTextureResources</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FTextureRHIRef&amp; DestTexture,<br />&nbsp;&nbsp;&nbsp;&nbsp;FTextureRHIRef&amp; SrcTexture<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FTextureRHIR...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIAsyncCreateTexture2D"><nobr><p>RHIAsyncCreateTexture2D</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 SizeX,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 SizeY,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint8 Format,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 NumMips,<br />&nbsp;&nbsp;&nbsp;&nbsp;ETextureCreateFlags Flags,<br />&nbsp;&nbsp;&nbsp;&nbsp;ERHIAccess InResourceState,<br />&nbsp;&nbsp;&nbsp;&nbsp;void&#42;&#42; InitialMipData,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 NumInitialMips,<br />&nbsp;&nbsp;&nbsp;&nbsp;FGraphEventRef&amp; OutCompletionEvent<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Thread safe.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FTexture2DRH...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIAsyncReallocateTexture2D"><nobr><p>RHIAsyncReallocateTexture2D</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FRHITexture2D&#42; Texture2D,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 NewMipCount,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 NewSizeX,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 NewSizeY,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/HAL/FThreadSafeCounter" ><span>FThreadSafeCounter</span></a>&#42; RequestSta...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Starts an asynchronous texture reallocation.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../RHI/FUpdateTexture3DData" ><span>FUpdateTextu</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIBeginUpdateTexture3D"><nobr><p>RHIBeginUpdateTexture3D</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHICommandListBase" ><span>FRHICommandListBase</span></a>&amp; RHICmdList,<br />&nbsp;&nbsp;&nbsp;&nbsp;FRHITexture3D&#42; Texture,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 MipIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../RHI/FUpdateTextureRegion3D" ><span>FUpdateTextureRegion3D</span></a>&amp; Upda...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIBindDebugLabelName/2"><nobr><p>RHIBindDebugLabelName</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHIUnorderedAccessView" ><span>FRHIUnorderedAccessView</span></a>&#42; Unord...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const TCHAR&#42; Name<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIBindDebugLabelName/1"><nobr><p>RHIBindDebugLabelName</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHITexture" ><span>FRHITexture</span></a>&#42; Texture,<br />&nbsp;&nbsp;&nbsp;&nbsp;const TCHAR&#42; Name<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Thread safe.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIBlockUntilGPUIdle"><nobr><p>RHIBlockUntilGPUIdle()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Blocks the CPU until the GPU catches up and goes idle. FlushType: Flush Immediate (seems wrong)</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../RHI/FDynamicRHI/FRHICalcTextureSizeResult" ><span>FRHICalcText</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHICalcTexturePlatformSize"><nobr><p>RHICalcTexturePlatformSize</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHITextureDesc" ><span>FRHITextureDesc</span></a> const&amp; Desc,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 FirstMipIndex<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Thread safe.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHICalibrateTimers"><nobr><p>RHICalibrateTimers()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>ETextureReal...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHICancelAsyncReallocateTexture2-"><nobr><p>RHICancelAsyncReallocateTexture2D</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FRHITexture2D&#42; Texture2D,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bBlockUntilCompleted<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Wait RHI Thread.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>uint32</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIComputeMemorySize"><nobr><p>RHIComputeMemorySize</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHITexture" ><span>FRHITexture</span></a>&#42; TextureRHI<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Thread safe.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>uint64</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIComputePrecachePSOHash"><nobr><p>RHIComputePrecachePSOHash</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../RHI/FGraphicsPipelineStateInitialize-" ><span>FGraphicsPipelineStateInitial</span></a>...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Compute the hash of the PSO initializer for PSO Precaching (only hash data relevant for the RHI specific PSO)</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHICopyBuffer"><nobr><p>RHICopyBuffer</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHIBuffer" ><span>FRHIBuffer</span></a>&#42; SourceBuffer,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHIBuffer" ><span>FRHIBuffer</span></a>&#42; DestBuffer<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Flush Immediate (seems dangerous)</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FTextureRHIR...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHICreateAliasedTexture"><nobr><p>RHICreateAliasedTexture</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FTextureRHIRef&amp; SourceTexture<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FBlendStateR...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHICreateBlendState"><nobr><p>RHICreateBlendState</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../RHI/FBlendStateInitializerRHI" ><span>FBlendStateInitializerRHI</span></a>&amp; I...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Thread safe.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FBoundShader...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHICreateBoundShaderState"><nobr><p>RHICreateBoundShaderState</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHIVertexDeclaration" ><span>FRHIVertexDeclaration</span></a>&#42; VertexD...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHIVertexShader" ><span>FRHIVertexShader</span></a>&#42; VertexShader,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHIPixelShader" ><span>FRHIPixelShader</span></a>&#42; PixelShader,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHIGeometryShader" ><span>FRHIGeometryShader</span></a>&#42; GeometrySh...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Thread safe, but varies depending on the RHI.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FBufferRHIRe...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHICreateBuffer"><nobr><p>RHICreateBuffer</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHICommandListBase" ><span>FRHICommandListBase</span></a>&amp; RHICmdList,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHIBufferDesc" ><span>FRHIBufferDesc</span></a> const&amp; Desc,<br />&nbsp;&nbsp;&nbsp;&nbsp;ERHIAccess ResourceState,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHIResourceCreateInfo" ><span>FRHIResourceCreateInfo</span></a>&amp; CreateInfo<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FComputePipe...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHICreateComputePipelineState"><nobr><p>RHICreateComputePipelineState</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHIComputeShader" ><span>FRHIComputeShader</span></a>&#42; ComputeShad...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Thread safe.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FComputeShad...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHICreateComputeShader"><nobr><p>RHICreateComputeShader</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const uint8 > Code,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Core/Misc/FSHAHash" ><span>FSHAHash</span></a>&amp; Hash<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Wait RHI Thread.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FDepthStenci...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHICreateDepthStencilState"><nobr><p>RHICreateDepthStencilState</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../RHI/FDepthStencilStateInitializerRHI" ><span>FDepthStencilStateInitializer</span></a>...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Thread safe.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FGeometrySha...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHICreateGeometryShader"><nobr><p>RHICreateGeometryShader</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const uint8 > Code,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Core/Misc/FSHAHash" ><span>FSHAHash</span></a>&amp; Hash<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Wait RHI Thread.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FGPUFenceRHI...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHICreateGPUFence"><nobr><p>RHICreateGPUFence</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Core/UObject/FName" ><span>FName</span></a>&amp; Name<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FGraphicsPip...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHICreateGraphicsPipelineState"><nobr><p>RHICreateGraphicsPipelineState</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../RHI/FGraphicsPipelineStateInitialize-" ><span>FGraphicsPipelineStateInitial</span></a>...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Thread safe.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FPixelShader...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHICreatePixelShader"><nobr><p>RHICreatePixelShader</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const uint8 > Code,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Core/Misc/FSHAHash" ><span>FSHAHash</span></a>&amp; Hash<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Wait RHI Thread.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FRasterizerS...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHICreateRasterizerState"><nobr><p>RHICreateRasterizerState</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../RHI/FRasterizerStateInitializerRHI" ><span>FRasterizerStateInitializerRH</span></a>...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Thread safe.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FRenderQuery...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHICreateRenderQuery"><nobr><p>RHICreateRenderQuery</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;ERenderQueryType QueryType<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Wait RHI Thread.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FSamplerStat...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHICreateSamplerState"><nobr><p>RHICreateSamplerState</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../RHI/FSamplerStateInitializerRHI" ><span>FSamplerStateInitializerRHI</span></a>&amp;...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Thread safe.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FShaderResou...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHICreateShaderResourceView"><nobr><p>RHICreateShaderResourceView</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHICommandListBase" ><span>FRHICommandListBase</span></a>&amp; RHICmdList,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHIViewableResource" ><span>FRHIViewableResource</span></a>&#42; Resource,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHIViewDesc" ><span>FRHIViewDesc</span></a> const&amp; ViewDesc<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>SRV / UAV creation functions.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FStagingBuff...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHICreateStagingBuffer"><nobr><p>RHICreateStagingBuffer()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Thread safe.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FTextureRHIR...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHICreateTexture"><nobr><p>RHICreateTexture</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../RHI/FRHITextureCreateDesc" ><span>FRHITextureCreateDesc</span></a>&amp; Creat...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Creates an RHI texture resource.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FTextureRHIR...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHICreateTexture_RenderThread"><nobr><p>RHICreateTexture_RenderThread</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHICommandListImmediate" ><span>FRHICommandListImmediate</span></a>&amp; RHICmdLi...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../RHI/FRHITextureCreateDesc" ><span>FRHITextureCreateDesc</span></a>&amp; Creat...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../RHI/IRHITransientResourceAllocator" ><span>IRHITransien</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHICreateTransientResourceAlloca-"><nobr><p>RHICreateTransientResourceAllocator()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Transient Resource Functions and Helpers.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHICreateTransition"><nobr><p>RHICreateTransition</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHITransition" ><span>FRHITransition</span></a>&#42; Transition,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../RHI/FRHITransitionCreateInfo" ><span>FRHITransitionCreateInfo</span></a>&amp; Cr...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FUniformBuff...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHICreateUniformBuffer"><nobr><p>RHICreateUniformBuffer</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const void&#42; Contents,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../RHI/FRHIUniformBufferLayout" ><span>FRHIUniformBufferLayout</span></a>&#42;...,<br />&nbsp;&nbsp;&nbsp;&nbsp;EUniformBufferUsage Usage,<br />&nbsp;&nbsp;&nbsp;&nbsp;EUniformBufferValidation Validation<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Thread safe, but varies depending on the RHI.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FUnorderedAc...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHICreateUnorderedAccessView"><nobr><p>RHICreateUnorderedAccessView</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHICommandListBase" ><span>FRHICommandListBase</span></a>&amp; RHICmdList,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHIViewableResource" ><span>FRHIViewableResource</span></a>&#42; Resource,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHIViewDesc" ><span>FRHIViewDesc</span></a> const&amp; ViewDesc<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FVertexDecla...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHICreateVertexDeclaration"><nobr><p>RHICreateVertexDeclaration</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const FVertexDeclarationElementList...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Wait RHI Thread.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FVertexShade...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHICreateVertexShader"><nobr><p>RHICreateVertexShader</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const uint8 > Code,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Core/Misc/FSHAHash" ><span>FSHAHash</span></a>&amp; Hash<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Wait RHI Thread.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FViewportRHI...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHICreateViewport"><nobr><p>RHICreateViewport</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;void&#42; WindowHandle,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 SizeX,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 SizeY,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bIsFullscreen,<br />&nbsp;&nbsp;&nbsp;&nbsp;EPixelFormat PreferredPixelFormat<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Must be called from the main thread. FlushType: Thread safe</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIEndUpdateTexture3D"><nobr><p>RHIEndUpdateTexture3D</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHICommandListBase" ><span>FRHICommandListBase</span></a>&amp; RHICmdList,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FUpdateTexture3DData" ><span>FUpdateTexture3DData</span></a>&amp; UpdateData<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>ETextureReal...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIFinalizeAsyncReallocateTextur-"><nobr><p>RHIFinalizeAsyncReallocateTexture2D</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FRHITexture2D&#42; Texture2D,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bBlockUntilCompleted<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Wait RHI Thread.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../RHI/IRHIPlatformCommandList" ><span>IRHIPlatform</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIFinalizeContext"><nobr><p>RHIFinalizeContext</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/IRHIComputeContext" ><span>IRHIComputeContext</span></a>&#42; Context<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Finalizes (i.e. closes) the specified command context, returning the completed platform command list object.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIFlushResources"><nobr><p>RHIFlushResources()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Flush driver resources.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIGetAvailableResolutions"><nobr><p>RHIGetAvailableResolutions</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FScreenResolutionArray&amp; Resolution...,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bIgnoreRefreshRate<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Thread safe.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../RHI/IRHIComputeContext" ><span>IRHIComputeC</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIGetCommandContext"><nobr><p>RHIGetCommandContext</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;ERHIPipeline Pipeline,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHIGPUMask" ><span>FRHIGPUMask</span></a> GPUMask<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Retrieves a new command context to begin the recording of a new platform command list.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../RHI/IRHIComputeContext" ><span>IRHIComputeC</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIGetDefaultAsyncComputeContext"><nobr><p>RHIGetDefaultAsyncComputeContext()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Thread safe.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../RHI/IRHICommandContext" ><span>IRHICommandC</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIGetDefaultContext"><nobr><p>RHIGetDefaultContext()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Thread safe.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>uint32</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIGetGPUFrameCycles"><nobr><p>RHIGetGPUFrameCycles</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 GPUIndex<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Thread safe.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>uint64</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIGetMinimumAlignmentForBufferB-"><nobr><p>RHIGetMinimumAlignmentForBufferBackedSRV</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;EPixelFormat Format<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Thread safe.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void &#42;</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIGetNativeComputeQueue"><nobr><p>RHIGetNativeComputeQueue()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Flush RHI Thread.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void &#42;</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIGetNativeDevice"><nobr><p>RHIGetNativeDevice()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Flush RHI Thread.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void &#42;</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIGetNativeGraphicsQueue"><nobr><p>RHIGetNativeGraphicsQueue()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Flush RHI Thread.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void &#42;</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIGetNativeInstance"><nobr><p>RHIGetNativeInstance()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Flush RHI Thread.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void &#42;</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIGetNativePhysicalDevice"><nobr><p>RHIGetNativePhysicalDevice()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Flush RHI Thread.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIGetRenderQueryResult"><nobr><p>RHIGetRenderQueryResult</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHIRenderQuery" ><span>FRHIRenderQuery</span></a>&#42; RenderQuery,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint64&amp; OutResult,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bWait,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 GPUIndex<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>CAUTION: Even though this is marked as threadsafe, it is only valid to call from the render thread.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIGetSupportedResolution"><nobr><p>RHIGetSupportedResolution</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32&amp; Width,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32&amp; Height<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Thread safe.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIGetTextureMemoryStats"><nobr><p>RHIGetTextureMemoryStats</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FTextureMemoryStats" ><span>FTextureMemoryStats</span></a>&amp; OutStats<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Thread safe.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIGetTextureMemoryVisualizeData"><nobr><p>RHIGetTextureMemoryVisualizeData</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Math/FColor" ><span>FColor</span></a>&#42; TextureData,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 SizeX,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 SizeY,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 Pitch,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 PixelSize<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Flush Immediate.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FTexture2DRH...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIGetViewportBackBuffer"><nobr><p>RHIGetViewportBackBuffer</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHIViewport" ><span>FRHIViewport</span></a>&#42; Viewport<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>With RHI thread, this is the current backbuffer from the perspective of the render thread.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIIsRenderingSuspended"><nobr><p>RHIIsRenderingSuspended()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Flush Immediate.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void &#42;</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHILockStagingBuffer"><nobr><p>RHILockStagingBuffer</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHIStagingBuffer" ><span>FRHIStagingBuffer</span></a>&#42; StagingBuff...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHIGPUFence" ><span>FRHIGPUFence</span></a>&#42; Fence,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 Offset,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 SizeRHI<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Lock a staging buffer to read contents on the CPU that were written by the GPU, without having to stall.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void &#42;</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHILockTexture2D"><nobr><p>RHILockTexture2D</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FRHITexture2D&#42; Texture,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 MipIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;EResourceLockMode LockMode,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32&amp; DestStride,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bLockWithinMiptail,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint64&#42; OutLockedByteCount<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Flush RHI Thread.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void &#42;</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHILockTexture2DArray"><nobr><p>RHILockTexture2DArray</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FRHITexture2DArray&#42; Texture,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 TextureIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 MipIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;EResourceLockMode LockMode,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32&amp; DestStride,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bLockWithinMiptail<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Flush RHI Thread.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void &#42;</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHILockTextureCubeFace"><nobr><p>RHILockTextureCubeFace</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FRHITextureCube&#42; Texture,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 FaceIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 ArrayIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 MipIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;EResourceLockMode LockMode,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32&amp; DestStride,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bLockWithinMiptail<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Flush RHI Thread.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIMapStagingSurface"><nobr><p>RHIMapStagingSurface</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHITexture" ><span>FRHITexture</span></a>&#42; Texture,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHIGPUFence" ><span>FRHIGPUFence</span></a>&#42; Fence,<br />&nbsp;&nbsp;&nbsp;&nbsp;void&#42;&amp; OutData,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32&amp; OutWidth,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32&amp; OutHeight,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 GPUIndex<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Flush Immediate (seems wrong)</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIMatchPrecachePSOInitializers"><nobr><p>RHIMatchPrecachePSOInitializers</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../RHI/FGraphicsPipelineStateInitialize-" ><span>FGraphicsPipelineStateInitial</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../RHI/FGraphicsPipelineStateInitialize-" ><span>FGraphicsPipelineStateInitial</span></a>...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Check if PSO Initializers are the same used during PSO Precaching (only compare data relevant for the RHI specific PSO)</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIRead3DSurfaceFloatData"><nobr><p>RHIRead3DSurfaceFloatData</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHITexture" ><span>FRHITexture</span></a>&#42; Texture,<br />&nbsp;&nbsp;&nbsp;&nbsp;FIntRect Rect,<br />&nbsp;&nbsp;&nbsp;&nbsp;FIntPoint ZMinMax,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../Core/Math/FFloat16Color" ><span>FFloat16Color</span></a> >&amp; OutData<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Flush Immediate (seems wrong)</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIReadSurfaceData/1"><nobr><p>RHIReadSurfaceData</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHITexture" ><span>FRHITexture</span></a>&#42; Texture,<br />&nbsp;&nbsp;&nbsp;&nbsp;FIntRect Rect,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../Core/Math/FColor" ><span>FColor</span></a> >&amp; OutData,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FReadSurfaceDataFlags" ><span>FReadSurfaceDataFlags</span></a> InFlags<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Flush Immediate (seems wrong)</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIReadSurfaceData/2"><nobr><p>RHIReadSurfaceData</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHITexture" ><span>FRHITexture</span></a>&#42; Texture,<br />&nbsp;&nbsp;&nbsp;&nbsp;FIntRect Rect,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../Core/Math/FLinearColor" ><span>FLinearColor</span></a> >&amp; OutData,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FReadSurfaceDataFlags" ><span>FReadSurfaceDataFlags</span></a> InFlags<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Default fallback; will not work for non-8-bit surfaces and it's extremely slow.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIReadSurfaceFloatData"><nobr><p>RHIReadSurfaceFloatData</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHITexture" ><span>FRHITexture</span></a>&#42; Texture,<br />&nbsp;&nbsp;&nbsp;&nbsp;FIntRect Rect,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../Core/Math/FFloat16Color" ><span>FFloat16Color</span></a> >&amp; OutData,<br />&nbsp;&nbsp;&nbsp;&nbsp;ECubeFace CubeFace,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 ArrayIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 MipIndex<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Flush Immediate (seems wrong)</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIReleaseThreadOwnership"><nobr><p>RHIReleaseThreadOwnership()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Flush RHI Thread.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIReleaseTransition"><nobr><p>RHIReleaseTransition</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHITransition" ><span>FRHITransition</span></a>&#42; Transition<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+
+<img class="  lazyload" alt="Const" title="Const" width="18" data-src="./../../../../../Images/api_function_const.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIRequiresComputeGenerateMips"><nobr><p>RHIRequiresComputeGenerateMips()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIResizeViewport/2"><nobr><p>RHIResizeViewport</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHIViewport" ><span>FRHIViewport</span></a>&#42; Viewport,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 SizeX,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 SizeY,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bIsFullscreen,<br />&nbsp;&nbsp;&nbsp;&nbsp;EPixelFormat PreferredPixelFormat<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIResizeViewport/1"><nobr><p>RHIResizeViewport</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHIViewport" ><span>FRHIViewport</span></a>&#42; Viewport,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 SizeX,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 SizeY,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bIsFullscreen<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Must be called from the main thread. FlushType: Thread safe</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIResumeRendering"><nobr><p>RHIResumeRendering()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Thread safe.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHISubmitCommandLists"><nobr><p>RHISubmitCommandLists</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; <a id="content_link" href="../../RHI/IRHIPlatformCommandList" ><span>IRHIPlatformCommandList</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bFlushResources<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Submits a batch of previously recorded/finalized command lists to the GPU.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHISubmitCommandsAndFlushGPU"><nobr><p>RHISubmitCommandsAndFlushGPU()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Kicks the current frame and makes sure GPU is actively working on them FlushType: Flush Immediate (copied from RHIBlockUntilGPUIdle)</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHISuspendRendering"><nobr><p>RHISuspendRendering()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Operations to suspend title rendering and yield control to the system FlushType: Thread safe</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHITick"><nobr><p>RHITick</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;float DeltaTime<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Must be called from the main thread. FlushType: Thread safe</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHITransferBufferUnderlyingResou-"><nobr><p>RHITransferBufferUnderlyingResource</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHIBuffer" ><span>FRHIBuffer</span></a>&#42; DestBuffer,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHIBuffer" ><span>FRHIBuffer</span></a>&#42; SrcBuffer<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Transfer metadata and underlying resource from src to dest and release any resource owned by dest.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIUnlockBuffer"><nobr><p>RHIUnlockBuffer</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHICommandListBase" ><span>FRHICommandListBase</span></a>&amp; RHICmdList,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHIBuffer" ><span>FRHIBuffer</span></a>&#42; Buffer<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Flush RHI Thread.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIUnlockStagingBuffer"><nobr><p>RHIUnlockStagingBuffer</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHIStagingBuffer" ><span>FRHIStagingBuffer</span></a>&#42; StagingBuff...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Unlock a staging buffer previously locked with RHILockStagingBuffer.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIUnlockTexture2D"><nobr><p>RHIUnlockTexture2D</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FRHITexture2D&#42; Texture,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 MipIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bLockWithinMiptail<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Flush RHI Thread.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIUnlockTexture2DArray"><nobr><p>RHIUnlockTexture2DArray</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FRHITexture2DArray&#42; Texture,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 TextureIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 MipIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bLockWithinMiptail<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Flush RHI Thread.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIUnlockTextureCubeFace"><nobr><p>RHIUnlockTextureCubeFace</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FRHITextureCube&#42; Texture,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 FaceIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 ArrayIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 MipIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bLockWithinMiptail<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Flush RHI Thread.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIUnmapStagingSurface"><nobr><p>RHIUnmapStagingSurface</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHITexture" ><span>FRHITexture</span></a>&#42; Texture,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 GPUIndex<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>FlushType: Flush Immediate (seems wrong)</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIUpdateTexture2D"><nobr><p>RHIUpdateTexture2D</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHICommandListBase" ><span>FRHICommandListBase</span></a>&amp; RHICmdList,<br />&nbsp;&nbsp;&nbsp;&nbsp;FRHITexture2D&#42; Texture,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 MipIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../RHI/FUpdateTextureRegion2D" ><span>FUpdateTextureRegion2D</span></a>&amp; Upda...,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 SourcePitch,<br />&nbsp;&nbsp;&nbsp;&nbsp;const uint8&#42; SourceData<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Updates a region of a 2D texture from system memory</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIUpdateTexture3D"><nobr><p>RHIUpdateTexture3D</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHICommandListBase" ><span>FRHICommandListBase</span></a>&amp; RHICmdList,<br />&nbsp;&nbsp;&nbsp;&nbsp;FRHITexture3D&#42; Texture,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 MipIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../RHI/FUpdateTextureRegion3D" ><span>FUpdateTextureRegion3D</span></a>&amp; Upda...,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 SourceRowPitch,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 SourceDepthPitch,<br />&nbsp;&nbsp;&nbsp;&nbsp;const uint8&#42; SourceData<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Updates a region of a 3D texture from system memory</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIUpdateTextureReference"><nobr><p>RHIUpdateTextureReference</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHICommandListBase" ><span>FRHICommandListBase</span></a>&amp; RHICmdList,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHITextureReference" ><span>FRHITextureReference</span></a>&#42; TextureR...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHITexture" ><span>FRHITexture</span></a>&#42; NewTexture<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIUpdateUniformBuffer"><nobr><p>RHIUpdateUniformBuffer</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHICommandListBase" ><span>FRHICommandListBase</span></a>&amp; RHICmdList,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHIUniformBuffer" ><span>FRHIUniformBuffer</span></a>&#42; UniformBuff...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const void&#42; Contents<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="Shutdown"><nobr><p>Shutdown()</p></nobr></a>
+		<div class="name-cell-arguments">
+			
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Shutdown the RHI; handle shutdown and resource destruction before the RHI's actual destructor is called (so that all resources of the RHI are still available for shutdown).</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UnlockBuffer_BottomOfPipe"><nobr><p>UnlockBuffer_BottomOfPipe</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHICommandListBase" ><span>FRHICommandListBase</span></a>&amp; RHICmdList,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHIBuffer" ><span>FRHIBuffer</span></a>&#42; Buffer<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UnlockTexture2D_RenderThread"><nobr><p>UnlockTexture2D_RenderThread</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHICommandListImmediate" ><span>FRHICommandListImmediate</span></a>&amp; RHICmdLi...,<br />&nbsp;&nbsp;&nbsp;&nbsp;FRHITexture2D&#42; Texture,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 MipIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bLockWithinMiptail,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bNeedsDefaultRHIFlush<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+	</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'enums');">
+        <p>Enums</p>
+    </div>
+<div id="enums">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:15%">
+			</th>
+			<th class="name-cell" style="width:20%">
+				<p>Name</p>
+			</th>
+			<th class="desc-cell" style="width:65%">
+				<p>Description</p>
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public enum" title="Public enum" width="18" data-src="./../../../../../Images/api_enum_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="EActiveDebugLayerExtension"><p>EActiveDebugLayerExtension</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+			</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'constants');">
+        <p>Constants</p>
+    </div>
+<div id="constants">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="name-cell" style="width:15%">
+				<p>Name</p>
+			</th>
+			<th class="desc-cell" style="width:85%">
+				<p>Description</p>
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="HMDVulkanExtensions"><p>HMDVulkanExtensions</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+			</table>
+</div>
+
+</div><div class="heading expanded" onclick="sectionOnClick(this, 'deprecatedfunctions');">
+        <p>Deprecated Functions</p>
+    </div>
+<div id="deprecatedfunctions">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:8%;">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Virtual" title="Virtual" width="18" data-src="./../../../../../Images/api_function_virtual.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>VkImageLayou...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RHIFindOrAddLayoutRW"><nobr><p>RHIFindOrAddLayoutRW</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../RHI/FRHITexture" ><span>FRHITexture</span></a>&#42; InTexture,<br />&nbsp;&nbsp;&nbsp;&nbsp;VkImageLayout LayoutIfNotFound<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Altering image layout tracking directly is not permitted anymore.</p>
+	</td>
+</tr>
+	</table>
+</div>
+
+</div>
+</div>
+																	</div>
+					<!-- End of Markdown converted page content -->
+				</div>
+												<div id="recommendations"></div>			</div>
+						<div id="footer"></div>			
+									<div id="announcement">
+			<div style="display:inline-block;margin:5px;">
+				Help shape the future of Unreal Engine documentation! Tell us how we're doing so we can serve you better.
+			</div>
+			<div style="margin:5px;display:inline-block;">
+				<div class="btn action" style="margin-top:-6px;display:inline-block;" onclick="$('#announcement').hide();window.open('https://epicgames.questionpro.com/t/AVVbJZwedR');createCookie('announcement-read', new Date().getTime(), 30);">Take our survey</div>
+				<div class="btn btn-default" style="margin-top:-6px;display:inline-block;" onclick="$('#announcement').hide();createCookie('announcement-read', new Date().getTime(), 30);">Cancel</div>
+			</div>
+			<div class="btn-close" style="position:absolute;right:5px;top:10px;padding:3px;width:14px;height:14px;" onclick="$('#announcement').hide();"></div>
+			</div>
+					</div>
+	</div>
+</body>
+</html>

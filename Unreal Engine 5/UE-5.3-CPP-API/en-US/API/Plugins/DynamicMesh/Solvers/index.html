@@ -1,0 +1,791 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="./../../../../../Include/Javascript/common_en-US.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var time = new Date(0);
+		var preview = false;
+		var relativeHTMLPath = "./../../../../../";
+				var pageid = 0;
+				var heroimage = "./../../../../../Images/ue5-hero.png";
+				var lang = "en-US";
+				var basePath = document.location.pathname.substring(0, document.location.pathname.indexOf('/' + lang + '/') + lang.length + 1);
+		document.write('<base href="' +  encodeURI(basePath) + '/API/Plugins/DynamicMesh/Solvers/" />');
+				var udnCSS = './../../../../../Include/CSS/udn_public.css';
+		var udnLangCSS = '';
+				var udnOverrideCSS = './../../../../../Include/CSS/skin_overrides.css';
+		var udnOverrideDarkCSS = './../../../../../Include/CSS/skin_overrides_dark.css';
+		var fancyboxCSS = './../../../../../Include/CSS/jquery.fancybox.css';
+		var jqueryuiCSS = './../../../../../Include/CSS/jquery-ui.min.css';
+		var qtipCSS = './../../../../../Include/CSS/jquery.qtip.css';
+		var prettifyCSS = './../../../../../Include/CSS/prettify.css';
+		var navbarCSS = './../../../../../Include/CSS/navBar.css';
+		var twentytwentyCSS = './../../../../../Include/CSS/twentytwenty.css';
+		var recommendationsCSS = './../../../../../Include/CSS/jquery.recommendations.css';
+	</script>
+    <title>Solvers | Unreal Engine 5.2 Documentation</title>
+    	    <meta name=viewport content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Cache-control" content="no-store">
+    <script  src="./../../../../../Include/Javascript/CustomEvent.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/jquery-3.4.0.min.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/udn.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/udn_extras.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/jquery-ui.min.js" type="text/javascript"></script>
+	    <script  src="./../../../../../Include/Javascript/informational.js" type="text/javascript"></script>
+	    <script  src="./../../../../../Include/Javascript/jquery.fancybox.pack.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/jquery.qtip.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/prettify.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/jquery.slimscroll.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/jquery.event.move.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/jquery.twentytwenty.js" type="text/javascript"></script>
+    <script  src="./../../../../../Include/Javascript/lazysizes.min.js" type="text/javascript"></script>
+	    <script  src="./../../../../../Include/Javascript/jquery.recommendations.js" type="text/javascript"></script>
+	
+    <link async rel="icon" href="./../../../../../Include/Images/site_icon.png" type="image/x-icon" />
+    <link async rel="shortcut icon" href="./../../../../../Include/Images/site_icon.png" type="image/x-icon" />
+    <link async href="./../../../../../Include/Images/touch_icon.png" rel="apple-touch-icon" />
+    <link async href="./../../../../../Include/Images/touch_icon_114.png" sizes="114x114" rel="apple-touch-icon" />    
+		<script  src="./../../../../../Include/Javascript/CollapsibleLists.js" type="text/javascript"></script>
+	<script  src="./../../../../../Include/Javascript/navigationBarUI.js"></script>
+	<script  src="./../../../../../Include/Javascript/navigationBar.js"></script>
+		
+	<link rel="alternate" href="https://docs.unrealengine.com/latest/en-US/API/Plugins/DynamicMesh/Solvers/" hreflang="x-default" />
+
+	<meta name="title" content="Solvers" />
+<meta name="description" content="" />
+<meta name="availability" content="Public" />
+<meta name="crumbs" content="%ROOT%,API,API/Plugins,API/Plugins/DynamicMesh" />
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta property="og:title" content="Solvers" />
+	<meta property="og:description" content="" />
+		<meta property="og:image" content="https://docs.unrealengine.com/5.1/Images/placeholder-social.png" />
+	</head>
+<body id="webbgThree" style="visibility: hidden;" onload="document.body.style.visibility='visible';">
+			<script>window.__tracking_base = 'https://tracking.unrealengine.com';</script>
+	<script src="https://tracking.unrealengine.com/tracking.js" async></script>    <div id="webThree">
+				<div id="page_head">
+						<div id="head">
+				<div id="logo"></div>
+			</div>
+						<div id="pagenav">
+				<div class="crumbs" id="crumbs">
+<span id="versionContainer">
+	<span id="versionSelect" class="btn btn-version" onclick="ToggleMenu($('#versionMenu'), $(this));"></span>
+	<div id="versionMenu">
+		<div id="4_26" data-version="4.26" class="btn btn-select" onclick="createCookie('version', '4.26', 365);SwitchVersion('4.26');">Unreal Engine 4.26 Documentation</div>
+		<div id="4_27" data-version="4.27" class="btn btn-select" onclick="createCookie('version', '4.27', 365);SwitchVersion('4.27');">Unreal Engine 4.27 Documentation</div>
+		<div id="5_0" data-version="5.0" class="btn btn-select" onclick="createCookie('version', '5.0', 365);SwitchVersion('5.0');">Unreal Engine 5.0 Documentation</div>
+		<div id="5_1" data-version="5.1" class="btn btn-select" onclick="createCookie('version', '5.1', 365);SwitchVersion('5.1');">Unreal Engine 5.1 Documentation</div>
+		<div id="5_2" data-version="5.2" class="btn btn-select" onclick="createCookie('version', '5.2', 365);SwitchVersion('5.2');">Unreal Engine 5.2 Documentation</div>
+		<div id="5_3" data-version="5.3" class="btn btn-select" onclick="createCookie('version', '5.3', 365);SwitchVersion('5.3');">Unreal Engine 5.3 Documentation</div>
+	</div>
+</span>
+	<span class="separator">></span> <a id="parent_link" href="../../../../API">Unreal Engine API Reference</a>
+
+	<span class="separator">></span> <a id="parent_link" href="../../../Plugins">Plugins</a>
+
+	<span class="separator">></span> <a id="parent_link" href="../../DynamicMesh">DynamicMesh</a>
+
+<span class="separator">></span> <span id="page">Solvers</span>
+</div>				<div id="pageNavRight">
+								<!-- Start of Search -->
+												<div id="search_container">
+					<form name="bodySearch" method="get" action="https://www.unrealengine.com/en-US/bing-search" onsubmit="return validateSearch()">
+						<input type="image" src="./../../../../../Include/Images/search_box_icon.png" class="searchbutton"/>
+						<input type="hidden" name="filter" value="Documentation" />
+						<input type="text" name="keyword" placeholder="Search Documentation..." class="searchbox" autocomplete="off"/>
+					</form>
+				</div>
+								<!-- End of Search -->
+				<div id="skinContainer">
+	<div id="skinSelect" class="btn btn-skin" onclick="ToggleMenu($('#skinMenu'), $(this));"></div>
+	<div id="skinMenu">
+		<div id="light" class="btn btn-select" onclick="createCookie('skin', 'light', 365);location.reload();">Light Theme</div>
+		<div id="dark" class="btn btn-select" onclick="createCookie('skin', 'dark', 365);location.reload();">Dark Theme</div>
+	</div>
+</div>				</div>
+			</div>
+		</div>						<div id="navWrapper">
+			<div id="nav-filter-container">
+				<div id="nav-filter-inner">
+					<form>
+						<input type="text" placeholder="Filter pages..." id="nav-filter" onchange="clearTimeout(filterTimer); filterTimer = setTimeout(updateNavTreeFilter,250, this.value);if(this.value.length == 0){$('#filter-clear').hide();}else{$('#filter-clear').show();}" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" />
+						<button class="close-icon" id="filter-clear" type="reset" onclick="clearTimeout(filterTimer); filterTimer = setTimeout(updateNavTreeFilter,250, '');$(this).hide();"></button>
+					</form>
+				</div>
+			</div>
+			<nav id="navPanel">
+			</nav>
+			<div id="navigation" title="Click to toggle navigation menu"><span>></span></div>
+		</div>		
+		<div id="splitter">
+		</div>
+				<div id="contentContainer">
+										<div id="pagedefault">
+				<div id="product-banner">
+	<div id="product-logo"></div>
+</div>				<div id="pagecontainer" style="padding-right:0px;">
+					<!-- Start of Markdown converted page content -->
+										<div class="hero  background">
+	<div class="imgContainer"><img src="./../../../../../Images/ue5-hero.png" /></div>	<div class="info">
+		<div id="pageTitle">
+			<h1 id="H1TitleId">Solvers</h1>
+		</div>
+		<h2 ></h2>
+		<div id="access">
+			<div class="accessContainer">
+															</div>
+		</div>
+	</div>
+</div>															<div id="maincol">
+																																				<div class="syntax">
+
+
+
+<div class="heading expanded" onclick="sectionOnClick(this, 'classes');">
+        <p>Classes</p>
+    </div>
+<div id="classes">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:15%">
+			</th>
+			<th class="name-cell" style="width:20%">
+				<p>Name</p>
+			</th>
+			<th class="desc-cell" style="width:65%">
+				<p>Description</p>
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public class" title="Public class" width="18" data-src="./../../../../../Images/api_class_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="CotanTriangleData"><p>CotanTriangleData</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>The per-triangle data used in constructing the cotangent weighted laplacian.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public class" title="Public class" width="18" data-src="./../../../../../Images/api_class_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="FTriangleLinearization"><p>FTriangleLinearization</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Used linearize the TriIds in a mesh as a single array and allow mapping from array offset to mesh TriId.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public class" title="Public class" width="18" data-src="./../../../../../Images/api_class_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="FVertexLinearization"><p>FVertexLinearization</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Used to linearize the VtxIds in a mesh as a single array and allow mapping from array offset to mesh VtxId.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public class" title="Public class" width="18" data-src="./../../../../../Images/api_class_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="IConstrainedLaplacianMeshSolver"><p>IConstrainedLaplacianMeshSolver</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Extension of <a id="content_link" href="IConstrainedMeshSolver" ><span>IConstrainedMeshSolver</span></a> that supports manipulating the underlying Laplacian vectors used in Laplacian-based Deformation Solvers.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public class" title="Public class" width="18" data-src="./../../../../../Images/api_class_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="IConstrainedMeshSolver"><p>IConstrainedMeshSolver</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Interface to a index-based deformation solver for a 3D mesh vertex set that supports weighted point constraints.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public class" title="Public class" width="18" data-src="./../../../../../Images/api_class_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="IConstrainedMeshUVSolver"><p>IConstrainedMeshUVSolver</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Interface to a index-based UV solver for a 3D triangle mesh that supports weighted point constraints.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public class" title="Public class" width="18" data-src="./../../../../../Images/api_class_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="MeanValueTriangleData"><p>MeanValueTriangleData</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>The per-triangle data used in constructing the mean-value weighted laplacian.</p>
+	</td>
+</tr>
+			</table>
+</div>
+
+</div>
+
+
+
+
+
+<div class="heading expanded" onclick="sectionOnClick(this, 'enums');">
+        <p>Enums</p>
+    </div>
+<div id="enums">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:15%">
+			</th>
+			<th class="name-cell" style="width:20%">
+				<p>Name</p>
+			</th>
+			<th class="desc-cell" style="width:65%">
+				<p>Description</p>
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public enum" title="Public enum" width="18" data-src="./../../../../../Images/api_enum_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="ELaplacianWeightScheme"><p>ELaplacianWeightScheme</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Types of Laplacian weights.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public enum" title="Public enum" width="18" data-src="./../../../../../Images/api_enum_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="UE__MeshDeformation__ECotangentA-"><p>UE::MeshDeformation::ECotangentAreaMode</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public enum" title="Public enum" width="18" data-src="./../../../../../Images/api_enum_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="UE__MeshDeformation__ECotangentW-"><p>UE::MeshDeformation::ECotangentWeightMode</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+			</table>
+</div>
+
+</div>
+
+<div class="heading expanded" onclick="sectionOnClick(this, 'functions');">
+        <p>Functions</p>
+    </div>
+<div id="functions">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:8%;">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="bIsSymmetricLaplacian"><nobr><p>bIsSymmetricLaplacian</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="ELaplacianWeightScheme" ><span>ELaplacianWeightScheme</span></a> Scheme<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Containers/FString" ><span>FString</span></a></p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="LaplacianSchemeName"><nobr><p>LaplacianSchemeName</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="ELaplacianWeightScheme" ><span>ELaplacianWeightScheme</span></a> Scheme<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Utility to map the enum names for debuging etc.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>int32</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UE__MeshDeformation__ComputeNumM-"><nobr><p>UE::MeshDeformation::ComputeNumMatrixElements</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const MeshT&amp; DynamicMesh,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; int32 >&amp; ToVtxId<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Utility to compute the number of elements in the sparse laplacian matrix.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UE__MeshDeformation__ComputeSmoo-"><nobr><p>UE::MeshDeformation::ComputeSmoothing_BiHarmonic</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="ELaplacianWeightScheme" ><span>ELaplacianWeightScheme</span></a> Weight...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/GeometryCore/DynamicMesh/FDynamicMesh3" ><span>FDynamicMesh3</span></a>&amp; OriginalMesh,<br />&nbsp;&nbsp;&nbsp;&nbsp;const double Speed,<br />&nbsp;&nbsp;&nbsp;&nbsp;const double Weight,<br />&nbsp;&nbsp;&nbsp;&nbsp;const int32 NumIterations,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FVector3d >&amp; PositionArray<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Note: for discussion of implicit / explicit integration of diffusion and biharmonic equations see "Implicit Fairing of Irregular Meshes using Diffusion and Curvature Flow" - M Desbrun 99.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UE__MeshDeformation__ComputeSmoo-_1"><nobr><p>UE::MeshDeformation::ComputeSmoothing_Diffusion</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="ELaplacianWeightScheme" ><span>ELaplacianWeightScheme</span></a> Weight...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/GeometryCore/DynamicMesh/FDynamicMesh3" ><span>FDynamicMesh3</span></a>&amp; OriginalMesh,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bForwardEuler,<br />&nbsp;&nbsp;&nbsp;&nbsp;const double Speed,<br />&nbsp;&nbsp;&nbsp;&nbsp;double Weight,<br />&nbsp;&nbsp;&nbsp;&nbsp;const int32 NumIterations,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FVector3d >&amp; PositionArray<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>This is equivalent to forward or backward Euler time steps of the diffusion equation</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UE__MeshDeformation__ComputeSmoo-_2"><nobr><p>UE::MeshDeformation::ComputeSmoothing_Forward</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bUniformWeightScheme,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bSmoothBoundary,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/GeometryCore/DynamicMesh/FDynamicMesh3" ><span>FDynamicMesh3</span></a>&amp; OriginalMesh,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/GenericPlatform/TFunctionRef" ><span>TFunctionRef</span></a>&lt; double(int VID, bool ...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const int32 NumIterations,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FVector3d >&amp; PositionArray<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Simple iterative smoothing with an optional weight map Each iteration Lerps towards the weighted neighbor centroid by the GetSmoothingAlpha amount</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UE__MeshDeformat-_10"><nobr><p>UE::MeshDeformation::ComputeSmoothing_ImplicitBiHarmonicPCG</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="ELaplacianWeightScheme" ><span>ELaplacianWeightScheme</span></a> Weight...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/GeometryCore/DynamicMesh/FDynamicMesh3" ><span>FDynamicMesh3</span></a>&amp; OriginalMesh,<br />&nbsp;&nbsp;&nbsp;&nbsp;const double Speed,<br />&nbsp;&nbsp;&nbsp;&nbsp;const double Weight,<br />&nbsp;&nbsp;&nbsp;&nbsp;const int32 MaxIterations,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; FVector3d >&amp; PositionArray<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Templates/TUniquePtr" ><span>TUniquePtr</span></a>&lt; ...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UE__MeshDeformat-"><nobr><p>UE::MeshDeformation::ConstructConstrainedMeshDeformer</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="ELaplacianWeightScheme" ><span>ELaplacianWeightScheme</span></a> Weight...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/GeometryCore/DynamicMesh/FDynamicMesh3" ><span>FDynamicMesh3</span></a>&amp; DynamicMesh<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Solves the linear system for p_vec    ( Transpose(L) &#42; L   + (0  0      )  ) p_vec = source_vec + ( 0              )</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Templates/TUniquePtr" ><span>TUniquePtr</span></a>&lt; ...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UE__MeshDeformat-_2"><nobr><p>UE::MeshDeformation::ConstructConstrainedMeshSmoother</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="ELaplacianWeightScheme" ><span>ELaplacianWeightScheme</span></a> Weight...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/GeometryCore/DynamicMesh/FDynamicMesh3" ><span>FDynamicMesh3</span></a>&amp; DynamicMesh<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Solves the linear system for p_vec    ( Transpose(L) &#42; L   + (0  0      )  ) p_vec = ( 0              )</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UE__MeshDeformation__ConstructCo-/1"><nobr><p>UE::MeshDeformation::ConstructCotangentLaplacian</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/GeometryCore/DynamicMesh/FDynamicMesh3" ><span>FDynamicMesh3</span></a>&amp; DynamicMesh,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="FVertexLinearization" ><span>FVertexLinearization</span></a>&amp; Vertex...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/GeometryCore/Solvers/TSparseMatrixAssembler" ><span>UE::Solvers::TSparseMatrixAssembler</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/GeometryCore/Solvers/TSparseMatrixAssembler" ><span>UE::Solvers::TSparseMatrixAssembler</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/GeometryCore/Solvers/TSparseMatrixAssembler" ><span>UE::Solvers::TSparseMatrixAssembler</span></a>...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Construct a sparse matrix representation using a cotangent-weighted Laplacian.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UE__MeshDeformation__ConstructCo-/2"><nobr><p>UE::MeshDeformation::ConstructCotangentLaplacian</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/GeometryCore/DynamicMesh/FDynamicMesh3" ><span>FDynamicMesh3</span></a>&amp; DynamicMesh,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="FVertexLinearization" ><span>FVertexLinearization</span></a>&amp; Vertex...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/GeometryCore/Solvers/TSparseMatrixAssembler" ><span>UE::Solvers::TSparseMatrixAssembler</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/GeometryCore/Solvers/TSparseMatrixAssembler" ><span>UE::Solvers::TSparseMatrixAssembler</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bClampWeights<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Construct a sparse matrix representation using a pre-multiplied cotangent-weighted Laplacian.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UE__MeshDeformat-_11"><nobr><p>UE::MeshDeformation::ConstructEdgeCotanWeightsDataArray</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/GeometryCore/DynamicMesh/FDynamicMesh3" ><span>FDynamicMesh3</span></a>&amp; Mesh,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; double >&amp; EdgeWeightsDataA...,<br />&nbsp;&nbsp;&nbsp;&nbsp;double ClampMin,<br />&nbsp;&nbsp;&nbsp;&nbsp;double ClampMax<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UE__MeshDeformat-_6"><nobr><p>UE::MeshDeformation::ConstructFullCotangentLaplacian</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/GeometryCore/DynamicMesh/FDynamicMesh3" ><span>FDynamicMesh3</span></a>&amp; DynamicMesh,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="FVertexLinearization" ><span>FVertexLinearization</span></a>&amp; Vertex...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/GeometryCore/Solvers/TSparseMatrixAssembler" ><span>UE::Solvers::TSparseMatrixAssembler</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="UE__MeshDeformation__ECotangentW-" ><span>ECotangentWeightMode</span></a> WeightMode,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="UE__MeshDeformation__ECotangentA-" ><span>ECotangentAreaMode</span></a> AreaMode<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Construct sparse Cotangent Laplacian matrix.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UE__MeshDeformat-_7"><nobr><p>UE::MeshDeformation::ConstructFullIDTCotangentLaplacian</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/GeometryCore/DynamicMesh/FDynamicMesh3" ><span>FDynamicMesh3</span></a>&amp; Mesh,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="FVertexLinearization" ><span>FVertexLinearization</span></a>&amp; Vertex...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/GeometryCore/Solvers/TSparseMatrixAssembler" ><span>UE::Solvers::TSparseMatrixAssembler</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="UE__MeshDeformation__ECotangentW-" ><span>ECotangentWeightMode</span></a> WeightMode,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="UE__MeshDeformation__ECotangentA-" ><span>ECotangentAreaMode</span></a> AreaMode<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Use intrinsic Delaunay mesh to construct sparse Cotangent Laplacian matrix.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UE__MeshDeformat-_5"><nobr><p>UE::MeshDeformation::ConstructIDTCotangentLaplacian</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/GeometryCore/DynamicMesh/FDynamicMesh3" ><span>FDynamicMesh3</span></a>&amp; DynamicMesh,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="FVertexLinearization" ><span>FVertexLinearization</span></a>&amp; Vertex...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/GeometryCore/Solvers/TSparseMatrixAssembler" ><span>UE::Solvers::TSparseMatrixAssembler</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/GeometryCore/Solvers/TSparseMatrixAssembler" ><span>UE::Solvers::TSparseMatrixAssembler</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const bool bClampWeights<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Construct a sparse matrix representation using a pre-multiplied cotangent-weighted Laplacian, using an intrinsic Delaunay mesh internally NB: there is no reason to expect this to be a symmetric matrix.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UE__MeshDeformat-_4"><nobr><p>UE::MeshDeformation::ConstructMeanValueWeightLaplacian</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/GeometryCore/DynamicMesh/FDynamicMesh3" ><span>FDynamicMesh3</span></a>&amp; DynamicMesh,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="FVertexLinearization" ><span>FVertexLinearization</span></a>&amp; Vertex...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/GeometryCore/Solvers/TSparseMatrixAssembler" ><span>UE::Solvers::TSparseMatrixAssembler</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/GeometryCore/Solvers/TSparseMatrixAssembler" ><span>UE::Solvers::TSparseMatrixAssembler</span></a>...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Construct a sparse matrix representation using a meanvalue-weighted Laplacian.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Templates/TUniquePtr" ><span>TUniquePtr</span></a>&lt; ...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UE__MeshDeformat-_8"><nobr><p>UE::MeshDeformation::ConstructNaturalConformalParamSolver</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/GeometryCore/DynamicMesh/FDynamicMesh3" ><span>FDynamicMesh3</span></a>&amp; DynamicMesh<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Create solver for the Least Squares Conformal UV Parameterization for this mesh.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Templates/TUniquePtr" ><span>TUniquePtr</span></a>&lt; ...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UE__MeshDeformation__ConstructSo-"><nobr><p>UE::MeshDeformation::ConstructSoftMeshDeformer</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/GeometryCore/DynamicMesh/FDynamicMesh3" ><span>FDynamicMesh3</span></a>&amp; DynamicMesh<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Construct a Mesh Deformer object for the given mesh that uses Biharmonic Laplacian Mesh Deformation to solve for the deformed vertex positions.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Templates/TUniquePtr" ><span>TUniquePtr</span></a>&lt; ...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UE__MeshDeformat-_9"><nobr><p>UE::MeshDeformation::ConstructSpectralConformalParamSolver</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/GeometryCore/DynamicMesh/FDynamicMesh3" ><span>FDynamicMesh3</span></a>&amp; DynamicMesh,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bPreserveIrregularity<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Create solver for the Spectral Conformal UV Parameterization for this mesh.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UE__MeshDeformation__ConstructTr-"><nobr><p>UE::MeshDeformation::ConstructTriangleDataArray</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/GeometryCore/DynamicMesh/FDynamicMesh3" ><span>FDynamicMesh3</span></a>&amp; DynamicMesh,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="FTriangleLinearization" ><span>FTriangleLinearization</span></a>&amp; Tria...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; TriangleDataType >&amp; Triang...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Return and array in triangle order that holds the per-triangle derived data needed</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UE__MeshDeformation__ConstructUm-"><nobr><p>UE::MeshDeformation::ConstructUmbrellaLaplacian</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/GeometryCore/DynamicMesh/FDynamicMesh3" ><span>FDynamicMesh3</span></a>&amp; DynamicMesh,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="FVertexLinearization" ><span>FVertexLinearization</span></a>&amp; Vertex...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/GeometryCore/Solvers/TSparseMatrixAssembler" ><span>UE::Solvers::TSparseMatrixAssembler</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/GeometryCore/Solvers/TSparseMatrixAssembler" ><span>UE::Solvers::TSparseMatrixAssembler</span></a>...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Construct a sparse matrix representation of an umbrella weighted Laplacian.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../../Runtime/Core/Templates/TUniquePtr" ><span>TUniquePtr</span></a>&lt; ...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UE__MeshDeformat-_1"><nobr><p>UE::MeshDeformation::ConstructUniformConstrainedMeshDeformer</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/GeometryCore/Curve/FDynamicGraph3d" ><span>FDynamicGraph3d</span></a>&amp; Graph<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Class IVertexEdgeGraph</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UE__MeshDeformation__ConstructUn-"><nobr><p>UE::MeshDeformation::ConstructUniformLaplacian</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const MeshType&amp; Mesh,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="FVertexLinearization" ><span>FVertexLinearization</span></a>&amp; Vertex...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/GeometryCore/Solvers/TSparseMatrixAssembler" ><span>UE::Solvers::TSparseMatrixAssembler</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/GeometryCore/Solvers/TSparseMatrixAssembler" ><span>UE::Solvers::TSparseMatrixAssembler</span></a>...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Construct a sparse matrix representation of a uniform weighted Laplacian.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UE__MeshDeformat-_3"><nobr><p>UE::MeshDeformation::ConstructValenceWeightedLaplacian</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../../Runtime/GeometryCore/DynamicMesh/FDynamicMesh3" ><span>FDynamicMesh3</span></a>&amp; DynamicMesh,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="FVertexLinearization" ><span>FVertexLinearization</span></a>&amp; Vertex...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/GeometryCore/Solvers/TSparseMatrixAssembler" ><span>UE::Solvers::TSparseMatrixAssembler</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../../Runtime/GeometryCore/Solvers/TSparseMatrixAssembler" ><span>UE::Solvers::TSparseMatrixAssembler</span></a>...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Construct a sparse matrix representation of a valence-weighted Laplacian.</p>
+	</td>
+</tr>
+	</table>
+</div>
+
+</div>
+
+
+
+</div>
+																	</div>
+					<!-- End of Markdown converted page content -->
+				</div>
+												<div id="recommendations"></div>			</div>
+						<div id="footer"></div>			
+									<div id="announcement">
+			<div style="display:inline-block;margin:5px;">
+				Help shape the future of Unreal Engine documentation! Tell us how we're doing so we can serve you better.
+			</div>
+			<div style="margin:5px;display:inline-block;">
+				<div class="btn action" style="margin-top:-6px;display:inline-block;" onclick="$('#announcement').hide();window.open('https://epicgames.questionpro.com/t/AVVbJZwedR');createCookie('announcement-read', new Date().getTime(), 30);">Take our survey</div>
+				<div class="btn btn-default" style="margin-top:-6px;display:inline-block;" onclick="$('#announcement').hide();createCookie('announcement-read', new Date().getTime(), 30);">Cancel</div>
+			</div>
+			<div class="btn-close" style="position:absolute;right:5px;top:10px;padding:3px;width:14px;height:14px;" onclick="$('#announcement').hide();"></div>
+			</div>
+					</div>
+	</div>
+</body>
+</html>

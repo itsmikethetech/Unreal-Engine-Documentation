@@ -1,0 +1,1873 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="./../../../../Include/Javascript/common_en-US.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var time = new Date(0);
+		var preview = false;
+		var relativeHTMLPath = "./../../../../";
+				var pageid = 0;
+				var heroimage = "./../../../../Images/ue5-hero.png";
+				var lang = "en-US";
+				var basePath = document.location.pathname.substring(0, document.location.pathname.indexOf('/' + lang + '/') + lang.length + 1);
+		document.write('<base href="' +  encodeURI(basePath) + '/API/Developer/ShaderCompilerCommon/" />');
+				var udnCSS = './../../../../Include/CSS/udn_public.css';
+		var udnLangCSS = '';
+				var udnOverrideCSS = './../../../../Include/CSS/skin_overrides.css';
+		var udnOverrideDarkCSS = './../../../../Include/CSS/skin_overrides_dark.css';
+		var fancyboxCSS = './../../../../Include/CSS/jquery.fancybox.css';
+		var jqueryuiCSS = './../../../../Include/CSS/jquery-ui.min.css';
+		var qtipCSS = './../../../../Include/CSS/jquery.qtip.css';
+		var prettifyCSS = './../../../../Include/CSS/prettify.css';
+		var navbarCSS = './../../../../Include/CSS/navBar.css';
+		var twentytwentyCSS = './../../../../Include/CSS/twentytwenty.css';
+		var recommendationsCSS = './../../../../Include/CSS/jquery.recommendations.css';
+	</script>
+    <title>ShaderCompilerCommon | Unreal Engine 5.2 Documentation</title>
+    	    <meta name=viewport content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Cache-control" content="no-store">
+    <script  src="./../../../../Include/Javascript/CustomEvent.js" type="text/javascript"></script>
+    <script  src="./../../../../Include/Javascript/jquery-3.4.0.min.js" type="text/javascript"></script>
+    <script  src="./../../../../Include/Javascript/udn.js" type="text/javascript"></script>
+    <script  src="./../../../../Include/Javascript/udn_extras.js" type="text/javascript"></script>
+    <script  src="./../../../../Include/Javascript/jquery-ui.min.js" type="text/javascript"></script>
+	    <script  src="./../../../../Include/Javascript/informational.js" type="text/javascript"></script>
+	    <script  src="./../../../../Include/Javascript/jquery.fancybox.pack.js" type="text/javascript"></script>
+    <script  src="./../../../../Include/Javascript/jquery.qtip.js" type="text/javascript"></script>
+    <script  src="./../../../../Include/Javascript/prettify.js" type="text/javascript"></script>
+    <script  src="./../../../../Include/Javascript/jquery.slimscroll.js" type="text/javascript"></script>
+    <script  src="./../../../../Include/Javascript/jquery.event.move.js" type="text/javascript"></script>
+    <script  src="./../../../../Include/Javascript/jquery.twentytwenty.js" type="text/javascript"></script>
+    <script  src="./../../../../Include/Javascript/lazysizes.min.js" type="text/javascript"></script>
+	    <script  src="./../../../../Include/Javascript/jquery.recommendations.js" type="text/javascript"></script>
+	
+    <link async rel="icon" href="./../../../../Include/Images/site_icon.png" type="image/x-icon" />
+    <link async rel="shortcut icon" href="./../../../../Include/Images/site_icon.png" type="image/x-icon" />
+    <link async href="./../../../../Include/Images/touch_icon.png" rel="apple-touch-icon" />
+    <link async href="./../../../../Include/Images/touch_icon_114.png" sizes="114x114" rel="apple-touch-icon" />    
+		<script  src="./../../../../Include/Javascript/CollapsibleLists.js" type="text/javascript"></script>
+	<script  src="./../../../../Include/Javascript/navigationBarUI.js"></script>
+	<script  src="./../../../../Include/Javascript/navigationBar.js"></script>
+		
+	<link rel="alternate" href="https://docs.unrealengine.com/latest/en-US/API/Developer/ShaderCompilerCommon/" hreflang="x-default" />
+
+	<meta name="title" content="ShaderCompilerCommon" />
+<meta name="description" content="" />
+<meta name="availability" content="Public" />
+<meta name="crumbs" content="%ROOT%,API,API/Developer" />
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta property="og:title" content="ShaderCompilerCommon" />
+	<meta property="og:description" content="" />
+		<meta property="og:image" content="https://docs.unrealengine.com/5.1/Images/placeholder-social.png" />
+	</head>
+<body id="webbgThree" style="visibility: hidden;" onload="document.body.style.visibility='visible';">
+			<script>window.__tracking_base = 'https://tracking.unrealengine.com';</script>
+	<script src="https://tracking.unrealengine.com/tracking.js" async></script>    <div id="webThree">
+				<div id="page_head">
+						<div id="head">
+				<div id="logo"></div>
+			</div>
+						<div id="pagenav">
+				<div class="crumbs" id="crumbs">
+<span id="versionContainer">
+	<span id="versionSelect" class="btn btn-version" onclick="ToggleMenu($('#versionMenu'), $(this));"></span>
+	<div id="versionMenu">
+		<div id="4_26" data-version="4.26" class="btn btn-select" onclick="createCookie('version', '4.26', 365);SwitchVersion('4.26');">Unreal Engine 4.26 Documentation</div>
+		<div id="4_27" data-version="4.27" class="btn btn-select" onclick="createCookie('version', '4.27', 365);SwitchVersion('4.27');">Unreal Engine 4.27 Documentation</div>
+		<div id="5_0" data-version="5.0" class="btn btn-select" onclick="createCookie('version', '5.0', 365);SwitchVersion('5.0');">Unreal Engine 5.0 Documentation</div>
+		<div id="5_1" data-version="5.1" class="btn btn-select" onclick="createCookie('version', '5.1', 365);SwitchVersion('5.1');">Unreal Engine 5.1 Documentation</div>
+		<div id="5_2" data-version="5.2" class="btn btn-select" onclick="createCookie('version', '5.2', 365);SwitchVersion('5.2');">Unreal Engine 5.2 Documentation</div>
+		<div id="5_3" data-version="5.3" class="btn btn-select" onclick="createCookie('version', '5.3', 365);SwitchVersion('5.3');">Unreal Engine 5.3 Documentation</div>
+	</div>
+</span>
+	<span class="separator">></span> <a id="parent_link" href="../../../API">Unreal Engine API Reference</a>
+
+	<span class="separator">></span> <a id="parent_link" href="../../Developer">Developer</a>
+
+<span class="separator">></span> <span id="page">ShaderCompilerCommon</span>
+</div>				<div id="pageNavRight">
+								<!-- Start of Search -->
+												<div id="search_container">
+					<form name="bodySearch" method="get" action="https://www.unrealengine.com/en-US/bing-search" onsubmit="return validateSearch()">
+						<input type="image" src="./../../../../Include/Images/search_box_icon.png" class="searchbutton"/>
+						<input type="hidden" name="filter" value="Documentation" />
+						<input type="text" name="keyword" placeholder="Search Documentation..." class="searchbox" autocomplete="off"/>
+					</form>
+				</div>
+								<!-- End of Search -->
+				<div id="skinContainer">
+	<div id="skinSelect" class="btn btn-skin" onclick="ToggleMenu($('#skinMenu'), $(this));"></div>
+	<div id="skinMenu">
+		<div id="light" class="btn btn-select" onclick="createCookie('skin', 'light', 365);location.reload();">Light Theme</div>
+		<div id="dark" class="btn btn-select" onclick="createCookie('skin', 'dark', 365);location.reload();">Dark Theme</div>
+	</div>
+</div>				</div>
+			</div>
+		</div>						<div id="navWrapper">
+			<div id="nav-filter-container">
+				<div id="nav-filter-inner">
+					<form>
+						<input type="text" placeholder="Filter pages..." id="nav-filter" onchange="clearTimeout(filterTimer); filterTimer = setTimeout(updateNavTreeFilter,250, this.value);if(this.value.length == 0){$('#filter-clear').hide();}else{$('#filter-clear').show();}" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" />
+						<button class="close-icon" id="filter-clear" type="reset" onclick="clearTimeout(filterTimer); filterTimer = setTimeout(updateNavTreeFilter,250, '');$(this).hide();"></button>
+					</form>
+				</div>
+			</div>
+			<nav id="navPanel">
+			</nav>
+			<div id="navigation" title="Click to toggle navigation menu"><span>></span></div>
+		</div>		
+		<div id="splitter">
+		</div>
+				<div id="contentContainer">
+										<div id="pagedefault">
+				<div id="product-banner">
+	<div id="product-logo"></div>
+</div>				<div id="pagecontainer" style="padding-right:0px;">
+					<!-- Start of Markdown converted page content -->
+										<div class="hero  background">
+	<div class="imgContainer"><img src="./../../../../Images/ue5-hero.png" /></div>	<div class="info">
+		<div id="pageTitle">
+			<h1 id="H1TitleId">ShaderCompilerCommon</h1>
+		</div>
+		<h2 ></h2>
+		<div id="access">
+			<div class="accessContainer">
+															</div>
+		</div>
+	</div>
+</div>															<div id="maincol">
+																																				<div class="syntax">
+
+
+
+<div class="heading expanded" onclick="sectionOnClick(this, 'classes');">
+        <p>Classes</p>
+    </div>
+<div id="classes">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:15%">
+			</th>
+			<th class="name-cell" style="width:20%">
+				<p>Name</p>
+			</th>
+			<th class="desc-cell" style="width:65%">
+				<p>Description</p>
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public class" title="Public class" width="18" data-src="./../../../../Images/api_class_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="FBaseShaderFormat"><p>FBaseShaderFormat</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public struct" title="Public struct" width="18" data-src="./../../../../Images/api_struct_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="FDebugShaderDataOptions"><p>FDebugShaderDataOptions</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public struct" title="Public struct" width="18" data-src="./../../../../Images/api_struct_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="FDiagnosticMessage"><p>FDiagnosticMessage</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public struct" title="Public struct" width="18" data-src="./../../../../Images/api_struct_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="FDiagnostics"><p>FDiagnostics</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public struct" title="Public struct" width="18" data-src="./../../../../Images/api_struct_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="FDllHandle"><p>FDllHandle</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public class" title="Public class" width="18" data-src="./../../../../Images/api_class_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="FDxcModuleWrapper"><p>FDxcModuleWrapper</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public struct" title="Public struct" width="18" data-src="./../../../../Images/api_struct_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="FHlslccHeader"><p>FHlslccHeader</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public class" title="Public class" width="18" data-src="./../../../../Images/api_class_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="FHlslccHeaderWriter"><p>FHlslccHeaderWriter</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public struct" title="Public struct" width="18" data-src="./../../../../Images/api_struct_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="FHlslShaderModel"><p>FHlslShaderModel</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Shader model version for HLSL input language.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public struct" title="Public struct" width="18" data-src="./../../../../Images/api_struct_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="FMinifiedShader"><p>FMinifiedShader</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public class" title="Public class" width="18" data-src="./../../../../Images/api_class_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="FShaderConductorContext"><p>FShaderConductorContext</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Wrapper class to handle interface between UE and ShaderConductor.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public struct" title="Public struct" width="18" data-src="./../../../../Images/api_struct_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="FShaderConductorIdentifierTable"><p>FShaderConductorIdentifierTable</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Container for all special case SPIR-V identifiers generated by ShaderConductor.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public class" title="Public class" width="18" data-src="./../../../../Images/api_class_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="FShaderConductorModuleWrapper"><p>FShaderConductorModuleWrapper</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public struct" title="Public struct" width="18" data-src="./../../../../Images/api_struct_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="FShaderConductorOptions"><p>FShaderConductorOptions</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Wrapper structure to pass options descriptor to ShaderConductor.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public struct" title="Public struct" width="18" data-src="./../../../../Images/api_struct_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="FShaderConductorTarget"><p>FShaderConductorTarget</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Shader conductor output target descriptor.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public struct" title="Public struct" width="18" data-src="./../../../../Images/api_struct_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="FSpirv"><p>FSpirv</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Base structure for SPIR-V modules in the shader backends.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public struct" title="Public struct" width="18" data-src="./../../../../Images/api_struct_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="FSpirvReflectBindings"><p>FSpirvReflectBindings</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Container structure for all SPIR-V reflection resources and in/out attributes.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public class" title="Public class" width="18" data-src="./../../../../Images/api_class_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="TSpirvForwardIterator"><p>TSpirvForwardIterator</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Template forward iterator for SPIR-V instructions.</p>
+	</td>
+</tr>
+			</table>
+</div>
+
+</div>
+
+<div class="heading expanded" onclick="sectionOnClick(this, 'constants');">
+        <p>Constants</p>
+    </div>
+<div id="constants">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="name-cell" style="width:15%">
+				<p>Name</p>
+			</th>
+			<th class="desc-cell" style="width:85%">
+				<p>Description</p>
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="UE__ShaderCompil-_1"><p>UE::ShaderCompilerCommon::kBindlessResourcePrefix</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="UE__ShaderCompil-_2"><p>UE::ShaderCompilerCommon::kBindlessSamplerPrefix</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="UE__ShaderCompil-"><p>UE::ShaderCompilerCommon::kUniformBufferConstantBufferPrefix</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+			</table>
+</div>
+
+</div>
+
+<div class="heading expanded" onclick="sectionOnClick(this, 'typedefs');">
+        <p>Typedefs</p>
+    </div>
+<div id="typedefs">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="name-cell" style="width:15%">
+				<p>Name</p>
+			</th>
+			<th class="desc-cell" style="width:85%">
+				<p>Description</p>
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="FSpirvConstIterator"><p>FSpirvConstIterator</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="name-cell">
+		<a href="FSpirvIterator"><p>FSpirvIterator</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+			</table>
+</div>
+
+</div>
+
+<div class="heading expanded" onclick="sectionOnClick(this, 'enums');">
+        <p>Enums</p>
+    </div>
+<div id="enums">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:15%">
+			</th>
+			<th class="name-cell" style="width:20%">
+				<p>Name</p>
+			</th>
+			<th class="desc-cell" style="width:65%">
+				<p>Description</p>
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public enum" title="Public enum" width="18" data-src="./../../../../Images/api_enum_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="CrossCompiler__EShaderConductorI-"><p>CrossCompiler::EShaderConductorIR</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Intermediate representation languages for ShaderConductor disassembly output.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public enum" title="Public enum" width="18" data-src="./../../../../Images/api_enum_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="CrossCompiler__EShaderConductorL-"><p>CrossCompiler::EShaderConductorLanguage</p></a>
+	</td>
+	<td class="desc-cell">
+		<p>Target high level languages for ShaderConductor output.</p>
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public enum" title="Public enum" width="18" data-src="./../../../../Images/api_enum_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="EShaderConductorTarget"><p>EShaderConductorTarget</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public enum" title="Public enum" width="18" data-src="./../../../../Images/api_enum_public.png" />
+</p>
+	</td>
+	<td class="name-cell">
+		<a href="UE__ShaderMinifier__EMinifyShade-"><p>UE::ShaderMinifier::EMinifyShaderFlags</p></a>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+			</table>
+</div>
+
+</div>
+
+<div class="heading expanded" onclick="sectionOnClick(this, 'functions');">
+        <p>Functions</p>
+    </div>
+<div id="functions">
+    <div class="member-list">
+	<table cellspacing="0">
+		<tr class="header-row">
+			<th class="icon-cell" style="width:10%">
+			</th>
+			<th class="name-cell" style="width:8%;">
+			</th>
+			<th class="name-cell" style="width:15%;">
+				Name
+			</th>
+			<th class="desc-cell">
+				Description
+			</th>
+		</tr>
+		<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="AddNoteToDisplay-"><nobr><p>AddNoteToDisplayShaderParameterStructureOnCppSide</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/RenderCore/FShaderParametersMetadata" ><span>FShaderParametersMetadata</span></a>&#4...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/RenderCore/FShaderCompilerOutput" ><span>FShaderCompilerOutput</span></a>&amp; CompilerOut...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Adds a note to CompilerOutput.Error about where the shader parameter structure is on C++ side.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="AddUnboundShaderParameterError"><nobr><p>AddUnboundShaderParameterError</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/RenderCore/FShaderCompilerInput" ><span>FShaderCompilerInput</span></a>&amp; Compil...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/RenderCore/FShaderParameterParser" ><span>FShaderParameterParser</span></a>&amp; Shad...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; ParameterBindingNam...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/RenderCore/FShaderCompilerOutput" ><span>FShaderCompilerOutput</span></a>&amp; CompilerOut...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Adds an error to CompilerOutput.Error about a shader parameters that could not be bound.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>PRAGMA_DISAB...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="BuildResourceTableMapping/2"><nobr><p>BuildResourceTableMapping</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/Core/Containers/TMap" ><span>TMap</span></a>&lt; <a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>, FResourceTable...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/Core/Containers/TMap" ><span>TMap</span></a>&lt; <a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>, <a id="content_link" href="../../Runtime/RenderCore/FUniformBufferEntry" ><span>FUniformBuffer</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/Core/Containers/TBitArray" ><span>TBitArray</span></a>&lt;>&amp; UsedUniformBufferSlot...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/RenderCore/FShaderParameterMap" ><span>FShaderParameterMap</span></a>&amp; ParameterMap,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/RenderCore/FShaderCompilerResourceTable" ><span>FShaderCompilerResourceTable</span></a>&amp; OutS...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>No longer supported; use version of function that accepts a <a id="content_link" href="../../Runtime/RenderCore/FShaderResourceTableMap" ><span>FShaderResourceTableMap</span></a> instead</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="BuildResourceTableMapping/1"><nobr><p>BuildResourceTableMapping</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/RenderCore/FShaderResourceTableMap" ><span>FShaderResourceTableMap</span></a>&amp; Res...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/Core/Containers/TMap" ><span>TMap</span></a>&lt; <a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>, <a id="content_link" href="../../Runtime/RenderCore/FUniformBufferEntry" ><span>FUniformBuffer</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/Core/Containers/TBitArray" ><span>TBitArray</span></a>&lt;>&amp; UsedUniformBufferSlot...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/RenderCore/FShaderParameterMap" ><span>FShaderParameterMap</span></a>&amp; ParameterMap,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/RenderCore/FShaderCompilerResourceTable" ><span>FShaderCompilerResourceTable</span></a>&amp; OutS...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>This function looks for resources specified in ResourceTableMap in the parameter map, adds them to the resource table, and removes them from the parameter map.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="BuildResourceTableTokenStream"><nobr><p>BuildResourceTableTokenStream</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; uint32 >&amp; InResource...,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 MaxBoundResourceTable,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; uint32 >&amp; OutTokenStream,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bGenerateEmptyTokenStreamIfNoR...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Builds a token stream out of the resource map.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CompileOfflineMali"><nobr><p>CompileOfflineMali</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/RenderCore/FShaderCompilerInput" ><span>FShaderCompilerInput</span></a>&amp; Input,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/RenderCore/FShaderCompilerOutput" ><span>FShaderCompilerOutput</span></a>&amp; ShaderOutpu...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const ANSICHAR&#42; ShaderSource,<br />&nbsp;&nbsp;&nbsp;&nbsp;const int32 SourceSize,<br />&nbsp;&nbsp;&nbsp;&nbsp;bool bVulkanSpirV,<br />&nbsp;&nbsp;&nbsp;&nbsp;const ANSICHAR&#42; VulkanSpirVEnt...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Calls 'Mali Offline Compiler' to compile the glsl source code and extract the generated instruction count</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="ConvertFromFP32ToFP16"><nobr><p>ConvertFromFP32ToFP16</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; InOutSourceCode,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a> >&amp; OutErrors<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CrossCompiler__Match/4"><nobr><p>CrossCompiler::Match</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const TCHAR&#42;&amp; Str,<br />&nbsp;&nbsp;&nbsp;&nbsp;const TCHAR&#42; Sub<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CrossCompiler__Match/3"><nobr><p>CrossCompiler::Match</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const ANSICHAR&#42;&amp; Str,<br />&nbsp;&nbsp;&nbsp;&nbsp;const ANSICHAR&#42; Sub<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CrossCompiler__Match/2"><nobr><p>CrossCompiler::Match</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const TCHAR&#42;&amp; Str,<br />&nbsp;&nbsp;&nbsp;&nbsp;ANSICHAR Char<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CrossCompiler__Match/1"><nobr><p>CrossCompiler::Match</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const ANSICHAR&#42;&amp; Str,<br />&nbsp;&nbsp;&nbsp;&nbsp;ANSICHAR Char<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CrossCompiler__ParseIdentifier/1"><nobr><p>CrossCompiler::ParseIdentifier</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const ANSICHAR&#42;&amp; Str,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; OutStr<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CrossCompiler__ParseIdentifier/2"><nobr><p>CrossCompiler::ParseIdentifier</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const TCHAR&#42;&amp; Str,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; OutStr<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CrossCompiler__ParseIntegerNumbe-/1"><nobr><p>CrossCompiler::ParseIntegerNumber</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const ANSICHAR&#42;&amp; Str,<br />&nbsp;&nbsp;&nbsp;&nbsp;T&amp; OutNum<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CrossCompiler__ParseIntegerNumbe-/2"><nobr><p>CrossCompiler::ParseIntegerNumber</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const TCHAR&#42;&amp; Str,<br />&nbsp;&nbsp;&nbsp;&nbsp;T&amp; OutNum<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CrossCompiler__ParseSignedNumber/2"><nobr><p>CrossCompiler::ParseSignedNumber</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const TCHAR&#42;&amp; Str,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32&amp; OutNum<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CrossCompiler__ParseSignedNumber/1"><nobr><p>CrossCompiler::ParseSignedNumber</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const ANSICHAR&#42;&amp; Str,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32&amp; OutNum<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CrossCompiler__ParseString/2"><nobr><p>CrossCompiler::ParseString</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const TCHAR&#42;&amp; Str,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; OutStr<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CrossCompiler__ParseString/1"><nobr><p>CrossCompiler::ParseString</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const ANSICHAR&#42;&amp; Str,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; OutStr<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="CullGlobalUniformBuffers"><nobr><p>CullGlobalUniformBuffers</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/Core/Containers/TMap" ><span>TMap</span></a>&lt; <a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>, <a id="content_link" href="../../Runtime/RenderCore/FUniformBufferEntry" ><span>FUniformBuffer</span></a>...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/RenderCore/FShaderParameterMap" ><span>FShaderParameterMap</span></a>&amp; ParameterMap<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Culls global uniform buffer entries from the parameter map.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+
+<img class="  lazyload" alt="Static" title="Static" width="18" data-src="./../../../../Images/api_function_static.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="DumpDebugBlobDetail"><nobr><p>DumpDebugBlobDetail</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;IDxcBlob&#42; Blob,<br />&nbsp;&nbsp;&nbsp;&nbsp;const TCHAR&#42; BlobName<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="DumpDebugShaderBinary/2"><nobr><p>DumpDebugShaderBinary</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/RenderCore/FShaderCompilerInput" ><span>FShaderCompilerInput</span></a>&amp; Input,<br />&nbsp;&nbsp;&nbsp;&nbsp;void&#42; InData,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 InDataByteSize,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; FileName,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; FileExtension<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="DumpDebugShaderBinary/1"><nobr><p>DumpDebugShaderBinary</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/RenderCore/FShaderCompilerInput" ><span>FShaderCompilerInput</span></a>&amp; Input,<br />&nbsp;&nbsp;&nbsp;&nbsp;void&#42; InData,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 InDataByteSize,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; FileExtension<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="DumpDebugShaderDisassembledDxil"><nobr><p>DumpDebugShaderDisassembledDxil</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/RenderCore/FShaderCompilerInput" ><span>FShaderCompilerInput</span></a>&amp; Input,<br />&nbsp;&nbsp;&nbsp;&nbsp;void&#42; InData,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 InDataByteSize,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; FileExtension<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="DumpDebugShaderDisassembledSpirv"><nobr><p>DumpDebugShaderDisassembledSpirv</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/RenderCore/FShaderCompilerInput" ><span>FShaderCompilerInput</span></a>&amp; Input,<br />&nbsp;&nbsp;&nbsp;&nbsp;void&#42; InData,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 InDataByteSize,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; FileExtension<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="DumpDebugShaderText/1"><nobr><p>DumpDebugShaderText</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/RenderCore/FShaderCompilerInput" ><span>FShaderCompilerInput</span></a>&amp; Input,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; InSource,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; FileExtension<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="DumpDebugShaderText/2"><nobr><p>DumpDebugShaderText</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/RenderCore/FShaderCompilerInput" ><span>FShaderCompilerInput</span></a>&amp; Input,<br />&nbsp;&nbsp;&nbsp;&nbsp;ANSICHAR&#42; InSource,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 InSourceLength,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; FileExtension<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="DumpDebugShaderText/3"><nobr><p>DumpDebugShaderText</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/RenderCore/FShaderCompilerInput" ><span>FShaderCompilerInput</span></a>&amp; Input,<br />&nbsp;&nbsp;&nbsp;&nbsp;ANSICHAR&#42; InSource,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 InSourceLength,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; FileName,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; FileExtension<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="FindOffsetToSpirvEntryPoint"><nobr><p>FindOffsetToSpirvEntryPoint</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="FSpirv" ><span>FSpirv</span></a>&amp; Spirv,<br />&nbsp;&nbsp;&nbsp;&nbsp;const ANSICHAR&#42; EntryPointName,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32&amp; OutWordOffsetToEntryPoint,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32&amp; OutWordOffsetToMainName<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Returns word offset to the entry point (OpEntryPoint) and name of the entry point (OpName).</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>int16</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="GetNumUniformBuffersUsed"><nobr><p>GetNumUniformBuffersUsed</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/RenderCore/FShaderCompilerResourceTable" ><span>FShaderCompilerResourceTable</span></a> ...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Finds the number of used uniform buffers in a resource map.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="HandleReflectedGlobalConstantBuf-"><nobr><p>HandleReflectedGlobalConstantBufferMember</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; MemberName,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32 ConstantBufferIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 ReflectionOffset,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 ReflectionSize,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/RenderCore/FShaderCompilerOutput" ><span>FShaderCompilerOutput</span></a>&amp; CompilerOut...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="HandleReflectedRootConstantBuffe-_1"><nobr><p>HandleReflectedRootConstantBuffer</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 ConstantBufferSize,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/RenderCore/FShaderCompilerOutput" ><span>FShaderCompilerOutput</span></a>&amp; CompilerOut...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="HandleReflectedRootConstantBuffe-"><nobr><p>HandleReflectedRootConstantBufferMember</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/RenderCore/FShaderCompilerInput" ><span>FShaderCompilerInput</span></a>&amp; Input,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/RenderCore/FShaderParameterParser" ><span>FShaderParameterParser</span></a>&amp; Shad...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; MemberName,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 ReflectionOffset,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 ReflectionSize,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/RenderCore/FShaderCompilerOutput" ><span>FShaderCompilerOutput</span></a>&amp; CompilerOut...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="HandleReflectedShaderResource/2"><nobr><p>HandleReflectedShaderResource</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; ResourceName,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 ReflectionSlot,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 BindCount,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/RenderCore/FShaderCompilerOutput" ><span>FShaderCompilerOutput</span></a>&amp; CompilerOut...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="HandleReflectedShaderResource/1"><nobr><p>HandleReflectedShaderResource</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; ResourceName,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 ReflectionSlot,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/RenderCore/FShaderCompilerOutput" ><span>FShaderCompilerOutput</span></a>&amp; CompilerOut...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="HandleReflectedShaderResource/3"><nobr><p>HandleReflectedShaderResource</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; ResourceName,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 BindOffset,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 ReflectionSlot,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 BindCount,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/RenderCore/FShaderCompilerOutput" ><span>FShaderCompilerOutput</span></a>&amp; CompilerOut...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="HandleReflectedShaderSampler/1"><nobr><p>HandleReflectedShaderSampler</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; SamplerName,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 ReflectionSlot,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/RenderCore/FShaderCompilerOutput" ><span>FShaderCompilerOutput</span></a>&amp; CompilerOut...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="HandleReflectedShaderSampler/3"><nobr><p>HandleReflectedShaderSampler</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; SamplerName,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 BindOffset,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 ReflectionSlot,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 BindCount,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/RenderCore/FShaderCompilerOutput" ><span>FShaderCompilerOutput</span></a>&amp; CompilerOut...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="HandleReflectedShaderSampler/2"><nobr><p>HandleReflectedShaderSampler</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; SamplerName,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 ReflectionSlot,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 BindCount,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/RenderCore/FShaderCompilerOutput" ><span>FShaderCompilerOutput</span></a>&amp; CompilerOut...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="HandleReflectedShaderUAV/3"><nobr><p>HandleReflectedShaderUAV</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; UAVName,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 BindOffset,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 ReflectionSlot,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 BindCount,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/RenderCore/FShaderCompilerOutput" ><span>FShaderCompilerOutput</span></a>&amp; CompilerOut...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="HandleReflectedShaderUAV/2"><nobr><p>HandleReflectedShaderUAV</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; UAVName,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 ReflectionSlot,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 BindCount,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/RenderCore/FShaderCompilerOutput" ><span>FShaderCompilerOutput</span></a>&amp; CompilerOut...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="HandleReflectedShaderUAV/1"><nobr><p>HandleReflectedShaderUAV</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; UAVName,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 ReflectionSlot,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/RenderCore/FShaderCompilerOutput" ><span>FShaderCompilerOutput</span></a>&amp; CompilerOut...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="HandleReflectedUniformBuffer/3"><nobr><p>HandleReflectedUniformBuffer</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; UniformBufferName,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 ReflectionSlot,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 BaseIndex,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 BufferSize,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/RenderCore/FShaderCompilerOutput" ><span>FShaderCompilerOutput</span></a>&amp; CompilerOut...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="HandleReflectedUniformBuffer/2"><nobr><p>HandleReflectedUniformBuffer</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; UniformBufferName,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 ReflectionSlot,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 BufferSize,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/RenderCore/FShaderCompilerOutput" ><span>FShaderCompilerOutput</span></a>&amp; CompilerOut...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="HandleReflectedUniformBuffer/1"><nobr><p>HandleReflectedUniformBuffer</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; UniformBufferName,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 ReflectionSlot,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/RenderCore/FShaderCompilerOutput" ><span>FShaderCompilerOutput</span></a>&amp; CompilerOut...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="HandleReflectedU-"><nobr><p>HandleReflectedUniformBufferConstantBufferMember</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 UniformBufferSlot,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; MemberName,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 ReflectionOffset,<br />&nbsp;&nbsp;&nbsp;&nbsp;int32 ReflectionSize,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/RenderCore/FShaderCompilerOutput" ><span>FShaderCompilerOutput</span></a>&amp; CompilerOut...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>const ANSICH...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="PatchSpirvEntryPointWithCRC"><nobr><p>PatchSpirvEntryPointWithCRC</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="FSpirv" ><span>FSpirv</span></a>&amp; Spirv,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint32&amp; OutCRC<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Renames the fixed-size entry point name (which must be "main_00000000_00000000") to the formatted name including a CRC over the module.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RemoveUniformBuffersFromSource"><nobr><p>RemoveUniformBuffersFromSource</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/RenderCore/FShaderCompilerEnvironment" ><span>FShaderCompilerEnvironment</span></a>&amp; ...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; PreprocessedShaderSource<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>The cross compiler doesn't yet support struct initializers needed to construct static structs for uniform buffers Replace all uniform buffer struct member references (View.WorldToClip) with a flattened name that removes the struct dependency (View_WorldToClip)</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RemoveUnusedInputs"><nobr><p>RemoveUnusedInputs</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; InOutSourceCode,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a> >&amp; InUsedInp...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; InOutEntryPoint,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a> >&amp; OutErrors<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="RemoveUnusedOutputs"><nobr><p>RemoveUnusedOutputs</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; InOutSourceCode,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a> >&amp; InUsedOut...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a> >&amp; InExcepti...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; InOutEntryPoint,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a> >&amp; OutErrors<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="TransformStringIntoCharacterArra-"><nobr><p>TransformStringIntoCharacterArray</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; PreprocessedShaderSource<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Processes TEXT macros.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>EShaderParam...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UE__ShaderCompil-_5/1"><nobr><p>UE::ShaderCompilerCommon::ParseAndRemoveBindlessParameterPrefix</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FStringView&amp; InName<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Deprecated; use <a id="content_link" href="../../Runtime/RenderCore/FShaderParameterParser/ParseAndRemoveBi-/1" ><span>FShaderParameterParser::ParseAndRemoveBindlessParameterPrefix</span></a> instead</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>EShaderParam...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UE__ShaderCompil-_5/2"><nobr><p>UE::ShaderCompilerCommon::ParseAndRemoveBindlessParameterPrefix</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; InName<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Deprecated; use FShaderParameterParser::ParseAndRemoveBindlessParameterPrexix instead</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>EShaderParam...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UE__ShaderCompilerCommon__ParseP-"><nobr><p>UE::ShaderCompilerCommon::ParseParameterType</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FStringView InType,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const TCHAR&#42;const ...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/Core/Containers/TArrayView" ><span>TArrayView</span></a>&lt; const TCHAR&#42;const ...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Deprecated; use <a id="content_link" href="../../Runtime/RenderCore/FShaderParameterParser/ParseParameterType" ><span>FShaderParameterParser::ParseParameterType</span></a> instead</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UE__ShaderCompil-_8"><nobr><p>UE::ShaderCompilerCommon::ParseRayTracingEntryPoint</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; Input,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; OutMain,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; OutAnyHit,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; OutIntersection<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Parses ray tracing shader entry point specification string in one of the following formats: 1) Verbatim single entry point name, e.g. "MainRGS" 2) Complex entry point for ray tracing hit group shaders: a) "closesthit=MainCHS" b) "closesthit=MainCHS anyhit=MainAHS" c) "closesthit=MainCHS anyhit=MainAHS intersection=MainIS" d) "closesthit=MainCHS intersection=MainIS" NOTE: closesthit attribute must always be provided for complex hit group entry points</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UE__ShaderCompil-_6"><nobr><p>UE::ShaderCompilerCommon::RemoveBindlessParameterPrefix</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; InName<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Deprecated; use <a id="content_link" href="../../Runtime/RenderCore/FShaderParameterParser/RemoveBindlessParameterPrefix" ><span>FShaderParameterParser::RemoveBindlessParameterPrefix</span></a> instead</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>FStringView</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UE__ShaderCompil-_4/1"><nobr><p>UE::ShaderCompilerCommon::RemoveConstantBufferPrefix</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;FStringView InName<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a></p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UE__ShaderCompil-_4/2"><nobr><p>UE::ShaderCompilerCommon::RemoveConstantBufferPrefix</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; InName<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UE__ShaderCompilerCommon__Remove-/2"><nobr><p>UE::ShaderCompilerCommon::RemoveDeadCode</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; InOutPreprocessedShaderSo...,<br />&nbsp;&nbsp;&nbsp;&nbsp;TConstArrayView&lt; FStringView > Requ...,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../Runtime/RenderCore/FShaderCompilerError" ><span>FShaderCompilerError</span></a> >&amp; Ou...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Rewrites a fully preprocessed shader source code, removing any functions or structs that are not reachable from a given entry point or list of symbols.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UE__ShaderCompilerCommon__Remove-/1"><nobr><p>UE::ShaderCompilerCommon::RemoveDeadCode</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; InOutPreprocessedShaderSo...,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; EntryPoint,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/Core/Containers/TArray" ><span>TArray</span></a>&lt; <a id="content_link" href="../../Runtime/RenderCore/FShaderCompilerError" ><span>FShaderCompilerError</span></a> >&amp; Ou...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Rewrites a fully preprocessed shader source code, removing any functions or structs that are not reachable from a given entry point or list of symbols.</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UE__ShaderCompil-_3"><nobr><p>UE::ShaderCompilerCommon::ShouldUseStableConstantBuffer</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/RenderCore/FShaderCompilerInput" ><span>FShaderCompilerInput</span></a>&amp; Input<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		<p>Deprecated; use FShaderCompilerInput::ShouldUseStableContantBuffer directly</p>
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>bool</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UE__ShaderCompil-_7"><nobr><p>UE::ShaderCompilerCommon::ValidatePackedResourceCounts</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/RenderCore/FShaderCompilerOutput" ><span>FShaderCompilerOutput</span></a>&amp; Output,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/RenderCore/FShaderCodePackedResourceCounts" ><span>FShaderCodePackedResourceCoun</span></a>...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>constexpr bo...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UE__ShaderMinifier__operator_6"><nobr><p>UE::ShaderMinifier::operator!</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="UE__ShaderMinifier__EMinifyShade-" ><span>EMinifyShaderFlags</span></a> E<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>constexpr <a id="content_link" href="UE__ShaderMinifier__EMinifyShade-" ><span>EM</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UE__ShaderMinifier__operator_4"><nobr><p>UE::ShaderMinifier::operator&amp;</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="UE__ShaderMinifier__EMinifyShade-" ><span>EMinifyShaderFlags</span></a> Lhs,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="UE__ShaderMinifier__EMinifyShade-" ><span>EMinifyShaderFlags</span></a> Rhs<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="UE__ShaderMinifier__EMinifyShade-" ><span>EMinifyShade</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UE__ShaderMinifier__operator_1"><nobr><p>UE::ShaderMinifier::operator&amp;=</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="UE__ShaderMinifier__EMinifyShade-" ><span>EMinifyShaderFlags</span></a>&amp; Lhs,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="UE__ShaderMinifier__EMinifyShade-" ><span>EMinifyShaderFlags</span></a> Rhs<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>constexpr <a id="content_link" href="UE__ShaderMinifier__EMinifyShade-" ><span>EM</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UE__ShaderMinifier__operator_5"><nobr><p>UE::ShaderMinifier::operator^</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="UE__ShaderMinifier__EMinifyShade-" ><span>EMinifyShaderFlags</span></a> Lhs,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="UE__ShaderMinifier__EMinifyShade-" ><span>EMinifyShaderFlags</span></a> Rhs<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="UE__ShaderMinifier__EMinifyShade-" ><span>EMinifyShade</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UE__ShaderMinifier__operator_2"><nobr><p>UE::ShaderMinifier::operator^=</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="UE__ShaderMinifier__EMinifyShade-" ><span>EMinifyShaderFlags</span></a>&amp; Lhs,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="UE__ShaderMinifier__EMinifyShade-" ><span>EMinifyShaderFlags</span></a> Rhs<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>constexpr <a id="content_link" href="UE__ShaderMinifier__EMinifyShade-" ><span>EM</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UE__ShaderMinifier__operator_3"><nobr><p>UE::ShaderMinifier::operator|</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="UE__ShaderMinifier__EMinifyShade-" ><span>EMinifyShaderFlags</span></a> Lhs,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="UE__ShaderMinifier__EMinifyShade-" ><span>EMinifyShaderFlags</span></a> Rhs<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p><a id="content_link" href="UE__ShaderMinifier__EMinifyShade-" ><span>EMinifyShade</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UE__ShaderMinifier__operator"><nobr><p>UE::ShaderMinifier::operator|=</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="UE__ShaderMinifier__EMinifyShade-" ><span>EMinifyShaderFlags</span></a>&amp; Lhs,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="UE__ShaderMinifier__EMinifyShade-" ><span>EMinifyShaderFlags</span></a> Rhs<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>constexpr <a id="content_link" href="UE__ShaderMinifier__EMinifyShade-" ><span>EM</span></a>...</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UE__ShaderMinifier__operator_7"><nobr><p>UE::ShaderMinifier::operator~</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="UE__ShaderMinifier__EMinifyShade-" ><span>EMinifyShaderFlags</span></a> E<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="UpdateStructuredBufferStride"><nobr><p>UpdateStructuredBufferStride</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/RenderCore/FShaderCompilerInput" ><span>FShaderCompilerInput</span></a>&amp; Input,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; ResourceName,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint16 BindPoint,<br />&nbsp;&nbsp;&nbsp;&nbsp;uint16 Stride,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="../../Runtime/RenderCore/FShaderCompilerOutput" ><span>FShaderCompilerOutput</span></a>&amp; CompilerOut...<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+<tr class="normal-row">
+	<td class="icon-cell">
+		<p><img class="  lazyload" alt="Public function" title="Public function" width="18" data-src="./../../../../Images/api_function_public.png" />
+</p>
+	</td>
+	<td class="name-cell" align="right">
+		<span class="type-span"><p>void</p></span>&nbsp;
+	</td>
+	<td class="name-cell">
+		<a href="WriteShaderConductorCommandLine"><nobr><p>WriteShaderConductorCommandLine</p></nobr></a>
+		<div class="name-cell-arguments">
+			<p>&#40;<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/RenderCore/FShaderCompilerInput" ><span>FShaderCompilerInput</span></a>&amp; Input,<br />&nbsp;&nbsp;&nbsp;&nbsp;const <a id="content_link" href="../../Runtime/Core/Containers/FString" ><span>FString</span></a>&amp; SourceFilename,<br />&nbsp;&nbsp;&nbsp;&nbsp;<a id="content_link" href="EShaderConductorTarget" ><span>EShaderConductorTarget</span></a> Target<br />&#41;</p>
+		</div>
+	</td>
+	<td class="desc-cell">
+		
+	</td>
+</tr>
+	</table>
+</div>
+
+</div>
+
+
+
+</div>
+																	</div>
+					<!-- End of Markdown converted page content -->
+				</div>
+												<div id="recommendations"></div>			</div>
+						<div id="footer"></div>			
+									<div id="announcement">
+			<div style="display:inline-block;margin:5px;">
+				Help shape the future of Unreal Engine documentation! Tell us how we're doing so we can serve you better.
+			</div>
+			<div style="margin:5px;display:inline-block;">
+				<div class="btn action" style="margin-top:-6px;display:inline-block;" onclick="$('#announcement').hide();window.open('https://epicgames.questionpro.com/t/AVVbJZwedR');createCookie('announcement-read', new Date().getTime(), 30);">Take our survey</div>
+				<div class="btn btn-default" style="margin-top:-6px;display:inline-block;" onclick="$('#announcement').hide();createCookie('announcement-read', new Date().getTime(), 30);">Cancel</div>
+			</div>
+			<div class="btn-close" style="position:absolute;right:5px;top:10px;padding:3px;width:14px;height:14px;" onclick="$('#announcement').hide();"></div>
+			</div>
+					</div>
+	</div>
+</body>
+</html>
