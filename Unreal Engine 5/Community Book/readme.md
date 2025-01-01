@@ -1,10 +1,7 @@
-
 # Unreal Engine 5.5 Unofficial Documentation
 
 > **Note**  
 > This is **unofficial** documentation created by the community. Always cross-reference with [Epic Games’ official resources](https://docs.unrealengine.com/) to stay current with updates and best practices.
-
----
 
 ## Introduction
 
