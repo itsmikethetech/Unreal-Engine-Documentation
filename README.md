@@ -11,20 +11,20 @@ The Unreal Engine 5 series introduces revolutionary features such as Nanite (vir
 ## About This Unofficial Documentation
 This resource is unofficial—it is created by the community, for the community. While every effort is made to ensure accuracy, always cross-reference with Epic Games’ official documentation and resources to stay current with updates and best practices.
 
-## Key Features of Unreal Engine 5.5
-# Nanite Enhancements
+# Key Features of Unreal Engine 5.5
+## Nanite Enhancements
 Improved workflows for high-poly assets and better optimization for large environments.
 
-# Lumen Improvements
+## Lumen Improvements
 Enhanced real-time global illumination system offering more stable and higher-quality results.
 
-# World Building Upgrades
+## World Building Upgrades
 Tools like World Partition provide streamlined management of large open worlds and levels.
 
-# Refined Developer Workflows
+## Refined Developer Workflows
 Blueprint improvements, expanded C++ APIs, and new editor features that boost productivity.
 
-# Virtual Production & Cinematics
+## Virtual Production & Cinematics
 Continued evolution of virtual production toolsets for high-quality cinematic content.
 
 # Who This Guide Is For
